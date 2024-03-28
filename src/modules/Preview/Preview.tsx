@@ -14,6 +14,7 @@ const Preview = () => {
         <S.Circle2 />
         <S.Circle3 />
         <S.Circle4 />
+        <S.Circle5 />
       </S.PreviewBacground>
       <S.PreviewBox></S.PreviewBox>
     </S.PreviewWraper>
