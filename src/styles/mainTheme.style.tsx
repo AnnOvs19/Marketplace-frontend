@@ -36,7 +36,7 @@ export const mainTheme = {
     black: "#000000",
 
     // colorBody: "#1e1d1f",
-    colorBody: "#080808",
+    colorBody: "#050505",
     colorContainer: "#343136"
   },
 

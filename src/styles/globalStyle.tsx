@@ -25,6 +25,10 @@ body {
   overflow-y: auto;
 }
 
+main{
+  width:100%;
+}
+
 a {
         cursor: pointer;
         text-decoration: none;

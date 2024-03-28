@@ -10,46 +10,23 @@ export const PreviewWraper = styled.section`
   overflow: hidden;
 
   @media (${mainTheme.deviсe.desktopS}) {
-    /* width: 1680px; */
     height: 800px;
   }
-
-  /* @media (${mainTheme.deviсe.laptopM}) {
-    width: 1280px;
-  }
-
-  @media (${mainTheme.deviсe.tablet}) {
-    width: 768px;
-  } */
 `;
 
 export const PreviewBacground = styled.div`
-  width: 1920px;
+  width: 100%;
   height: 900px;
   position: relative;
   overflow: hidden;
   z-index: 2;
 
   @media (${mainTheme.deviсe.desktopS}) {
-    width: 1680px;
     height: 800px;
   }
 
-  @media (${mainTheme.deviсe.laptopM}) {
-    width: 1280px;
-  }
-
-  @media (${mainTheme.deviсe.tablet}) {
-    width: 768px;
-  }
-
   @media (${mainTheme.deviсe.mobileXL}) {
-    width: 550px;
     height: 700px;
-  }
-
-  @media (${mainTheme.deviсe.mobileS}) {
-    width: 320px;
   }
 `;
 
@@ -222,32 +199,18 @@ export const Circle5 = styled.div`
 export const PreviewBox = styled.article`
   background: transparent;
   box-shadow: 0 8px 32px 0 rgba(95 31 135 / 37%);
-  backdrop-filter: blur(80px);
-  width: 1920px;
+  backdrop-filter: blur(35px);
+  width: 100%;
   height: 900px;
   position: absolute;
   z-index: 3;
 
   @media (${mainTheme.deviсe.desktopS}) {
-    width: 1680px;
     height: 800px;
   }
 
-  @media (${mainTheme.deviсe.laptopM}) {
-    width: 1280px;
-  }
-
-  @media (${mainTheme.deviсe.tablet}) {
-    width: 768px;
-  }
-
   @media (${mainTheme.deviсe.mobileXL}) {
-    width: 550px;
     height: 700px;
-  }
-
-  @media (${mainTheme.deviсe.mobileS}) {
-    width: 320px;
   }
 `;
 
