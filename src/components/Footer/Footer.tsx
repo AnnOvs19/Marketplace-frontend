@@ -5,9 +5,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer>
-      <MainTitle>Hello World from MyComponent</MainTitle>
-    </footer>
+    <footer>{/* <MainTitle>Hello World from MyComponent</MainTitle> */}</footer>
   );
 };
 

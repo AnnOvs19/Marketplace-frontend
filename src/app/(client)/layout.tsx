@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
-import { Lato } from "next/font/google";
+import { Roboto_Mono } from "next/font/google";
 import { GlobalStyle } from "@/styles/globalStyle";
 import Providers from "@/providers/Providers";
 import HeaderClient from "@/components/Headers/HeaderClient/HeaderClient";
 import Footer from "@/components/Footer/Footer";
 
-const lato = Lato({ weight: ["300", "400", "700", "900"], subsets: ["latin"] });
+const roboto = Roboto_Mono({
+  weight: ["300", "400", "600", "700"],
+  subsets: ["latin"]
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,9 +22,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body className={lato.className}>
+      <body className={roboto.className}>
         <Providers>
-          {/* <GlobalStyle /> {children} */}
           <GlobalStyle />
           <HeaderClient />
           {children}

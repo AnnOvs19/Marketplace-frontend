@@ -1,6 +1,7 @@
 "use client";
 
 import { createGlobalStyle } from "styled-components";
+import { mainTheme } from "./mainTheme.style";
 
 export const GlobalStyle = createGlobalStyle`
 *,
@@ -16,19 +17,24 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  background-color: 'white';
+  align-items: center;
+  background-color: ${mainTheme.colors.colorBody};
   font-family: "Lato", sans-serif;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 a {
         cursor: pointer;
         text-decoration: none;
+        transition: 0.4s;
     }
 
 
     button {
         cursor: pointer;
-        
+        display: flex;
+        transition: 0.4s;
     }
 `;

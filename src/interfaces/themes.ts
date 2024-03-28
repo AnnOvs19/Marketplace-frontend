@@ -5,12 +5,22 @@ export interface IMainTheme {
     purple: string;
     lightPurple: string;
     extraLightPurple: string;
+
+    extraDarkGreen: string;
+    darkGreen: string;
+    green: string;
+    lightGreen: string;
+    extraLightGreen: string;
+
     white: string;
     lightGray: string;
     gray: string;
     black: string;
+
+    colorBody: string;
+    colorContainer: string;
   };
-  media: {
+  device: {
     mobileXS: string;
     mobileS: string;
     mobileM: string;
@@ -23,4 +33,18 @@ export interface IMainTheme {
     desktopS: string;
     desktopM: string;
   };
+}
+
+export interface ISizeDevice {
+  mobileXS: string;
+  mobileS: string;
+  mobileM: string;
+  mobileL: string;
+  mobileXL: string;
+  tablet: string;
+  laptopS: string;
+  laptopM: string;
+  laptopL: string;
+  desktopS: string;
+  desktopM: string;
 }

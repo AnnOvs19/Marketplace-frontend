@@ -1,9 +1,10 @@
-import HeaderClient from "@/components/Headers/HeaderClient/HeaderClient";
+import Preview from "@/modules/Preview/Preview";
 
 export default function Home() {
   return (
     <main>
-      <h1>i</h1>
+      <Preview />
+      <h1>hello</h1>
     </main>
   );
 }
