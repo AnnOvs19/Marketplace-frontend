@@ -2,9 +2,34 @@ import styled from "styled-components";
 import { mainTheme } from "./mainTheme.style";
 
 export const MainTitle = styled.h1`
-  font-size: 38px;
+  font-size: 40px;
   font-weight: 700;
+  line-height: 100%;
   color: ${mainTheme.colors.white};
+
+  @media (${mainTheme.deviсe.laptopL}) {
+    font-size: 38px;
+  }
+
+  @media (${mainTheme.deviсe.laptopM}) {
+    font-size: 36px;
+  }
+
+  @media (${mainTheme.deviсe.laptopS}) {
+    font-size: 30px;
+  }
+
+  @media (max-width: 870px) {
+    text-align: center;
+  }
+
+  @media (${mainTheme.deviсe.mobileXL}) {
+    font-size: 26px;
+  }
+
+  @media (${mainTheme.deviсe.mobileS}) {
+    font-size: 24px;
+  }
 `;
 
 export const Title = styled.h2`
@@ -14,9 +39,33 @@ export const Title = styled.h2`
 `;
 
 export const SubTitle = styled.h4`
-  font-size: 28px;
+  font-size: 22px;
   font-weight: 700;
   color: ${mainTheme.colors.white};
+
+  @media (${mainTheme.deviсe.laptopL}) {
+    font-size: 20px;
+  }
+
+  @media (${mainTheme.deviсe.laptopM}) {
+    font-size: 18px;
+  }
+
+  @media (${mainTheme.deviсe.laptopS}) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 870px) {
+    text-align: center;
+  }
+
+  @media (${mainTheme.deviсe.mobileXL}) {
+    font-size: 14px;
+  }
+
+  @media (${mainTheme.deviсe.mobileS}) {
+    font-size: 12px;
+  }
 `;
 
 export const TextMedium = styled.p`
@@ -24,6 +73,22 @@ export const TextMedium = styled.p`
   transition: 0.4s;
   font-weight: 400;
   color: ${mainTheme.colors.white};
+
+  @media (${mainTheme.deviсe.laptopL}) {
+    font-size: 14px;
+  }
+
+  @media (${mainTheme.deviсe.laptopM}) {
+    font-size: 12px;
+  }
+
+  @media (max-width: 870px) {
+    text-align: center;
+  }
+
+  @media (${mainTheme.deviсe.mobileS}) {
+    font-size: 11px;
+  }
 `;
 
 export const SmallText = styled.span`
@@ -90,21 +155,36 @@ export const LinkText = styled.a`
   }
 `;
 
-export const ButtonText = styled.span`
-  font-size: 15px;
-  line-height: 100%;
-  font-weight: 400;
-  color: ${mainTheme.colors.white};
+// export const ButtonText = styled.span`
+//   font-size: 15px;
+//   line-height: 100%;
+//   font-weight: 400;
+//   color: ${mainTheme.colors.white};
 
-  @media (${mainTheme.deviсe.laptopM}) {
-    font-size: 13px;
-  }
-`;
+//   @media (${mainTheme.deviсe.laptopM}) {
+//     font-size: 13px;
+//   }
+// `;
 
-export const ButtonTextUppercase = styled.span`
-  font-size: 14px;
-  line-height: 100%;
-  text-transform: uppercase;
-  font-weight: 400;
-  color: ${mainTheme.colors.white};
-`;
+// export const ButtonTextTransparent = styled.span`
+//   font-size: 15px;
+//   line-height: 100%;
+//   font-weight: 400;
+//   color: ${mainTheme.colors.white};
+
+//   &:hover {
+//     color: black;
+//   }
+
+//   @media (${mainTheme.deviсe.laptopM}) {
+//     font-size: 13px;
+//   }
+// `;
+
+// export const ButtonTextUppercase = styled.span`
+//   font-size: 14px;
+//   line-height: 100%;
+//   text-transform: uppercase;
+//   font-weight: 400;
+//   color: ${mainTheme.colors.white};
+// `;

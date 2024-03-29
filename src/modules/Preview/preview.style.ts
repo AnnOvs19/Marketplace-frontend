@@ -5,28 +5,50 @@ export const PreviewWraper = styled.section`
   margin-top: 0;
   display: flex;
   width: 100%;
-  height: 900px;
+  height: 750px;
   justify-content: center;
   overflow: hidden;
 
-  @media (${mainTheme.deviсe.desktopS}) {
-    height: 800px;
+  @media (${mainTheme.deviсe.laptopL}) {
+    height: 620px;
+  }
+
+  @media (${mainTheme.deviсe.mobileXL}) {
+    height: 645px;
   }
 `;
 
 export const PreviewBacground = styled.div`
   width: 100%;
-  height: 900px;
+  height: 750px;
   position: relative;
   overflow: hidden;
   z-index: 2;
 
-  @media (${mainTheme.deviсe.desktopS}) {
-    height: 800px;
+  @media (${mainTheme.deviсe.laptopL}) {
+    height: 620px;
   }
 
   @media (${mainTheme.deviсe.mobileXL}) {
-    height: 700px;
+    height: 645px;
+  }
+`;
+
+export const PreviewBoxBG = styled.div`
+  background: transparent;
+  box-shadow: 0 8px 32px 0 rgba(95 31 135 / 37%);
+  backdrop-filter: blur(35px);
+  width: 100%;
+  height: 750px;
+  position: absolute;
+  z-index: 3;
+
+  @media (${mainTheme.deviсe.laptopL}) {
+    height: 620px;
+  }
+
+  @media (${mainTheme.deviсe.mobileXL}) {
+    height: 645px;
   }
 `;
 
@@ -41,29 +63,29 @@ export const Circle1 = styled.div`
   height: 400px;
 
   @media (${mainTheme.deviсe.laptopM}) {
-    left: 150px;
-    width: 350px;
-    height: 350px;
+    left: 90px;
+    top: -150px;
+    width: 300px;
+    height: 300px;
   }
 
   @media (${mainTheme.deviсe.tablet}) {
-    left: 100px;
-    top: -170px;
+    top: -100px;
+    left: 60px;
     width: 200px;
     height: 200px;
   }
 
   @media (${mainTheme.deviсe.mobileXL}) {
-    left: 60px;
-    width: 110px;
-    height: 110px;
+    top: 0px;
+    left: 30px;
+    width: 80px;
+    height: 80px;
   }
 
   @media (${mainTheme.deviсe.mobileS}) {
-    left: 60px;
-    top: -180px;
-    width: 90px;
-    height: 90px;
+    width: 50px;
+    height: 50px;
   }
 `;
 
@@ -79,14 +101,15 @@ export const Circle2 = styled.div`
   height: 350px;
 
   @media (${mainTheme.deviсe.laptopM}) {
-    width: 300px;
-    height: 300px;
+    right: -150px;
+    width: 200px;
+    height: 200px;
   }
 
   @media (${mainTheme.deviсe.tablet}) {
     right: -50px;
-    width: 140px;
-    height: 140px;
+    width: 120px;
+    height: 120px;
   }
 
   @media (${mainTheme.deviсe.mobileXL}) {
@@ -106,23 +129,25 @@ export const Circle3 = styled.div`
 
   @media (${mainTheme.deviсe.laptopM}) {
     right: 80px;
-    width: 500px;
-    height: 300px;
+    width: 400px;
+    height: 200px;
   }
 
   @media (${mainTheme.deviсe.tablet}) {
-    width: 350px;
-    height: 150px;
+    width: 300px;
+    height: 100px;
   }
 
   @media (${mainTheme.deviсe.mobileXL}) {
+    top: 460px;
     right: 50px;
-    width: 200px;
-    height: 70px;
+    width: 190px;
+    height: 90px;
   }
 
   @media (${mainTheme.deviсe.mobileS}) {
-    width: 150px;
+    top: 430px;
+    width: 100px;
     height: 30px;
   }
 `;
@@ -138,25 +163,28 @@ export const Circle4 = styled.div`
   height: 350px;
 
   @media (${mainTheme.deviсe.laptopM}) {
-    width: 315px;
-    height: 215px;
+    width: 300px;
+    height: 200px;
   }
 
   @media (${mainTheme.deviсe.tablet}) {
-    width: 200px;
-    height: 100px;
+    left: 420px;
+    top: 7px;
+    width: 150px;
+    height: 150px;
   }
 
   @media (${mainTheme.deviсe.mobileXL}) {
     left: 320px;
+    top: 47px;
     width: 150px;
-    height: 60px;
+    height: 70px;
   }
 
   @media (${mainTheme.deviсe.mobileS}) {
-    left: 234px;
-    width: 80px;
-    height: 40px;
+    left: 104px;
+    width: 100px;
+    height: 50px;
   }
 `;
 
@@ -172,15 +200,15 @@ export const Circle5 = styled.div`
 
   @media (${mainTheme.deviсe.laptopM}) {
     top: 707px;
-    left: 114px;
+    left: 54px;
     width: 500px;
     height: 400px;
   }
 
   @media (${mainTheme.deviсe.tablet}) {
-    top: 637px;
-    width: 300px;
-    height: 200px;
+    top: 687px;
+    width: 250px;
+    height: 150px;
   }
 
   @media (${mainTheme.deviсe.mobileXL}) {
@@ -191,32 +219,127 @@ export const Circle5 = styled.div`
   }
 
   @media (${mainTheme.deviсe.mobileS}) {
-    width: 100px;
-    height: 35px;
+    width: 70px;
+    height: 25px;
   }
 `;
 
-export const PreviewBox = styled.article`
-  background: transparent;
-  box-shadow: 0 8px 32px 0 rgba(95 31 135 / 37%);
-  backdrop-filter: blur(35px);
-  width: 100%;
-  height: 900px;
-  position: absolute;
-  z-index: 3;
+export const PreviewContainer = styled.div`
+  position: relative;
+  z-index: 150;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 70px;
 
   @media (${mainTheme.deviсe.desktopS}) {
-    height: 800px;
+    gap: 20px;
+  }
+
+  @media (${mainTheme.deviсe.laptopM}) {
+    gap: 0px;
+  }
+
+  @media (max-width: 870px) {
+    margin-top: 135px;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
   }
 
   @media (${mainTheme.deviсe.mobileXL}) {
-    height: 700px;
+    margin-top: 130px;
+    gap: 10px;
+  }
+
+  @media (${mainTheme.deviсe.mobileL}) {
+    margin-top: 115px;
+    gap: 5px;
   }
 `;
 
-// export const PreviewImage = styled.div`
-//   margin: 100px 0 70px 0;
-//   width: 460px;
-//   height: 640px;
-//   position: relative;
-// `;
+export const TextBox = styled.article`
+  position: relative;
+  z-index: 150;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 580px;
+
+  @media (${mainTheme.deviсe.laptopL}) {
+    max-width: 540px;
+  }
+
+  @media (${mainTheme.deviсe.laptopM}) {
+    max-width: 500px;
+    margin-left: 40px;
+  }
+
+  @media (${mainTheme.deviсe.laptopS}) {
+    max-width: 420px;
+  }
+
+  @media (max-width: 870px) {
+    align-items: center;
+    margin-left: 0px;
+  }
+
+  @media (${mainTheme.deviсe.mobileL}) {
+    max-width: 100%;
+  }
+`;
+
+export const TextBottom = styled.div`
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+
+  @media (${mainTheme.deviсe.laptopS}) {
+    gap: 10px;
+  }
+
+  @media (${mainTheme.deviсe.mobileL}) {
+    flex-direction: column;
+  }
+`;
+
+export const PreviewImage = styled.div`
+  margin: 90px 0 70px 0;
+  width: 675px;
+  height: 550px;
+  position: relative;
+
+  @media (${mainTheme.deviсe.laptopL}) {
+    width: 575px;
+    height: 450px;
+  }
+
+  @media (${mainTheme.deviсe.laptopM}) {
+    width: 545px;
+    height: 420px;
+  }
+
+  @media (${mainTheme.deviсe.laptopM}) {
+    width: 495px;
+    height: 370px;
+  }
+
+  @media (max-width: 870px) {
+    margin: 20px 0;
+  }
+
+  @media (${mainTheme.deviсe.mobileXL}) {
+    width: 100%;
+    height: 60%;
+  }
+
+  @media (${mainTheme.deviсe.mobileL}) {
+    width: 100%;
+    height: 40%;
+  }
+
+  @media (${mainTheme.deviсe.mobileS}) {
+    width: 100%;
+    height: 30%;
+  }
+`;

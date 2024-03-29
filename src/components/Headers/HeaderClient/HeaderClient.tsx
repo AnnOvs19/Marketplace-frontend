@@ -42,9 +42,7 @@ const HeaderClient = () => {
             />
             <S.CountBasket>0</S.CountBasket>
           </I.BasketIcon>
-          <B.NavButton>
-            <T.ButtonText>Вы продавец?</T.ButtonText>
-          </B.NavButton>
+          <B.HeaderButton>Вы продавец?</B.HeaderButton>
         </S.Navigation>
       </S.HeaderBox>
     </S.HeaderWraper>

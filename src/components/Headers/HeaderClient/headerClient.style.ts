@@ -15,7 +15,7 @@ export const HeaderWraper = styled.header`
   height: 70px;
   position: fixed;
   top: 0;
-  z-index: 100;
+  z-index: 200;
   border-bottom: 1px solid ${mainTheme.colors.gray};
 
   @media (${mainTheme.deviсe.desktopS}) {

@@ -32,7 +32,7 @@ const MenuClient = () => {
         <T.MenuText>Каталог</T.MenuText>
         <T.MenuText>Корзина</T.MenuText>
       </S.MenuNavigation>
-      <B.NavButton>Вы продавец?</B.NavButton>
+      <B.HeaderButton>Вы продавец?</B.HeaderButton>
     </S.MenuWrapper>
   );
 };
