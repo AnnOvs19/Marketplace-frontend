@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Roboto_Mono } from "next/font/google";
 import { GlobalStyle } from "@/styles/globalStyle";
 import Providers from "@/providers/Providers";
-import HeaderClient from "@/components/Headers/HeaderClient/HeaderClient";
 import Footer from "@/components/Footer/Footer";
+import Headers from "@/components/Headers/Headers";
 
 const roboto = Roboto_Mono({
   weight: ["300", "400", "600", "700"],
@@ -25,8 +25,8 @@ export default function RootLayout({
       <body className={roboto.className}>
         <Providers>
           <GlobalStyle />
-          <HeaderClient />
-          {children}
+          <Headers />
+          <main>{children}</main>
           <Footer />
         </Providers>
       </body>

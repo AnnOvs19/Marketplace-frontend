@@ -148,14 +148,14 @@ export const Circle5 = styled.div`
   height: 450px;
 
   @media (${mainTheme.deviсe.laptopM}) {
-    top: 707px;
+    top: 560px;
     left: 54px;
     width: 500px;
     height: 400px;
   }
 
   @media (${mainTheme.deviсe.tablet}) {
-    top: 687px;
+    top: 470px;
     width: 250px;
     height: 150px;
   }

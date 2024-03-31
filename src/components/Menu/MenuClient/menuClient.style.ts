@@ -1,12 +1,16 @@
 import { mainTheme } from "@/styles/mainTheme.style";
 import styled from "styled-components";
 
-export const MenuWrapper = styled.aside`
+interface IProps {
+  openMenu: boolean;
+}
+
+export const MenuClientWrapper = styled.aside<IProps>`
   display: none;
 
-  @media (max-width: 602px) {
+  @media (max-width: 622px) {
     padding: 150px 25px;
-    display: flex;
+    display: ${(props) => (props.openMenu ? "flex" : "none")};
     flex-direction: column;
     align-items: flex-start;
     gap: 27px;
@@ -29,10 +33,4 @@ export const MenuWrapper = styled.aside`
     border: none;
     z-index: 1000;
   }
-`;
-
-export const MenuNavigation = styled.nav`
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
 `;

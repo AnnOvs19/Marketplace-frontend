@@ -1,17 +1,22 @@
 "use client";
 
-import React from "react";
+import React, { FC, useState } from "react";
 import * as S from "./menuClient.style";
 import * as T from "@/styles/baseText.style";
 import * as B from "@/styles/baseButtons.style";
 import * as I from "@/styles/baseIcons.style";
+import * as C from "../menu.style";
 
 import Image from "next/image";
 import logo from "@/assets/icons/mainLogo.svg";
 
-const MenuClient = () => {
+interface IProps {
+  openMenu: boolean;
+}
+
+const MenuClient: FC<IProps> = ({ openMenu }) => {
   return (
-    <S.MenuWrapper>
+    <S.MenuClientWrapper openMenu={openMenu}>
       <I.LogoBox>
         <I.LogoIcon>
           <Image
@@ -26,14 +31,14 @@ const MenuClient = () => {
         </I.LogoIcon>
         <T.LogoTextMenu>Marketech</T.LogoTextMenu>
       </I.LogoBox>
-      <S.MenuNavigation>
+      <C.MenuNavigation>
         <T.MenuText>Главная</T.MenuText>
         <T.MenuText>Блог</T.MenuText>
         <T.MenuText>Каталог</T.MenuText>
         <T.MenuText>Корзина</T.MenuText>
-      </S.MenuNavigation>
+      </C.MenuNavigation>
       <B.HeaderButton>Вы продавец?</B.HeaderButton>
-    </S.MenuWrapper>
+    </S.MenuClientWrapper>
   );
 };
 

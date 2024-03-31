@@ -113,7 +113,7 @@ export const TextBox = styled.article`
   }
 
   @media (${mainTheme.deviсe.mobileL}) {
-    max-width: 100%;
+    max-width: 95%;
   }
 `;
 
