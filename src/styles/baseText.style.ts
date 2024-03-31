@@ -66,7 +66,7 @@ export const TitleSection = styled.h2`
 
 export const SubTitle = styled.h4`
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 600;
   color: ${mainTheme.colors.white};
 
   @media (${mainTheme.deviсe.laptopL}) {

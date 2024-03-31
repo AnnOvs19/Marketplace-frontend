@@ -18,7 +18,7 @@ const AccordionItems: FC<IProps> = ({ item }) => {
 
   return (
     <S.AccordionItem onClick={toggle}>
-      <S.AccordionTitle>{item.title}</S.AccordionTitle>
+      <S.AccordionTitle openTab={openTab}>{item.title}</S.AccordionTitle>
       {openTab && <T.TextMedium>{item.text}</T.TextMedium>}
     </S.AccordionItem>
   );

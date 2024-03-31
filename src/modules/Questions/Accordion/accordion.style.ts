@@ -32,9 +32,10 @@ export const AccordionItem = styled.div`
   flex-direction: column;
 `;
 
-export const AccordionTitle = styled(SubTitle)`
+export const AccordionTitle = styled(SubTitle)<IProps>`
   margin-bottom: 10px;
   padding-bottom: 13px;
   border-bottom: 1px solid ${mainTheme.colors.gray};
+  color: ${({ openTab }) => (openTab ? "#d5aaf0" : "#fff")};
   cursor: pointer;
 `;
