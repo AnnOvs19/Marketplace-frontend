@@ -32,10 +32,36 @@ export const MainTitle = styled.h1`
   }
 `;
 
-export const Title = styled.h2`
+export const TitleSection = styled.h2`
   font-size: 35px;
   font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
   color: ${mainTheme.colors.white};
+
+  @media (${mainTheme.deviсe.laptopL}) {
+    font-size: 33px;
+  }
+
+  @media (${mainTheme.deviсe.laptopM}) {
+    font-size: 31px;
+  }
+
+  @media (${mainTheme.deviсe.laptopS}) {
+    font-size: 25px;
+  }
+
+  @media (max-width: 870px) {
+    text-align: center;
+  }
+
+  @media (${mainTheme.deviсe.mobileXL}) {
+    font-size: 21px;
+  }
+
+  @media (${mainTheme.deviсe.mobileS}) {
+    font-size: 19px;
+  }
 `;
 
 export const SubTitle = styled.h4`
@@ -73,6 +99,7 @@ export const TextMedium = styled.p`
   transition: 0.4s;
   font-weight: 400;
   color: ${mainTheme.colors.white};
+  line-height: 120%;
 
   @media (${mainTheme.deviсe.laptopL}) {
     font-size: 14px;
@@ -154,37 +181,3 @@ export const LinkText = styled.a`
     font-size: 14px;
   }
 `;
-
-// export const ButtonText = styled.span`
-//   font-size: 15px;
-//   line-height: 100%;
-//   font-weight: 400;
-//   color: ${mainTheme.colors.white};
-
-//   @media (${mainTheme.deviсe.laptopM}) {
-//     font-size: 13px;
-//   }
-// `;
-
-// export const ButtonTextTransparent = styled.span`
-//   font-size: 15px;
-//   line-height: 100%;
-//   font-weight: 400;
-//   color: ${mainTheme.colors.white};
-
-//   &:hover {
-//     color: black;
-//   }
-
-//   @media (${mainTheme.deviсe.laptopM}) {
-//     font-size: 13px;
-//   }
-// `;
-
-// export const ButtonTextUppercase = styled.span`
-//   font-size: 14px;
-//   line-height: 100%;
-//   text-transform: uppercase;
-//   font-weight: 400;
-//   color: ${mainTheme.colors.white};
-// `;

@@ -14,7 +14,7 @@ export const PreviewWraper = styled.section`
   }
 
   @media (${mainTheme.deviсe.mobileXL}) {
-    height: 645px;
+    height: 635px;
   }
 `;
 
@@ -30,7 +30,7 @@ export const PreviewBacground = styled.div`
   }
 
   @media (${mainTheme.deviсe.mobileXL}) {
-    height: 645px;
+    height: 635px;
   }
 `;
 
@@ -48,11 +48,12 @@ export const PreviewBoxBG = styled.div`
   }
 
   @media (${mainTheme.deviсe.mobileXL}) {
-    height: 645px;
+    height: 635px;
   }
 `;
 
 export const PreviewContainer = styled.div`
+  margin-top: 30px;
   position: relative;
   z-index: 150;
   display: flex;
@@ -65,23 +66,24 @@ export const PreviewContainer = styled.div`
   }
 
   @media (${mainTheme.deviсe.laptopM}) {
-    gap: 0px;
+    margin-top: 0px;
+    gap: 10px;
   }
 
   @media (max-width: 870px) {
-    margin-top: 135px;
+    margin-top: 95px;
     flex-direction: column;
     align-items: center;
     gap: 25px;
   }
 
   @media (${mainTheme.deviсe.mobileXL}) {
-    margin-top: 130px;
+    margin-top: 100px;
     gap: 10px;
   }
 
   @media (${mainTheme.deviсe.mobileL}) {
-    margin-top: 115px;
+    margin-top: 105px;
     gap: 5px;
   }
 `;
@@ -92,14 +94,18 @@ export const TextBox = styled.article`
   display: flex;
   flex-direction: column;
   gap: 10px;
-  max-width: 580px;
+  max-width: 605px;
+
+  @media (${mainTheme.deviсe.desktopM}) {
+    max-width: 580px;
+  }
 
   @media (${mainTheme.deviсe.laptopL}) {
     max-width: 540px;
   }
 
   @media (${mainTheme.deviсe.laptopM}) {
-    max-width: 500px;
+    max-width: 470px;
     margin-left: 40px;
   }
 
@@ -133,9 +139,14 @@ export const TextBottom = styled.div`
 
 export const PreviewImage = styled.div`
   margin: 90px 0 70px 0;
-  width: 675px;
-  height: 550px;
+  width: 740px;
+  height: 585px;
   position: relative;
+
+  @media (${mainTheme.deviсe.desktopM}) {
+    width: 675px;
+    height: 550px;
+  }
 
   @media (${mainTheme.deviсe.laptopL}) {
     width: 575px;
@@ -157,7 +168,7 @@ export const PreviewImage = styled.div`
   }
 
   @media (${mainTheme.deviсe.mobileXL}) {
-    width: 100%;
+    width: 95%;
     height: 60%;
   }
 
