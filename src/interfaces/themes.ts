@@ -18,7 +18,7 @@ export interface IMainTheme {
     black: string;
 
     colorBody: string;
-    colorContainer: string;
+    colorForm: string;
   };
   device: {
     mobileXS: string;

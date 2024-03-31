@@ -5,14 +5,16 @@ export const FormQueWraper = styled.article`
   max-width: 600px;
   display: flex;
   flex-direction: column;
-  background-color: red;
+  background-color: ${mainTheme.colors.colorForm};
+  box-shadow: 0px 0px 26px 5px ${mainTheme.colors.darkPurple};
   height: 380px;
   width: 50%;
   padding: 25px;
+  margin-bottom: 20px;
 
   @media (${mainTheme.deviсe.laptopL}) {
     width: 60%;
-    height: 337px;
+    height: 305px;
     margin-right: 40px;
   }
 

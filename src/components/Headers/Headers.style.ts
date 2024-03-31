@@ -29,6 +29,7 @@ export const Header = styled.div`
   top: 0;
   z-index: 200;
   border-bottom: 1px solid ${mainTheme.colors.gray};
+  backdrop-filter: blur(17px);
 
   @media (${mainTheme.deviсe.desktopS}) {
     padding: 10px 50px;

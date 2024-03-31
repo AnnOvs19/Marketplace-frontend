@@ -31,13 +31,13 @@ const PreviewItemsClient: FC<IProps> = ({
             <T.TextMedium>{item.text}</T.TextMedium>
             <C.TextBottom>
               <B.TransparentButton onClick={() => setIndex(0)}>
-                Lorem
+                Экономия
               </B.TransparentButton>
               <B.TransparentButton onClick={() => setIndex(1)}>
-                Lorem ipsum
+                Качество
               </B.TransparentButton>
               <B.TransparentButton onClick={() => setIndex(2)}>
-                Lorem ipsumLorem
+                Большой выбор
               </B.TransparentButton>
             </C.TextBottom>
           </C.TextBox>

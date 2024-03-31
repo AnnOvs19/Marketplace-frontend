@@ -10,7 +10,12 @@ export const QuestionsWraper = styled.section`
   max-width: 1405px;
   height: auto;
   overflow: hidden;
-  gap: 30px;
+  gap: 44px;
+
+  @media (max-width: 870px) {
+    overflow: auto;
+    gap: 30px;
+  }
 
   @media (${mainTheme.deviсe.mobileXL}) {
     margin-top: 30px;
