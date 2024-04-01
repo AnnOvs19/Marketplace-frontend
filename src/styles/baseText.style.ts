@@ -3,7 +3,7 @@ import { mainTheme } from "./mainTheme.style";
 
 export const MainTitle = styled.h1`
   font-size: 40px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 100%;
   color: ${mainTheme.colors.white};
 
@@ -95,20 +95,20 @@ export const TitleForm = styled.h3`
 `;
 
 export const SubTitle = styled.h4`
-  font-size: 22px;
+  font-size: 21px;
   font-weight: 600;
   color: ${mainTheme.colors.white};
 
   @media (${mainTheme.deviсe.laptopL}) {
-    font-size: 20px;
+    font-size: 19px;
   }
 
   @media (${mainTheme.deviсe.laptopM}) {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   @media (${mainTheme.deviсe.laptopS}) {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   @media (max-width: 870px) {
@@ -116,11 +116,11 @@ export const SubTitle = styled.h4`
   }
 
   @media (${mainTheme.deviсe.mobileXL}) {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   @media (${mainTheme.deviсe.mobileS}) {
-    font-size: 12px;
+    font-size: 11px;
   }
 `;
 

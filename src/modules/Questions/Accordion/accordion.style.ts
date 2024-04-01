@@ -33,7 +33,7 @@ export const AccordionItem = styled.div`
 `;
 
 export const AccordionTitle = styled.h4<IProps>`
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
   margin-bottom: 10px;
   padding-bottom: 13px;
@@ -42,22 +42,19 @@ export const AccordionTitle = styled.h4<IProps>`
   cursor: pointer;
 
   @media (${mainTheme.deviсe.laptopL}) {
-    font-size: 18px;
-  }
-
-  @media (${mainTheme.deviсe.laptopM}) {
     font-size: 16px;
   }
 
-  @media (${mainTheme.deviсe.laptopS}) {
+  @media (${mainTheme.deviсe.laptopM}) {
     font-size: 14px;
+  }
+
+  @media (${mainTheme.deviсe.laptopS}) {
+    font-size: 12px;
   }
 
   @media (max-width: 870px) {
     text-align: center;
-  }
-
-  @media (${mainTheme.deviсe.mobileXL}) {
-    font-size: 12px;
+    font-size: 13px;
   }
 `;

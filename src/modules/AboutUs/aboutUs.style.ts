@@ -31,7 +31,7 @@ export const AboutUsBg = styled.div`
   left: 0;
   background: ${mainTheme.colors.colorBody};
   width: 100%;
-  height: 800px;
+  height: 850px;
   overflow: hidden;
 
   @keyframes move {
@@ -260,16 +260,24 @@ export const AboutUsBg = styled.div`
     }
   }
 
+  @media (${mainTheme.deviсe.desktopS}) {
+    height: 750px;
+  }
+
   @media (${mainTheme.deviсe.laptopL}) {
-    height: 710px;
+    height: 680px;
+  }
+
+  @media (${mainTheme.deviсe.laptopM}) {
+    height: 650px;
   }
 
   @media (max-width: 870px) {
-    height: 1200px;
+    height: 1050px;
   }
 
   @media (${mainTheme.deviсe.tablet}) {
-    height: 1080px;
+    height: 1000px;
   }
 
   @media (${mainTheme.deviсe.mobileXL}) {
@@ -286,16 +294,24 @@ export const AboutUsBgBox = styled.div`
   box-shadow: 0 8px 32px 0 rgba(95 31 135 / 37%);
   backdrop-filter: blur(35px);
   width: 100%;
-  height: 800px;
+  height: 850px;
   position: absolute;
   z-index: 3;
 
+  @media (${mainTheme.deviсe.desktopS}) {
+    height: 750px;
+  }
+
   @media (${mainTheme.deviсe.laptopL}) {
-    height: 710px;
+    height: 680px;
+  }
+
+  @media (${mainTheme.deviсe.laptopM}) {
+    height: 650px;
   }
 
   @media (max-width: 870px) {
-    height: 1200px;
+    height: 1000px;
   }
 
   @media (${mainTheme.deviсe.tablet}) {
@@ -355,6 +371,7 @@ export const AboutUsBlock = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20px;
 
   @media (${mainTheme.deviсe.desktopS}) {
     width: 610px;
@@ -378,19 +395,19 @@ export const AboutUsImage = styled.div`
   position: relative;
 
   @media (${mainTheme.deviсe.desktopS}) {
-    width: 610px;
-    height: 425px;
+    width: 600px;
+    height: 380px;
   }
 
   @media (${mainTheme.deviсe.laptopL}) {
     width: 100%;
-    height: 325px;
+    height: 305px;
   }
 
   @media (${mainTheme.deviсe.tablet}) {
     margin: 10px 0;
     width: 70%;
-    height: 300px;
+    height: 280px;
   }
 
   @media (${mainTheme.deviсe.mobileXL}) {
