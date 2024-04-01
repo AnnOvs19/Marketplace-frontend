@@ -24,6 +24,7 @@ export const MainTitle = styled.h1`
   }
 
   @media (${mainTheme.deviсe.mobileXL}) {
+    font-weight: 600;
     font-size: 26px;
   }
 
@@ -56,6 +57,7 @@ export const TitleSection = styled.h2`
   }
 
   @media (${mainTheme.deviсe.mobileXL}) {
+    font-weight: 400;
     font-size: 21px;
   }
 
