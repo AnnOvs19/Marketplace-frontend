@@ -29,15 +29,13 @@ export const QuestionsBox = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 160px;
+  gap: 155px;
 
   @media (${mainTheme.deviсe.desktopM}) {
-    justify-content: center;
     gap: 128px;
   }
 
   @media (${mainTheme.deviсe.desktopS}) {
-    justify-content: center;
     gap: 70px;
   }
 

@@ -125,19 +125,18 @@ export const SubTitle = styled.h4`
 `;
 
 export const TextMedium = styled.p`
-  font-size: 16px;
+  font-size: 17px;
   transition: 0.4s;
-  font-weight: 400;
+  font-weight: 300;
   color: ${mainTheme.colors.white};
-  line-height: 120%;
+  line-height: 150%;
 
   @media (${mainTheme.deviсe.laptopL}) {
-    font-weight: 300;
-    font-size: 14px;
+    font-size: 15px;
   }
 
   @media (${mainTheme.deviсe.laptopM}) {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   @media (max-width: 870px) {
@@ -146,6 +145,7 @@ export const TextMedium = styled.p`
 
   @media (${mainTheme.deviсe.mobileXL}) {
     font-size: 11px;
+    line-height: 120%;
   }
 `;
 

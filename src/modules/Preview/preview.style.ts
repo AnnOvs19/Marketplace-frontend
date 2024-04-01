@@ -154,11 +154,6 @@ export const PreviewImage = styled.div`
   }
 
   @media (${mainTheme.deviсe.laptopM}) {
-    width: 545px;
-    height: 420px;
-  }
-
-  @media (${mainTheme.deviсe.laptopM}) {
     width: 495px;
     height: 370px;
   }
@@ -178,7 +173,6 @@ export const PreviewImage = styled.div`
   }
 
   @media (${mainTheme.deviсe.mobileS}) {
-    width: 100%;
     height: 30%;
   }
 `;
