@@ -47,4 +47,43 @@ export const TransparentButton = styled.button`
   @media (${mainTheme.deviсe.tablet}) {
     font-size: 13px;
   }
+
+  @media (${mainTheme.deviсe.mobileXL}) {
+    font-size: 12px;
+  }
+
+  @media (${mainTheme.deviсe.mobileS}) {
+    font-size: 11px;
+  }
+`;
+
+export const FormButton = styled.button`
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: ${mainTheme.colors.darkPurple};
+  color: ${mainTheme.colors.white};
+  border: none;
+  padding: 12px 20px;
+  font-size: 14px;
+
+  &:hover {
+    background-color: ${mainTheme.colors.extraDarkPurple};
+  }
+
+  @media (${mainTheme.deviсe.laptopM}) {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+
+  @media (${mainTheme.deviсe.mobileXL}) {
+    font-size: 12px;
+  }
+
+  @media (${mainTheme.deviсe.mobileS}) {
+    font-size: 11px;
+  }
 `;

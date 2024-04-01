@@ -5,17 +5,18 @@ export const FormQueWraper = styled.article`
   max-width: 600px;
   display: flex;
   flex-direction: column;
+  gap: 20px;
   background-color: ${mainTheme.colors.colorForm};
   box-shadow: 0px 0px 26px 5px ${mainTheme.colors.darkPurple};
-  height: 380px;
+  height: auto;
   width: 50%;
-  padding: 25px;
+  padding: 30px;
   margin-bottom: 20px;
 
   @media (${mainTheme.deviсe.laptopL}) {
     width: 60%;
-    height: 305px;
     margin-right: 40px;
+    gap: 15px;
   }
 
   @media (${mainTheme.deviсe.laptopS}) {
@@ -27,8 +28,9 @@ export const FormQueWraper = styled.article`
   }
 
   @media (max-width: 870px) {
-    align-items: center;
     margin-left: 0px;
     width: 85%;
+    gap: 10px;
+    padding: 20px;
   }
 `;

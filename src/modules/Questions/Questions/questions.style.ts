@@ -29,7 +29,7 @@ export const QuestionsBox = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 180px;
+  gap: 160px;
 
   @media (${mainTheme.deviсe.desktopM}) {
     justify-content: center;

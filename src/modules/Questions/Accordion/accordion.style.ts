@@ -23,7 +23,7 @@ export const AccordionWraper = styled.article`
   }
 
   @media (${mainTheme.deviсe.mobileXL}) {
-    gap: 5px;
+    gap: 12px;
   }
 `;
 
@@ -32,10 +32,32 @@ export const AccordionItem = styled.div`
   flex-direction: column;
 `;
 
-export const AccordionTitle = styled(SubTitle)<IProps>`
+export const AccordionTitle = styled.h4<IProps>`
+  font-size: 20px;
+  font-weight: 400;
   margin-bottom: 10px;
   padding-bottom: 13px;
   border-bottom: 1px solid ${mainTheme.colors.gray};
   color: ${({ openTab }) => (openTab ? "#d5aaf0" : "#fff")};
   cursor: pointer;
+
+  @media (${mainTheme.deviсe.laptopL}) {
+    font-size: 18px;
+  }
+
+  @media (${mainTheme.deviсe.laptopM}) {
+    font-size: 16px;
+  }
+
+  @media (${mainTheme.deviсe.laptopS}) {
+    font-size: 14px;
+  }
+
+  @media (max-width: 870px) {
+    text-align: center;
+  }
+
+  @media (${mainTheme.deviсe.mobileXL}) {
+    font-size: 12px;
+  }
 `;

@@ -64,6 +64,34 @@ export const TitleSection = styled.h2`
   }
 `;
 
+export const TitleForm = styled.h3`
+  margin-bottom: 5px;
+  font-size: 27px;
+  font-weight: 500;
+  text-align: center;
+  color: ${mainTheme.colors.white};
+
+  @media (${mainTheme.deviсe.laptopL}) {
+    font-size: 25px;
+  }
+
+  @media (${mainTheme.deviсe.laptopM}) {
+    font-size: 23px;
+  }
+
+  @media (${mainTheme.deviсe.laptopS}) {
+    font-size: 18px;
+  }
+
+  @media (${mainTheme.deviсe.mobileXL}) {
+    font-size: 16px;
+  }
+
+  @media (${mainTheme.deviсe.mobileS}) {
+    font-size: 14px;
+  }
+`;
+
 export const SubTitle = styled.h4`
   font-size: 22px;
   font-weight: 600;
@@ -102,6 +130,7 @@ export const TextMedium = styled.p`
   line-height: 120%;
 
   @media (${mainTheme.deviсe.laptopL}) {
+    font-weight: 300;
     font-size: 14px;
   }
 
@@ -113,7 +142,7 @@ export const TextMedium = styled.p`
     text-align: center;
   }
 
-  @media (${mainTheme.deviсe.mobileS}) {
+  @media (${mainTheme.deviсe.mobileXL}) {
     font-size: 11px;
   }
 `;
@@ -123,6 +152,26 @@ export const SmallText = styled.span`
   transition: 0.4s;
   font-weight: 300;
   color: ${mainTheme.colors.lightGray};
+`;
+
+export const TextForm = styled.span`
+  margin-left: 3px;
+  font-size: 15px;
+  transition: 0.4s;
+  font-weight: 300;
+  color: ${mainTheme.colors.white};
+
+  @media (${mainTheme.deviсe.laptopL}) {
+    font-size: 13px;
+  }
+
+  @media (${mainTheme.deviсe.tablet}) {
+    font-size: 12px;
+  }
+
+  @media (${mainTheme.deviсe.mobileL}) {
+    font-size: 11px;
+  }
 `;
 
 export const LogoText = styled.p`

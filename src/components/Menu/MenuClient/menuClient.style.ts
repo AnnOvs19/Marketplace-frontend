@@ -14,7 +14,7 @@ export const MenuClientWrapper = styled.aside<IProps>`
     flex-direction: column;
     align-items: flex-start;
     gap: 27px;
-    height: 100%;
+    height: 920px;
     width: 100%;
     background: linear-gradient(
       135deg,
@@ -32,5 +32,9 @@ export const MenuClientWrapper = styled.aside<IProps>`
     position: fixed;
     border: none;
     z-index: 1000;
+  }
+
+  @media (${mainTheme.deviсe.mobileXL}) {
+    height: 860px;
   }
 `;
