@@ -284,8 +284,12 @@ export const AboutUsBg = styled.div`
     height: 880px;
   }
 
+  @media (${mainTheme.deviсe.mobileL}) {
+    height: 900px;
+  }
+
   @media (${mainTheme.deviсe.mobileXS}) {
-    height: 925px;
+    height: 955px;
   }
 `;
 
@@ -322,8 +326,12 @@ export const AboutUsBgBox = styled.div`
     height: 880px;
   }
 
+  @media (${mainTheme.deviсe.mobileL}) {
+    height: 900px;
+  }
+
   @media (${mainTheme.deviсe.mobileXS}) {
-    height: 925px;
+    height: 955px;
   }
 `;
 

@@ -3,7 +3,7 @@
 import React, { FC } from "react";
 import * as S from "./NewsItem.style";
 import * as T from "@/styles/baseText.style";
-import * as C from "../NewsHome/newsHome.style";
+import * as C from "../newsHome.style";
 import { INewsMock } from "../mockDelNews";
 import { TextMedium } from "@/styles/baseText.style";
 import Image from "next/image";

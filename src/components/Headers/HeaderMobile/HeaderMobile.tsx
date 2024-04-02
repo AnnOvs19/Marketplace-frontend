@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 
 import * as T from "@/styles/baseText.style";
-import * as S from "./headerMobile.style";
 import * as B from "@/styles/baseButtons.style";
 import * as I from "@/styles/baseIcons.style";
 import * as C from "../Headers.style";
@@ -39,7 +38,7 @@ const HeaderMobile = () => {
             <T.LogoText>Marketech</T.LogoText>
           </I.LogoBox>
           <MenuBurger isOpen={isOpen} onClick={handleMenuClick} />
-          <MenuClient openMenu={openMenu} />
+          <MenuClient openMenu={openMenu} setOpenMenu={handleMenuClick} />
         </C.HeaderBox>
       </C.Header>
     </C.HeaderMobileWrapper>

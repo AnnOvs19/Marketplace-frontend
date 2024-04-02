@@ -8,13 +8,16 @@ interface IProps {
 export const MenuClientWrapper = styled.aside<IProps>`
   display: none;
 
+  @media (${mainTheme.deviсe.tablet}) {
+    display: flex;
+  }
+
   @media (max-width: 622px) {
     padding: 150px 25px;
-    display: ${(props) => (props.openMenu ? "flex" : "none")};
     flex-direction: column;
     align-items: flex-start;
     gap: 27px;
-    height: 920px;
+    height: 980px;
     width: 100%;
     background: linear-gradient(
       135deg,
@@ -26,15 +29,11 @@ export const MenuClientWrapper = styled.aside<IProps>`
       ${mainTheme.colors.darkPurple},
       ${mainTheme.colors.extraDarkPurple}
     );
-    right: 0;
+    right: ${(props) => (props.openMenu ? "0px" : "-5000px")};
     transition: 0.4s;
     top: 0;
     position: fixed;
     border: none;
     z-index: 1000;
-  }
-
-  @media (${mainTheme.deviсe.mobileXL}) {
-    height: 860px;
   }
 `;

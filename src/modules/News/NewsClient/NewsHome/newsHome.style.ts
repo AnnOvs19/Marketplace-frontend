@@ -2,29 +2,6 @@ import { TransparentButton } from "@/styles/baseButtons.style";
 import { mainTheme } from "@/styles/mainTheme.style";
 import styled from "styled-components";
 
-export const NewsHomeContainer = styled.div`
-  max-width: 1405px;
-  z-index: 150;
-  margin: 0 auto;
-  margin-top: 50px;
-  margin-bottom: 50px;
-
-  overflow: hidden;
-  gap: 44px;
-
-  @media (${mainTheme.deviсe.laptopL}) {
-    margin: 50px 40px;
-  }
-
-  @media (${mainTheme.deviсe.mobileXL}) {
-    margin: 30px 20px;
-  }
-
-  @media (${mainTheme.deviсe.mobileM}) {
-    margin: 30px 5px;
-  }
-`;
-
 export const NewsHomeWraper = styled.section`
   position: relative;
   display: flex;
@@ -66,6 +43,29 @@ export const NewsHomeWraper = styled.section`
   }
 `;
 
+export const NewsHomeContainer = styled.div`
+  max-width: 1405px;
+  z-index: 150;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  overflow: hidden;
+  gap: 44px;
+
+  @media (${mainTheme.deviсe.laptopL}) {
+    margin: 50px 40px;
+  }
+
+  @media (${mainTheme.deviсe.mobileXL}) {
+    margin: 30px 20px;
+  }
+
+  @media (${mainTheme.deviсe.mobileM}) {
+    margin: 30px 5px;
+  }
+`;
+
 export const NewsHomeBox = styled.div`
   padding: 30px 0;
   display: flex;
@@ -83,11 +83,11 @@ export const NewsHomeBox = styled.div`
   }
 
   @media (${mainTheme.deviсe.laptopL}) {
-    gap: 40px;
+    gap: 25px;
   }
 
   @media (${mainTheme.deviсe.laptopM}) {
-    gap: 30px;
+    gap: 20px;
   }
 
   @media (${mainTheme.deviсe.laptopS}) {

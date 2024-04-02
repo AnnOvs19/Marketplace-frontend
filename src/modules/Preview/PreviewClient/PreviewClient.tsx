@@ -33,6 +33,7 @@ const PreviewClient = () => {
               index={index}
               setIndex={setIndex}
               indexSlide={indexSlide}
+              key={indexSlide}
             />
           );
         })}

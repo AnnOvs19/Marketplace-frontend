@@ -20,7 +20,12 @@ export const HeaderButton = styled.button`
 
   @media (${mainTheme.deviсe.tablet}) {
     margin-left: 0;
-    font-size: 13px;
+    font-size: 14px;
+  }
+
+  @media (max-width: 622px) {
+    font-size: 17px;
+    padding: 10px 30px;
   }
 `;
 

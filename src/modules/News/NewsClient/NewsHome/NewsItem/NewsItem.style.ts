@@ -67,8 +67,4 @@ export const NewsItemImage = styled.div`
   @media (${mainTheme.deviсe.mobileM}) {
     height: 180px;
   }
-
-  @media (${mainTheme.deviсe.mobileS}) {
-    height: 160px;
-  }
 `;

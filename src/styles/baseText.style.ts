@@ -212,14 +212,10 @@ export const LogoTextMenu = styled.p`
 export const MenuText = styled.a`
   cursor: pointer;
   margin-left: 4px;
-  font-size: 17px;
+  font-size: 21px;
   transition: 0.4s;
   font-weight: 400;
   color: ${mainTheme.colors.white};
-
-  @media (${mainTheme.deviсe.mobileXL}) {
-    font-size: 19px;
-  }
 `;
 
 export const LinkText = styled.a`

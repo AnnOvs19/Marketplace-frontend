@@ -4,9 +4,9 @@ import React, { useState } from "react";
 import * as S from "./newsHome.style";
 import * as T from "@/styles/baseText.style";
 import * as B from "@/styles/baseButtons.style";
-import NewsItem from "../NewsItem/NewsItem";
-import NewsList from "../NewsList/NewsList";
-import { mockDelNews } from "../mockDelNews";
+import NewsItem from "./NewsItem/NewsItem";
+import NewsList from "./NewsList/NewsList";
+import { mockDelNews } from "./mockDelNews";
 import Image from "next/image";
 import clava from "@/assets/images/clavs.jpg";
 

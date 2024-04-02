@@ -8,8 +8,8 @@ import * as S from "../accordion.style";
 const Accordion = () => {
   return (
     <S.AccordionWraper>
-      {accordionMock?.map((item) => {
-        return <AccordionItems item={item} />;
+      {accordionMock?.map((item, index) => {
+        return <AccordionItems item={item} key={index} />;
       })}
     </S.AccordionWraper>
   );

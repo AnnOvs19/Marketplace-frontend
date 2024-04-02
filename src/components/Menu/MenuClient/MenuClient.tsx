@@ -9,12 +9,14 @@ import * as C from "../menu.style";
 
 import Image from "next/image";
 import logo from "@/assets/icons/mainLogo.svg";
+import Link from "next/link";
 
 interface IProps {
   openMenu: boolean;
+  setOpenMenu: () => void;
 }
 
-const MenuClient: FC<IProps> = ({ openMenu }) => {
+const MenuClient: FC<IProps> = ({ openMenu, setOpenMenu }) => {
   return (
     <S.MenuClientWrapper openMenu={openMenu}>
       <I.LogoBox>
@@ -32,9 +34,14 @@ const MenuClient: FC<IProps> = ({ openMenu }) => {
         <T.LogoTextMenu>Marketech</T.LogoTextMenu>
       </I.LogoBox>
       <C.MenuNavigation>
-        <T.MenuText>Главная</T.MenuText>
+        <Link href="/" onClick={setOpenMenu}>
+          <T.MenuText>Главная</T.MenuText>
+        </Link>
+
         <T.MenuText>Блог</T.MenuText>
-        <T.MenuText>Каталог</T.MenuText>
+        <Link href="/catalog" onClick={setOpenMenu}>
+          <T.MenuText>Каталог</T.MenuText>
+        </Link>
         <T.MenuText>Корзина</T.MenuText>
       </C.MenuNavigation>
       <B.HeaderButton>Вы продавец?</B.HeaderButton>

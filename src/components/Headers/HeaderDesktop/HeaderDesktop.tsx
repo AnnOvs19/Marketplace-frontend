@@ -10,6 +10,7 @@ import * as C from "../Headers.style";
 import logo from "@/assets/icons/mainLogo.svg";
 import basket from "@/assets/icons/basketHeader.svg";
 import Image from "next/image";
+import Link from "next/link";
 
 const HeaderDesktop = () => {
   return (
@@ -30,9 +31,15 @@ const HeaderDesktop = () => {
             <T.LogoText>Marketech</T.LogoText>
           </I.LogoBox>
           <S.Navigation>
-            <T.LinkText>Главная</T.LinkText>
+            <Link href="/">
+              Главная
+              {/* <T.LinkText>Главная</T.LinkText> */}
+            </Link>
             <T.LinkText>Блог</T.LinkText>
-            <T.LinkText>Каталог</T.LinkText>
+            <Link href="/catalog">
+              Каталог
+              {/* <T.LinkText>Каталог</T.LinkText> */}
+            </Link>
             <I.BasketIcon>
               <Image
                 src={basket}
