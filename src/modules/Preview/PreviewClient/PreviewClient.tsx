@@ -19,6 +19,9 @@ const PreviewClient = () => {
           <S.Circle3 />
           <S.Circle4 />
           <S.Circle5 />
+          <S.Circle6 />
+          <S.Circle7 />
+          <S.Circle8 />
         </C.PreviewBacground>
       </C.PreviewBoxBG>
 

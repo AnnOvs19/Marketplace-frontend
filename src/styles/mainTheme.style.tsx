@@ -31,7 +31,7 @@ export const mainTheme = {
     extraLightGreen: "#8ae3dd",
 
     white: "#ffffff",
-    lightGray: "#808080",
+    lightGray: "#c5c5c5",
     gray: "#404040",
     black: "#000000",
 

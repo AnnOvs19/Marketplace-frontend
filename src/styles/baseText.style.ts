@@ -35,7 +35,7 @@ export const MainTitle = styled.h1`
 
 export const TitleSection = styled.h2`
   font-size: 35px;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   text-align: center;
   color: ${mainTheme.colors.white};
@@ -144,7 +144,7 @@ export const TextMedium = styled.p`
   }
 
   @media (${mainTheme.deviсe.mobileXL}) {
-    font-size: 11px;
+    font-size: 12px;
     line-height: 120%;
   }
 `;
@@ -154,6 +154,11 @@ export const SmallText = styled.span`
   transition: 0.4s;
   font-weight: 300;
   color: ${mainTheme.colors.lightGray};
+
+  @media (max-width: 870px) {
+    font-size: 11px;
+    text-align: center;
+  }
 `;
 
 export const TextForm = styled.span`

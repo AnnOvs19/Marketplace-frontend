@@ -1,5 +1,5 @@
 import AboutUs from "@/modules/AboutUs/AboutUs";
-import NewsHome from "@/modules/NewsHome/NewsHome/NewsHome";
+import NewsHome from "@/modules/News/NewsHome/NewsHome/NewsHome";
 import PreviewClient from "@/modules/Preview/PreviewClient/PreviewClient";
 import Questions from "@/modules/Questions/Questions/Questions";
 

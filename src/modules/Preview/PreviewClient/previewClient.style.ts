@@ -41,7 +41,7 @@ export const Circle1 = styled.div`
 export const Circle2 = styled.div`
   display: flex;
   top: 350px;
-  right: -200px;
+  right: -100px;
   position: absolute;
   background: ${mainTheme.colors.darkPurple};
   box-shadow: 0px 0px 49px 83px ${mainTheme.colors.darkPurple};
@@ -68,12 +68,12 @@ export const Circle2 = styled.div`
 
 export const Circle3 = styled.div`
   top: 550px;
-  right: 100px;
+  right: 150px;
   position: absolute;
   background: ${mainTheme.colors.extraDarkPurple};
   box-shadow: 0px 0px 49px 83px ${mainTheme.colors.extraDarkPurple};
   border-radius: 40% 60% 66% 34% / 39% 55% 45% 61%;
-  width: 550px;
+  width: 500px;
   height: 350px;
 
   @media (${mainTheme.deviсe.laptopM}) {
@@ -138,13 +138,13 @@ export const Circle4 = styled.div`
 `;
 
 export const Circle5 = styled.div`
-  left: 154px;
-  top: 627px;
+  left: 199px;
+  top: 606px;
   position: absolute;
   background: ${mainTheme.colors.lightPurple};
   box-shadow: 0px 0px 49px 83px ${mainTheme.colors.lightPurple};
   border-radius: 40% 60% 64% 36% / 20% 45% 55% 80%;
-  width: 550px;
+  width: 500px;
   height: 450px;
 
   @media (${mainTheme.deviсe.laptopM}) {
@@ -170,5 +170,51 @@ export const Circle5 = styled.div`
   @media (${mainTheme.deviсe.mobileS}) {
     width: 70px;
     height: 25px;
+  }
+`;
+
+export const Circle6 = styled.div`
+  position: absolute;
+  left: 1700px;
+  top: -250px;
+  background: ${mainTheme.colors.purple};
+  box-shadow: 0px 0px 66px 67px ${mainTheme.colors.purple};
+  border-radius: 50% 50% 70% 30% / 50% 30% 70% 50%;
+  width: 450px;
+  height: 450px;
+
+  @media (${mainTheme.deviсe.desktopS}) {
+    display: none;
+  }
+`;
+
+export const Circle7 = styled.div`
+  display: flex;
+  left: 1900px;
+  top: -150px;
+  position: absolute;
+  background: ${mainTheme.colors.darkPurple};
+  box-shadow: 0px 0px 49px 83px ${mainTheme.colors.darkPurple};
+  border-radius: 66% 34% 25% 75% / 22% 82% 18% 78%;
+  width: 330px;
+  height: 250px;
+
+  @media (${mainTheme.deviсe.desktopS}) {
+    display: none;
+  }
+`;
+
+export const Circle8 = styled.div`
+  top: 300px;
+  right: 1000px;
+  position: absolute;
+  background: ${mainTheme.colors.darkPurple};
+  box-shadow: 0px 0px 49px 83px ${mainTheme.colors.darkPurple};
+  border-radius: 40% 60% 66% 34% / 39% 55% 45% 61%;
+  width: 420px;
+  height: 300px;
+
+  @media (${mainTheme.deviсe.desktopS}) {
+    display: none;
   }
 `;

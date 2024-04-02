@@ -50,11 +50,10 @@ export const AccordionTitle = styled.h4<IProps>`
   }
 
   @media (${mainTheme.deviсe.laptopS}) {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   @media (max-width: 870px) {
     text-align: center;
-    font-size: 13px;
   }
 `;

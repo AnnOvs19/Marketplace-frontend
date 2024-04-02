@@ -311,11 +311,11 @@ export const AboutUsBgBox = styled.div`
   }
 
   @media (max-width: 870px) {
-    height: 1000px;
+    height: 1050px;
   }
 
   @media (${mainTheme.deviсe.tablet}) {
-    height: 1080px;
+    height: 1000px;
   }
 
   @media (${mainTheme.deviсe.mobileXL}) {
