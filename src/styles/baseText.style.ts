@@ -209,7 +209,7 @@ export const LogoTextMenu = styled.p`
   }
 `;
 
-export const MenuText = styled.a`
+export const MenuText = styled.p`
   cursor: pointer;
   margin-left: 4px;
   font-size: 21px;
@@ -218,7 +218,7 @@ export const MenuText = styled.a`
   color: ${mainTheme.colors.white};
 `;
 
-export const LinkText = styled.a`
+export const LinkText = styled.p`
   cursor: pointer;
   font-size: 17px;
   transition: 0.4s;
@@ -231,5 +231,68 @@ export const LinkText = styled.a`
 
   @media (${mainTheme.deviсe.tablet}) {
     font-size: 14px;
+  }
+`;
+
+export const CardTitle = styled.h6`
+  font-size: 14px;
+  transition: 0.4s;
+  cursor: pointer;
+  font-weight: 300;
+  color: ${mainTheme.colors.white};
+  line-height: 120%;
+
+  @media (${mainTheme.deviсe.laptopL}) {
+    font-size: 13px;
+  }
+
+  @media (${mainTheme.deviсe.laptopM}) {
+    font-size: 12px;
+  }
+
+  @media (max-width: 870px) {
+    text-align: center;
+  }
+
+  @media (${mainTheme.deviсe.mobileXL}) {
+    font-size: 11px;
+    line-height: 100%;
+  }
+`;
+
+export const CardPrice = styled.p`
+  font-size: 14px;
+  transition: 0.4s;
+  font-weight: 400;
+  color: ${mainTheme.colors.extraLightPurple};
+  line-height: 120%;
+
+  @media (${mainTheme.deviсe.laptopL}) {
+    font-size: 13px;
+  }
+
+  @media (${mainTheme.deviсe.laptopM}) {
+    font-size: 12px;
+  }
+
+  @media (${mainTheme.deviсe.mobileXL}) {
+    font-size: 11px;
+    line-height: 100%;
+  }
+`;
+
+export const CardOtherText = styled.span`
+  font-size: 12px;
+  transition: 0.4s;
+  font-weight: 300;
+  color: ${mainTheme.colors.lightGray};
+  line-height: 100%;
+
+  @media (${mainTheme.deviсe.laptopL}) {
+    font-size: 11px;
+  }
+
+  @media (${mainTheme.deviсe.mobileXL}) {
+    font-size: 10px;
   }
 `;

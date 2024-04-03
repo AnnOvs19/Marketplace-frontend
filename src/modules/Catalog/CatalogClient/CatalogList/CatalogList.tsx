@@ -3,14 +3,17 @@
 import React from "react";
 import { mockDelCatalog } from "../../mockDelCatalog";
 import CatalogItem from "../CatalogItem/CatalogItem";
+import * as S from "./catalogList.style";
 
 const CatalogList = () => {
   return (
-    <div>
-      {mockDelCatalog?.map((item, index) => {
-        return <CatalogItem item={item} key={index} />;
-      })}
-    </div>
+    <S.CardList>
+      <S.CardBox>
+        {mockDelCatalog?.map((item, index) => {
+          return <CatalogItem item={item} key={index} />;
+        })}
+      </S.CardBox>
+    </S.CardList>
   );
 };
 

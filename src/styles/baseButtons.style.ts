@@ -92,3 +92,35 @@ export const FormButton = styled.button`
     font-size: 11px;
   }
 `;
+
+export const CardButton = styled.button`
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: ${mainTheme.colors.darkPurple};
+  color: ${mainTheme.colors.white};
+  border: none;
+  padding: 12px 20px;
+  font-size: 14px;
+
+  &:hover {
+    background-color: ${mainTheme.colors.extraDarkPurple};
+  }
+
+  @media (${mainTheme.deviсe.laptopM}) {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+
+  @media (${mainTheme.deviсe.mobileXL}) {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+
+  @media (${mainTheme.deviсe.mobileS}) {
+    font-size: 11px;
+  }
+`;

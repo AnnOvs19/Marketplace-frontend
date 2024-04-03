@@ -32,13 +32,13 @@ const HeaderDesktop = () => {
           </I.LogoBox>
           <S.Navigation>
             <Link href="/">
-              Главная
-              {/* <T.LinkText>Главная</T.LinkText> */}
+              {/* Главная */}
+              <T.LinkText>Главная</T.LinkText>
             </Link>
             <T.LinkText>Блог</T.LinkText>
             <Link href="/catalog">
-              Каталог
-              {/* <T.LinkText>Каталог</T.LinkText> */}
+              {/* Каталог */}
+              <T.LinkText>Каталог</T.LinkText>
             </Link>
             <I.BasketIcon>
               <Image

@@ -3,17 +3,17 @@
 import { ISizeDevice } from "@/interfaces/themes";
 
 const size: ISizeDevice = {
-  mobileXS: "280px",
-  mobileS: "320px",
-  mobileM: "375px",
-  mobileL: "425px",
-  mobileXL: "550px",
-  tablet: "768px",
-  laptopS: "1024px",
-  laptopM: "1280px",
-  laptopL: "1440px",
-  desktopS: "1680px",
-  desktopM: "1920px"
+  mobileXS: "281px",
+  mobileS: "321px",
+  mobileM: "376px",
+  mobileL: "426px",
+  mobileXL: "551px",
+  tablet: "769px",
+  laptopS: "1025px",
+  laptopM: "1281px",
+  laptopL: "1441px",
+  desktopS: "1681px",
+  desktopM: "1921px"
 };
 
 export const mainTheme = {
