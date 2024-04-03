@@ -5,7 +5,9 @@ export const CardItem = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid ${mainTheme.colors.lightGray};
+  border: 1px solid ${mainTheme.colors.gray};
+  background-color: #0d09128d;
+  backdrop-filter: blur(35px);
   width: 250px;
   &:hover {
     box-shadow: 0px 0px 26px 5px ${mainTheme.colors.darkPurple};

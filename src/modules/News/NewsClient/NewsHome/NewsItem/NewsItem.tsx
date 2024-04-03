@@ -5,7 +5,6 @@ import * as S from "./NewsItem.style";
 import * as T from "@/styles/baseText.style";
 import * as C from "../newsHome.style";
 import { INewsMock } from "../mockDelNews";
-import { TextMedium } from "@/styles/baseText.style";
 import Image from "next/image";
 
 interface IProps {
@@ -30,7 +29,7 @@ const NewsItem: FC<IProps> = ({ item }) => {
           <T.SmallText>by {item.autor}</T.SmallText>
           <T.SmallText>| {item.date}</T.SmallText>
         </C.NewsHead>
-        <TextMedium>{item.title}</TextMedium>
+        <T.TextMedium>{item.title}</T.TextMedium>
         <T.SmallText> {item.text.substring(0, 108)}</T.SmallText>
       </S.NewsItemText>
     </S.NewsItemWrap>

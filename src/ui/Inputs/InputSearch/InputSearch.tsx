@@ -1,7 +1,7 @@
 "use client";
 
 import React, { FC, InputHTMLAttributes } from "react";
-import * as S from "./inputForm.style";
+import { InputSearcWrap } from "./inputSearch.style";
 
 interface IProps extends InputHTMLAttributes<HTMLInputElement> {
   name?: string;
@@ -10,12 +10,12 @@ interface IProps extends InputHTMLAttributes<HTMLInputElement> {
   value?: string;
 }
 
-const InputForm: FC<IProps> = ({ name, type, placeholder, value }) => {
+const InputSearch: FC<IProps> = ({ name, type, placeholder, value }) => {
   return (
-    <S.InputFormWrapper>
+    <InputSearcWrap>
       <input type={type} name={name} placeholder={placeholder} value={value} />
-    </S.InputFormWrapper>
+    </InputSearcWrap>
   );
 };
 
-export default InputForm;
+export default InputSearch;

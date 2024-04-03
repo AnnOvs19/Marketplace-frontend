@@ -62,6 +62,71 @@ export const TransparentButton = styled.button`
   }
 `;
 
+export const SearchButton = styled.button`
+  min-width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  color: ${mainTheme.colors.lightGray};
+  border: 1px solid ${mainTheme.colors.lightGray};
+  padding: 15px 20px;
+  font-size: 14px;
+  font-weight: 300;
+
+  &:hover {
+    background-color: ${mainTheme.colors.lightGray};
+    color: ${mainTheme.colors.black};
+  }
+
+  @media (${mainTheme.deviсe.laptopM}) {
+    padding: 15px 20px;
+  }
+
+  @media (${mainTheme.deviсe.tablet}) {
+    font-size: 13px;
+  }
+
+  @media (${mainTheme.deviсe.mobileXL}) {
+    font-size: 12px;
+  }
+
+  @media (${mainTheme.deviсe.mobileS}) {
+    font-size: 11px;
+  }
+`;
+
+export const BaseButton = styled.button`
+  min-width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: ${mainTheme.colors.darkPurple};
+  color: ${mainTheme.colors.white};
+  padding: 10px 20px;
+  font-size: 14px;
+
+  &:hover {
+    background-color: ${mainTheme.colors.extraDarkPurple};
+  }
+
+  @media (${mainTheme.deviсe.laptopM}) {
+    padding: 10px 20px;
+  }
+
+  @media (${mainTheme.deviсe.tablet}) {
+    font-size: 13px;
+  }
+
+  @media (${mainTheme.deviсe.mobileXL}) {
+    font-size: 12px;
+  }
+
+  @media (${mainTheme.deviсe.mobileS}) {
+    font-size: 11px;
+  }
+`;
+
 export const FormButton = styled.button`
   width: 100%;
   margin-top: 15px;
@@ -95,7 +160,7 @@ export const FormButton = styled.button`
 
 export const CardButton = styled.button`
   width: 100%;
-  margin-top: 15px;
+  margin-top: 8px;
   margin-bottom: 5px;
   display: flex;
   justify-content: center;

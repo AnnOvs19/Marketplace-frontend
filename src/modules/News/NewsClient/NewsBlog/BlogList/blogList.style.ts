@@ -1,11 +1,11 @@
 import { mainTheme } from "@/styles/mainTheme.style";
 import styled from "styled-components";
 
-export const CardList = styled.section`
+export const BlogListWrap = styled.div`
   overflow: hidden;
   max-width: 1405px;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 150px;
   margin-bottom: 150px;
   position: relative;
   z-index: 15;
@@ -16,7 +16,7 @@ export const CardList = styled.section`
   }
 `;
 
-export const CardBox = styled.div`
+export const BlogListBox = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -29,12 +29,17 @@ export const CardBox = styled.div`
   }
 
   @media (${mainTheme.deviсe.tablet}) {
-    gap: 15px;
+    gap: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
   @media (${mainTheme.deviсe.mobileXL}) {
+    flex-direction: column;
+    align-items: center;
     width: 95%;
     margin-left: 0;
     margin-right: 0;
+    gap: 20px;
   }
 `;
