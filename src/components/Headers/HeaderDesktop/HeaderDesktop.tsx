@@ -41,17 +41,19 @@ const HeaderDesktop = () => {
             <Link href="/catalog">
               <T.LinkText>Каталог</T.LinkText>
             </Link>
-            <I.BasketIcon>
-              <Image
-                src={basket}
-                alt="The page with the shopping cart"
-                fill
-                style={{
-                  objectFit: "cover"
-                }}
-              />
-              <S.CountBasket>0</S.CountBasket>
-            </I.BasketIcon>
+            <Link href="/basket">
+              <I.BasketIcon>
+                <Image
+                  src={basket}
+                  alt="The page with the shopping cart"
+                  fill
+                  style={{
+                    objectFit: "cover"
+                  }}
+                />
+                <S.CountBasket>0</S.CountBasket>
+              </I.BasketIcon>
+            </Link>
             <B.HeaderButton>Вы продавец?</B.HeaderButton>
           </S.Navigation>
         </C.HeaderBox>

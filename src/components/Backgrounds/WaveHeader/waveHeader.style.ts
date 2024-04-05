@@ -8,10 +8,9 @@ export const WaveHeaderWrap = styled.div`
   background: linear-gradient(
     360deg,
     rgba(5, 5, 5, 0) 0%,
-    rgba(39, 4, 61, 0.6503851540616247) 21%,
-    rgba(61, 3, 97, 1) 50%,
-    rgba(89, 7, 140, 1) 78%,
-    rgba(139, 66, 184, 1) 100%
+    rgba(35, 4, 61, 0.8318042813455657) 21%,
+    rgba(51, 2, 82, 1) 74%,
+    rgba(74, 6, 116, 1) 100%
   );
   height: 580px;
   width: 100%;

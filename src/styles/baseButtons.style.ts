@@ -189,3 +189,22 @@ export const CardButton = styled.button`
     font-size: 11px;
   }
 `;
+
+export const QuantityButton = styled.button`
+  width: 30px;
+  height: 30px;
+  border-radius: 31px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  margin: 0 6px 0 6px;
+  padding: 11px;
+  background-color: ${mainTheme.colors.darkPurple};
+  color: ${mainTheme.colors.white};
+  font-size: 10px;
+
+  &:hover {
+    background-color: ${mainTheme.colors.extraDarkPurple};
+  }
+`;

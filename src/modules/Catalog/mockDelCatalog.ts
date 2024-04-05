@@ -1,5 +1,6 @@
-import cardImage from "@/assets/images/clavs.jpg";
-import cardImage2 from "@/assets/images/moderm.png";
+import cardImage from "@/assets/images/2.jpg";
+import cardImage2 from "@/assets/images/3.jpg";
+import cardImage3 from "@/assets/images/4.jpg";
 
 export interface ICatalogMock {
   id: number;
@@ -10,6 +11,7 @@ export interface ICatalogMock {
   image: any;
   category: string;
   sumInStock: number;
+  quantity: number;
 }
 
 export const mockDelCatalog = [
@@ -21,7 +23,8 @@ export const mockDelCatalog = [
     category: "phone",
     seller: "Seller1",
     text: "На нашем маркетплейсе предоставляется официальная гарантия от производителя на все товары. Арпрьаал оал дешщдег пырпррчаптк р а прапр",
-    sumInStock: 55
+    sumInStock: 55,
+    quantity: 1
   },
   {
     id: 2,
@@ -31,17 +34,19 @@ export const mockDelCatalog = [
     category: "computer",
     seller: "Seller2",
     text: "На нашем маркетплейсе предоставляется официальная гарантия от производителя на все товары. Арпрьаал оал дешщдег пырпррчаптк р а прапр",
-    sumInStock: 59
+    sumInStock: 59,
+    quantity: 1
   },
   {
     id: 3,
     title: "African Violet",
     price: 199.0,
-    image: cardImage,
+    image: cardImage3,
     category: "watch",
     seller: "Seller3",
     text: "На нашем маркетплейсе предоставляется официальная гарантия от производителя на все товары. Арпрьаал оал дешщдег пырпррчаптк р а прапр",
-    sumInStock: 95
+    sumInStock: 95,
+    quantity: 1
   },
   {
     id: 4,
@@ -51,7 +56,8 @@ export const mockDelCatalog = [
     category: "computer",
     seller: "Seller1",
     text: "На нашем маркетплейсе предоставляется официальная гарантия от производителя на все товары. Арпрьаал оал дешщдег пырпррчаптк р а прапр",
-    sumInStock: 15
+    sumInStock: 15,
+    quantity: 1
   },
   {
     id: 5,
@@ -61,17 +67,19 @@ export const mockDelCatalog = [
     category: "watch",
     seller: "Seller2",
     text: "На нашем маркетплейсе предоставляется официальная гарантия от производителя на все товары. Арпрьаал оал дешщдег пырпррчаптк р а прапр",
-    sumInStock: 5
+    sumInStock: 5,
+    quantity: 1
   },
   {
     id: 6,
     title: "Aluminum Plant",
     price: 179.0,
-    image: cardImage2,
+    image: cardImage3,
     category: "phone",
     seller: "Seller3",
     text: "На нашем маркетплейсе предоставляется официальная гарантия от производителя на все товары. Арпрьаал оал дешщдег пырпррчаптк р а прапр",
-    sumInStock: 105
+    sumInStock: 105,
+    quantity: 1
   },
   {
     id: 7,
@@ -81,7 +89,8 @@ export const mockDelCatalog = [
     category: "watch",
     seller: "Seller1",
     text: "На нашем маркетплейсе предоставляется официальная гарантия от производителя на все товары. Арпрьаал оал дешщдег пырпррчаптк р а прапр",
-    sumInStock: 205
+    sumInStock: 205,
+    quantity: 1
   },
   {
     id: 8,
@@ -91,17 +100,19 @@ export const mockDelCatalog = [
     category: "computer",
     seller: "Seller2",
     text: "На нашем маркетплейсе предоставляется официальная гарантия от производителя на все товары. Арпрьаал оал дешщдег пырпррчаптк р а прапр",
-    sumInStock: 25
+    sumInStock: 25,
+    quantity: 1
   },
   {
     id: 9,
     title: "Chinese Evergreen",
     price: 39.0,
-    image: cardImage,
+    image: cardImage3,
     category: "phone",
     seller: "Seller3",
     text: "На нашем маркетплейсе предоставляется официальная гарантия от производителя на все товары. Арпрьаал оал дешщдег пырпррчаптк р а прапр",
-    sumInStock: 75
+    sumInStock: 75,
+    quantity: 1
   },
   {
     id: 10,
@@ -111,7 +122,8 @@ export const mockDelCatalog = [
     category: "computer",
     seller: "Seller1",
     text: "На нашем маркетплейсе предоставляется официальная гарантия от производителя на все товары. Арпрьаал оал дешщдег пырпррчаптк р а прапр",
-    sumInStock: 45
+    sumInStock: 45,
+    quantity: 1
   },
   {
     id: 11,
@@ -121,17 +133,19 @@ export const mockDelCatalog = [
     category: "phone",
     seller: "Seller2",
     text: "На нашем маркетплейсе предоставляется официальная гарантия от производителя на все товары. Арпрьаал оал дешщдег пырпррчаптк р а прапр",
-    sumInStock: 40
+    sumInStock: 40,
+    quantity: 1
   },
   {
     id: 12,
     title: "Chinese",
     price: 79.0,
-    image: cardImage2,
+    image: cardImage3,
     category: "headphones",
     seller: "Seller3",
     text: "На нашем маркетплейсе предоставляется официальная гарантия от производителя на все товары. Арпрьаал оал дешщдег пырпррчаптк р а прапр",
-    sumInStock: 4
+    sumInStock: 4,
+    quantity: 1
   },
   {
     id: 13,
@@ -141,7 +155,8 @@ export const mockDelCatalog = [
     category: "headphones",
     seller: "Seller1",
     text: "На нашем маркетплейсе предоставляется официальная гарантия от производителя на все товары. Арпрьаал оал дешщдег пырпррчаптк р а прапр",
-    sumInStock: 2
+    sumInStock: 2,
+    quantity: 1
   },
   {
     id: 14,
@@ -151,17 +166,19 @@ export const mockDelCatalog = [
     category: "phone",
     seller: "Seller2",
     text: "На нашем маркетплейсе предоставляется официальная гарантия от производителя на все товары. Арпрьаал оал дешщдег пырпррчаптк р а прапр",
-    sumInStock: 1
+    sumInStock: 1,
+    quantity: 1
   },
   {
     id: 15,
     title: "Beach Lily",
     price: 799.0,
-    image: cardImage,
+    image: cardImage3,
     category: "headphones",
     seller: "Seller3",
     text: "На нашем маркетплейсе предоставляется официальная гарантия от производителя на все товары. Арпрьаал оал дешщдег пырпррчаптк р а прапр",
-    sumInStock: 3
+    sumInStock: 3,
+    quantity: 1
   },
   {
     id: 16,
@@ -171,6 +188,7 @@ export const mockDelCatalog = [
     category: "headphones",
     seller: "Seller1",
     text: "На нашем маркетплейсе предоставляется официальная гарантия от производителя на все товары. Арпрьаал оал дешщдег пырпррчаптк р а прапр",
-    sumInStock: 6
+    sumInStock: 6,
+    quantity: 1
   }
 ];

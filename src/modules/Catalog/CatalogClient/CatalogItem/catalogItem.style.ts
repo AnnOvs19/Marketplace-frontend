@@ -45,30 +45,30 @@ export const CardItemImage = styled.div`
   position: relative;
   width: 99%;
   margin: 1px;
-  height: 170px;
+  height: 185px;
 
   @media (${mainTheme.deviсe.laptopL}) {
-    height: 150px;
+    height: 160px;
   }
 
   @media (${mainTheme.deviсe.tablet}) {
-    height: 100px;
-  }
-
-  @media (max-width: 490px) {
-    height: 90px;
-  }
-
-  @media (${mainTheme.deviсe.mobileL}) {
     height: 110px;
   }
 
-  @media (${mainTheme.deviсe.mobileM}) {
+  @media (max-width: 490px) {
     height: 100px;
   }
 
+  @media (${mainTheme.deviсe.mobileL}) {
+    height: 120px;
+  }
+
+  @media (${mainTheme.deviсe.mobileM}) {
+    height: 110px;
+  }
+
   @media (${mainTheme.deviсe.mobileS}) {
-    height: 160px;
+    height: 170px;
   }
 `;
 

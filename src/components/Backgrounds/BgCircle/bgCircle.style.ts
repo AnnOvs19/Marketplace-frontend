@@ -29,7 +29,7 @@ export const BgCircleWrap = styled.div`
     }
 
     &:nth-child(0) {
-      color: #3d0361;
+      color: #0e0014e1;
       top: 87%;
       left: 84%;
       animation-duration: 53s;
@@ -38,7 +38,7 @@ export const BgCircleWrap = styled.div`
       box-shadow: 70vmin 0 9.436247118703587vmin currentColor;
     }
     &:nth-child(1) {
-      color: #3d0361;
+      color: #1a0329;
       top: 86%;
       left: 14%;
       animation-duration: 72s;
@@ -47,7 +47,7 @@ export const BgCircleWrap = styled.div`
       box-shadow: 70vmin 0 9.028855359103297vmin currentColor;
     }
     &:nth-child(2) {
-      color: #27043d;
+      color: #0e0014e1;
       top: 5%;
       left: 94%;
       animation-duration: 183s;
@@ -65,7 +65,7 @@ export const BgCircleWrap = styled.div`
       box-shadow: -70vmin 0 9.59754354091322vmin currentColor;
     }
     &:nth-child(4) {
-      color: #27043d;
+      color: #0e0014e1;
       top: 28%;
       left: 76%;
       animation-duration: 211s;
@@ -92,7 +92,7 @@ export const BgCircleWrap = styled.div`
       box-shadow: -70vmin 0 8.834852150359483vmin currentColor;
     }
     &:nth-child(7) {
-      color: #3d0361;
+      color: #1a0329;
       top: 22%;
       left: 88%;
       animation-duration: 141s;
@@ -101,7 +101,7 @@ export const BgCircleWrap = styled.div`
       box-shadow: -70vmin 0 9.501298976888812vmin currentColor;
     }
     &:nth-child(8) {
-      color: #3d0361;
+      color: #0e0014e1;
       top: 7%;
       left: 84%;
       animation-duration: 32s;
@@ -119,7 +119,7 @@ export const BgCircleWrap = styled.div`
       box-shadow: 70vmin 0 9.7026687692375vmin currentColor;
     }
     &:nth-child(10) {
-      color: #3d0361;
+      color: #1a0329;
       top: 2%;
       left: 22%;
       animation-duration: 264s;
@@ -155,7 +155,7 @@ export const BgCircleWrap = styled.div`
       box-shadow: -70vmin 0 9.476973049208382vmin currentColor;
     }
     &:nth-child(14) {
-      color: #27043d;
+      color: #0e0014e1;
       top: 46%;
       left: 5%;
       animation-duration: 101s;
@@ -164,7 +164,7 @@ export const BgCircleWrap = styled.div`
       box-shadow: 70vmin 0 8.751596112820955vmin currentColor;
     }
     &:nth-child(15) {
-      color: #571683;
+      color: #27043d;
       top: 87%;
       left: 78%;
       animation-duration: 85s;
@@ -173,7 +173,7 @@ export const BgCircleWrap = styled.div`
       box-shadow: 70vmin 0 8.945739554625918vmin currentColor;
     }
     &:nth-child(16) {
-      color: #27043d;
+      color: #0e0014e1;
       top: 3%;
       left: 33%;
       animation-duration: 182s;
@@ -191,7 +191,7 @@ export const BgCircleWrap = styled.div`
       box-shadow: 70vmin 0 9.661403490961703vmin currentColor;
     }
     &:nth-child(18) {
-      color: #27043d;
+      color: #19131c;
       top: 100%;
       left: 58%;
       animation-duration: 243s;
@@ -209,7 +209,7 @@ export const BgCircleWrap = styled.div`
       box-shadow: 70vmin 0 9.3069900870665vmin currentColor;
     }
     &:nth-child(20) {
-      color: #3d0361;
+      color: #1a0329;
       top: 69%;
       left: 17%;
       animation-duration: 265s;
@@ -218,7 +218,7 @@ export const BgCircleWrap = styled.div`
       box-shadow: 70vmin 0 9.435944843864482vmin currentColor;
     }
     &:nth-child(21) {
-      color: #3d0361;
+      color: #0e0014e1;
       top: 91%;
       left: 44%;
       animation-duration: 30s;
@@ -227,7 +227,7 @@ export const BgCircleWrap = styled.div`
       box-shadow: 70vmin 0 9.081875535161608vmin currentColor;
     }
     &:nth-child(22) {
-      color: #27043d;
+      color: #0e0014e1;
       top: 12%;
       left: 25%;
       animation-duration: 173s;
@@ -236,7 +236,7 @@ export const BgCircleWrap = styled.div`
       box-shadow: -70vmin 0 9.149798773742761vmin currentColor;
     }
     &:nth-child(23) {
-      color: #3d0361;
+      color: #1a0329;
       top: 28%;
       left: 65%;
       animation-duration: 136s;
@@ -245,7 +245,7 @@ export const BgCircleWrap = styled.div`
       box-shadow: 70vmin 0 9.335823206098604vmin currentColor;
     }
     &:nth-child(24) {
-      color: #571683;
+      color: #27043d;
       top: 15%;
       left: 51%;
       animation-duration: 144s;
@@ -272,7 +272,7 @@ export const BgCircleWrap = styled.div`
       box-shadow: 70vmin 0 8.758034093978571vmin currentColor;
     }
     &:nth-child(27) {
-      color: #3d0361;
+      color: #1a0329;
       top: 5%;
       left: 83%;
       animation-duration: 113s;
@@ -281,7 +281,7 @@ export const BgCircleWrap = styled.div`
       box-shadow: -70vmin 0 9.50392514695054vmin currentColor;
     }
     &:nth-child(28) {
-      color: #3d0361;
+      color: #0e0014e1;
       top: 27%;
       left: 2%;
       animation-duration: 102s;
@@ -290,7 +290,7 @@ export const BgCircleWrap = styled.div`
       box-shadow: -70vmin 0 9.518424319220689vmin currentColor;
     }
     &:nth-child(29) {
-      color: #3d0361;
+      color: #1a0329;
       top: 20%;
       left: 15%;
       animation-duration: 136s;
@@ -308,7 +308,7 @@ export const BgCircleWrap = styled.div`
       box-shadow: 70vmin 0 9.0188177729239vmin currentColor;
     }
     &:nth-child(31) {
-      color: #3d0361;
+      color: #1a0329;
       top: 67%;
       left: 62%;
       animation-duration: 73s;
@@ -317,7 +317,7 @@ export const BgCircleWrap = styled.div`
       box-shadow: -70vmin 0 8.792524265008566vmin currentColor;
     }
     &:nth-child(32) {
-      color: #3d0361;
+      color: #19131c;
       top: 61%;
       left: 88%;
       animation-duration: 53s;
@@ -333,122 +333,6 @@ export const BgCircleWrap = styled.div`
       animation-delay: -158s;
       transform-origin: 15vw 20vh;
       box-shadow: 70vmin 0 9.511249295580638vmin currentColor;
-    }
-    &:nth-child(34) {
-      color: #3d0361;
-      top: 54%;
-      left: 36%;
-      animation-duration: 129s;
-      animation-delay: -148s;
-      transform-origin: 13vw -5vh;
-      box-shadow: -70vmin 0 9.13048979727732vmin currentColor;
-    }
-    &:nth-child(35) {
-      color: #27043d;
-      top: 59%;
-      left: 70%;
-      animation-duration: 50s;
-      animation-delay: -98s;
-      transform-origin: -20vw -11vh;
-      box-shadow: -70vmin 0 9.14791097761975vmin currentColor;
-    }
-    &:nth-child(36) {
-      color: #27043d;
-      top: 50%;
-      left: 23%;
-      animation-duration: 94s;
-      animation-delay: -117s;
-      transform-origin: 3vw -22vh;
-      box-shadow: 70vmin 0 9.246115803042809vmin currentColor;
-    }
-    &:nth-child(37) {
-      color: #27043d;
-      top: 97%;
-      left: 15%;
-      animation-duration: 52s;
-      animation-delay: -128s;
-      transform-origin: -6vw -1vh;
-      box-shadow: 70vmin 0 9.48733993189952vmin currentColor;
-    }
-    &:nth-child(38) {
-      color: #3d0361;
-      top: 66%;
-      left: 60%;
-      animation-duration: 263s;
-      animation-delay: -78s;
-      transform-origin: 23vw 18vh;
-      box-shadow: 70vmin 0 8.825470404101987vmin currentColor;
-    }
-    &:nth-child(39) {
-      color: #3d0361;
-      top: 92%;
-      left: 66%;
-      animation-duration: 192s;
-      animation-delay: -109s;
-      transform-origin: 8vw -20vh;
-      box-shadow: 70vmin 0 9.503145872676603vmin currentColor;
-    }
-    &:nth-child(40) {
-      color: #3d0361;
-      top: 41%;
-      left: 55%;
-      animation-duration: 195s;
-      animation-delay: -53s;
-      transform-origin: -3vw -20vh;
-      box-shadow: 70vmin 0 9.131351003279608vmin currentColor;
-    }
-    &:nth-child(41) {
-      color: #3d0361;
-      top: 99%;
-      left: 71%;
-      animation-duration: 157s;
-      animation-delay: -68s;
-      transform-origin: -21vw -19vh;
-      box-shadow: 70vmin 0 9.155205655972354vmin currentColor;
-    }
-    &:nth-child(42) {
-      color: #3d0361;
-      top: 57%;
-      left: 60%;
-      animation-duration: 245s;
-      animation-delay: -71s;
-      transform-origin: 14vw 25vh;
-      box-shadow: 70vmin 0 9.395458294344934vmin currentColor;
-    }
-    &:nth-child(43) {
-      color: #3d0361;
-      top: 11%;
-      left: 33%;
-      animation-duration: 42s;
-      animation-delay: -258s;
-      transform-origin: 15vw -14vh;
-      box-shadow: -70vmin 0 9.088829596434755vmin currentColor;
-    }
-    &:nth-child(44) {
-      color: #27043d;
-      top: 72%;
-      left: 23%;
-      animation-duration: 49s;
-      animation-delay: -244s;
-      transform-origin: 9vw -12vh;
-      box-shadow: 70vmin 0 9.70951192099156vmin currentColor;
-    }
-    &:nth-child(45) {
-      color: #27043d;
-      top: 37%;
-      left: 19%;
-      animation-duration: 146s;
-      animation-delay: -121s;
-      transform-origin: -14vw 3vh;
-      box-shadow: -70vmin 0 9.459674523181182vmin currentColor;
-    }
-    &:nth-child(46) {
-      color: #27043d;
-      top: 6%;
-      left: 90%;
-      animation-duration: 180s;
-      animation-delay: -242s;
-      transform-origin: -23vw 1vh;
     }
   }
 `;
