@@ -4,14 +4,16 @@ import React from "react";
 import BasketDeskList from "./BasketDesktop/BasketDeskList";
 import BasketMobList from "./BasketMobile/BasketMobList";
 import TotalCost from "./TotalCost/TotalCost";
-import { BasketMain } from "./baskets.style";
+import { BasketMain, BoxBasket } from "./baskets.style";
 
 const Baskets = () => {
   return (
     <BasketMain>
-      <BasketDeskList />
-      {/* <BasketMobList /> */}
-      {/* <TotalCost /> */}
+      <BoxBasket>
+        <BasketDeskList />
+        <BasketMobList />
+        <TotalCost />
+      </BoxBasket>
     </BasketMain>
   );
 };

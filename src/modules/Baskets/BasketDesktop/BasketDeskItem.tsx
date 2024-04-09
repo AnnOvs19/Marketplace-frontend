@@ -5,8 +5,10 @@ import React, { FC } from "react";
 import * as S from "./basketDesk.style";
 import * as T from "@/styles/baseText.style";
 import * as B from "@/styles/baseButtons.style";
+import * as I from "@/styles/baseIcons.style";
 import * as C from "../baskets.style";
 import Image from "next/image";
+import deleteBasket from "@/assets/icons/deleteBasket.svg";
 
 interface IProps {
   item: ICatalogMock;
@@ -26,16 +28,32 @@ const BasketDeskItem: FC<IProps> = ({ item }) => {
             }}
           />
         </C.BasketImage>
-        <T.TextMedium>{item.title}</T.TextMedium>
+        <T.BasketTitle>{item.title}</T.BasketTitle>
       </S.BodyElement>
-      <S.BodyElement>{item.price.toFixed(2)}</S.BodyElement>
+      <S.BodyElement>
+        <T.BasketPrice>{item.price.toFixed(2)} руб</T.BasketPrice>
+      </S.BodyElement>
       <S.BodyElement>
         <B.QuantityButton>-</B.QuantityButton>
         <T.TextMedium>{item.quantity}</T.TextMedium>
         <B.QuantityButton>+</B.QuantityButton>
       </S.BodyElement>
-      <S.BodyElement>{item.price.toFixed(2)}</S.BodyElement>
-      <S.BodyElement></S.BodyElement>
+      <S.BodyElement>
+        <T.BasketPrice>{item.price.toFixed(2)} руб</T.BasketPrice>
+      </S.BodyElement>
+
+      <S.BodyElement>
+        <I.DeleteIcon>
+          <Image
+            src={deleteBasket}
+            alt="The page with the shopping cart"
+            fill
+            style={{
+              objectFit: "cover"
+            }}
+          />
+        </I.DeleteIcon>
+      </S.BodyElement>
     </S.TableString>
   );
 };

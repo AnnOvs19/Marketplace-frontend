@@ -1,7 +1,7 @@
 import { mainTheme } from "@/styles/mainTheme.style";
 import styled from "styled-components";
 
-export const FormQueWraper = styled.article`
+export const FormQueWraper = styled.form`
   max-width: 600px;
   display: flex;
   flex-direction: column;

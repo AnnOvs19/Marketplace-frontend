@@ -190,10 +190,42 @@ export const CardButton = styled.button`
   }
 `;
 
+export const DeleteButton = styled.button`
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  color: red;
+  border: none;
+  border-top: 1px solid ${mainTheme.colors.gray};
+
+  padding: 15px 10px;
+  font-size: 14px;
+
+  &:hover {
+    color: ${mainTheme.colors.white};
+  }
+
+  @media (${mainTheme.deviсe.tablet}) {
+    font-size: 13px;
+  }
+
+  @media (${mainTheme.deviсe.mobileM}) {
+    padding: 12px 10px;
+  }
+
+  @media (${mainTheme.deviсe.mobileS}) {
+    font-size: 13px;
+  }
+`;
+
 export const QuantityButton = styled.button`
   width: 30px;
   height: 30px;
   border-radius: 31px;
+  border: none;
   display: flex;
   align-content: center;
   justify-content: center;
@@ -206,5 +238,29 @@ export const QuantityButton = styled.button`
 
   &:hover {
     background-color: ${mainTheme.colors.extraDarkPurple};
+  }
+
+  @media (${mainTheme.deviсe.tablet}) {
+    width: 22px;
+    height: 22px;
+    padding: 5px;
+  }
+
+  @media (max-width: 636px) {
+    width: 30px;
+    height: 30px;
+    padding: 11px;
+  }
+
+  @media (${mainTheme.deviсe.mobileL}) {
+    width: 22px;
+    height: 22px;
+    padding: 5px;
+  }
+
+  @media (${mainTheme.deviсe.mobileS}) {
+    width: 18px;
+    height: 18px;
+    padding: 4px;
   }
 `;

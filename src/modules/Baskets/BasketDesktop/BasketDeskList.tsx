@@ -11,22 +11,6 @@ const BasketDeskList = () => {
   return (
     <BasketDesktop>
       <S.BasketTable>
-        <S.TableHead>
-          <S.TableString>
-            <S.TableCell>
-              <T.TextMedium>Название</T.TextMedium>
-            </S.TableCell>
-            <S.TableCell>
-              <T.TextMedium>Цена</T.TextMedium>
-            </S.TableCell>
-            <S.TableCell>
-              <T.TextMedium>Количество</T.TextMedium>
-            </S.TableCell>
-            <S.TableCell>
-              <T.TextMedium>Итого</T.TextMedium>
-            </S.TableCell>
-          </S.TableString>
-        </S.TableHead>
         <S.TableBody>
           {mockDelCatalog?.map((item, index) => {
             return <BasketDeskItem item={item} key={index} />;

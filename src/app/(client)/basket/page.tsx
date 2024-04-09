@@ -4,7 +4,7 @@ import Baskets from "@/modules/Baskets/Baskets";
 export default function Basket() {
   return (
     <>
-      <WaveHeader />
+      {/* <WaveHeader /> */}
       <Baskets />
     </>
   );
