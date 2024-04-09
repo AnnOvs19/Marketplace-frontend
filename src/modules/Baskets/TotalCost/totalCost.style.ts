@@ -5,10 +5,7 @@ export const CostWrap = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
-
-  @media (${mainTheme.deviсe.laptopL}) {
-    width: 100%;
-  }
+  width: 100%;
 
   @media (${mainTheme.deviсe.laptopM}) {
     flex-direction: row;
@@ -29,7 +26,7 @@ export const CostWrap = styled.div`
 `;
 
 export const TotalPrice = styled.section`
-  width: 550px;
+  width: 100%;
   height: 245px;
   padding: 30px;
   background-color: #161616;
@@ -38,7 +35,6 @@ export const TotalPrice = styled.section`
   gap: 30px;
 
   @media (${mainTheme.deviсe.laptopL}) {
-    width: 100%;
     height: auto;
   }
 
@@ -70,17 +66,13 @@ export const PriceElem = styled.div`
 `;
 
 export const TotalForm = styled.form`
-  width: 550px;
+  width: 100%;
   height: auto;
   padding: 30px;
   background-color: #161616;
   display: flex;
   flex-direction: column;
   gap: 30px;
-
-  @media (${mainTheme.deviсe.laptopL}) {
-    width: 100%;
-  }
 
   @media (${mainTheme.deviсe.tablet}) {
     gap: 25px;
