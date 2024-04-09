@@ -37,16 +37,16 @@ export const BlogItemWrap = styled.div`
 
   @media (max-width: 650px) {
     width: 260px;
-    height: 368px;
+    height: 358px;
   }
 
   @media (${mainTheme.deviсe.mobileXL}) {
-    width: 75%;
-    height: 368px;
+    width: 94%;
+    height: 378px;
   }
 
   @media (${mainTheme.deviсe.mobileL}) {
-    width: 95%;
+    width: 96%;
     height: 348px;
   }
 
