@@ -3,13 +3,14 @@ import { mainTheme } from "@/styles/mainTheme.style";
 
 export const BgCircleWrap = styled.div`
   background: ${mainTheme.colors.colorBody};
-  position: fixed;
+  position: absolute;
   width: 100vw;
-  height: 100vh;
+  height: 530px;
   top: 0;
   left: 0;
   background: #050505;
   overflow: hidden;
+  box-shadow: 0 8px 32px 0 rgba(95 31 135 / 37%);
 
   span {
     width: 35vmin;
@@ -334,5 +335,29 @@ export const BgCircleWrap = styled.div`
       transform-origin: 15vw 20vh;
       box-shadow: 70vmin 0 9.511249295580638vmin currentColor;
     }
+  }
+
+  @media (${mainTheme.deviсe.desktopS}) {
+    height: 470px;
+  }
+
+  @media (${mainTheme.deviсe.laptopL}) {
+    height: 390px;
+  }
+
+  @media (${mainTheme.deviсe.mobileXL}) {
+    height: 410px;
+  }
+
+  @media (${mainTheme.deviсe.mobileL}) {
+    height: 370px;
+  }
+
+  @media (${mainTheme.deviсe.mobileM}) {
+    height: 340px;
+  }
+
+  @media (${mainTheme.deviсe.mobileS}) {
+    height: 300px;
   }
 `;

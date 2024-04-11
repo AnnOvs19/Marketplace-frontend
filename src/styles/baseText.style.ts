@@ -58,31 +58,40 @@ export const TitleSection = styled.h2`
 
   @media (${mainTheme.deviсe.mobileXL}) {
     font-weight: 400;
-    font-size: 21px;
+    font-size: 20px;
+  }
+
+  @media (${mainTheme.deviсe.mobileM}) {
+    font-weight: 400;
+    font-size: 19px;
   }
 
   @media (${mainTheme.deviсe.mobileS}) {
-    font-size: 19px;
+    font-size: 18px;
+  }
+
+  @media (${mainTheme.deviсe.mobileXS}) {
+    font-size: 17px;
   }
 `;
 
 export const TitleForm = styled.h3`
   margin-bottom: 5px;
-  font-size: 27px;
+  font-size: 26px;
   font-weight: 500;
   text-align: center;
   color: ${mainTheme.colors.white};
 
   @media (${mainTheme.deviсe.laptopL}) {
-    font-size: 25px;
-  }
-
-  @media (${mainTheme.deviсe.laptopM}) {
     font-size: 23px;
   }
 
+  @media (${mainTheme.deviсe.laptopM}) {
+    font-size: 21px;
+  }
+
   @media (${mainTheme.deviсe.laptopS}) {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   @media (${mainTheme.deviсe.mobileXL}) {
@@ -102,19 +111,19 @@ export const TitleBasket = styled.h3`
   color: ${mainTheme.colors.white};
 
   @media (${mainTheme.deviсe.laptopL}) {
-    font-size: 25px;
-  }
-
-  @media (${mainTheme.deviсe.laptopM}) {
-    font-size: 24px;
-  }
-
-  @media (${mainTheme.deviсe.laptopS}) {
     font-size: 23px;
   }
 
-  @media (${mainTheme.deviсe.tablet}) {
+  @media (${mainTheme.deviсe.laptopM}) {
     font-size: 22px;
+  }
+
+  @media (${mainTheme.deviсe.laptopS}) {
+    font-size: 19px;
+  }
+
+  @media (${mainTheme.deviсe.tablet}) {
+    font-size: 21px;
   }
 
   @media (${mainTheme.deviсe.mobileXL}) {
@@ -177,7 +186,7 @@ export const TextMedium = styled.p`
 
   @media (${mainTheme.deviсe.mobileXL}) {
     font-size: 12px;
-    line-height: 120%;
+    line-height: 135%;
   }
 `;
 
