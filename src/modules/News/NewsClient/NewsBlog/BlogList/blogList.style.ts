@@ -5,27 +5,31 @@ export const BlogListWrap = styled.div`
   overflow: hidden;
   max-width: 1405px;
   margin: 0 auto;
-  margin-top: 300px;
+  margin-top: 240px;
   margin-bottom: 150px;
   position: relative;
   z-index: 15;
 
+  @media (${mainTheme.deviсe.desktopS}) {
+    margin-top: 180px;
+  }
+
   @media (${mainTheme.deviсe.laptopL}) {
-    margin-top: 170px;
+    margin-top: 165px;
   }
 
   @media (${mainTheme.deviсe.tablet}) {
-    margin-top: 140px;
+    margin-top: 135px;
   }
 
   @media (${mainTheme.deviсe.mobileXL}) {
     display: flex;
     justify-content: center;
-    margin-top: 130px;
+    margin-top: 120px;
   }
 
   @media (${mainTheme.deviсe.mobileM}) {
-    margin-top: 110px;
+    margin-top: 100px;
   }
 
   @media (${mainTheme.deviсe.mobileXS}) {

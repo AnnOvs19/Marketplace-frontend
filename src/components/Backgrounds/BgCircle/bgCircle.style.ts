@@ -5,7 +5,7 @@ export const BgCircleWrap = styled.div`
   background: ${mainTheme.colors.colorBody};
   position: absolute;
   width: 100vw;
-  height: 530px;
+  height: 460px;
   top: 0;
   left: 0;
   background: #050505;
@@ -338,23 +338,23 @@ export const BgCircleWrap = styled.div`
   }
 
   @media (${mainTheme.deviсe.desktopS}) {
-    height: 470px;
+    height: 430px;
   }
 
   @media (${mainTheme.deviсe.laptopL}) {
-    height: 390px;
-  }
-
-  @media (${mainTheme.deviсe.mobileXL}) {
-    height: 410px;
-  }
-
-  @media (${mainTheme.deviсe.mobileL}) {
     height: 370px;
   }
 
+  @media (${mainTheme.deviсe.mobileXL}) {
+    height: 390px;
+  }
+
+  @media (${mainTheme.deviсe.mobileL}) {
+    height: 365px;
+  }
+
   @media (${mainTheme.deviсe.mobileM}) {
-    height: 340px;
+    height: 335px;
   }
 
   @media (${mainTheme.deviсe.mobileS}) {

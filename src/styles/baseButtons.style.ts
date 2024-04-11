@@ -200,7 +200,6 @@ export const DeleteButton = styled.button`
   color: red;
   border: none;
   border-top: 1px solid ${mainTheme.colors.gray};
-
   padding: 15px 10px;
   font-size: 14px;
 
@@ -214,10 +213,6 @@ export const DeleteButton = styled.button`
 
   @media (${mainTheme.deviсe.mobileM}) {
     padding: 12px 10px;
-  }
-
-  @media (${mainTheme.deviсe.mobileS}) {
-    font-size: 13px;
   }
 `;
 

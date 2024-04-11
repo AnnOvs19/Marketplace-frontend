@@ -54,7 +54,9 @@ const HeaderDesktop = () => {
                 <S.CountBasket>0</S.CountBasket>
               </I.BasketIcon>
             </Link>
-            <B.HeaderButton>Вы продавец?</B.HeaderButton>
+            <Link href="/loginSeller">
+              <B.HeaderButton>Вы продавец?</B.HeaderButton>
+            </Link>
           </S.Navigation>
         </C.HeaderBox>
       </C.Header>
