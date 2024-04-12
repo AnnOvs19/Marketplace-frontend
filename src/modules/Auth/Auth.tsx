@@ -16,10 +16,16 @@ const Auth = () => {
   return (
     <S.AuthForm>
       <S.AuthHead>
-        <S.HeadButton onClick={(event) => toggleForm(event, 0)}>
+        <S.HeadButton
+          onClick={(event) => toggleForm(event, 0)}
+          openTab={activeTab == 0 ? true : false}
+        >
           Вход
         </S.HeadButton>
-        <S.HeadButton onClick={(event) => toggleForm(event, 1)}>
+        <S.HeadButton
+          onClick={(event) => toggleForm(event, 1)}
+          openTab={activeTab == 1 ? true : false}
+        >
           Регистрация
         </S.HeadButton>
       </S.AuthHead>

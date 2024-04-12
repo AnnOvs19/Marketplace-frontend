@@ -3,7 +3,7 @@ import { mainTheme } from "@/styles/mainTheme.style";
 
 export const WaveHeaderWrap = styled.div`
   position: absolute;
-  top: -250px;
+  top: -200px;
   background: rgb(5, 5, 5);
   background: linear-gradient(
     360deg,

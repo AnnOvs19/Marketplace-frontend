@@ -5,7 +5,7 @@ export const BasketMain = styled.section`
   overflow: hidden;
   max-width: 1445px;
   margin: 0 auto;
-  margin-top: 150px;
+  margin-top: 120px;
   margin-bottom: 150px;
   position: relative;
   z-index: 15;
@@ -13,6 +13,11 @@ export const BasketMain = styled.section`
   @media (${mainTheme.deviсe.laptopL}) {
     max-width: 100%;
     width: 100%;
+    margin-top: 140px;
+  }
+
+  @media (${mainTheme.deviсe.mobileXL}) {
+    margin-top: 90px;
   }
 `;
 

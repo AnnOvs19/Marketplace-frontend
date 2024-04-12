@@ -1,6 +1,10 @@
 import { mainTheme } from "@/styles/mainTheme.style";
 import styled from "styled-components";
 
+interface IProps {
+  openTab?: boolean;
+}
+
 export const AuthForm = styled.form`
   margin: 0 auto;
   margin-top: 280px;
@@ -69,12 +73,12 @@ export const AuthHead = styled.div`
   gap: 10px;
 `;
 
-export const HeadButton = styled.button`
+export const HeadButton = styled.button<IProps>`
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: transparent;
+  background-color: ${(props) => (props.openTab ? "#030303" : "transparent")};
   color: ${mainTheme.colors.extraLightPurple};
   border: none;
   padding: 35px 45px;
