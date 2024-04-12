@@ -17,6 +17,7 @@ export const BasketContainer = styled.div`
 export const ItemBox = styled.div`
   padding: 0;
   background-color: #161616;
+  border: 1px solid ${mainTheme.colors.gray};
   width: 100%;
   display: flex;
   flex-direction: column;

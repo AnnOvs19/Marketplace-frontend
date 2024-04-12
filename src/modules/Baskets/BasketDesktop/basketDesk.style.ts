@@ -4,6 +4,7 @@ import styled from "styled-components";
 export const BasketTable = styled.div`
   padding: 25px;
   background-color: #161616;
+  border: 1px solid ${mainTheme.colors.gray};
   width: 100%;
   display: flex;
   flex-direction: column;

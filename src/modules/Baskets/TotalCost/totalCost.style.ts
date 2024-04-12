@@ -28,8 +28,9 @@ export const CostWrap = styled.div`
 export const TotalPrice = styled.section`
   width: 100%;
   height: 245px;
-  padding: 30px;
+  padding: 30px 30px 40px 30px;
   background-color: #161616;
+  border: 1px solid ${mainTheme.colors.gray};
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -43,12 +44,12 @@ export const TotalPrice = styled.section`
   }
 
   @media (${mainTheme.deviсe.mobileXL}) {
-    padding: 20px;
+    padding: 20px 20px 30px 20px;
   }
 
   @media (${mainTheme.deviсe.mobileM}) {
     gap: 20px;
-    padding: 15px;
+    padding: 15px 15px 25px 15px;
   }
 `;
 
@@ -70,6 +71,7 @@ export const TotalForm = styled.form`
   height: auto;
   padding: 30px;
   background-color: #161616;
+  border: 1px solid ${mainTheme.colors.gray};
   display: flex;
   flex-direction: column;
   gap: 30px;

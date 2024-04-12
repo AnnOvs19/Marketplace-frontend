@@ -1,11 +1,9 @@
 import BgCircle from "@/components/Backgrounds/BgCircle/BgCircle";
-import Baskets from "@/modules/Baskets/Baskets";
 
-export default function Basket() {
+export default function AccountSeller() {
   return (
     <>
       <BgCircle />
-      <Baskets />
     </>
   );
 }
