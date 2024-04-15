@@ -8,7 +8,7 @@ export const InputFormWrapper = styled.div`
   width: 100%;
 
   input {
-    padding: 1px 5px;
+    padding: 4px 5px;
     border: none;
     height: 100%;
     width: 100%;
@@ -27,7 +27,7 @@ export const InputFormWrapper = styled.div`
 
   @media (${mainTheme.deviсe.laptopL}) {
     input {
-      padding: 1px 3px;
+      padding: 3px 3px;
 
       &::placeholder {
         font-size: 13px;
@@ -38,7 +38,7 @@ export const InputFormWrapper = styled.div`
 
   @media (${mainTheme.deviсe.mobileXL}) {
     input {
-      padding: 1px 3px;
+      padding: 2px 3px;
 
       &::placeholder {
         font-size: 11px;
@@ -48,8 +48,6 @@ export const InputFormWrapper = styled.div`
 
   @media (${mainTheme.deviсe.mobileL}) {
     input {
-      padding: 1px 3px;
-
       &::placeholder {
         font-size: 10px;
       }

@@ -13,6 +13,7 @@ export const CardList = styled.section`
   @media (${mainTheme.deviсe.mobileXL}) {
     display: flex;
     justify-content: center;
+    margin-top: 30px;
   }
 `;
 

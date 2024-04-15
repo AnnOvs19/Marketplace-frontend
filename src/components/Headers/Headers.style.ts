@@ -45,7 +45,7 @@ export const Header = styled.div`
   }
 `;
 
-export const HeaderBox = styled.div`
+export const HeaderBox = styled.nav`
   width: 1850px;
   display: flex;
   flex-direction: row;

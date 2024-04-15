@@ -68,11 +68,11 @@ export const SearchButton = styled.button`
   justify-content: center;
   align-items: center;
   background-color: transparent;
-  color: ${mainTheme.colors.lightGray};
+  color: ${mainTheme.colors.white};
   border: 1px solid ${mainTheme.colors.lightGray};
-  padding: 15px 20px;
+  padding: 8px 30px;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 100;
 
   &:hover {
     background-color: ${mainTheme.colors.lightGray};
@@ -80,7 +80,7 @@ export const SearchButton = styled.button`
   }
 
   @media (${mainTheme.deviсe.laptopM}) {
-    padding: 15px 20px;
+    padding: 8px 28px;
   }
 
   @media (${mainTheme.deviсe.tablet}) {
@@ -89,10 +89,12 @@ export const SearchButton = styled.button`
 
   @media (${mainTheme.deviсe.mobileXL}) {
     font-size: 12px;
+    padding: 8px 22px;
   }
 
   @media (${mainTheme.deviсe.mobileS}) {
     font-size: 11px;
+    padding: 8px 14px;
   }
 `;
 
@@ -103,15 +105,16 @@ export const BaseButton = styled.button`
   align-items: center;
   background-color: ${mainTheme.colors.darkPurple};
   color: ${mainTheme.colors.white};
-  padding: 10px 20px;
+  padding: 12px 20px;
   font-size: 14px;
+  border: none;
 
   &:hover {
     background-color: ${mainTheme.colors.extraDarkPurple};
   }
 
   @media (${mainTheme.deviсe.laptopM}) {
-    padding: 10px 20px;
+    padding: 11px 20px;
   }
 
   @media (${mainTheme.deviсe.tablet}) {

@@ -2,13 +2,13 @@ import { mainTheme } from "@/styles/mainTheme.style";
 import styled from "styled-components";
 
 export const InputSearcWrap = styled.div`
-  border: 1px solid ${mainTheme.colors.lightGray};
+  border-bottom: 1px solid ${mainTheme.colors.lightGray};
   display: flex;
   align-items: center;
   width: 100%;
 
   input {
-    padding: 15px 20px;
+    padding: 7px 10px;
     border: none;
     height: 100%;
     width: 100%;
@@ -18,7 +18,7 @@ export const InputSearcWrap = styled.div`
     font-weight: 300;
 
     &::placeholder {
-      color: #d9b4f07f;
+      color: ${mainTheme.colors.white};
       font-size: 14px;
       font-weight: 300;
       line-height: 120%;
@@ -26,7 +26,17 @@ export const InputSearcWrap = styled.div`
 
     @media (${mainTheme.deviсe.laptopM}) {
       input {
-        padding: 15px 20px;
+        padding: 5px 18px;
+      }
+
+      @media (${mainTheme.deviсe.mobileL}) {
+        input {
+          padding: 4px 18px;
+        }
+
+        &::placeholder {
+          font-size: 12px;
+        }
       }
     }
   }

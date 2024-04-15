@@ -37,13 +37,13 @@ const MenuClient: FC<IProps> = ({ openMenu, setOpenMenu }) => {
         <Link href="/" onClick={setOpenMenu}>
           <T.MenuText>Главная</T.MenuText>
         </Link>
-        <Link href="/blog">
+        <Link href="/blog" onClick={setOpenMenu}>
           <T.MenuText>Блог</T.MenuText>
         </Link>
         <Link href="/catalog" onClick={setOpenMenu}>
           <T.MenuText>Каталог</T.MenuText>
         </Link>
-        <Link href="/basket">
+        <Link href="/basket" onClick={setOpenMenu}>
           <T.MenuText>Корзина</T.MenuText>
         </Link>
       </C.MenuNavigation>
