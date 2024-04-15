@@ -61,3 +61,34 @@ export const DeleteIcon = styled.div`
     height: 23px;
   }
 `;
+
+export const EditIcon = styled.div`
+  width: 30px;
+  height: 30px;
+  position: relative;
+
+  @media (${mainTheme.deviсe.laptopM}) {
+    width: 28px;
+    height: 28px;
+  }
+
+  @media (${mainTheme.deviсe.laptopS}) {
+    width: 26px;
+    height: 26px;
+  }
+
+  @media (${mainTheme.deviсe.tablet}) {
+    width: 24px;
+    height: 24px;
+  }
+
+  @media (${mainTheme.deviсe.mobileXL}) {
+    width: 22px;
+    height: 22px;
+  }
+
+  @media (${mainTheme.deviсe.mobileS}) {
+    width: 20px;
+    height: 20px;
+  }
+`;

@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const PageSellerWrap = styled.section`
   margin: 0 auto;
-  margin-top: 200px;
+  margin-top: 165px;
   margin-bottom: 50px;
   max-width: 1405px;
   height: auto;
@@ -14,7 +14,7 @@ export const PageSellerWrap = styled.section`
   justify-content: center;
 
   @media (${mainTheme.deviсe.laptopL}) {
-    margin-top: 150px;
+    margin-top: 145px;
     width: 100%;
   }
 
@@ -23,15 +23,15 @@ export const PageSellerWrap = styled.section`
   }
 
   @media (${mainTheme.deviсe.mobileXL}) {
-    margin-top: 150px;
+    margin-top: 120px;
   }
 
   @media (${mainTheme.deviсe.mobileM}) {
-    margin-top: 130px;
+    margin-top: 125px;
   }
 
   @media (${mainTheme.deviсe.mobileS}) {
-    margin-top: 100px;
+    margin-top: 90px;
   }
 `;
 
