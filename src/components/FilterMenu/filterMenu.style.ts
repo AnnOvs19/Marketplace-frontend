@@ -20,27 +20,27 @@ export const FilterMenuWrap = styled.div<IProps>`
 
 export const FilterContent = styled.aside`
   height: 100vh;
-  width: 500px;
+  width: 400px;
   padding: 100px 35px;
   background-color: ${mainTheme.colors.colorForm};
   display: flex;
   justify-content: center;
   flex-direction: column;
-  gap: 40px;
+  gap: 30px;
 
   @media (${mainTheme.deviсe.laptopS}) {
     width: 300px;
   }
 
   @media (${mainTheme.deviсe.mobileXL}) {
-    height: 585px;
+    height: 555px;
     width: 100%;
-    padding: 50px 20px;
-    gap: 30px;
+    padding: 30px 20px;
+    gap: 20px;
   }
 
   @media (${mainTheme.deviсe.mobileM}) {
-    height: 545px;
+    height: 475px;
   }
 `;
 
@@ -48,14 +48,14 @@ export const ContentList = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
 
   @media (${mainTheme.deviсe.laptopS}) {
-    gap: 15px;
+    gap: 12px;
   }
 
   @media (${mainTheme.deviсe.mobileM}) {
-    gap: 11px;
+    gap: 10px;
   }
 `;
 

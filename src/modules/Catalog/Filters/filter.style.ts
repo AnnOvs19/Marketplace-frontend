@@ -15,7 +15,7 @@ export const FiltersWrap = styled.div`
   }
 `;
 
-export const FilterBox = styled.div`
+export const FilterBox = styled.section`
   overflow: hidden;
   width: 98%;
   display: flex;

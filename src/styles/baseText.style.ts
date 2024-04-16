@@ -339,50 +339,50 @@ export const CardOtherText = styled.span`
 `;
 
 export const FilterTitle = styled.h3`
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 500;
   color: ${mainTheme.colors.white};
 
   @media (${mainTheme.deviсe.laptopM}) {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   @media (${mainTheme.deviсe.tablet}) {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   @media (${mainTheme.deviсe.mobileXL}) {
     text-align: center;
-    font-size: 20px;
+    font-size: 18px;
   }
 
   @media (${mainTheme.deviсe.mobileS}) {
-    font-size: 18px;
+    font-size: 16px;
   }
 `;
 
 export const FilterText = styled.p`
   cursor: pointer;
   margin-left: 4px;
-  font-size: 22px;
+  font-size: 20px;
   transition: 0.4s;
   font-weight: 400;
   color: ${mainTheme.colors.white};
 
   @media (${mainTheme.deviсe.laptopM}) {
-    font-size: 20px;
-  }
-
-  @media (${mainTheme.deviсe.tablet}) {
     font-size: 18px;
   }
 
-  @media (${mainTheme.deviсe.mobileXL}) {
+  @media (${mainTheme.deviсe.tablet}) {
     font-size: 16px;
   }
 
-  @media (${mainTheme.deviсe.mobileS}) {
+  @media (${mainTheme.deviсe.mobileXL}) {
     font-size: 14px;
+  }
+
+  @media (${mainTheme.deviсe.mobileS}) {
+    font-size: 13px;
   }
 `;
 

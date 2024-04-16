@@ -10,6 +10,7 @@ import reverse from "@/assets/icons/filterReverseOrder.svg";
 import delivery from "@/assets/icons/filterDelivery.svg";
 import like from "@/assets/icons/filterLike.svg";
 import FilterMenu from "@/components/FilterMenu/FilterMenu";
+import Link from "next/link";
 
 const Filters = () => {
   const [openFilter, setOpenFilter] = useState<boolean>(false);
@@ -63,19 +64,21 @@ const Filters = () => {
               </S.ButtonBox>
               <S.TextIcon>Избранное</S.TextIcon>
             </S.IconsContainer>
-            <S.IconsContainer>
-              <S.ButtonBox>
-                <Image
-                  src={delivery}
-                  alt=""
-                  fill
-                  style={{
-                    objectFit: "contain"
-                  }}
-                />
-              </S.ButtonBox>
-              <S.TextIcon>Мои заказы</S.TextIcon>
-            </S.IconsContainer>
+            <Link href="/myOrders">
+              <S.IconsContainer>
+                <S.ButtonBox>
+                  <Image
+                    src={delivery}
+                    alt=""
+                    fill
+                    style={{
+                      objectFit: "contain"
+                    }}
+                  />
+                </S.ButtonBox>
+                <S.TextIcon>Мои заказы</S.TextIcon>
+              </S.IconsContainer>
+            </Link>
           </S.ControlPanel>
         </S.FilterBox>
       </S.FiltersWrap>
