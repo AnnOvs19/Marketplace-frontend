@@ -16,7 +16,7 @@ export interface ICatalogMock {
 
 export const mockDelCatalog = [
   {
-    id: 1,
+    id: 1234567890,
     title: "Barberton Daisy",
     price: 119.0,
     image: cardImage,
@@ -27,7 +27,7 @@ export const mockDelCatalog = [
     quantity: 1
   },
   {
-    id: 2,
+    id: 2234567890,
     title: "Angel Wing Begonia",
     price: 169.0,
     image: cardImage2,
@@ -38,7 +38,7 @@ export const mockDelCatalog = [
     quantity: 1
   },
   {
-    id: 3,
+    id: 3124567890,
     title: "African Violet",
     price: 199.0,
     image: cardImage3,
@@ -49,7 +49,7 @@ export const mockDelCatalog = [
     quantity: 1
   },
   {
-    id: 4,
+    id: 4123567890,
     title: "Beach Spider Lily",
     price: 129.0,
     image: cardImage2,
@@ -60,7 +60,7 @@ export const mockDelCatalog = [
     quantity: 1
   },
   {
-    id: 5,
+    id: 5098764321,
     title: "Blushing Bromeliad",
     price: 139.0,
     image: cardImage,
@@ -71,7 +71,7 @@ export const mockDelCatalog = [
     quantity: 1
   },
   {
-    id: 6,
+    id: 6123457890,
     title: "Aluminum Plant",
     price: 179.0,
     image: cardImage3,
@@ -82,7 +82,7 @@ export const mockDelCatalog = [
     quantity: 1
   },
   {
-    id: 7,
+    id: 7098654321,
     title: "Bird's Nest Fern",
     price: 99.0,
     image: cardImage,
@@ -93,7 +93,7 @@ export const mockDelCatalog = [
     quantity: 1
   },
   {
-    id: 8,
+    id: 8123456790,
     title: "Broadleaf Lady Palm",
     price: 59.0,
     image: cardImage2,
@@ -104,7 +104,7 @@ export const mockDelCatalog = [
     quantity: 1
   },
   {
-    id: 9,
+    id: 9087654321,
     title: "Chinese Evergreen",
     price: 39.0,
     image: cardImage3,
@@ -115,7 +115,7 @@ export const mockDelCatalog = [
     quantity: 1
   },
   {
-    id: 10,
+    id: 1023456789,
     title: "Broadleaf",
     price: 39.0,
     image: cardImage2,
@@ -126,7 +126,7 @@ export const mockDelCatalog = [
     quantity: 1
   },
   {
-    id: 11,
+    id: 1134567890,
     title: "Chinese Evergreen",
     price: 490.0,
     image: cardImage,
@@ -137,7 +137,7 @@ export const mockDelCatalog = [
     quantity: 1
   },
   {
-    id: 12,
+    id: 1209876543,
     title: "Chinese",
     price: 79.0,
     image: cardImage3,
@@ -148,7 +148,7 @@ export const mockDelCatalog = [
     quantity: 1
   },
   {
-    id: 13,
+    id: 1324567890,
     title: "Spider Lily",
     price: 790.0,
     image: cardImage,
@@ -159,7 +159,7 @@ export const mockDelCatalog = [
     quantity: 1
   },
   {
-    id: 14,
+    id: 1409876532,
     title: "Chinese",
     price: 79.0,
     image: cardImage2,
@@ -170,7 +170,7 @@ export const mockDelCatalog = [
     quantity: 1
   },
   {
-    id: 15,
+    id: 1523467890,
     title: "Beach Lily",
     price: 799.0,
     image: cardImage3,
@@ -181,7 +181,7 @@ export const mockDelCatalog = [
     quantity: 1
   },
   {
-    id: 16,
+    id: 1609875432,
     title: "Lily",
     price: 79.0,
     image: cardImage2,

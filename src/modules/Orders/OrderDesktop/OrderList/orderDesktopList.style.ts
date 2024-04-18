@@ -2,14 +2,14 @@ import { mainTheme } from "@/styles/mainTheme.style";
 import styled from "styled-components";
 
 export const OrderDesktop = styled.div`
-  width: 980px;
+  width: 1080px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
 
   @media (${mainTheme.deviсe.laptopL}) {
-    width: 887px;
+    width: 1000px;
   }
 
   @media (${mainTheme.deviсe.laptopS}) {

@@ -13,6 +13,12 @@ const CatalogList = () => {
         {/* <Link href="/accountSeller">
           <button>Перейти на аккаунт продавца</button>
         </Link> */}
+        <Link href="/editAccountSel">
+          <button>Редактировать аккаунт</button>
+        </Link>
+        <Link href="/myProducts">
+          <button>Мои товары</button>
+        </Link>
         {mockDelCatalog?.map((item, index) => {
           return <CatalogItem item={item} key={index} />;
         })}

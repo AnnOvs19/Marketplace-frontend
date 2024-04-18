@@ -43,7 +43,7 @@ const BasketDeskItem: FC<IProps> = ({ item }) => {
       </S.BodyElement>
 
       <S.BodyElement>
-        <I.DeleteIcon>
+        <I.TableIcon>
           <Image
             src={deleteBasket}
             alt="The page with the shopping cart"
@@ -52,7 +52,7 @@ const BasketDeskItem: FC<IProps> = ({ item }) => {
               objectFit: "cover"
             }}
           />
-        </I.DeleteIcon>
+        </I.TableIcon>
       </S.BodyElement>
     </S.TableString>
   );

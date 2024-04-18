@@ -40,7 +40,7 @@ export const BasketIcon = styled.div`
   }
 `;
 
-export const DeleteIcon = styled.div`
+export const TableIcon = styled.div`
   margin-right: 5px;
   width: 30px;
   height: 30px;

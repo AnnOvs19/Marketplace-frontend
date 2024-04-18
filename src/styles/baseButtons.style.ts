@@ -219,6 +219,32 @@ export const DeleteButton = styled.button`
   }
 `;
 
+export const EditButton = styled.button`
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-top: 1px solid ${mainTheme.colors.gray};
+  padding: 15px 10px;
+  font-size: 14px;
+
+  &:hover {
+    color: ${mainTheme.colors.green};
+  }
+
+  @media (${mainTheme.deviсe.tablet}) {
+    font-size: 13px;
+  }
+
+  @media (${mainTheme.deviсe.mobileM}) {
+    padding: 12px 10px;
+  }
+`;
+
 export const QuantityButton = styled.button`
   width: 30px;
   height: 30px;
