@@ -412,9 +412,13 @@ export const AboutUsImage = styled.div`
     height: 305px;
   }
 
+  @media (max-width: 870px) {
+    margin: 5px 0;
+  }
+
   @media (${mainTheme.deviсe.tablet}) {
     margin: 10px 0;
-    width: 70%;
+    width: 90%;
     height: 280px;
   }
 

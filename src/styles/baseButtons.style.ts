@@ -62,6 +62,45 @@ export const TransparentButton = styled.button`
   }
 `;
 
+export const SliderButton = styled.button`
+  width: 390px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  color: ${mainTheme.colors.white};
+  border: 1px solid ${mainTheme.colors.white};
+  padding: 12px 20px;
+  font-size: 14px;
+
+  &:hover {
+    background-color: ${mainTheme.colors.white};
+    color: ${mainTheme.colors.black};
+  }
+
+  @media (${mainTheme.deviсe.laptopM}) {
+    padding: 10px 20px;
+  }
+
+  @media (${mainTheme.deviсe.tablet}) {
+    font-size: 13px;
+  }
+
+  @media (${mainTheme.deviсe.mobileXL}) {
+    font-size: 12px;
+    width: 100%;
+  }
+
+  @media (${mainTheme.deviсe.mobileL}) {
+    width: 97%;
+  }
+
+  @media (${mainTheme.deviсe.mobileS}) {
+    font-size: 11px;
+    padding: 10px 10px;
+  }
+`;
+
 export const SearchButton = styled.button`
   min-width: 100px;
   display: flex;

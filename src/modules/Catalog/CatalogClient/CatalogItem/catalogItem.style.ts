@@ -38,6 +38,7 @@ export const CardItem = styled.div`
 
   @media (${mainTheme.deviсe.mobileS}) {
     width: 85%;
+    height: 250px;
   }
 `;
 

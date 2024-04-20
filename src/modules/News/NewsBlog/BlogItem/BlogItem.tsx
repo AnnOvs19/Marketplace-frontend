@@ -3,10 +3,9 @@
 import React, { FC } from "react";
 import * as S from "./blogItem.style";
 import * as T from "@/styles/baseText.style";
-import * as B from "@/styles/baseButtons.style";
-import * as C from "@/modules/News/NewsClient/NewsHome/newsHome.style";
 import { INewsMock } from "../../NewsHome/mockDelNews";
 import Image from "next/image";
+import * as C from "../../NewsHome/newsHome.style";
 
 interface IProps {
   item: INewsMock;
