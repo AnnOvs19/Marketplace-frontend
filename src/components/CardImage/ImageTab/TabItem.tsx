@@ -1,12 +1,34 @@
 "use client";
 
-import React from "react";
+import React, { FC } from "react";
+import * as S from "./tabList.style";
+import Image from "next/image";
+import Swiper from "swiper";
 
-const TabItem = () => {
+interface IProps {
+  image: any;
+  index: number;
+  swiper: Swiper;
+  click: (index: number) => void;
+}
+
+const TabItem: FC<IProps> = ({ image, click, index, swiper }) => {
   return (
-    <div>
-      <h1>Hello World from MyComponent</h1>
-    </div>
+    <S.TabItemWrap
+      onClick={() => {
+        click(index);
+        swiper.slideTo(index);
+      }}
+    >
+      <Image
+        src={image}
+        alt="Product card image"
+        fill
+        style={{
+          objectFit: "cover"
+        }}
+      />
+    </S.TabItemWrap>
   );
 };
 

@@ -13,8 +13,6 @@ import clava from "@/assets/images/clavs.jpg";
 const NewsHome = () => {
   const [indexItem, setIndexItem] = useState<number>(0);
 
-  console.log(indexItem);
-
   return (
     <S.NewsHomeWraper>
       <S.NewsHomeContainer>

@@ -92,3 +92,14 @@ export const EditIcon = styled.div`
     height: 20px;
   }
 `;
+
+export const LikeIcon = styled.div`
+  width: 15px;
+  height: 15px;
+  position: relative;
+
+  @media (${mainTheme.deviсe.tablet}) {
+    width: 13px;
+    height: 13px;
+  }
+`;

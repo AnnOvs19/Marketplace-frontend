@@ -20,7 +20,11 @@ const CatalogList = () => {
           <button>Мои товары</button>
         </Link>
         {mockDelCatalog?.map((item, index) => {
-          return <CatalogItem item={item} key={index} />;
+          return (
+            <Link href={`/catalog/${item.title}`}>
+              <CatalogItem item={item} key={index} />
+            </Link>
+          );
         })}
       </S.CardBox>
     </S.CardList>

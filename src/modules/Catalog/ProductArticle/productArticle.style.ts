@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const ProductWrapper = styled.section`
   margin: 0 auto;
-  margin-top: 200px;
+  margin-top: 190px;
   margin-bottom: 50px;
   max-width: 1405px;
   height: auto;
@@ -14,24 +14,24 @@ export const ProductWrapper = styled.section`
   justify-content: center;
 
   @media (${mainTheme.deviсe.laptopL}) {
-    margin-top: 150px;
+    margin-top: 140px;
     width: 100%;
   }
 
+  @media (${mainTheme.deviсe.laptopS}) {
+    margin-top: 100px;
+  }
+
   @media (${mainTheme.deviсe.tablet}) {
-    margin-top: 130px;
+    margin-top: 90px;
+  }
+
+  @media (max-width: 650px) {
+    margin-top: 75px;
   }
 
   @media (${mainTheme.deviсe.mobileXL}) {
-    margin-top: 150px;
-  }
-
-  @media (${mainTheme.deviсe.mobileM}) {
-    margin-top: 130px;
-  }
-
-  @media (${mainTheme.deviсe.mobileS}) {
-    margin-top: 100px;
+    margin-top: 60px;
   }
 `;
 
@@ -49,15 +49,7 @@ export const ProductBox = styled.article`
   @media (${mainTheme.deviсe.mobileXL}) {
     margin-left: 0px;
     margin-right: 0px;
-    width: 90%;
+    width: 100%;
     gap: 25px;
-  }
-
-  @media (${mainTheme.deviсe.mobileL}) {
-    width: 92%;
-  }
-
-  @media (${mainTheme.deviсe.mobileM}) {
-    width: 95%;
   }
 `;

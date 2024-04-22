@@ -52,10 +52,6 @@ export const TitleSection = styled.h2`
     font-size: 25px;
   }
 
-  @media (max-width: 870px) {
-    text-align: center;
-  }
-
   @media (${mainTheme.deviсe.mobileXL}) {
     font-weight: 400;
     font-size: 20px;
@@ -132,6 +128,47 @@ export const TitleBasket = styled.h3`
 
   @media (${mainTheme.deviсe.mobileS}) {
     font-size: 14px;
+  }
+`;
+
+export const TitleProduct = styled.h2`
+  font-size: 35px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: ${mainTheme.colors.white};
+
+  @media (${mainTheme.deviсe.laptopL}) {
+    font-size: 32px;
+  }
+
+  @media (${mainTheme.deviсe.laptopM}) {
+    font-size: 28px;
+  }
+
+  @media (${mainTheme.deviсe.laptopS}) {
+    font-size: 22px;
+  }
+
+  @media (max-width: 700px) {
+    font-size: 18px;
+  }
+
+  @media (${mainTheme.deviсe.mobileXL}) {
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  @media (${mainTheme.deviсe.mobileM}) {
+    font-size: 22px;
+  }
+
+  @media (${mainTheme.deviсe.mobileS}) {
+    font-size: 20px;
+  }
+
+  @media (${mainTheme.deviсe.mobileXS}) {
+    font-size: 18px;
   }
 `;
 
@@ -562,5 +599,46 @@ export const TotalPrice = styled.h4`
 
   @media (${mainTheme.deviсe.mobileS}) {
     font-size: 11px;
+  }
+`;
+
+export const InfoProduct = styled.h2`
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+  background-color: ${mainTheme.colors.purple};
+  padding: 10px 20px;
+  border-radius: 50px;
+  width: fit-content;
+
+  @media (${mainTheme.deviсe.laptopM}) {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+  @media (${mainTheme.deviсe.laptopS}) {
+    font-size: 12px;
+  }
+
+  @media (max-width: 700px) {
+    padding: 5px 12px;
+    font-weight: 500;
+  }
+
+  @media (${mainTheme.deviсe.mobileXL}) {
+    width: 100%;
+    text-align: center;
+    padding: 8px 18px;
+    font-size: 14px;
+  }
+
+  @media (${mainTheme.deviсe.mobileM}) {
+    padding: 6px 15px;
+    font-size: 13px;
+  }
+
+  @media (${mainTheme.deviсe.mobileS}) {
+    padding: 5px 12px;
+    font-size: 12px;
   }
 `;

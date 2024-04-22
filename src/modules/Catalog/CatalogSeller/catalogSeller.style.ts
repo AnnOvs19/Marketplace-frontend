@@ -86,6 +86,13 @@ export const BoxCatalogSel = styled.div`
   }
 `;
 
+export const HeadFilter = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+`;
+
 export const BoxРHeadSel = styled.div`
   display: flex;
   flex-direction: column;

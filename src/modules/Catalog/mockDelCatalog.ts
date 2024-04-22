@@ -12,15 +12,17 @@ export interface ICatalogMock {
   category: string;
   sumInStock: number;
   quantity: number;
+  like?: number;
+  reviews?: string[];
 }
 
 export const mockDelCatalog = [
   {
     id: 1234567890,
-    title: "Barberton Daisy",
+    title: "Barberton Daisy Barberton",
     price: 119.0,
     image: [
-      cardImage,
+      cardImage3,
       cardImage2,
       cardImage,
       cardImage3,
@@ -31,7 +33,9 @@ export const mockDelCatalog = [
     seller: "Seller1",
     text: "На нашем маркетплейсе предоставляется официальная гарантия от производителя на все товары. Арпрьаал оал дешщдег пырпррчаптк р а прапр",
     sumInStock: 55,
-    quantity: 1
+    quantity: 1,
+    like: 5,
+    reviews: ["1", "2", "3", "4", "5"]
   },
   {
     id: 2234567890,
@@ -42,7 +46,9 @@ export const mockDelCatalog = [
     seller: "Seller2",
     text: "На нашем маркетплейсе предоставляется официальная гарантия от производителя на все товары. Арпрьаал оал дешщдег пырпррчаптк р а прапр",
     sumInStock: 59,
-    quantity: 1
+    quantity: 1,
+    like: 6,
+    reviews: ["1", "2", "3", "4", "5"]
   },
   {
     id: 3124567890,
@@ -53,7 +59,9 @@ export const mockDelCatalog = [
     seller: "Seller3",
     text: "На нашем маркетплейсе предоставляется официальная гарантия от производителя на все товары. Арпрьаал оал дешщдег пырпррчаптк р а прапр",
     sumInStock: 95,
-    quantity: 1
+    quantity: 1,
+    like: 7,
+    reviews: ["1", "2", "3", "4", "5"]
   },
   {
     id: 4123567890,
@@ -64,7 +72,9 @@ export const mockDelCatalog = [
     seller: "Seller1",
     text: "На нашем маркетплейсе предоставляется официальная гарантия от производителя на все товары. Арпрьаал оал дешщдег пырпррчаптк р а прапр",
     sumInStock: 15,
-    quantity: 1
+    quantity: 1,
+    like: 9,
+    reviews: ["1", "2", "3", "4", "5"]
   },
   {
     id: 5098764321,
@@ -75,7 +85,9 @@ export const mockDelCatalog = [
     seller: "Seller2",
     text: "На нашем маркетплейсе предоставляется официальная гарантия от производителя на все товары. Арпрьаал оал дешщдег пырпррчаптк р а прапр",
     sumInStock: 5,
-    quantity: 1
+    quantity: 1,
+    like: 17,
+    reviews: ["1", "2", "3", "4", "5"]
   },
   {
     id: 6123457890,
@@ -86,7 +98,9 @@ export const mockDelCatalog = [
     seller: "Seller3",
     text: "На нашем маркетплейсе предоставляется официальная гарантия от производителя на все товары. Арпрьаал оал дешщдег пырпррчаптк р а прапр",
     sumInStock: 105,
-    quantity: 1
+    quantity: 1,
+    like: 44,
+    reviews: ["1", "2", "3", "4", "5"]
   },
   {
     id: 7098654321,
@@ -104,7 +118,9 @@ export const mockDelCatalog = [
     seller: "Seller1",
     text: "На нашем маркетплейсе предоставляется официальная гарантия от производителя на все товары. Арпрьаал оал дешщдег пырпррчаптк р а прапр",
     sumInStock: 205,
-    quantity: 1
+    quantity: 1,
+    like: 7,
+    reviews: ["1", "2", "3", "4", "5"]
   },
   {
     id: 8123456790,
@@ -115,7 +131,9 @@ export const mockDelCatalog = [
     seller: "Seller2",
     text: "На нашем маркетплейсе предоставляется официальная гарантия от производителя на все товары. Арпрьаал оал дешщдег пырпррчаптк р а прапр",
     sumInStock: 25,
-    quantity: 1
+    quantity: 1,
+    like: 97,
+    reviews: ["1", "2", "3", "4", "5"]
   },
   {
     id: 9087654321,
@@ -133,7 +151,9 @@ export const mockDelCatalog = [
     seller: "Seller3",
     text: "На нашем маркетплейсе предоставляется официальная гарантия от производителя на все товары. Арпрьаал оал дешщдег пырпррчаптк р а прапр",
     sumInStock: 75,
-    quantity: 1
+    quantity: 1,
+    like: 2,
+    reviews: ["1", "2", "3", "4", "5"]
   },
   {
     id: 1023456789,
@@ -144,7 +164,9 @@ export const mockDelCatalog = [
     seller: "Seller1",
     text: "На нашем маркетплейсе предоставляется официальная гарантия от производителя на все товары. Арпрьаал оал дешщдег пырпррчаптк р а прапр",
     sumInStock: 45,
-    quantity: 1
+    quantity: 1,
+    like: 8,
+    reviews: ["1", "2", "3", "4", "5"]
   },
   {
     id: 1134567890,
@@ -155,7 +177,9 @@ export const mockDelCatalog = [
     seller: "Seller2",
     text: "На нашем маркетплейсе предоставляется официальная гарантия от производителя на все товары. Арпрьаал оал дешщдег пырпррчаптк р а прапр",
     sumInStock: 40,
-    quantity: 1
+    quantity: 1,
+    like: 123,
+    reviews: ["1", "2", "3", "4", "5"]
   },
   {
     id: 1209876543,
@@ -166,7 +190,9 @@ export const mockDelCatalog = [
     seller: "Seller3",
     text: "На нашем маркетплейсе предоставляется официальная гарантия от производителя на все товары. Арпрьаал оал дешщдег пырпррчаптк р а прапр",
     sumInStock: 4,
-    quantity: 1
+    quantity: 1,
+    like: 11,
+    reviews: ["1", "2", "3", "4", "5"]
   },
   {
     id: 1324567890,
@@ -177,7 +203,9 @@ export const mockDelCatalog = [
     seller: "Seller1",
     text: "На нашем маркетплейсе предоставляется официальная гарантия от производителя на все товары. Арпрьаал оал дешщдег пырпррчаптк р а прапр",
     sumInStock: 2,
-    quantity: 1
+    quantity: 1,
+    like: 198,
+    reviews: ["1", "2", "3", "4", "5"]
   },
   {
     id: 1409876532,
@@ -195,7 +223,9 @@ export const mockDelCatalog = [
     seller: "Seller2",
     text: "На нашем маркетплейсе предоставляется официальная гарантия от производителя на все товары. Арпрьаал оал дешщдег пырпррчаптк р а прапр",
     sumInStock: 1,
-    quantity: 1
+    quantity: 1,
+    like: 66,
+    reviews: ["1", "2", "3", "4", "5"]
   },
   {
     id: 1523467890,
@@ -206,7 +236,9 @@ export const mockDelCatalog = [
     seller: "Seller3",
     text: "На нашем маркетплейсе предоставляется официальная гарантия от производителя на все товары. Арпрьаал оал дешщдег пырпррчаптк р а прапр",
     sumInStock: 3,
-    quantity: 1
+    quantity: 1,
+    like: 890,
+    reviews: ["1", "2", "3", "4", "5"]
   },
   {
     id: 1609875432,
@@ -224,6 +256,8 @@ export const mockDelCatalog = [
     seller: "Seller1",
     text: "На нашем маркетплейсе предоставляется официальная гарантия от производителя на все товары. Арпрьаал оал дешщдег пырпррчаптк р а прапр",
     sumInStock: 6,
-    quantity: 1
+    quantity: 1,
+    like: 954,
+    reviews: ["1", "2", "3", "4", "5"]
   }
 ];
