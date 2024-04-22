@@ -4,7 +4,7 @@ import React, { FC } from "react";
 import * as S from "./NewsItem.style";
 import * as T from "@/styles/baseText.style";
 import * as C from "../newsHome.style";
-import { INewsMock } from "../mockDelNews";
+import { INewsMock } from "../../mockDelNews";
 import Image from "next/image";
 
 interface IProps {
@@ -16,7 +16,7 @@ const NewsItem: FC<IProps> = ({ item }) => {
     <S.NewsItemWrap>
       <S.NewsItemImage>
         <Image
-          src={item.img}
+          src={item.img[0]}
           alt="The main picture of the news post"
           fill
           style={{

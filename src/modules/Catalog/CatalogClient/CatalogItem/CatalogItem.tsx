@@ -16,7 +16,7 @@ const CatalogItem: FC<IProps> = ({ item }) => {
     <S.CardItem>
       <S.CardItemImage>
         <Image
-          src={item.image}
+          src={item.image[0]}
           alt="Product card image"
           fill
           style={{

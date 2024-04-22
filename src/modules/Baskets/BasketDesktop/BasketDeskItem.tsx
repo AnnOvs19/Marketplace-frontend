@@ -20,7 +20,7 @@ const BasketDeskItem: FC<IProps> = ({ item }) => {
       <S.BodyElement>
         <C.BasketImage>
           <Image
-            src={item.image}
+            src={item.image[0]}
             alt="the main photo of the product"
             fill
             style={{

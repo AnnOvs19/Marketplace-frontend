@@ -41,17 +41,15 @@ export const BlogItemWrap = styled.div`
   }
 
   @media (${mainTheme.deviсe.mobileXL}) {
-    width: 94%;
+    width: 100%;
     height: 378px;
   }
 
   @media (${mainTheme.deviсe.mobileL}) {
-    width: 96%;
     height: 348px;
   }
 
   @media (${mainTheme.deviсe.mobileS}) {
-    width: 98%;
     height: 328px;
   }
 `;

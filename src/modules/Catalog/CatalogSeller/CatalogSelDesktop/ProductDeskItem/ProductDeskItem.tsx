@@ -20,7 +20,7 @@ const ProductDeskItem: FC<IProps> = ({ item }) => {
       <S.ProductElement>
         <C.ProductImage>
           <Image
-            src={item.image}
+            src={item.image[0]}
             alt="the main photo of the product"
             fill
             style={{

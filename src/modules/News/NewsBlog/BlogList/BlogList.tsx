@@ -2,7 +2,7 @@
 
 import React from "react";
 import * as S from "./blogList.style";
-import { mockDelNews } from "../../NewsHome/mockDelNews";
+import { mockDelNews } from "../../mockDelNews";
 import BlogItem from "../BlogItem/BlogItem";
 import Link from "next/link";
 

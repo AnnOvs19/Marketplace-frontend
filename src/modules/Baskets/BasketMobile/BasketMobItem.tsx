@@ -18,7 +18,7 @@ const BasketMobItem: FC<IProps> = ({ item }) => {
       <S.MobItem>
         <C.BasketImage>
           <Image
-            src={item.image}
+            src={item.image[0]}
             alt="the main photo of the product"
             fill
             style={{

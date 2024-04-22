@@ -3,7 +3,7 @@
 import React, { FC } from "react";
 import * as S from "./blogItem.style";
 import * as T from "@/styles/baseText.style";
-import { INewsMock } from "../../NewsHome/mockDelNews";
+import { INewsMock } from "../../mockDelNews";
 import Image from "next/image";
 import * as C from "../../NewsHome/newsHome.style";
 
@@ -25,7 +25,7 @@ const BlogItem: FC<IProps> = ({ item }) => {
 
       <S.BlogItemImage>
         <Image
-          src={item.img}
+          src={item.img[0]}
           alt="The main picture of the news post"
           fill
           style={{

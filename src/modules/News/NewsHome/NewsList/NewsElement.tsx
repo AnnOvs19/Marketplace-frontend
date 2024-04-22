@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { INewsMock } from "../mockDelNews";
+import { INewsMock } from "../../mockDelNews";
 import * as S from "./NewsList.style";
 import * as T from "@/styles/baseText.style";
 import * as C from "../newsHome.style";
