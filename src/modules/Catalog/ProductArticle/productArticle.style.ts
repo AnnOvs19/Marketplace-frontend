@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const ProductWrapper = styled.section`
   margin: 0 auto;
-  margin-top: 190px;
+  margin-top: 170px;
   margin-bottom: 50px;
   max-width: 1405px;
   height: auto;
