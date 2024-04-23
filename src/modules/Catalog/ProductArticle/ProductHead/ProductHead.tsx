@@ -61,7 +61,6 @@ const ProductHead: FC<IProps> = ({ product }) => {
           </T.InfoProduct>
           <T.InfoProduct>Стоимость: {product.price}руб</T.InfoProduct>
         </S.PriceBox>
-
         <BaseButton>Добавить в корзину</BaseButton>
       </S.HeadInfo>
     </S.HeadBox>

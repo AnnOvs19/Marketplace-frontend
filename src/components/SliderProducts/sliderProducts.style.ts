@@ -11,6 +11,7 @@ export const SliderWrap = styled.section`
   height: auto;
   overflow: hidden;
   gap: 44px;
+  width: 100%;
 
   @media (${mainTheme.deviсe.mobileXL}) {
     margin-top: 40px;

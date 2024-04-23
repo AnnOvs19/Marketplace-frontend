@@ -5,6 +5,7 @@ import ProductHead from "./ProductHead/ProductHead";
 import ProductBody from "./ProductBody/ProductBody";
 import * as S from "./productArticle.style";
 import { mockDelCatalog } from "../mockDelCatalog";
+import ProductReviews from "./ProductReviews/ProductReviews";
 
 const ProductArticle = () => {
   const product = mockDelCatalog[0];
@@ -12,7 +13,8 @@ const ProductArticle = () => {
     <S.ProductWrapper>
       <S.ProductBox>
         <ProductHead product={product} />
-        <ProductBody />
+        <ProductBody product={product} />
+        <ProductReviews />
       </S.ProductBox>
     </S.ProductWrapper>
   );

@@ -25,7 +25,7 @@ const CatalogItem: FC<IProps> = ({ item }) => {
         />
       </S.CardItemImage>
       <S.CardItemBox>
-        <T.CardTitle>{item.title}</T.CardTitle>
+        <T.CardTitle>{item.title.substring(0, 20)}...</T.CardTitle>
         <T.CardPrice>{item.price} руб</T.CardPrice>
         <S.CardBottom>
           <T.CardOtherText>{item.category}</T.CardOtherText>

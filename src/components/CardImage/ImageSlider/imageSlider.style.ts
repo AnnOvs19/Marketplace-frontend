@@ -4,37 +4,37 @@ import styled from "styled-components";
 export const SliderImage = styled.div`
   width: 100%;
   .swiper {
-    width: 450px;
-    height: 560px;
+    width: 430px;
+    height: 510px;
 
     @media (${mainTheme.deviсe.laptopL}) {
-      width: 430px;
-      height: 540px;
+      width: 410px;
+      height: 490px;
     }
 
     @media (${mainTheme.deviсe.laptopM}) {
-      width: 400px;
-      height: 510px;
+      width: 390px;
+      height: 460px;
     }
 
     @media (${mainTheme.deviсe.laptopS}) {
-      width: 360px;
-      height: 470px;
+      width: 340px;
+      height: 420px;
     }
 
     @media (max-width: 860px) {
-      width: 300px;
-      height: 410px;
+      width: 290px;
+      height: 390px;
     }
 
     @media (${mainTheme.deviсe.tablet}) {
       width: 260px;
-      height: 370px;
+      height: 350px;
     }
 
     @media (max-width: 650px) {
       width: 210px;
-      height: 230px;
+      height: 220px;
     }
 
     @media (${mainTheme.deviсe.mobileXL}) {
@@ -115,37 +115,37 @@ export const ImageBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 450px;
-  height: 560px;
+  width: 430px;
+  height: 510px;
 
   @media (${mainTheme.deviсe.laptopL}) {
-    width: 430px;
-    height: 540px;
+    width: 410px;
+    height: 490px;
   }
 
   @media (${mainTheme.deviсe.laptopM}) {
-    width: 400px;
-    height: 510px;
+    width: 390px;
+    height: 460px;
   }
 
   @media (${mainTheme.deviсe.laptopS}) {
-    width: 360px;
-    height: 470px;
+    width: 340px;
+    height: 420px;
   }
 
   @media (max-width: 860px) {
-    width: 300px;
-    height: 410px;
+    width: 290px;
+    height: 390px;
   }
 
   @media (${mainTheme.deviсe.tablet}) {
     width: 260px;
-    height: 370px;
+    height: 350px;
   }
 
   @media (max-width: 650px) {
     width: 210px;
-    height: 230px;
+    height: 220px;
   }
 
   @media (${mainTheme.deviсe.mobileXL}) {

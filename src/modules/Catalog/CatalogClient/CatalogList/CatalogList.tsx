@@ -10,7 +10,7 @@ const CatalogList = () => {
   return (
     <S.CardList>
       <S.CardBox>
-        <Link href="/accountSeller">
+        {/* <Link href="/accountSeller">
           <button>Перейти на аккаунт продавца</button>
         </Link>
         <Link href="/editAccountSel">
@@ -18,7 +18,7 @@ const CatalogList = () => {
         </Link>
         <Link href="/myProducts">
           <button>Мои товары</button>
-        </Link>
+        </Link> */}
         {mockDelCatalog?.map((item, index) => {
           return (
             <Link href={`/catalog/${item.title}`}>

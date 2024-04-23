@@ -99,6 +99,36 @@ export const TitleForm = styled.h3`
   }
 `;
 
+export const SubTitle = styled.h4`
+  font-size: 21px;
+  font-weight: 600;
+  color: ${mainTheme.colors.white};
+
+  @media (${mainTheme.deviсe.laptopL}) {
+    font-size: 19px;
+  }
+
+  @media (${mainTheme.deviсe.laptopM}) {
+    font-size: 17px;
+  }
+
+  @media (${mainTheme.deviсe.laptopS}) {
+    font-size: 15px;
+  }
+
+  @media (max-width: 870px) {
+    text-align: center;
+  }
+
+  @media (${mainTheme.deviсe.mobileXL}) {
+    font-size: 13px;
+  }
+
+  @media (${mainTheme.deviсe.mobileS}) {
+    font-size: 11px;
+  }
+`;
+
 export const TitleBasket = styled.h3`
   margin-bottom: 5px;
   font-size: 26px;
@@ -169,36 +199,6 @@ export const TitleProduct = styled.h2`
 
   @media (${mainTheme.deviсe.mobileXS}) {
     font-size: 18px;
-  }
-`;
-
-export const SubTitle = styled.h4`
-  font-size: 21px;
-  font-weight: 600;
-  color: ${mainTheme.colors.white};
-
-  @media (${mainTheme.deviсe.laptopL}) {
-    font-size: 19px;
-  }
-
-  @media (${mainTheme.deviсe.laptopM}) {
-    font-size: 17px;
-  }
-
-  @media (${mainTheme.deviсe.laptopS}) {
-    font-size: 15px;
-  }
-
-  @media (max-width: 870px) {
-    text-align: center;
-  }
-
-  @media (${mainTheme.deviсe.mobileXL}) {
-    font-size: 13px;
-  }
-
-  @media (${mainTheme.deviсe.mobileS}) {
-    font-size: 11px;
   }
 `;
 
@@ -319,6 +319,7 @@ export const CardTitle = styled.h6`
   font-weight: 300;
   color: ${mainTheme.colors.white};
   line-height: 120%;
+  text-align: center;
 
   @media (${mainTheme.deviсe.laptopL}) {
     font-size: 13px;
@@ -640,5 +641,53 @@ export const InfoProduct = styled.h2`
   @media (${mainTheme.deviсe.mobileS}) {
     padding: 5px 12px;
     font-size: 12px;
+  }
+`;
+
+export const DeskTitle = styled.h4`
+  font-size: 21px;
+  font-weight: 600;
+  color: ${mainTheme.colors.white};
+
+  @media (${mainTheme.deviсe.laptopL}) {
+    font-size: 19px;
+  }
+
+  @media (${mainTheme.deviсe.laptopM}) {
+    font-size: 17px;
+  }
+
+  @media (max-width: 870px) {
+    text-align: center;
+  }
+
+  @media (${mainTheme.deviсe.mobileM}) {
+    font-size: 15px;
+  }
+
+  @media (${mainTheme.deviсe.mobileS}) {
+    font-size: 14px;
+  }
+`;
+
+export const DeskKey = styled.span`
+  font-size: 12px;
+  transition: 0.4s;
+  font-weight: 300;
+  color: ${mainTheme.colors.white};
+
+  @media (max-width: 650px) {
+    font-size: 11px;
+  }
+`;
+
+export const DeskValue = styled.span`
+  font-size: 12px;
+  transition: 0.4s;
+  font-weight: 300;
+  color: ${mainTheme.colors.lightGray};
+
+  @media (max-width: 650px) {
+    font-size: 11px;
   }
 `;
