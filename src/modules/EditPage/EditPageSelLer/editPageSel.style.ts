@@ -126,17 +126,23 @@ export const SellerPhoto = styled.div`
   }
 
   @media (max-width: 650px) {
-    width: 80%;
+    width: 100%;
     height: 350px;
   }
 
   @media (${mainTheme.deviсe.mobileXL}) {
-    width: 90%;
-    height: 250px;
+    height: 260px;
+  }
+
+  @media (${mainTheme.deviсe.mobileL}) {
+    height: 240px;
   }
 
   @media (${mainTheme.deviсe.mobileM}) {
-    width: 95%;
     height: 200px;
+  }
+
+  @media (${mainTheme.deviсe.mobileXS}) {
+    height: 170px;
   }
 `;

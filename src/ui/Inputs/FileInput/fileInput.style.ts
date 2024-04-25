@@ -1,14 +1,24 @@
 import { mainTheme } from "@/styles/mainTheme.style";
 import styled from "styled-components";
 
-export const InputFile = styled.input`
-  display: none;
+export const InputFile = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
 `;
 
 export const Label = styled.label`
-  background-color: transparent;
-  color: white;
-  padding: 10px 15px;
-  border: 1px solid white;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
   cursor: pointer;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
 `;

@@ -232,6 +232,39 @@ export const CardButton = styled.button`
   }
 `;
 
+export const FileButton = styled.button`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: ${mainTheme.colors.darkPurple};
+  color: ${mainTheme.colors.white};
+  padding: 12px 20px;
+  font-size: 14px;
+  border: none;
+  position: relative;
+
+  &:hover {
+    background-color: ${mainTheme.colors.extraDarkPurple};
+  }
+
+  @media (${mainTheme.deviсe.laptopM}) {
+    padding: 11px 20px;
+  }
+
+  @media (${mainTheme.deviсe.tablet}) {
+    font-size: 13px;
+  }
+
+  @media (${mainTheme.deviсe.mobileXL}) {
+    font-size: 12px;
+  }
+
+  @media (${mainTheme.deviсe.mobileS}) {
+    font-size: 11px;
+  }
+`;
+
 export const DeleteButton = styled.button`
   margin-top: 10px;
   width: 100%;

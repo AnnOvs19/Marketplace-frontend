@@ -3,24 +3,39 @@
 import React from "react";
 import * as S from "./fileInput.style";
 
-interface FileInputProps {
-  onChange: (file: File) => void;
+interface IProps {
+  children?: React.ReactNode;
+  value?: string;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  disabled?: boolean;
   accept?: string;
+  name?: string;
 }
 
-const FileInput: React.FC<FileInputProps> = ({ onChange, accept }) => {
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files && e.target.files[0];
-    if (file) {
-      onChange(file);
-    }
-  };
-
+const FileInput: React.FC<IProps> = ({
+  children,
+  value,
+  onChange,
+  disabled,
+  accept,
+  name,
+  ...props
+}) => {
   return (
-    <div>
-      <S.InputFile type="file" accept={accept} onChange={handleChange} />
-      <S.Label htmlFor="fileInput">Добавить фото</S.Label>
-    </div>
+    <S.InputFile>
+      <S.Label htmlFor="containedButton-file">
+        <input
+          name={name}
+          type="file"
+          multiple
+          value={value}
+          accept={accept}
+          disabled={disabled}
+          onChange={disabled ? () => {} : onChange}
+        />
+        {children}
+      </S.Label>
+    </S.InputFile>
   );
 };
 

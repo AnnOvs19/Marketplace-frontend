@@ -38,4 +38,8 @@ export const CardBox = styled.div`
     margin-left: 0;
     margin-right: 0;
   }
+
+  @media (${mainTheme.deviсe.mobileS}) {
+    gap: 5px;
+  }
 `;

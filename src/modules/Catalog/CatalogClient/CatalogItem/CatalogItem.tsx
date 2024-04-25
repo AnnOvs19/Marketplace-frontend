@@ -1,37 +1,68 @@
 "use client";
 
-import React, { FC } from "react";
+import React, { FC, MouseEvent, useState } from "react";
 import { ICatalogMock } from "../../mockDelCatalog";
 import * as S from "./catalogItem.style";
 import * as T from "@/styles/baseText.style";
 import * as B from "@/styles/baseButtons.style";
 import Image from "next/image";
+import likeEmpty from "@/assets/icons/filterLike.svg";
+import like from "@/assets/icons/likeProductIcon.svg";
+import Link from "next/link";
 
 interface IProps {
   item: ICatalogMock;
 }
 
 const CatalogItem: FC<IProps> = ({ item }) => {
+  const [likeList, setLikelist] = useState<boolean>(false);
+
+  function addLike(event: MouseEvent<HTMLButtonElement>) {
+    event.stopPropagation();
+    setLikelist(!likeList);
+  }
+
   return (
     <S.CardItem>
-      <S.CardItemImage>
-        <Image
-          src={item.image[0]}
-          alt="Product card image"
-          fill
-          style={{
-            objectFit: "cover"
-          }}
-        />
-      </S.CardItemImage>
+      <Link href={`/catalog/${item.title}`} style={{ width: `100%` }}>
+        <S.CardItemImage>
+          <Image
+            src={item.image[0]}
+            alt="Product card image"
+            fill
+            style={{
+              objectFit: "cover"
+            }}
+          />
+        </S.CardItemImage>
+      </Link>
       <S.CardItemBox>
-        <T.CardTitle>{item.title.substring(0, 20)}...</T.CardTitle>
-        <T.CardPrice>{item.price} руб</T.CardPrice>
+        <Link href={`/catalog/${item.title}`}>
+          <T.CardTitle>{item.title.substring(0, 20)}...</T.CardTitle>
+        </Link>
+        <Link href={`/catalog/${item.title}`}>
+          <T.CardPrice>{item.price} руб</T.CardPrice>
+        </Link>
+
         <S.CardBottom>
           <T.CardOtherText>{item.category}</T.CardOtherText>
           <T.CardOtherText>{item.sumInStock} шт.</T.CardOtherText>
         </S.CardBottom>
-        <B.CardButton>В корзину</B.CardButton>
+        <B.CardButton type="button" onClick={(e) => e.stopPropagation()}>
+          В корзину
+        </B.CardButton>
+        <S.LikeCardIcon onClick={(event) => addLike(event)} type="button">
+          <S.LikeWrap>
+            <Image
+              src={likeList ? like : likeEmpty}
+              alt=""
+              fill
+              style={{
+                objectFit: "contain"
+              }}
+            />
+          </S.LikeWrap>
+        </S.LikeCardIcon>
       </S.CardItemBox>
     </S.CardItem>
   );

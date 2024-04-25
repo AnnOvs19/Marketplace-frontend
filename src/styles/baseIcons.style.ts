@@ -24,7 +24,10 @@ export const LogoIcon = styled.div`
   }
 `;
 
-export const BasketIcon = styled.div`
+export const BasketIcon = styled.button`
+  background-color: transparent;
+  border: none;
+  outline: none;
   width: 32px;
   height: 32px;
   position: relative;
@@ -40,7 +43,10 @@ export const BasketIcon = styled.div`
   }
 `;
 
-export const TableIcon = styled.div`
+export const TableIcon = styled.button`
+  background-color: transparent;
+  border: none;
+  outline: none;
   margin-right: 5px;
   width: 30px;
   height: 30px;
@@ -62,7 +68,10 @@ export const TableIcon = styled.div`
   }
 `;
 
-export const EditIcon = styled.div`
+export const EditIcon = styled.button`
+  background-color: transparent;
+  border: none;
+  outline: none;
   width: 30px;
   height: 30px;
   position: relative;

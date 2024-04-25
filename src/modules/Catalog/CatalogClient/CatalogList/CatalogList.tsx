@@ -21,9 +21,9 @@ const CatalogList = () => {
         </Link> */}
         {mockDelCatalog?.map((item, index) => {
           return (
-            <Link href={`/catalog/${item.title}`}>
-              <CatalogItem item={item} key={index} />
-            </Link>
+            // <Link href={`/catalog/${item.title}`}>
+            <CatalogItem item={item} key={index} />
+            // </Link>
           );
         })}
       </S.CardBox>
