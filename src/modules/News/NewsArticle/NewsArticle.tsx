@@ -20,7 +20,6 @@ const NewsArticle: FC<IProps> = ({ item }) => {
   return (
     <S.ArticleWrapper>
       <S.ArticleBox>
-        <T.TitleSection>{item.title}</T.TitleSection>
         <S.ImageList>
           <Swiper
             navigation={true}
@@ -47,8 +46,10 @@ const NewsArticle: FC<IProps> = ({ item }) => {
             })}
           </Swiper>
         </S.ImageList>
-
-        <T.TextMedium>{item.text}</T.TextMedium>
+        <S.InfoBox>
+          <T.TitleSection>{item.title}</T.TitleSection>
+          <T.TextMedium>{item.text}</T.TextMedium>
+        </S.InfoBox>
       </S.ArticleBox>
     </S.ArticleWrapper>
   );

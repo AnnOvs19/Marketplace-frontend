@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const EditForm = styled.form`
   margin: 0 auto;
-  margin-top: 280px;
+  margin-top: 230px;
   position: relative;
   padding: 30px;
   z-index: 150;
@@ -13,23 +13,25 @@ export const EditForm = styled.form`
   background-color: ${mainTheme.colors.colorForm};
   box-shadow: 0px 0px 26px 5px ${mainTheme.colors.darkPurple};
   height: auto;
-  width: 40%;
+  width: 55%;
 
   @media (${mainTheme.deviсe.desktopM}) {
-    width: 50%;
+    width: 65%;
   }
 
   @media (${mainTheme.deviсe.desktopS}) {
-    margin-top: 210px;
-    width: 55%;
+    margin-top: 170px;
+    width: 80%;
   }
 
   @media (${mainTheme.deviсe.laptopL}) {
-    width: 60%;
+    margin-top: 150px;
+    width: 90%;
     gap: 20px;
   }
 
   @media (${mainTheme.deviсe.laptopS}) {
+    margin-top: 100px;
     width: 65%;
   }
 
@@ -48,7 +50,6 @@ export const EditForm = styled.form`
   @media (${mainTheme.deviсe.mobileXL}) {
     gap: 15px;
     width: 85%;
-    margin-top: 250px;
   }
 
   @media (${mainTheme.deviсe.mobileL}) {
@@ -57,11 +58,10 @@ export const EditForm = styled.form`
 
   @media (${mainTheme.deviсe.mobileM}) {
     width: 98%;
-    margin-top: 210px;
   }
 `;
 
-export const EditSelBody = styled.div`
+export const EditBody = styled.div`
   display: flex;
   flex-direction: row;
   gap: 40px;
@@ -83,18 +83,34 @@ export const EditSelBody = styled.div`
   }
 `;
 
-export const SelBodyInfo = styled.div`
-  width: 100%;
+export const EditItemBox = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 100%;
 
   @media (${mainTheme.deviсe.mobileL}) {
     gap: 10px;
   }
 `;
 
-export const SelBodyAvatar = styled.div`
+export const SelBodyInfo = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 35px;
+
+  @media (${mainTheme.deviсe.laptopS}) {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  @media (${mainTheme.deviсe.mobileL}) {
+    gap: 10px;
+  }
+`;
+
+export const BodyAvatar = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -105,7 +121,7 @@ export const SelBodyAvatar = styled.div`
   }
 `;
 
-export const SellerPhoto = styled.div`
+export const Photo = styled.div`
   position: relative;
   width: 200px;
   height: 200px;

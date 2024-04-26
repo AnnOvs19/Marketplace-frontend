@@ -70,7 +70,6 @@ const StepOneClient: FC<IProps> = ({ indexTab, setIndexTab, formControl }) => {
           <U.ErrorMessage>Введите корректный номер телефона</U.ErrorMessage>
         )}
       </U.BodyInputWrapper>
-
       <U.BodyInputWrapper>
         <T.TextForm>Придумайте свой пароль</T.TextForm>
         <Controller

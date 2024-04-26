@@ -5,11 +5,12 @@ import * as S from "./fileInput.style";
 
 interface IProps {
   children?: React.ReactNode;
-  value?: string;
+  value?: string | any;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   disabled?: boolean;
   accept?: string;
   name?: string;
+  errors?: boolean;
 }
 
 const FileInput: React.FC<IProps> = ({
@@ -19,6 +20,7 @@ const FileInput: React.FC<IProps> = ({
   disabled,
   accept,
   name,
+  errors,
   ...props
 }) => {
   return (

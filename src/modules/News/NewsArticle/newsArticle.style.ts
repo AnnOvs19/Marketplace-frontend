@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const ArticleWrapper = styled.section`
   margin: 0 auto;
-  margin-top: 200px;
+  margin-top: 155px;
   margin-bottom: 50px;
   max-width: 1405px;
   height: auto;
@@ -14,12 +14,8 @@ export const ArticleWrapper = styled.section`
   justify-content: center;
 
   @media (${mainTheme.deviсe.laptopL}) {
-    margin-top: 150px;
-    width: 100%;
-  }
-
-  @media (${mainTheme.deviсe.tablet}) {
     margin-top: 130px;
+    width: 100%;
   }
 
   @media (${mainTheme.deviсe.mobileXL}) {
@@ -37,7 +33,7 @@ export const ArticleWrapper = styled.section`
 
 export const ArticleBox = styled.article`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   max-width: 1405px;
   margin-left: 40px;
@@ -45,6 +41,10 @@ export const ArticleBox = styled.article`
   height: auto;
   overflow: hidden;
   gap: 40px;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
 
   @media (${mainTheme.deviсe.mobileXL}) {
     margin-left: 0px;
@@ -63,12 +63,15 @@ export const ArticleBox = styled.article`
 `;
 
 export const ImageList = styled.div`
-  width: 1405px;
+  width: 100%;
   height: 655px;
 
   @media (${mainTheme.deviсe.desktopM}) {
-    width: 1405px;
     height: 550px;
+  }
+
+  @media (${mainTheme.deviсe.desktopS}) {
+    height: 500px;
   }
 
   @media (${mainTheme.deviсe.laptopL}) {
@@ -78,6 +81,14 @@ export const ImageList = styled.div`
 
   @media (${mainTheme.deviсe.laptopM}) {
     height: 350px;
+  }
+
+  @media (max-width: 900px) {
+    height: 450px;
+  }
+
+  @media (${mainTheme.deviсe.tablet}) {
+    height: 340px;
   }
 
   @media (${mainTheme.deviсe.mobileXL}) {
@@ -94,41 +105,27 @@ export const ImageList = styled.div`
 
   .swiper-button-next,
   .swiper-button-prev {
-    color: #9500f2;
-    width: 60px;
-    height: 60px;
-    margin: 0 45px 0 45px;
-
+    margin: -10px 30px 0 30px;
+    width: 45px;
+    height: 45px;
     &:after {
-      font-size: 35px !important;
-      color: ${mainTheme.colors.darkPurple};
+      font-size: 25px !important;
+      color: ${mainTheme.colors.white};
     }
 
     &:hover {
       transition: 0.5s;
       border-radius: 50%;
       background-color: rgba(255, 255, 255, 0.596);
+      color: ${mainTheme.colors.darkPurple};
     }
 
-    @media (${mainTheme.deviсe.laptopL}) {
-      margin: 0 40px 0 40px;
+    @media (${mainTheme.deviсe.desktopS}) {
+      margin: -20px 30px 0 30px;
     }
 
     @media (${mainTheme.deviсe.laptopS}) {
-      width: 55px;
-      height: 55px;
-      &:after {
-        font-size: 30px !important;
-      }
-    }
-
-    @media (${mainTheme.deviсe.tablet}) {
-      margin: 0 30px 0 30px;
-      width: 45px;
-      height: 45px;
-      &:after {
-        font-size: 25px !important;
-      }
+      margin: -5px 30px 0 30px;
     }
 
     @media (${mainTheme.deviсe.mobileXL}) {
@@ -164,7 +161,7 @@ export const ImageList = styled.div`
 `;
 
 export const ArticleImage = styled.div`
-  width: 1405px;
+  width: 100%;
   height: 655px;
   position: relative;
 
@@ -173,12 +170,19 @@ export const ArticleImage = styled.div`
   }
 
   @media (${mainTheme.deviсe.laptopL}) {
-    width: 100%;
     height: 450px;
   }
 
   @media (${mainTheme.deviсe.laptopM}) {
     height: 350px;
+  }
+
+  @media (max-width: 900px) {
+    height: 450px;
+  }
+
+  @media (${mainTheme.deviсe.tablet}) {
+    height: 340px;
   }
 
   @media (${mainTheme.deviсe.mobileXL}) {
@@ -192,4 +196,11 @@ export const ArticleImage = styled.div`
   @media (${mainTheme.deviсe.mobileS}) {
     height: 150px;
   }
+`;
+
+export const InfoBox = styled.article`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 40px;
 `;
