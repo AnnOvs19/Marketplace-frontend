@@ -2,13 +2,12 @@
 
 import React, { ChangeEvent, FC, InputHTMLAttributes } from "react";
 import * as S from "./inputForm.style";
-import { FieldErrors } from "react-hook-form";
 
 interface IProps extends InputHTMLAttributes<HTMLInputElement> {
   name?: string;
   type: string;
   placeholder: string;
-  value?: string;
+  value?: string | number;
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
   errors?: boolean;
 }

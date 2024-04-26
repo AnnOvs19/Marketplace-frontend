@@ -17,6 +17,8 @@ interface IProps {
 }
 
 const NewsArticle: FC<IProps> = ({ item }) => {
+  // const text = item.text.split("\n").map((str) => <>{str}</>);
+
   return (
     <S.ArticleWrapper>
       <S.ArticleBox>

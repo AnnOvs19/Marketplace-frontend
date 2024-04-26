@@ -2,7 +2,6 @@ import { mainTheme } from "@/styles/mainTheme.style";
 import styled from "styled-components";
 
 export const InputFormWrapper = styled.div<{ error?: boolean }>`
-  /* border-bottom: 1px solid ${mainTheme.colors.darkPurple}; */
   border-bottom: 1px solid
     ${(props) => (props.error ? "#db2c2c" : `${mainTheme.colors.darkPurple}`)};
   display: flex;
@@ -24,6 +23,11 @@ export const InputFormWrapper = styled.div<{ error?: boolean }>`
       font-size: 14px;
       font-weight: 100;
       line-height: 120%;
+    }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
     }
   }
 

@@ -5,18 +5,17 @@ import * as S from "./createEditNews.style";
 import * as T from "@/styles/baseText.style";
 import * as B from "@/styles/baseButtons.style";
 import * as U from "@/ui/Inputs/InputForm/inputForm.style";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import FileInput from "@/ui/Inputs/FileInput/FileInput";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
-
-import "swiper/css/navigation";
-import "swiper/css";
 import MiniLoader from "@/ui/Loading/MiniLoader/MiniLoader";
 import { Controller, useForm } from "react-hook-form";
 import TextAreaForm from "@/ui/TextArea/TextAreaForm/TextAreaForm";
 import InputForm from "@/ui/Inputs/InputForm/InputForm";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import "swiper/css/navigation";
+import "swiper/css";
 
 interface ICreateEditNews {
   title: string;
@@ -98,7 +97,7 @@ const CreateEditNews = () => {
           />
           {errors.title && (
             <U.ErrorMessage>
-              Введите Заголовок статьи не менее 5 и не более 200 символов
+              Введите заголовок статьи не менее 5 и не более 200 символов
             </U.ErrorMessage>
           )}
         </U.BodyInputWrapper>

@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const CreateNews = styled.form`
   margin: 0 auto;
-  margin-top: 230px;
+  margin-top: 170px;
   position: relative;
   padding: 30px;
   z-index: 150;
@@ -20,17 +20,65 @@ export const CreateNews = styled.form`
     display: none;
   }
 
+  .swiper-button-next,
+  .swiper-button-prev {
+    margin: -5px 30px 0 30px;
+    width: 45px;
+    height: 45px;
+    &:after {
+      font-size: 25px !important;
+      color: ${mainTheme.colors.white};
+    }
+
+    &:hover {
+      transition: 0.5s;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.596);
+      color: ${mainTheme.colors.darkPurple};
+    }
+
+    @media (${mainTheme.deviсe.mobileXL}) {
+      margin: 0 25px 0 25px;
+      width: 40px;
+      height: 40px;
+      &:after {
+        font-size: 20px !important;
+      }
+    }
+
+    @media (${mainTheme.deviсe.mobileL}) {
+      margin: 0 15px 0 15px;
+    }
+
+    @media (${mainTheme.deviсe.mobileM}) {
+      margin: 0 15px 0 15px;
+      width: 30px;
+      height: 30px;
+      &:after {
+        font-size: 15px !important;
+      }
+    }
+
+    @media (${mainTheme.deviсe.mobileXS}) {
+      width: 25px;
+      height: 25px;
+      &:after {
+        font-size: 10px !important;
+      }
+    }
+  }
+
   @media (${mainTheme.deviсe.desktopM}) {
+    margin-top: 150px;
     width: 75%;
   }
 
   @media (${mainTheme.deviсe.desktopS}) {
-    margin-top: 170px;
     width: 85%;
   }
 
   @media (${mainTheme.deviсe.laptopL}) {
-    margin-top: 150px;
+    margin-top: 130px;
     width: 90%;
     gap: 25px;
   }

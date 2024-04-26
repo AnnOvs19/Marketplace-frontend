@@ -1,10 +1,10 @@
-import BgCircle from "@/components/Backgrounds/BgCircle/BgCircle";
+import WaveHeader from "@/components/Backgrounds/WaveHeader/WaveHeader";
 import CreateEditNews from "@/modules/News/CreateEditNews/CreateEditNews";
 
 export default function CreateNewsArticle() {
   return (
     <>
-      <BgCircle />
+      <WaveHeader />
       <CreateEditNews />
     </>
   );
