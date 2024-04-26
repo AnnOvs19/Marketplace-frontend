@@ -5,9 +5,30 @@ interface IProps {
   openTab?: boolean;
 }
 
-export const AuthForm = styled.form`
+export const AuthContainer = styled.div`
   margin: 0 auto;
-  margin-top: 280px;
+  margin-top: 250px;
+  position: relative;
+  z-index: 150;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (${mainTheme.deviсe.desktopS}) {
+    margin-top: 210px;
+  }
+
+  @media (${mainTheme.deviсe.mobileXL}) {
+    margin-top: 250px;
+  }
+
+  @media (${mainTheme.deviсe.mobileM}) {
+    margin-top: 210px;
+  }
+`;
+
+export const AuthWrap = styled.div`
+  margin: 0 auto;
   position: relative;
   z-index: 150;
   display: flex;
@@ -23,7 +44,6 @@ export const AuthForm = styled.form`
   }
 
   @media (${mainTheme.deviсe.desktopS}) {
-    margin-top: 210px;
     width: 45%;
   }
 
@@ -50,7 +70,6 @@ export const AuthForm = styled.form`
 
   @media (${mainTheme.deviсe.mobileXL}) {
     width: 80%;
-    margin-top: 250px;
   }
 
   @media (${mainTheme.deviсe.mobileL}) {
@@ -59,7 +78,6 @@ export const AuthForm = styled.form`
 
   @media (${mainTheme.deviсe.mobileM}) {
     width: 95%;
-    margin-top: 210px;
   }
 
   @media (${mainTheme.deviсe.mobileS}) {
@@ -121,7 +139,90 @@ export const HeadButton = styled.button<IProps>`
 
 export const AuthBody = styled.div`
   padding: 2px 30px 30px 30px;
+  /* display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (${mainTheme.deviсe.laptopL}) {
+    gap: 18px;
+  }
+
+  @media (${mainTheme.deviсe.mobileL}) {
+    gap: 16px;
+  }
+
+  @media (${mainTheme.deviсe.mobileS}) {
+    gap: 14px;
+  } */
+`;
+
+export const BottomAuth = styled.div`
   display: flex;
+  flex-direction: row;
+  gap: 20px;
+
+  @media (${mainTheme.deviсe.mobileXL}) {
+    gap: 10px;
+    flex-direction: column;
+  }
+`;
+
+export const LoginForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (${mainTheme.deviсe.laptopL}) {
+    gap: 18px;
+  }
+
+  @media (${mainTheme.deviсe.mobileL}) {
+    gap: 16px;
+  }
+
+  @media (${mainTheme.deviсe.mobileS}) {
+    gap: 14px;
+  }
+`;
+
+export const RegisterForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (${mainTheme.deviсe.laptopL}) {
+    gap: 18px;
+  }
+
+  @media (${mainTheme.deviсe.mobileL}) {
+    gap: 16px;
+  }
+
+  @media (${mainTheme.deviсe.mobileS}) {
+    gap: 14px;
+  }
+`;
+
+export const StepRegister1 = styled.div<{ step: number }>`
+  display: ${(props) => (props.step === 1 ? "flex" : "none")};
+  flex-direction: column;
+  gap: 20px;
+
+  @media (${mainTheme.deviсe.laptopL}) {
+    gap: 18px;
+  }
+
+  @media (${mainTheme.deviсe.mobileL}) {
+    gap: 16px;
+  }
+
+  @media (${mainTheme.deviсe.mobileS}) {
+    gap: 14px;
+  }
+`;
+
+export const StepRegister2 = styled.div<{ step: number }>`
+  display: ${(props) => (props.step === 2 ? "flex" : "none")};
   flex-direction: column;
   gap: 20px;
 

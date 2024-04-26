@@ -1,9 +1,11 @@
-import WaveHeader from "@/components/Backgrounds/WaveHeader/WaveHeader";
+import BgCircle from "@/components/Backgrounds/BgCircle/BgCircle";
+import AuthClient from "@/modules/Auth/AuthClient/AuthClient";
 
 export default function LoginClient() {
   return (
     <>
-      <WaveHeader />
+      <BgCircle />
+      <AuthClient />
     </>
   );
 }

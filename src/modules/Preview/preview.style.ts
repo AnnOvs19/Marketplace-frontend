@@ -13,8 +13,24 @@ export const PreviewWraper = styled.section`
     height: 620px;
   }
 
+  @media (max-width: 900px) {
+    height: 700px;
+  }
+
+  @media (${mainTheme.deviсe.tablet}) {
+    height: 740px;
+  }
+
   @media (${mainTheme.deviсe.mobileXL}) {
-    height: 635px;
+    height: 700px;
+  }
+
+  @media (${mainTheme.deviсe.mobileL}) {
+    height: 665px;
+  }
+
+  @media (${mainTheme.deviсe.mobileXS}) {
+    height: 690px;
   }
 `;
 
@@ -29,8 +45,24 @@ export const PreviewBacground = styled.div`
     height: 620px;
   }
 
+  @media (max-width: 900px) {
+    height: 700px;
+  }
+
+  @media (${mainTheme.deviсe.tablet}) {
+    height: 740px;
+  }
+
   @media (${mainTheme.deviсe.mobileXL}) {
-    height: 635px;
+    height: 700px;
+  }
+
+  @media (${mainTheme.deviсe.mobileL}) {
+    height: 665px;
+  }
+
+  @media (${mainTheme.deviсe.mobileXS}) {
+    height: 690px;
   }
 `;
 
@@ -47,8 +79,24 @@ export const PreviewBoxBG = styled.div`
     height: 620px;
   }
 
+  @media (max-width: 900px) {
+    height: 700px;
+  }
+
+  @media (${mainTheme.deviсe.tablet}) {
+    height: 740px;
+  }
+
   @media (${mainTheme.deviсe.mobileXL}) {
-    height: 635px;
+    height: 700px;
+  }
+
+  @media (${mainTheme.deviсe.mobileL}) {
+    height: 665px;
+  }
+
+  @media (${mainTheme.deviсe.mobileXS}) {
+    height: 690px;
   }
 `;
 
@@ -132,7 +180,7 @@ export const TextBottom = styled.div`
     gap: 10px;
   }
 
-  @media (${mainTheme.deviсe.mobileL}) {
+  @media (${mainTheme.deviсe.mobileS}) {
     flex-direction: column;
   }
 `;
@@ -159,20 +207,60 @@ export const PreviewImage = styled.div`
   }
 
   @media (max-width: 870px) {
-    margin: 20px 0;
+    margin: 30px 0;
   }
 
   @media (${mainTheme.deviсe.mobileXL}) {
     width: 95%;
-    height: 60%;
+    height: 50%;
+    margin: 25px 0;
   }
 
   @media (${mainTheme.deviсe.mobileL}) {
     width: 100%;
-    height: 40%;
+    height: 35%;
   }
 
   @media (${mainTheme.deviсe.mobileS}) {
     height: 30%;
+  }
+`;
+
+export const LoginPrewiewButton = styled.button`
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  color: ${mainTheme.colors.white};
+  border: 1px solid ${mainTheme.colors.white};
+  padding: 10px 131px;
+  font-size: 14px;
+  margin-top: 15px;
+  margin-bottom: -5px;
+
+  &:hover {
+    background-color: ${mainTheme.colors.white};
+    color: ${mainTheme.colors.black};
+  }
+
+  @media (${mainTheme.deviсe.laptopS}) {
+    padding: 10px 120px;
+  }
+
+  @media (${mainTheme.deviсe.tablet}) {
+    margin-bottom: -10px;
+    font-size: 13px;
+  }
+
+  @media (${mainTheme.deviсe.mobileL}) {
+    font-size: 12px;
+    padding: 10px 40px;
+    width: 100%;
+    margin-bottom: -5px;
+  }
+
+  @media (${mainTheme.deviсe.mobileS}) {
+    font-size: 11px;
   }
 `;

@@ -7,6 +7,7 @@ import * as C from "../preview.style";
 import * as B from "@/styles/baseButtons.style";
 import Image from "next/image";
 import { IPreviewClient } from "../preview.mock";
+import Link from "next/link";
 
 interface IProps {
   item: IPreviewClient;
@@ -29,6 +30,9 @@ const PreviewItemsClient: FC<IProps> = ({
             <T.MainTitle>{item.title}</T.MainTitle>
             <T.SubTitle>{item.subTitle}</T.SubTitle>
             <T.TextMedium>{item.text}</T.TextMedium>
+            <Link href="/loginClient">
+              <C.LoginPrewiewButton>Аккаунт покупателя</C.LoginPrewiewButton>
+            </Link>
             <C.TextBottom>
               <B.TransparentButton onClick={() => setIndex(0)}>
                 Экономия

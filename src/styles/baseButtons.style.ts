@@ -57,6 +57,10 @@ export const TransparentButton = styled.button`
     font-size: 12px;
   }
 
+  @media (${mainTheme.deviсe.mobileL}) {
+    padding: 10px 10px;
+  }
+
   @media (${mainTheme.deviсe.mobileS}) {
     font-size: 11px;
   }

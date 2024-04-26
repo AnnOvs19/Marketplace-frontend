@@ -1,8 +1,10 @@
 import { mainTheme } from "@/styles/mainTheme.style";
 import styled from "styled-components";
 
-export const InputFormWrapper = styled.div`
-  border-bottom: 1px solid ${mainTheme.colors.darkPurple};
+export const InputFormWrapper = styled.div<{ error?: boolean }>`
+  /* border-bottom: 1px solid ${mainTheme.colors.darkPurple}; */
+  border-bottom: 1px solid
+    ${(props) => (props.error ? "#db2c2c" : `${mainTheme.colors.darkPurple}`)};
   display: flex;
   align-items: center;
   width: 100%;
@@ -20,7 +22,7 @@ export const InputFormWrapper = styled.div`
     &::placeholder {
       color: #d9b4f07f;
       font-size: 14px;
-      font-weight: 300;
+      font-weight: 100;
       line-height: 120%;
     }
   }
@@ -61,10 +63,19 @@ export const BodyInputWrapper = styled.div`
   gap: 8px;
 
   @media (${mainTheme.deviсe.laptopL}) {
-    gap: 3px;
+    gap: 5px;
   }
 
   @media (${mainTheme.deviсe.tablet}) {
-    gap: 1px;
+    gap: 3px;
+  }
+`;
+
+export const ErrorMessage = styled.span`
+  color: #db2c2c;
+  font-size: 12px;
+
+  @media (${mainTheme.deviсe.mobileL}) {
+    font-size: 11px;
   }
 `;
