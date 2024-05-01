@@ -1,12 +1,33 @@
 "use client";
 
-import React from "react";
+import React, { FC } from "react";
+import { ICatalogMock } from "../../mockDelCatalog";
+import * as S from "./productReviews.style";
+import * as T from "@/styles/baseText.style";
+import CreateReviews from "./CreateReviews/CreateReviews";
 
-const ProductReviews = () => {
+interface IProps {
+  product: ICatalogMock;
+}
+
+const ProductReviews: FC<IProps> = ({ product }) => {
   return (
-    <div>
-      <h1>Hello World from MyComponent</h1>
-    </div>
+    <S.ReviewBox>
+      <T.TitleSection>Отзывы</T.TitleSection>
+      <S.ReviewContainer>
+        <S.ReviewList>
+          {product.reviews?.map((item) => {
+            return (
+              <S.ReviewItem>
+                <T.DeskKey>{item.user}</T.DeskKey>
+                <T.DeskValue>{item.text}</T.DeskValue>
+              </S.ReviewItem>
+            );
+          })}
+        </S.ReviewList>
+        <CreateReviews />
+      </S.ReviewContainer>
+    </S.ReviewBox>
   );
 };
 

@@ -14,7 +14,7 @@ const ProductArticle = () => {
       <S.ProductBox>
         <ProductHead product={product} />
         <ProductBody product={product} />
-        <ProductReviews />
+        <ProductReviews product={product} />
       </S.ProductBox>
     </S.ProductWrapper>
   );

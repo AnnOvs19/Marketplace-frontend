@@ -16,18 +16,22 @@ const SliderProducts = () => {
       <T.TitleSection>Популярные новинки</T.TitleSection>
       <S.SliderList>
         <Swiper
-          spaceBetween={16}
+          spaceBetween={18}
           slidesPerView={"auto"}
           speed={500}
           breakpoints={{
             250: {
               spaceBetween: 1
             },
-            321: {
+            425: {
               spaceBetween: 10
             },
-            425: {
-              spaceBetween: 16
+            600: {
+              spaceBetween: 14
+            },
+
+            1000: {
+              spaceBetween: 18
             }
           }}
         >

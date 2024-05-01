@@ -13,7 +13,13 @@ export interface ICatalogMock {
   sumInStock: number;
   quantity: number;
   like?: number;
-  reviews?: string[];
+  reviews?: IReviews[];
+}
+
+export interface IReviews {
+  id: number;
+  user: string;
+  text: string;
 }
 
 export const mockDelCatalog = [
@@ -35,7 +41,17 @@ export const mockDelCatalog = [
     sumInStock: 55,
     quantity: 1,
     like: 5,
-    reviews: ["1", "2", "3", "4", "5"]
+    reviews: [
+      {
+        id: 1,
+        user: "anya",
+        text: "blabla1 blabla1 blabla1 На нашем маркетплейсе предоставляется официальная гарантия от производителя на все товары. Арпрьаал оал дешщдег пы"
+      },
+      { id: 2, user: "anya", text: "blabla2" },
+      { id: 3, user: "anya", text: "blabla3" },
+      { id: 4, user: "anya", text: "blabla4" },
+      { id: 5, user: "anya", text: "blabla5" }
+    ]
   },
   {
     id: 2234567890,
@@ -48,7 +64,13 @@ export const mockDelCatalog = [
     sumInStock: 59,
     quantity: 1,
     like: 6,
-    reviews: ["1", "2", "3", "4", "5"]
+    reviews: [
+      { id: 1, user: "anya", text: "blabla1" },
+      { id: 2, user: "anya", text: "blabla2" },
+      { id: 3, user: "anya", text: "blabla3" },
+      { id: 4, user: "anya", text: "blabla4" },
+      { id: 5, user: "anya", text: "blabla5" }
+    ]
   },
   {
     id: 3124567890,
@@ -61,7 +83,13 @@ export const mockDelCatalog = [
     sumInStock: 95,
     quantity: 1,
     like: 7,
-    reviews: ["1", "2", "3", "4", "5"]
+    reviews: [
+      { id: 1, user: "anya", text: "blabla1" },
+      { id: 2, user: "anya", text: "blabla2" },
+      { id: 3, user: "anya", text: "blabla3" },
+      { id: 4, user: "anya", text: "blabla4" },
+      { id: 5, user: "anya", text: "blabla5" }
+    ]
   },
   {
     id: 4123567890,
@@ -74,7 +102,13 @@ export const mockDelCatalog = [
     sumInStock: 15,
     quantity: 1,
     like: 9,
-    reviews: ["1", "2", "3", "4", "5"]
+    reviews: [
+      { id: 1, user: "anya", text: "blabla1" },
+      { id: 2, user: "anya", text: "blabla2" },
+      { id: 3, user: "anya", text: "blabla3" },
+      { id: 4, user: "anya", text: "blabla4" },
+      { id: 5, user: "anya", text: "blabla5" }
+    ]
   },
   {
     id: 5098764321,
@@ -87,7 +121,13 @@ export const mockDelCatalog = [
     sumInStock: 5,
     quantity: 1,
     like: 17,
-    reviews: ["1", "2", "3", "4", "5"]
+    reviews: [
+      { id: 1, user: "anya", text: "blabla1" },
+      { id: 2, user: "anya", text: "blabla2" },
+      { id: 3, user: "anya", text: "blabla3" },
+      { id: 4, user: "anya", text: "blabla4" },
+      { id: 5, user: "anya", text: "blabla5" }
+    ]
   },
   {
     id: 6123457890,
@@ -100,7 +140,13 @@ export const mockDelCatalog = [
     sumInStock: 105,
     quantity: 1,
     like: 44,
-    reviews: ["1", "2", "3", "4", "5"]
+    reviews: [
+      { id: 1, user: "anya", text: "blabla1" },
+      { id: 2, user: "anya", text: "blabla2" },
+      { id: 3, user: "anya", text: "blabla3" },
+      { id: 4, user: "anya", text: "blabla4" },
+      { id: 5, user: "anya", text: "blabla5" }
+    ]
   },
   {
     id: 7098654321,
@@ -120,7 +166,13 @@ export const mockDelCatalog = [
     sumInStock: 205,
     quantity: 1,
     like: 7,
-    reviews: ["1", "2", "3", "4", "5"]
+    reviews: [
+      { id: 1, user: "anya", text: "blabla1" },
+      { id: 2, user: "anya", text: "blabla2" },
+      { id: 3, user: "anya", text: "blabla3" },
+      { id: 4, user: "anya", text: "blabla4" },
+      { id: 5, user: "anya", text: "blabla5" }
+    ]
   },
   {
     id: 8123456790,
@@ -133,7 +185,13 @@ export const mockDelCatalog = [
     sumInStock: 25,
     quantity: 1,
     like: 97,
-    reviews: ["1", "2", "3", "4", "5"]
+    reviews: [
+      { id: 1, user: "anya", text: "blabla1" },
+      { id: 2, user: "anya", text: "blabla2" },
+      { id: 3, user: "anya", text: "blabla3" },
+      { id: 4, user: "anya", text: "blabla4" },
+      { id: 5, user: "anya", text: "blabla5" }
+    ]
   },
   {
     id: 9087654321,
@@ -153,7 +211,13 @@ export const mockDelCatalog = [
     sumInStock: 75,
     quantity: 1,
     like: 2,
-    reviews: ["1", "2", "3", "4", "5"]
+    reviews: [
+      { id: 1, user: "anya", text: "blabla1" },
+      { id: 2, user: "anya", text: "blabla2" },
+      { id: 3, user: "anya", text: "blabla3" },
+      { id: 4, user: "anya", text: "blabla4" },
+      { id: 5, user: "anya", text: "blabla5" }
+    ]
   },
   {
     id: 1023456789,
@@ -166,7 +230,13 @@ export const mockDelCatalog = [
     sumInStock: 45,
     quantity: 1,
     like: 8,
-    reviews: ["1", "2", "3", "4", "5"]
+    reviews: [
+      { id: 1, user: "anya", text: "blabla1" },
+      { id: 2, user: "anya", text: "blabla2" },
+      { id: 3, user: "anya", text: "blabla3" },
+      { id: 4, user: "anya", text: "blabla4" },
+      { id: 5, user: "anya", text: "blabla5" }
+    ]
   },
   {
     id: 1134567890,
@@ -179,7 +249,13 @@ export const mockDelCatalog = [
     sumInStock: 40,
     quantity: 1,
     like: 123,
-    reviews: ["1", "2", "3", "4", "5"]
+    reviews: [
+      { id: 1, user: "anya", text: "blabla1" },
+      { id: 2, user: "anya", text: "blabla2" },
+      { id: 3, user: "anya", text: "blabla3" },
+      { id: 4, user: "anya", text: "blabla4" },
+      { id: 5, user: "anya", text: "blabla5" }
+    ]
   },
   {
     id: 1209876543,
@@ -192,7 +268,13 @@ export const mockDelCatalog = [
     sumInStock: 4,
     quantity: 1,
     like: 11,
-    reviews: ["1", "2", "3", "4", "5"]
+    reviews: [
+      { id: 1, user: "anya", text: "blabla1" },
+      { id: 2, user: "anya", text: "blabla2" },
+      { id: 3, user: "anya", text: "blabla3" },
+      { id: 4, user: "anya", text: "blabla4" },
+      { id: 5, user: "anya", text: "blabla5" }
+    ]
   },
   {
     id: 1324567890,
@@ -205,7 +287,13 @@ export const mockDelCatalog = [
     sumInStock: 2,
     quantity: 1,
     like: 198,
-    reviews: ["1", "2", "3", "4", "5"]
+    reviews: [
+      { id: 1, user: "anya", text: "blabla1" },
+      { id: 2, user: "anya", text: "blabla2" },
+      { id: 3, user: "anya", text: "blabla3" },
+      { id: 4, user: "anya", text: "blabla4" },
+      { id: 5, user: "anya", text: "blabla5" }
+    ]
   },
   {
     id: 1409876532,
@@ -225,7 +313,17 @@ export const mockDelCatalog = [
     sumInStock: 1,
     quantity: 1,
     like: 66,
-    reviews: ["1", "2", "3", "4", "5"]
+    reviews: [
+      {
+        id: 1,
+        user: "anya",
+        text: "blabla1 blabla1 blabla1 На нашем маркетплейсе предоставляется официальная гарантия от производителя на все товары. Арпрьаал оал дешщдег пы"
+      },
+      { id: 2, user: "anya", text: "blabla2" },
+      { id: 3, user: "anya", text: "blabla3" },
+      { id: 4, user: "anya", text: "blabla4" },
+      { id: 5, user: "anya", text: "blabla5" }
+    ]
   },
   {
     id: 1523467890,
@@ -238,7 +336,13 @@ export const mockDelCatalog = [
     sumInStock: 3,
     quantity: 1,
     like: 890,
-    reviews: ["1", "2", "3", "4", "5"]
+    reviews: [
+      { id: 1, user: "anya", text: "blabla1" },
+      { id: 2, user: "anya", text: "blabla2" },
+      { id: 3, user: "anya", text: "blabla3" },
+      { id: 4, user: "anya", text: "blabla4" },
+      { id: 5, user: "anya", text: "blabla5" }
+    ]
   },
   {
     id: 1609875432,
@@ -258,6 +362,12 @@ export const mockDelCatalog = [
     sumInStock: 6,
     quantity: 1,
     like: 954,
-    reviews: ["1", "2", "3", "4", "5"]
+    reviews: [
+      { id: 1, user: "anya", text: "blabla1" },
+      { id: 2, user: "anya", text: "blabla2" },
+      { id: 3, user: "anya", text: "blabla3" },
+      { id: 4, user: "anya", text: "blabla4" },
+      { id: 5, user: "anya", text: "blabla5" }
+    ]
   }
 ];

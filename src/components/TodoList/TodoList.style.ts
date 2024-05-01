@@ -8,9 +8,11 @@ export const TodoHead = styled.div`
   align-items: flex-end;
   width: 100%;
   gap: 20px;
+  margin-bottom: 20px;
 
   @media (${mainTheme.deviсe.mobileL}) {
     gap: 15px;
+    margin-bottom: 10px;
   }
 `;
 

@@ -1,9 +1,9 @@
 import { mainTheme } from "@/styles/mainTheme.style";
 import styled from "styled-components";
 
-export const ProductWrapper = styled.section`
+export const ProductWrapper = styled.article`
   margin: 0 auto;
-  margin-top: 170px;
+  margin-top: 120px;
   margin-bottom: 50px;
   max-width: 1405px;
   height: auto;
@@ -14,16 +14,16 @@ export const ProductWrapper = styled.section`
   justify-content: center;
 
   @media (${mainTheme.deviсe.laptopL}) {
-    margin-top: 140px;
+    margin-top: 100px;
     width: 100%;
   }
 
   @media (${mainTheme.deviсe.laptopS}) {
-    margin-top: 100px;
+    margin-top: 90px;
   }
 
   @media (${mainTheme.deviсe.tablet}) {
-    margin-top: 90px;
+    margin-top: 80px;
   }
 
   @media (max-width: 650px) {
@@ -35,7 +35,7 @@ export const ProductWrapper = styled.section`
   }
 `;
 
-export const ProductBox = styled.article`
+export const ProductBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;

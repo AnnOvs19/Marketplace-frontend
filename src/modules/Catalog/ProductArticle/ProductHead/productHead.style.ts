@@ -1,7 +1,7 @@
 import { mainTheme } from "@/styles/mainTheme.style";
 import styled from "styled-components";
 
-export const HeadBox = styled.div`
+export const HeadBox = styled.section`
   display: flex;
   flex-direction: row;
   gap: 60px;

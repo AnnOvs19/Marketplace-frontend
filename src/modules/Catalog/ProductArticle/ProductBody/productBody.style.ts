@@ -1,7 +1,7 @@
 import { mainTheme } from "@/styles/mainTheme.style";
 import styled from "styled-components";
 
-export const BodyBox = styled.div`
+export const BodyBox = styled.section`
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -11,9 +11,10 @@ export const BodyBox = styled.div`
 export const BodyDesk = styled.div`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 30px;
 
-  @media (max-width: 650px) {
+  @media (${mainTheme.deviсe.tablet}) {
     flex-direction: column;
   }
 `;
@@ -24,7 +25,11 @@ export const InfoContainer = styled.div`
   gap: 20px;
   background-color: ${mainTheme.colors.colorForm};
   padding: 20px;
-  width: 100%;
+  width: 47%;
+
+  @media (${mainTheme.deviсe.tablet}) {
+    width: 100%;
+  }
 
   @media (max-width: 650px) {
     padding: 35px 50px 35px 50px;
@@ -67,9 +72,17 @@ export const TextContainer = styled.div`
   gap: 20px;
   background-color: ${mainTheme.colors.colorForm};
   padding: 20px;
-  width: 100%;
+  width: 49%;
   min-height: 180px;
   height: fit-content;
+
+  @media (max-width: 850px) {
+    width: 47%;
+  }
+
+  @media (${mainTheme.deviсe.tablet}) {
+    width: 100%;
+  }
 
   @media (max-width: 650px) {
     padding: 35px 50px 35px 50px;
@@ -90,5 +103,63 @@ export const TextContainer = styled.div`
 
   @media (${mainTheme.deviсe.mobileXS}) {
     padding: 10px;
+  }
+`;
+
+export const ComplementContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: ${mainTheme.colors.colorForm};
+  padding: 20px;
+  width: 47%;
+
+  @media (${mainTheme.deviсe.tablet}) {
+    width: 100%;
+  }
+
+  @media (max-width: 650px) {
+    padding: 35px 50px 35px 50px;
+  }
+
+  @media (${mainTheme.deviсe.mobileXL}) {
+    padding: 30px 45px 30px 45px;
+  }
+
+  @media (${mainTheme.deviсe.mobileL}) {
+    padding: 20px 30px 20px 30px;
+  }
+
+  @media (${mainTheme.deviсe.mobileS}) {
+    padding: 20px;
+  }
+
+  @media (${mainTheme.deviсe.mobileXS}) {
+    padding: 10px;
+  }
+`;
+
+export const BodyComplement = styled.ul`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+`;
+export const ItemComplement = styled.li`
+  margin-left: 12px;
+  width: 45%;
+  line-height: 110%;
+  font-size: 14px;
+  transition: 0.4s;
+  font-weight: 300;
+  color: ${mainTheme.colors.white};
+
+  @media (${mainTheme.deviсe.mobileL}) {
+    font-size: 14px;
+  }
+
+  @media (${mainTheme.deviсe.mobileM}) {
+    font-size: 12px;
   }
 `;

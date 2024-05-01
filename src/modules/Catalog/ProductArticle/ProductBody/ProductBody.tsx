@@ -10,6 +10,16 @@ interface IProps {
   product: ICatalogMock;
 }
 
+const сomplement = [
+  "Телефоны",
+  "Компьютеры",
+  "Ноутбуки",
+  "Планшеты",
+  "Гарнитура",
+  "Часы",
+  "Прочее"
+];
+
 const ProductBody: FC<IProps> = ({ product }) => {
   return (
     <S.BodyBox>
@@ -17,61 +27,53 @@ const ProductBody: FC<IProps> = ({ product }) => {
         <S.InfoContainer>
           <T.DeskTitle>Общие характеристики</T.DeskTitle>
           <S.InfoItem>
-            <T.DeskKey>Прампампам</T.DeskKey>
+            <T.DeskKey>Название товара</T.DeskKey>
             <S.InfoLine />
             <T.DeskValue>Прампампам</T.DeskValue>
           </S.InfoItem>
           <S.InfoItem>
-            <T.DeskKey>Прампампам</T.DeskKey>
+            <T.DeskKey>Модель</T.DeskKey>
             <S.InfoLine />
             <T.DeskValue>Прампампам</T.DeskValue>
           </S.InfoItem>
           <S.InfoItem>
-            <T.DeskKey>Прампампам</T.DeskKey>
+            <T.DeskKey>Торговый артикул</T.DeskKey>
             <S.InfoLine />
             <T.DeskValue>Прампампам</T.DeskValue>
           </S.InfoItem>
           <S.InfoItem>
-            <T.DeskKey>Прампампам</T.DeskKey>
+            <T.DeskKey>Размеры товара (см)</T.DeskKey>
             <S.InfoLine />
             <T.DeskValue>Прампампам</T.DeskValue>
           </S.InfoItem>
           <S.InfoItem>
-            <T.DeskKey>Прампампам</T.DeskKey>
+            <T.DeskKey>Страна производства</T.DeskKey>
             <S.InfoLine />
             <T.DeskValue>Прампампам</T.DeskValue>
           </S.InfoItem>
           <S.InfoItem>
-            <T.DeskKey>Прампампам</T.DeskKey>
+            <T.DeskKey>Бренд-производитель</T.DeskKey>
             <S.InfoLine />
             <T.DeskValue>Прампампам</T.DeskValue>
           </S.InfoItem>
           <S.InfoItem>
-            <T.DeskKey>Прампампам</T.DeskKey>
+            <T.DeskKey>Количество товаров на складе</T.DeskKey>
             <S.InfoLine />
             <T.DeskValue>Прампампам</T.DeskValue>
           </S.InfoItem>
-
-          {/* <T.SubTitle>Общие характеристики</T.SubTitle>
-        <T.SmallText>Прампампам</T.SmallText>
-        <T.SmallText>Прампампам</T.SmallText>
-        <T.SmallText>Прампампам</T.SmallText>
-        <T.SmallText>Прампампам</T.SmallText>
-        <T.SubTitle>Общие характеристики</T.SubTitle>
-        <T.SmallText>Прампампам</T.SmallText>
-        <T.SmallText>Прампампам</T.SmallText>
-        <T.SmallText>Прампампам</T.SmallText>
-        <T.SmallText>Прампампам</T.SmallText>
-        <T.SubTitle>Общие характеристики</T.SubTitle>
-        <T.SmallText>Прампампам</T.SmallText>
-        <T.SmallText>Прампампам</T.SmallText>
-        <T.SmallText>Прампампам</T.SmallText>
-        <T.SmallText>Прампампам</T.SmallText> */}
         </S.InfoContainer>
         <S.TextContainer>
           <T.DeskTitle>Описание товара</T.DeskTitle>
           <T.SmallText>{product.text}</T.SmallText>
         </S.TextContainer>
+        <S.ComplementContainer>
+          <T.DeskTitle>Комплектация товара</T.DeskTitle>
+          <S.BodyComplement>
+            {сomplement?.map((item) => {
+              return <S.ItemComplement>{item}</S.ItemComplement>;
+            })}
+          </S.BodyComplement>
+        </S.ComplementContainer>
       </S.BodyDesk>
 
       <SliderProducts />

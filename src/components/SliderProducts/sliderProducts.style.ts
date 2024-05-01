@@ -66,12 +66,13 @@ export const SliderList = styled.div`
 
     @media (${mainTheme.deviсe.tablet}) {
       width: 145px;
-      height: 230px;
+
+      height: auto;
     }
 
     @media (max-width: 490px) {
       width: 125px;
-      height: 210px;
+      height: auto;
     }
 
     @media (${mainTheme.deviсe.mobileL}) {
@@ -80,15 +81,14 @@ export const SliderList = styled.div`
 
     @media (${mainTheme.deviсe.mobileM}) {
       width: 145px;
-      height: auto;
     }
 
     @media (${mainTheme.deviсe.mobileS}) {
-      width: 170px;
+      width: 135px;
     }
 
     @media (${mainTheme.deviсe.mobileXS}) {
-      width: 150px;
+      width: 230px;
     }
   }
 `;

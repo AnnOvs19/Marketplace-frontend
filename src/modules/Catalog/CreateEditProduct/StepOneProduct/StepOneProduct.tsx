@@ -131,7 +131,7 @@ const StepOneProduct: FC<IProps> = ({
         </S.ProductBox>
         <S.ProductBox>
           <U.BodyInputWrapper>
-            <T.TextForm>Размеры товара (ШхДхВ)*</T.TextForm>
+            <T.TextForm>Размеры товара (ШхДхВ)см*</T.TextForm>
             <Controller
               name="size"
               rules={{ required: true, minLength: 5, maxLength: 100 }}

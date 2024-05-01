@@ -671,10 +671,21 @@ export const DeskTitle = styled.h4`
 `;
 
 export const DeskKey = styled.span`
+  /* width: 275px; */
+  /* width: fit-content; */
+  line-height: 110%;
   font-size: 12px;
   transition: 0.4s;
   font-weight: 300;
   color: ${mainTheme.colors.white};
+
+  /* &:nth-child(1) {
+    width: 245px;
+  }
+
+  &:nth-child(2) {
+    width: 200px;
+  } */
 
   @media (max-width: 650px) {
     font-size: 11px;
