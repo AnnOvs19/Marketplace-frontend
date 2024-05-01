@@ -86,7 +86,7 @@ const StepThreeProduct: FC<IProps> = ({
       {!validPhoto && (
         <S.Notice>
           <U.ErrorMessage>
-            Для загрузки поста необходима хотя бы одна фотография
+            Для загрузки поста необходима хотя бы одна фотография*
           </U.ErrorMessage>
         </S.Notice>
       )}

@@ -21,6 +21,7 @@ export interface ICreateEditeProduct {
   sumInStock: number;
   image?: FileList;
   category?: string;
+  сomplement?: string[];
 }
 
 const defaultValues: ICreateEditeProduct = {
@@ -42,6 +43,8 @@ const CreateEditProduct = () => {
   const [photo, setPhoto] = useState<string[]>([]);
   const [imageData, setImageData] = useState<FileList>();
   const [validPhoto, setValidPhoto] = useState<boolean>(false);
+
+  const [list, setList] = useState<string[]>([]);
 
   const [errorDrop, setErrorDrop] = useState<boolean>(true);
 
@@ -72,11 +75,17 @@ const CreateEditProduct = () => {
 
   function submit(data: ICreateEditeProduct) {
     console.log(data);
+    data.сomplement = list;
+    data.image = imageData!;
     if (photo.length !== 0) {
       setTextButton("Создание товара...");
       setStatusLoad(true);
       setValidPhoto(true);
       productControl.reset();
+      fetch("twst", {
+        method: "POST",
+        body: JSON.stringify(data)
+      });
     } else {
       setValidPhoto(false);
     }
@@ -97,6 +106,10 @@ const CreateEditProduct = () => {
           indexTab={indexTab}
           setIndexTab={setIndexTab}
           productControl={productControl}
+          errorDrop={errorDrop}
+          setErrorDrop={setErrorDrop}
+          list={list}
+          setList={setList}
         />
         <StepThreeProduct
           indexTab={indexTab}

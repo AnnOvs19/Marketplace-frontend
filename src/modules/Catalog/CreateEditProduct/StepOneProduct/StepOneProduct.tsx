@@ -36,7 +36,7 @@ const StepOneProduct: FC<IProps> = ({
       <S.ContainerRow>
         <S.ProductBox>
           <U.BodyInputWrapper>
-            <T.TextForm>Название товара</T.TextForm>
+            <T.TextForm>Название товара*</T.TextForm>
             <Controller
               name="title"
               rules={{ required: true, minLength: 5, maxLength: 200 }}
@@ -59,7 +59,7 @@ const StepOneProduct: FC<IProps> = ({
             )}
           </U.BodyInputWrapper>
           <U.BodyInputWrapper>
-            <T.TextForm>Модель товара</T.TextForm>
+            <T.TextForm>Модель товара*</T.TextForm>
             <Controller
               name="model"
               rules={{ required: true, minLength: 5, maxLength: 200 }}
@@ -82,7 +82,7 @@ const StepOneProduct: FC<IProps> = ({
             )}
           </U.BodyInputWrapper>
           <U.BodyInputWrapper>
-            <T.TextForm>Торговый артикул</T.TextForm>
+            <T.TextForm>Торговый артикул*</T.TextForm>
             <Controller
               name="article"
               rules={{ required: true, minLength: 2 }}
@@ -106,7 +106,7 @@ const StepOneProduct: FC<IProps> = ({
           </U.BodyInputWrapper>
 
           <U.BodyInputWrapper>
-            <T.TextForm>Цена товара</T.TextForm>
+            <T.TextForm>Цена товара*</T.TextForm>
             <Controller
               name="price"
               rules={{ required: true, minLength: 5 }}
@@ -131,7 +131,7 @@ const StepOneProduct: FC<IProps> = ({
         </S.ProductBox>
         <S.ProductBox>
           <U.BodyInputWrapper>
-            <T.TextForm>Размеры товара (ШхДхВ)</T.TextForm>
+            <T.TextForm>Размеры товара (ШхДхВ)*</T.TextForm>
             <Controller
               name="size"
               rules={{ required: true, minLength: 5, maxLength: 100 }}
@@ -154,7 +154,7 @@ const StepOneProduct: FC<IProps> = ({
             )}
           </U.BodyInputWrapper>
           <U.BodyInputWrapper>
-            <T.TextForm>Страна производства</T.TextForm>
+            <T.TextForm>Страна производства*</T.TextForm>
             <Controller
               name="country"
               rules={{ required: true, minLength: 3, maxLength: 100 }}
@@ -177,7 +177,7 @@ const StepOneProduct: FC<IProps> = ({
             )}
           </U.BodyInputWrapper>
           <U.BodyInputWrapper>
-            <T.TextForm>Наименование бренда</T.TextForm>
+            <T.TextForm>Наименование бренда*</T.TextForm>
             <Controller
               name="brand"
               rules={{ required: true, minLength: 3, maxLength: 100 }}
@@ -200,7 +200,7 @@ const StepOneProduct: FC<IProps> = ({
             )}
           </U.BodyInputWrapper>
           <U.BodyInputWrapper>
-            <T.TextForm>Количество товаров на складе</T.TextForm>
+            <T.TextForm>Количество товаров на складе*</T.TextForm>
             <Controller
               name="sumInStock"
               rules={{ required: true, pattern: /^[0-9]+/ }}
