@@ -5,13 +5,15 @@ import * as S from "./filterMenu.style";
 import * as T from "@/styles/baseText.style";
 import * as B from "@/styles/baseButtons.style";
 import CheckBox from "@/ui/Inputs/Checkbox/CheckBox";
+import { ICategory } from "@/interfaces/product/category";
 
 interface IProps {
   openFilter: boolean;
   setOpenFilter: (state: boolean) => void;
+  filters: ICategory[];
 }
 
-const FilterMenu: FC<IProps> = ({ openFilter, setOpenFilter }) => {
+const FilterMenu: FC<IProps> = ({ openFilter, setOpenFilter, filters }) => {
   return (
     <S.FilterMenuWrap
       openFilter={openFilter}
@@ -20,38 +22,14 @@ const FilterMenu: FC<IProps> = ({ openFilter, setOpenFilter }) => {
       <S.FilterContent onClick={(event) => event.stopPropagation()}>
         <T.FilterTitle>Фильтры по категориям:</T.FilterTitle>
         <S.ContentList>
-          <S.ContentItem>
-            <CheckBox />
-            <T.FilterText>Компьютеры</T.FilterText>
-          </S.ContentItem>
-          <S.ContentItem>
-            <CheckBox />
-            <T.FilterText>Мониторы</T.FilterText>
-          </S.ContentItem>
-          <S.ContentItem>
-            <CheckBox />
-            <T.FilterText>Ноутбуки</T.FilterText>
-          </S.ContentItem>
-          <S.ContentItem>
-            <CheckBox />
-            <T.FilterText>Планшеты</T.FilterText>
-          </S.ContentItem>
-          <S.ContentItem>
-            <CheckBox />
-            <T.FilterText>Телефоны</T.FilterText>
-          </S.ContentItem>
-          <S.ContentItem>
-            <CheckBox />
-            <T.FilterText>Гарнитура</T.FilterText>
-          </S.ContentItem>
-          <S.ContentItem>
-            <CheckBox />
-            <T.FilterText>Часы</T.FilterText>
-          </S.ContentItem>
-          <S.ContentItem>
-            <CheckBox />
-            <T.FilterText>Прочее</T.FilterText>
-          </S.ContentItem>
+          {filters?.map((item, index) => {
+            return (
+              <S.ContentItem key={index}>
+                <CheckBox />
+                <T.FilterText>{item.title}</T.FilterText>
+              </S.ContentItem>
+            );
+          })}
         </S.ContentList>
         <B.BaseButton>Применить фильтры</B.BaseButton>
       </S.FilterContent>

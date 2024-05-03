@@ -2,7 +2,7 @@
 
 import * as B from "@/styles/baseButtons.style";
 import InputSearch from "@/ui/Inputs/InputSearch/InputSearch";
-import React, { useState } from "react";
+import React, { FC, useState } from "react";
 import * as S from "./filter.style";
 import Image from "next/image";
 import order from "@/assets/icons/filterOrder.svg";
@@ -11,8 +11,13 @@ import delivery from "@/assets/icons/filterDelivery.svg";
 import like from "@/assets/icons/filterLike.svg";
 import FilterMenu from "@/components/FilterMenu/FilterMenu";
 import Link from "next/link";
+import { ICategory } from "@/interfaces/product/category";
 
-const Filters = () => {
+interface IProps {
+  filters: ICategory[];
+}
+
+const Filters: FC<IProps> = ({ filters }) => {
   const [openFilter, setOpenFilter] = useState<boolean>(false);
   return (
     <>
@@ -82,7 +87,11 @@ const Filters = () => {
           </S.ControlPanel>
         </S.FilterBox>
       </S.FiltersWrap>
-      <FilterMenu openFilter={openFilter} setOpenFilter={setOpenFilter} />
+      <FilterMenu
+        openFilter={openFilter}
+        setOpenFilter={setOpenFilter}
+        filters={filters}
+      />
     </>
   );
 };

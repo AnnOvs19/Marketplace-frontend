@@ -1,12 +1,17 @@
 "use client";
 
-import React from "react";
+import React, { FC } from "react";
 import { mockDelCatalog } from "../../mockDelCatalog";
 import CatalogItem from "../CatalogItem/CatalogItem";
 import * as S from "./catalogList.style";
 import Link from "next/link";
+import { IProduct } from "@/interfaces/product/product";
 
-const CatalogList = () => {
+interface IProps {
+  productsMain: IProduct[];
+}
+
+const CatalogList: FC<IProps> = ({ productsMain }) => {
   return (
     <S.CardList>
       <S.CardBox>
@@ -19,7 +24,7 @@ const CatalogList = () => {
         <Link href="/myProducts">
           <button>Мои товары</button>
         </Link> */}
-        {mockDelCatalog?.map((item, index) => {
+        {productsMain?.map((item, index) => {
           return (
             // <Link href={`/catalog/${item.title}`}>
             <CatalogItem item={item} key={index} />

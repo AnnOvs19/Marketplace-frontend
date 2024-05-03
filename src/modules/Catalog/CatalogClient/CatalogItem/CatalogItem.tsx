@@ -1,7 +1,6 @@
 "use client";
 
 import React, { FC, MouseEvent, useState } from "react";
-import { ICatalogMock } from "../../mockDelCatalog";
 import * as S from "./catalogItem.style";
 import * as T from "@/styles/baseText.style";
 import * as B from "@/styles/baseButtons.style";
@@ -9,9 +8,10 @@ import Image from "next/image";
 import likeEmpty from "@/assets/icons/filterLike.svg";
 import like from "@/assets/icons/likeProductIcon.svg";
 import Link from "next/link";
+import { IProduct } from "@/interfaces/product/product";
 
 interface IProps {
-  item: ICatalogMock;
+  item: IProduct;
 }
 
 const CatalogItem: FC<IProps> = ({ item }) => {
@@ -25,7 +25,7 @@ const CatalogItem: FC<IProps> = ({ item }) => {
   return (
     <S.CardItem>
       <Link href={`/catalog/${item.title}`} style={{ width: `100%` }}>
-        <S.CardItemImage>
+        {/* <S.CardItemImage>
           <Image
             src={item.image[0]}
             alt="Product card image"
@@ -34,7 +34,7 @@ const CatalogItem: FC<IProps> = ({ item }) => {
               objectFit: "cover"
             }}
           />
-        </S.CardItemImage>
+        </S.CardItemImage> */}
       </Link>
       <S.CardItemBox>
         <Link href={`/catalog/${item.title}`}>
@@ -45,7 +45,7 @@ const CatalogItem: FC<IProps> = ({ item }) => {
         </Link>
 
         <S.CardBottom>
-          <T.CardOtherText>{item.category}</T.CardOtherText>
+          {/* <T.CardOtherText>{item.category.title}</T.CardOtherText> */}
           <T.CardOtherText>{item.sumInStock} шт.</T.CardOtherText>
         </S.CardBottom>
         <B.CardButton type="button" onClick={(e) => e.stopPropagation()}>

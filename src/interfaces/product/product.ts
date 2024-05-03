@@ -15,8 +15,10 @@ export interface IProduct {
   country: string;
   brand: string;
   weight: number;
-  size: number;
+  size: string;
   category: ICategory;
+  сomplements?: string[];
+  materials?: string[];
   sumInStock: number;
   quantity?: number;
   orders?: IOrder[];

@@ -21,7 +21,7 @@ export interface ICreateEditeProduct {
   sumInStock: number;
   image?: FileList;
   category?: string;
-  сomplement?: string[];
+  сomplements?: string[];
 }
 
 const defaultValues: ICreateEditeProduct = {
@@ -75,7 +75,7 @@ const CreateEditProduct = () => {
 
   function submit(data: ICreateEditeProduct) {
     console.log(data);
-    data.сomplement = list;
+    data.сomplements = list;
     data.image = imageData!;
     if (photo.length !== 0) {
       setTextButton("Создание товара...");
