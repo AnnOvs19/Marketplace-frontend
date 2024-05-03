@@ -5,17 +5,9 @@ import { useForm } from "react-hook-form";
 import { RegisterForm } from "../../auth.style";
 import StepOneClient from "./StepOneClient";
 import StepTwoClient from "./StepTwoClient";
+import { IRegisrerClient } from "@/interfaces/users/client";
 
-export interface IFormRegisrerClient {
-  name: string;
-  phone: string;
-  email: string;
-  password: string;
-  sity: string;
-  adress: string;
-}
-
-const defaultValues: IFormRegisrerClient = {
+const defaultValues: IRegisrerClient = {
   name: "",
   phone: "",
   email: "",
@@ -29,12 +21,12 @@ const RegisterClient = () => {
   const [textButton, setTextButton] = useState<string>("Зарегистрироваться");
   const [statusLoad, setStatusLoad] = useState<boolean>(false);
 
-  const formControl = useForm<IFormRegisrerClient>({
+  const formControl = useForm<IRegisrerClient>({
     defaultValues,
     mode: "onChange"
   });
 
-  function submit(data: IFormRegisrerClient) {
+  function submit(data: IRegisrerClient) {
     console.log(data);
     setTextButton("Регистрация...");
     setStatusLoad(true);

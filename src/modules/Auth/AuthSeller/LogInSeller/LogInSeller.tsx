@@ -8,15 +8,12 @@ import InputForm from "@/ui/Inputs/InputForm/InputForm";
 import { Controller, useForm } from "react-hook-form";
 import { LoginForm } from "../../auth.style";
 import MiniLoader from "@/ui/Loading/MiniLoader/MiniLoader";
+import { ILoginSeller } from "@/interfaces/users/seller";
 
-interface IFormLogInSeller {
-  storeName: string;
-  password: string;
-}
-
-const defaultValues: IFormLogInSeller = {
+const defaultValues: ILoginSeller = {
   storeName: "",
-  password: ""
+  password: "",
+  name: ""
 };
 
 const LogInSeller = () => {
@@ -30,9 +27,9 @@ const LogInSeller = () => {
     reset,
     control,
     formState: { errors }
-  } = useForm<IFormLogInSeller>({ defaultValues, mode: "onChange" });
+  } = useForm<ILoginSeller>({ defaultValues, mode: "onChange" });
 
-  function submit(data: IFormLogInSeller) {
+  function submit(data: ILoginSeller) {
     console.log(data);
     setTextButton("Вход...");
     setStatusLoad(true);
@@ -41,6 +38,27 @@ const LogInSeller = () => {
 
   return (
     <LoginForm onSubmit={handleSubmit(submit)}>
+      <U.BodyInputWrapper>
+        <T.TextForm>Введите своё имя</T.TextForm>
+        <Controller
+          name="name"
+          rules={{ required: true, minLength: 5 }}
+          control={control}
+          render={({ field: { value, onChange }, fieldState }) => (
+            <InputForm
+              placeholder="Ваше ФИО"
+              type="text"
+              name="name"
+              value={value}
+              onChange={onChange}
+              errors={fieldState.invalid}
+            />
+          )}
+        />
+        {errors.name && (
+          <U.ErrorMessage>Введите ФИО не короче пяти символов</U.ErrorMessage>
+        )}
+      </U.BodyInputWrapper>
       <U.BodyInputWrapper>
         <T.TextForm>Название вашего магазина</T.TextForm>
         <Controller

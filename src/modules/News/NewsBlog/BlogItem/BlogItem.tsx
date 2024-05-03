@@ -3,12 +3,12 @@
 import React, { FC } from "react";
 import * as S from "./blogItem.style";
 import * as T from "@/styles/baseText.style";
-import { INewsMock } from "../../mockDelNews";
 import Image from "next/image";
 import * as C from "../../NewsHome/newsHome.style";
+import { INewsItem } from "@/interfaces/news/newsItem";
 
 interface IProps {
-  item: INewsMock;
+  item: INewsItem;
 }
 
 const BlogItem: FC<IProps> = ({ item }) => {
@@ -16,7 +16,7 @@ const BlogItem: FC<IProps> = ({ item }) => {
     <S.BlogItemWrap>
       <S.BlogItemBox>
         <C.NewsHead>
-          <T.SmallText>by {item.autor}</T.SmallText>
+          <T.SmallText>by {item.seller.name}</T.SmallText>
           <T.SmallText>| {item.date}</T.SmallText>
         </C.NewsHead>
         <T.TextMedium>{item.title}</T.TextMedium>
@@ -25,7 +25,7 @@ const BlogItem: FC<IProps> = ({ item }) => {
 
       <S.BlogItemImage>
         <Image
-          src={item.img[0]}
+          src={item.image[0]}
           alt="The main picture of the news post"
           fill
           style={{

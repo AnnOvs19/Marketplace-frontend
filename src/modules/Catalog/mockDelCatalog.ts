@@ -13,10 +13,10 @@ export interface ICatalogMock {
   sumInStock: number;
   quantity: number;
   like?: number;
-  reviews?: IReviews[];
+  reviews?: IReviewsMock[];
 }
 
-export interface IReviews {
+export interface IReviewsMock {
   id: number;
   user: string;
   text: string;

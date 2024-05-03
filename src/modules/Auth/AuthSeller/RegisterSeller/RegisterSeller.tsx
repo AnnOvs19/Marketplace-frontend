@@ -5,18 +5,9 @@ import StepOneSeller from "./StepOneSeller";
 import StepTwoSeller from "./StepTwoSeller";
 import { RegisterForm } from "../../auth.style";
 import { useForm } from "react-hook-form";
+import { IRegisrerSeller } from "@/interfaces/users/seller";
 
-export interface IFormRegisrerSeller {
-  name: string;
-  phone: string;
-  email: string;
-  password: string;
-  storeName: string;
-  sity: string;
-  adress: string;
-}
-
-const defaultValues: IFormRegisrerSeller = {
+const defaultValues: IRegisrerSeller = {
   name: "",
   phone: "",
   email: "",
@@ -31,12 +22,12 @@ const RegisterSeller = () => {
   const [textButton, setTextButton] = useState<string>("Зарегистрироваться");
   const [statusLoad, setStatusLoad] = useState<boolean>(false);
 
-  const formControl = useForm<IFormRegisrerSeller>({
+  const formControl = useForm<IRegisrerSeller>({
     defaultValues,
     mode: "onChange"
   });
 
-  function submit(data: IFormRegisrerSeller) {
+  function submit(data: IRegisrerSeller) {
     console.log(data);
     setTextButton("Регистрация...");
     setStatusLoad(true);

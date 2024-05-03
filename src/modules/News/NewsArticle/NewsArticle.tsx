@@ -4,16 +4,16 @@ import React, { FC } from "react";
 import * as S from "./newsArticle.style";
 import * as T from "@/styles/baseText.style";
 import Image from "next/image";
-import { INewsMock } from "../mockDelNews";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 
 import "swiper/css/navigation";
 import "swiper/css";
+import { INewsItem } from "@/interfaces/news/newsItem";
 
 interface IProps {
-  item: INewsMock;
+  item: INewsItem;
 }
 
 const NewsArticle: FC<IProps> = ({ item }) => {
@@ -30,7 +30,7 @@ const NewsArticle: FC<IProps> = ({ item }) => {
             slidesPerView={"auto"}
             speed={500}
           >
-            {item.img.map((elem, index) => {
+            {item.image.map((elem, index) => {
               return (
                 <SwiperSlide key={index}>
                   <S.ArticleImage>
