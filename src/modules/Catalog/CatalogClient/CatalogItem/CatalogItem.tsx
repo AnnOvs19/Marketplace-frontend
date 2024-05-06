@@ -4,7 +4,7 @@ import React, { FC, MouseEvent, useState } from "react";
 import * as S from "./catalogItem.style";
 import * as T from "@/styles/baseText.style";
 import * as B from "@/styles/baseButtons.style";
-import Image from "next/image";
+import Image, { ImageLoader } from "next/image";
 import likeEmpty from "@/assets/icons/filterLike.svg";
 import like from "@/assets/icons/likeProductIcon.svg";
 import Link from "next/link";
@@ -13,6 +13,10 @@ import { IProduct } from "@/interfaces/product/product";
 interface IProps {
   item: IProduct;
 }
+
+const LoaderImage: ImageLoader = ({ src }) => {
+  return `http://127.0.0.1:1337${src}`;
+};
 
 const CatalogItem: FC<IProps> = ({ item }) => {
   const [likeList, setLikelist] = useState<boolean>(false);
@@ -25,16 +29,17 @@ const CatalogItem: FC<IProps> = ({ item }) => {
   return (
     <S.CardItem>
       <Link href={`/catalog/${item.title}`} style={{ width: `100%` }}>
-        {/* <S.CardItemImage>
+        <S.CardItemImage>
           <Image
-            src={item.image[0]}
+            loader={LoaderImage}
+            src={item!.image[0]!.url}
             alt="Product card image"
             fill
             style={{
               objectFit: "cover"
             }}
           />
-        </S.CardItemImage> */}
+        </S.CardItemImage>
       </Link>
       <S.CardItemBox>
         <Link href={`/catalog/${item.title}`}>
@@ -45,7 +50,7 @@ const CatalogItem: FC<IProps> = ({ item }) => {
         </Link>
 
         <S.CardBottom>
-          {/* <T.CardOtherText>{item.category.title}</T.CardOtherText> */}
+          <T.CardOtherText>{item.category.title}</T.CardOtherText>
           <T.CardOtherText>{item.sumInStock} шт.</T.CardOtherText>
         </S.CardBottom>
         <B.CardButton type="button" onClick={(e) => e.stopPropagation()}>

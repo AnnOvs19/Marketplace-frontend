@@ -13,7 +13,7 @@ async function getCategories() {
 }
 
 async function getProduct() {
-  const res: AxiosResponse = await axios.get("/api/products");
+  const res: AxiosResponse = await axios.get("/api/products?populate=*");
   const productsMain: IProduct[] = res.data.data;
   return productsMain;
 }
@@ -21,6 +21,7 @@ async function getProduct() {
 export default async function Catalog() {
   const filters = await getCategories();
   const productsMain = await getProduct();
+  console.log(productsMain);
 
   return (
     <>
