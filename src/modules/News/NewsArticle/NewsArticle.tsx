@@ -11,13 +11,16 @@ import { Navigation } from "swiper/modules";
 import "swiper/css/navigation";
 import "swiper/css";
 import { INewsItem } from "@/interfaces/news/newsItem";
+import { LoaderImage } from "@/helpers/loaderImage";
 
 interface IProps {
-  item: INewsItem;
+  newsPage: INewsItem;
 }
 
-const NewsArticle: FC<IProps> = ({ item }) => {
-  // const text = item.text.split("\n").map((str) => <>{str}</>);
+const NewsArticle: FC<IProps> = ({ newsPage }) => {
+  const text = newsPage.text
+    .split("\n")
+    .map((str) => <T.TextMedium>{str}</T.TextMedium>);
 
   return (
     <S.ArticleWrapper>
@@ -30,12 +33,13 @@ const NewsArticle: FC<IProps> = ({ item }) => {
             slidesPerView={"auto"}
             speed={500}
           >
-            {item.image.map((elem, index) => {
+            {newsPage.image.map((elem, index) => {
               return (
                 <SwiperSlide key={index}>
                   <S.ArticleImage>
                     <Image
-                      src={elem}
+                      loader={LoaderImage}
+                      src={elem.url}
                       alt="Main image article"
                       fill
                       style={{
@@ -49,8 +53,8 @@ const NewsArticle: FC<IProps> = ({ item }) => {
           </Swiper>
         </S.ImageList>
         <S.InfoBox>
-          <T.TitleSection>{item.title}</T.TitleSection>
-          <T.TextMedium>{item.text}</T.TextMedium>
+          <T.TitleSection>{newsPage.title}</T.TitleSection>
+          <S.TextBox>{text}</S.TextBox>
         </S.InfoBox>
       </S.ArticleBox>
     </S.ArticleWrapper>

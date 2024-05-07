@@ -80,10 +80,10 @@ export const PriceBox = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  gap: 10px;
 
   @media (${mainTheme.deviсe.laptopS}) {
     align-items: flex-start;
     flex-direction: column;
-    gap: 10px;
   }
 `;

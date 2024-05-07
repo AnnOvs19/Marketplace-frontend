@@ -11,7 +11,6 @@ export const BodyBox = styled.section`
 export const BodyDesk = styled.div`
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   gap: 30px;
 
   @media (${mainTheme.deviсe.tablet}) {
@@ -19,17 +18,23 @@ export const BodyDesk = styled.div`
   }
 `;
 
-export const InfoContainer = styled.div`
+export const BodyItem = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  background-color: ${mainTheme.colors.colorForm};
-  padding: 20px;
+  gap: 30px;
   width: 47%;
 
   @media (${mainTheme.deviсe.tablet}) {
     width: 100%;
   }
+`;
+
+export const InfoContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: ${mainTheme.colors.colorForm};
+  padding: 20px;
 
   @media (max-width: 650px) {
     padding: 35px 50px 35px 50px;
@@ -69,20 +74,11 @@ export const InfoLine = styled.div`
 export const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
   background-color: ${mainTheme.colors.colorForm};
   padding: 20px;
-  width: 49%;
   min-height: 180px;
   height: fit-content;
-
-  @media (max-width: 850px) {
-    width: 47%;
-  }
-
-  @media (${mainTheme.deviсe.tablet}) {
-    width: 100%;
-  }
 
   @media (max-width: 650px) {
     padding: 35px 50px 35px 50px;
@@ -106,17 +102,12 @@ export const TextContainer = styled.div`
   }
 `;
 
-export const ComplementContainer = styled.div`
+export const OtherContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
   background-color: ${mainTheme.colors.colorForm};
   padding: 20px;
-  width: 47%;
-
-  @media (${mainTheme.deviсe.tablet}) {
-    width: 100%;
-  }
 
   @media (max-width: 650px) {
     padding: 35px 50px 35px 50px;
@@ -139,14 +130,15 @@ export const ComplementContainer = styled.div`
   }
 `;
 
-export const BodyComplement = styled.ul`
+export const BodyOther = styled.ul`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 10px;
   width: 100%;
 `;
-export const ItemComplement = styled.li`
+
+export const ItemOther = styled.li`
   margin-left: 12px;
   width: 45%;
   line-height: 110%;

@@ -2,7 +2,7 @@ import { IOrder } from "../orders/order";
 
 export interface IClient {
   id: number;
-  name: string;
+  username: string;
   phone: string;
   email: string;
   password: string;

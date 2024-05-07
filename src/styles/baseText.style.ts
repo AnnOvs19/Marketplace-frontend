@@ -604,17 +604,17 @@ export const TotalPrice = styled.h4`
 `;
 
 export const InfoProduct = styled.h2`
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 700;
   color: white;
   background-color: ${mainTheme.colors.purple};
-  padding: 10px 20px;
+  padding: 8px 14px;
   border-radius: 50px;
   width: fit-content;
 
   @media (${mainTheme.deviсe.laptopM}) {
-    padding: 8px 10px;
-    font-size: 13px;
+    padding: 7px 9px;
+    font-size: 11px;
   }
 
   @media (${mainTheme.deviсe.laptopS}) {
@@ -671,21 +671,11 @@ export const DeskTitle = styled.h4`
 `;
 
 export const DeskKey = styled.span`
-  /* width: 275px; */
-  /* width: fit-content; */
   line-height: 110%;
   font-size: 12px;
   transition: 0.4s;
   font-weight: 300;
   color: ${mainTheme.colors.white};
-
-  /* &:nth-child(1) {
-    width: 245px;
-  }
-
-  &:nth-child(2) {
-    width: 200px;
-  } */
 
   @media (max-width: 650px) {
     font-size: 11px;
@@ -693,6 +683,18 @@ export const DeskKey = styled.span`
 `;
 
 export const DeskValue = styled.span`
+  text-align: right;
+  font-size: 12px;
+  transition: 0.4s;
+  font-weight: 300;
+  color: ${mainTheme.colors.lightGray};
+
+  @media (max-width: 650px) {
+    font-size: 11px;
+  }
+`;
+
+export const ReviewText = styled.span`
   font-size: 12px;
   transition: 0.4s;
   font-weight: 300;

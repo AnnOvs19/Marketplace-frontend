@@ -9,14 +9,11 @@ import likeEmpty from "@/assets/icons/filterLike.svg";
 import like from "@/assets/icons/likeProductIcon.svg";
 import Link from "next/link";
 import { IProduct } from "@/interfaces/product/product";
+import { LoaderImage } from "@/helpers/loaderImage";
 
 interface IProps {
   item: IProduct;
 }
-
-const LoaderImage: ImageLoader = ({ src }) => {
-  return `http://127.0.0.1:1337${src}`;
-};
 
 const CatalogItem: FC<IProps> = ({ item }) => {
   const [likeList, setLikelist] = useState<boolean>(false);
@@ -28,7 +25,7 @@ const CatalogItem: FC<IProps> = ({ item }) => {
 
   return (
     <S.CardItem>
-      <Link href={`/catalog/${item.title}`} style={{ width: `100%` }}>
+      <Link href={`/catalog/${item.id}`} style={{ width: `100%` }}>
         <S.CardItemImage>
           <Image
             loader={LoaderImage}

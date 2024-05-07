@@ -1,16 +1,21 @@
 "use client";
 
-import React from "react";
+import React, { FC } from "react";
 import * as S from "./blogList.style";
 import { mockDelNews } from "../../mockDelNews";
 import BlogItem from "../BlogItem/BlogItem";
 import Link from "next/link";
+import { INewsItem } from "@/interfaces/news/newsItem";
 
-const BlogList = () => {
+interface IProps {
+  newsMain: INewsItem[];
+}
+
+const BlogList: FC<IProps> = ({ newsMain }) => {
   return (
     <S.BlogListWrap>
       <S.BlogListBox>
-        {mockDelNews?.map((item, index) => {
+        {newsMain?.map((item, index) => {
           return (
             <Link href={`/blog/${index + 1}`}>
               <BlogItem item={item} key={index} />

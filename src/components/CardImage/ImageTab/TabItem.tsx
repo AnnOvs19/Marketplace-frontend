@@ -4,6 +4,8 @@ import React, { FC } from "react";
 import * as S from "./tabList.style";
 import Image from "next/image";
 import Swiper from "swiper";
+import { IProduct } from "@/interfaces/product/product";
+import { LoaderImage } from "@/helpers/loaderImage";
 
 interface IProps {
   image: any;
@@ -21,6 +23,7 @@ const TabItem: FC<IProps> = ({ image, click, index, swiper }) => {
       }}
     >
       <Image
+        loader={LoaderImage}
         src={image}
         alt="Product card image"
         fill

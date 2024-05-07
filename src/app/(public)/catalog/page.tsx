@@ -21,7 +21,6 @@ async function getProduct() {
 export default async function Catalog() {
   const filters = await getCategories();
   const productsMain = await getProduct();
-  console.log(productsMain);
 
   return (
     <>

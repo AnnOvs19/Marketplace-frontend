@@ -17,12 +17,12 @@ export interface IProduct {
   weight: number;
   size: string;
   category: ICategory;
-  сomplements?: string[];
+  equipment?: string[];
   materials?: string[];
   sumInStock: number;
   quantity?: number;
   orders?: IOrder[];
-  like?: ILike[];
+  likes?: ILike[];
   reviews?: IReview[];
   seller: ISeller;
 }

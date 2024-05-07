@@ -1,11 +1,11 @@
+import { IStore } from "../store/store";
 import { ISeller } from "../users/seller";
 
 export interface INewsItem {
   id?: number;
-  date: string;
   title: string;
   text: string;
   image: any[];
-  seller: ISeller;
-  // seller: {name:}
+  store: { storeName: string; id?: number };
+  createdAt: string;
 }

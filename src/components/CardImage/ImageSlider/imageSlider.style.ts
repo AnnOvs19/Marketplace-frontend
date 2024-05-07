@@ -19,20 +19,20 @@ export const SliderImage = styled.div`
 
     @media (${mainTheme.deviсe.laptopS}) {
       width: 340px;
-      height: 420px;
+      height: 400px;
     }
 
     @media (max-width: 860px) {
       width: 290px;
-      height: 390px;
+      height: 360px;
     }
 
     @media (${mainTheme.deviсe.tablet}) {
       width: 260px;
-      height: 350px;
+      height: 345px;
     }
 
-    @media (max-width: 650px) {
+    @media (max-width: 681px) {
       width: 210px;
       height: 220px;
     }
@@ -130,20 +130,20 @@ export const ImageBox = styled.div`
 
   @media (${mainTheme.deviсe.laptopS}) {
     width: 340px;
-    height: 420px;
+    height: 400px;
   }
 
   @media (max-width: 860px) {
     width: 290px;
-    height: 390px;
+    height: 360px;
   }
 
   @media (${mainTheme.deviсe.tablet}) {
     width: 260px;
-    height: 350px;
+    height: 345px;
   }
 
-  @media (max-width: 650px) {
+  @media (max-width: 681px) {
     width: 210px;
     height: 220px;
   }

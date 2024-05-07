@@ -204,3 +204,14 @@ export const InfoBox = styled.article`
   width: 100%;
   gap: 40px;
 `;
+
+export const TextBox = styled.article`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+
+  @media (${mainTheme.deviсe.laptopM}) {
+    gap: 15px;
+  }
+`;

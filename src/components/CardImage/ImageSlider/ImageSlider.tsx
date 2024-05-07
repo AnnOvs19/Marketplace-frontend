@@ -10,13 +10,16 @@ import "swiper/css";
 import * as S from "./imageSlider.style";
 import { ICatalogMock, mockDelCatalog } from "@/modules/Catalog/mockDelCatalog";
 import Image from "next/image";
+import { IProduct } from "@/interfaces/product/product";
+import { LoaderImage } from "@/helpers/loaderImage";
 
 interface IProps {
   item: any;
   setSwiper: any;
+  product: IProduct;
 }
 
-const ImageSlider: FC<IProps> = ({ item, setSwiper }) => {
+const ImageSlider: FC<IProps> = ({ item, setSwiper, product }) => {
   return (
     <>
       <S.SliderImage>
@@ -36,12 +39,13 @@ const ImageSlider: FC<IProps> = ({ item, setSwiper }) => {
             }
           }}
         >
-          {mockDelCatalog[0].image?.map((elem, index) => {
+          {product.image?.map((elem) => {
             return (
               <SwiperSlide>
                 <S.ImageBox>
                   <Image
-                    src={elem}
+                    loader={LoaderImage}
+                    src={elem.url}
                     alt="Main image article"
                     fill
                     style={{
@@ -54,17 +58,6 @@ const ImageSlider: FC<IProps> = ({ item, setSwiper }) => {
           })}
         </Swiper>
       </S.SliderImage>
-
-      {/* <S.ImageBox>
-        <Image
-          src={item}
-          alt="Main image article"
-          fill
-          style={{
-            objectFit: "contain"
-          }}
-        />
-      </S.ImageBox> */}
     </>
   );
 };

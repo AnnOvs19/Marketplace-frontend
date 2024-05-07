@@ -4,27 +4,29 @@ import CardImage from "@/components/CardImage/CardImage";
 import React, { FC } from "react";
 import * as S from "./productHead.style";
 import * as T from "@/styles/baseText.style";
-import { ICatalogMock } from "../../mockDelCatalog";
 import * as I from "@/styles/baseIcons.style";
 import like from "@/assets/icons/likeProductIcon.svg";
 import reviews from "@/assets/icons/reviewsProductIcon.svg";
 import Image from "next/image";
 import { BaseButton } from "@/styles/baseButtons.style";
+import { IProduct } from "@/interfaces/product/product";
 
 interface IProps {
-  product: ICatalogMock;
+  product: IProduct;
 }
 
 const ProductHead: FC<IProps> = ({ product }) => {
+  console.log(product);
+
   return (
     <S.HeadBox>
-      <CardImage />
+      <CardImage product={product} />
       <S.HeadInfo>
         <T.TitleProduct>{product.title}</T.TitleProduct>
         <S.CommonInfo>
           <S.CategoryBox>
-            <T.SmallText>Артикул: {product.id}</T.SmallText>
-            <T.SmallText>Категория: {product.category}</T.SmallText>
+            <T.SmallText>Артикул: {product.article}</T.SmallText>
+            <T.SmallText>Категория: {product.category.title}</T.SmallText>
           </S.CategoryBox>
           <S.CategoryBox>
             <S.LikeBox>
@@ -38,7 +40,7 @@ const ProductHead: FC<IProps> = ({ product }) => {
                   }}
                 />
               </I.LikeIcon>
-              <T.SmallText>{product.like} оценок</T.SmallText>
+              <T.SmallText>{product.likes?.length} оценок</T.SmallText>
             </S.LikeBox>
             <S.LikeBox>
               <I.LikeIcon>

@@ -5,22 +5,27 @@ import { ICatalogMock } from "../../mockDelCatalog";
 import * as S from "./productReviews.style";
 import * as T from "@/styles/baseText.style";
 import CreateReviews from "./CreateReviews/CreateReviews";
+import { IProduct } from "@/interfaces/product/product";
+import { IReview } from "@/interfaces/product/review";
 
 interface IProps {
-  product: ICatalogMock;
+  // product: IProduct;
+  reviews: IReview[];
 }
 
-const ProductReviews: FC<IProps> = ({ product }) => {
+const ProductReviews: FC<IProps> = ({ reviews }) => {
+  console.log(reviews);
+
   return (
     <S.ReviewBox>
       <T.TitleSection>Отзывы</T.TitleSection>
       <S.ReviewContainer>
         <S.ReviewList>
-          {product.reviews?.map((item) => {
+          {reviews?.map((item) => {
             return (
               <S.ReviewItem>
-                <T.DeskKey>{item.user}</T.DeskKey>
-                <T.DeskValue>{item.text}</T.DeskValue>
+                <T.DeskKey>{item.client.username}</T.DeskKey>
+                <T.ReviewText>{item.text}</T.ReviewText>
               </S.ReviewItem>
             );
           })}
