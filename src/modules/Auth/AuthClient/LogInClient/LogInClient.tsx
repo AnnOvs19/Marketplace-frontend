@@ -9,6 +9,7 @@ import * as T from "@/styles/baseText.style";
 import InputForm from "@/ui/Inputs/InputForm/InputForm";
 import MiniLoader from "@/ui/Loading/MiniLoader/MiniLoader";
 import { ILoginClient } from "@/interfaces/users/client";
+import { signIn, useSession } from "next-auth/react";
 
 const defaultValues: ILoginClient = {
   name: "",
@@ -16,6 +17,9 @@ const defaultValues: ILoginClient = {
 };
 
 const LogInClient = () => {
+  const session = useSession();
+  console.log(session);
+
   const [textButton, setTextButton] = useState<string>(
     "Войти в личный кабинет"
   );
@@ -28,11 +32,18 @@ const LogInClient = () => {
     formState: { errors }
   } = useForm<ILoginClient>({ defaultValues, mode: "onChange" });
 
-  function submit(data: ILoginClient) {
-    console.log(data);
+  async function submit(data: ILoginClient) {
     setTextButton("Вход...");
     setStatusLoad(true);
     reset();
+
+    const response = await signIn("credentials", {
+      identifier: data.name,
+      password: data.password,
+      redirect: false
+    });
+
+    console.log(response);
   }
   return (
     <LoginForm onSubmit={handleSubmit(submit)}>
@@ -86,7 +97,7 @@ const LogInClient = () => {
         )}
       </U.BodyInputWrapper>
 
-      <B.FormButton>
+      <B.FormButton type="submit">
         {textButton}
         {statusLoad ? <MiniLoader /> : ""}
       </B.FormButton>

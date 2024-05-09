@@ -9,7 +9,6 @@ import { IProduct } from "@/interfaces/product/product";
 import { IReview } from "@/interfaces/product/review";
 
 interface IProps {
-  // product: IProduct;
   reviews: IReview[];
 }
 
