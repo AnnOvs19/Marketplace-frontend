@@ -1,14 +1,14 @@
 "use client";
 
 import React from "react";
-import * as S from "./accountHead.style";
+import * as S from "../accountHead.style";
 import * as T from "@/styles/baseText.style";
 import * as I from "@/styles/baseIcons.style";
 import Image from "next/image";
 import avatar from "@/assets/images/clavs.jpg";
 import edit from "@/assets/icons/editIcon.svg";
 
-const AccountHead = () => {
+const HeadSeller = () => {
   return (
     <S.HeadAccount>
       <S.AvatarSeller>
@@ -35,10 +35,12 @@ const AccountHead = () => {
             />
           </I.EditIcon>
         </S.InfoHeader>
+        <T.SubTitle>Название магазина</T.SubTitle>
         <T.TextMedium>email1111@gmail.com</T.TextMedium>
+        <T.TextMedium>Город, адрес</T.TextMedium>
       </S.AvatarInfo>
     </S.HeadAccount>
   );
 };
 
-export default AccountHead;
+export default HeadSeller;

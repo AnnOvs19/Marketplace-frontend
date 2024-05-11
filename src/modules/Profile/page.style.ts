@@ -1,7 +1,7 @@
 import { mainTheme } from "@/styles/mainTheme.style";
 import styled from "styled-components";
 
-export const PageSellerWrap = styled.section`
+export const PageWrap = styled.section`
   margin: 0 auto;
   margin-top: 165px;
   margin-bottom: 50px;
@@ -35,7 +35,7 @@ export const PageSellerWrap = styled.section`
   }
 `;
 
-export const PageSellerBox = styled.div`
+export const PageBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;

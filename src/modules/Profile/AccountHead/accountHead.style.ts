@@ -77,18 +77,18 @@ export const AvatarSeller = styled.div`
 export const AvatarInfo = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 
   @media (${mainTheme.deviсe.laptopL}) {
-    gap: 11px;
+    gap: 9px;
   }
 
   @media (${mainTheme.deviсe.tablet}) {
-    gap: 10px;
+    gap: 8px;
   }
 
   @media (${mainTheme.deviсe.mobileXL}) {
-    gap: 8px;
+    gap: 7px;
   }
 
   @media (${mainTheme.deviсe.mobileM}) {
