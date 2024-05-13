@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { LoginForm } from "../../auth.style";
 import * as U from "@/ui/Inputs/InputForm/inputForm.style";
@@ -10,6 +10,7 @@ import InputForm from "@/ui/Inputs/InputForm/InputForm";
 import MiniLoader from "@/ui/Loading/MiniLoader/MiniLoader";
 import { ILoginClient } from "@/interfaces/users/client";
 import { signIn, useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 const defaultValues: ILoginClient = {
   name: "",
@@ -18,7 +19,8 @@ const defaultValues: ILoginClient = {
 
 const LogInClient = () => {
   const session = useSession();
-  console.log(session);
+
+  const router = useRouter();
 
   const [textButton, setTextButton] = useState<string>(
     "Войти в личный кабинет"
@@ -43,8 +45,19 @@ const LogInClient = () => {
       redirect: false
     });
 
-    console.log(response);
+    if (response?.ok) {
+      setTextButton("Добро пожаловать");
+      setStatusLoad(false);
+      router.push("/accountUser");
+    }
   }
+
+  useEffect(() => {
+    if (session.data) {
+      localStorage.setItem("token", JSON.stringify(session.data?.user.token));
+    }
+  }, [session]);
+
   return (
     <LoginForm onSubmit={handleSubmit(submit)}>
       <U.BodyInputWrapper>

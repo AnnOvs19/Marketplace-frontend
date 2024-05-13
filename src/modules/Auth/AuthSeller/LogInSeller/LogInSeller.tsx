@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import * as U from "@/ui/Inputs/InputForm/inputForm.style";
 import * as B from "@/styles/baseButtons.style";
 import * as T from "@/styles/baseText.style";
@@ -9,14 +9,19 @@ import { Controller, useForm } from "react-hook-form";
 import { LoginForm } from "../../auth.style";
 import MiniLoader from "@/ui/Loading/MiniLoader/MiniLoader";
 import { ILoginSeller } from "@/interfaces/users/seller";
+import { signIn, useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 const defaultValues: ILoginSeller = {
-  storeName: "",
   password: "",
   name: ""
 };
 
 const LogInSeller = () => {
+  const session = useSession();
+
+  const router = useRouter();
+
   const [textButton, setTextButton] = useState<string>(
     "Войти в личный кабинет"
   );
@@ -29,12 +34,30 @@ const LogInSeller = () => {
     formState: { errors }
   } = useForm<ILoginSeller>({ defaultValues, mode: "onChange" });
 
-  function submit(data: ILoginSeller) {
+  async function submit(data: ILoginSeller) {
     console.log(data);
     setTextButton("Вход...");
     setStatusLoad(true);
     reset();
+
+    const response = await signIn("credentials", {
+      identifier: data.name,
+      password: data.password,
+      redirect: false
+    });
+
+    if (response?.ok) {
+      setTextButton("Добро пожаловать");
+      setStatusLoad(false);
+      router.push("/accountSeller");
+    }
   }
+
+  useEffect(() => {
+    if (session.data) {
+      localStorage.setItem("token", JSON.stringify(session.data?.user.token));
+    }
+  }, [session]);
 
   return (
     <LoginForm onSubmit={handleSubmit(submit)}>
@@ -59,29 +82,7 @@ const LogInSeller = () => {
           <U.ErrorMessage>Введите ФИО не короче пяти символов</U.ErrorMessage>
         )}
       </U.BodyInputWrapper>
-      <U.BodyInputWrapper>
-        <T.TextForm>Название вашего магазина</T.TextForm>
-        <Controller
-          name="storeName"
-          rules={{ required: true, minLength: 5 }}
-          control={control}
-          render={({ field: { value, onChange }, fieldState }) => (
-            <InputForm
-              placeholder="Название вашего магазина"
-              type="text"
-              name="storeName"
-              value={value}
-              onChange={onChange}
-              errors={fieldState.invalid}
-            />
-          )}
-        />
-        {errors.storeName && (
-          <U.ErrorMessage>
-            Введите название своего магазина не короче пяти символов
-          </U.ErrorMessage>
-        )}
-      </U.BodyInputWrapper>
+
       <U.BodyInputWrapper>
         <T.TextForm>Введите свой пароль</T.TextForm>
         <Controller

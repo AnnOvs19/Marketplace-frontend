@@ -25,6 +25,5 @@ export interface IRegisrerSeller {
 
 export interface ILoginSeller {
   name: string;
-  storeName: string;
   password: string;
 }

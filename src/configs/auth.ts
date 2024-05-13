@@ -1,5 +1,5 @@
 import axios from "axios";
-import NextAuth, { User } from "next-auth";
+import NextAuth from "next-auth";
 import Credentials from "next-auth/providers/credentials";
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
@@ -17,14 +17,14 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
             identifier: credentials.identifier,
             password: credentials.password
           })
-          .then((res) => res.data);
+          .then((res) => res.data)
+          .catch((res) => alert(res.data));
 
         if (user) {
-          console.log(user);
-
           return {
             name: user.user.username,
-            email: user.user.email
+            id: user.user.id,
+            token: user.jwt
           };
         }
 
@@ -33,7 +33,17 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     })
   ],
 
+  callbacks: {
+    async jwt({ token, user }) {
+      return { ...token, ...user };
+    },
+    async session({ session, token, user }) {
+      session.user = token as any;
+      return session;
+    }
+  },
+
   pages: {
-    signIn: "/loginClient"
+    signIn: "/loginClient" || "/loginSeller"
   }
 });
