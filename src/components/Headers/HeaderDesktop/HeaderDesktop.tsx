@@ -11,8 +11,10 @@ import logo from "@/assets/icons/mainLogo.svg";
 import basket from "@/assets/icons/basketHeader.svg";
 import Image from "next/image";
 import Link from "next/link";
+import { useSession } from "next-auth/react";
 
 const HeaderDesktop = () => {
+  const session = useSession();
   return (
     <C.HeaderDesktopWrapper>
       <C.Header>
@@ -30,6 +32,7 @@ const HeaderDesktop = () => {
             </I.LogoIcon>
             <T.LogoText>Marketech</T.LogoText>
           </I.LogoBox>
+
           <S.Navigation>
             <Link href="/">
               <T.LinkText>Главная</T.LinkText>

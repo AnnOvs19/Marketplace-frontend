@@ -231,17 +231,18 @@ export const LoginPrewiewButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: transparent;
-  color: ${mainTheme.colors.white};
-  border: 1px solid ${mainTheme.colors.white};
+  background-color: ${mainTheme.colors.white};
+  color: ${mainTheme.colors.black};
+  border: none;
   padding: 10px 131px;
   font-size: 14px;
   margin-top: 15px;
   margin-bottom: -5px;
 
   &:hover {
-    background-color: ${mainTheme.colors.white};
-    color: ${mainTheme.colors.black};
+    background-color: transparent;
+    color: ${mainTheme.colors.white};
+    border: 1px solid ${mainTheme.colors.white};
   }
 
   @media (${mainTheme.deviсe.laptopS}) {

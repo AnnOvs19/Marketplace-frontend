@@ -3,7 +3,7 @@
 import React, { FC } from "react";
 import * as S from "./NewsList.style";
 import NewsElement from "./NewsElement";
-import { mockDelNews } from "../../mockDelNews";
+import { mockDelNews } from "@/modules/News/mockDelNews";
 
 interface IProps {
   setIndexItem: (state: number) => void;

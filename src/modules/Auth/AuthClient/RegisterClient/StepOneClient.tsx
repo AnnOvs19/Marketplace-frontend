@@ -6,13 +6,13 @@ import * as B from "@/styles/baseButtons.style";
 import * as T from "@/styles/baseText.style";
 import InputForm from "@/ui/Inputs/InputForm/InputForm";
 import { Controller, UseFormReturn } from "react-hook-form";
-import { IFormRegisrerClient } from "./RegisterClient";
 import { StepRegister1 } from "../../auth.style";
+import { IRegisrerClient } from "@/interfaces/users/client";
 
 interface IProps {
   indexTab: number;
   setIndexTab: (step: number) => void;
-  formControl: UseFormReturn<IFormRegisrerClient>;
+  formControl: UseFormReturn<IRegisrerClient>;
 }
 
 const StepOneClient: FC<IProps> = ({ indexTab, setIndexTab, formControl }) => {

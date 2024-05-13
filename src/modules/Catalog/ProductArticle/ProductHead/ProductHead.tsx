@@ -10,13 +10,23 @@ import reviews from "@/assets/icons/reviewsProductIcon.svg";
 import Image from "next/image";
 import { BaseButton } from "@/styles/baseButtons.style";
 import { IProduct } from "@/interfaces/product/product";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 interface IProps {
   product: IProduct;
 }
 
 const ProductHead: FC<IProps> = ({ product }) => {
-  console.log(product);
+  const session = useSession();
+
+  const router = useRouter();
+
+  function buttonHandler() {
+    if (!session.data) {
+      router.push("/loginClient");
+    }
+  }
 
   return (
     <S.HeadBox>
@@ -63,7 +73,9 @@ const ProductHead: FC<IProps> = ({ product }) => {
           </T.InfoProduct>
           <T.InfoProduct>Стоимость: {product.price}руб</T.InfoProduct>
         </S.PriceBox>
-        <BaseButton>Добавить в корзину</BaseButton>
+        <BaseButton type="button" onClick={buttonHandler}>
+          Добавить в корзину
+        </BaseButton>
       </S.HeadInfo>
     </S.HeadBox>
   );

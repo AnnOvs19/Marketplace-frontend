@@ -7,13 +7,13 @@ import * as T from "@/styles/baseText.style";
 import InputForm from "@/ui/Inputs/InputForm/InputForm";
 import { BottomAuth, StepRegister2 } from "../../auth.style";
 import { Controller, UseFormReturn } from "react-hook-form";
-import { IFormRegisrerSeller } from "./RegisterSeller";
 import MiniLoader from "@/ui/Loading/MiniLoader/MiniLoader";
+import { IRegisrerSeller } from "@/interfaces/users/seller";
 
 interface IProps {
   indexTab: number;
   setIndexTab: (step: number) => void;
-  formControl: UseFormReturn<IFormRegisrerSeller>;
+  formControl: UseFormReturn<IRegisrerSeller>;
   textButton: string;
   statusLoad: boolean;
 }

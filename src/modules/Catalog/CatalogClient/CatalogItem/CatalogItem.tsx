@@ -10,17 +10,29 @@ import like from "@/assets/icons/likeProductIcon.svg";
 import Link from "next/link";
 import { IProduct } from "@/interfaces/product/product";
 import { LoaderImage } from "@/helpers/loaderImage";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 interface IProps {
   item: IProduct;
 }
 
 const CatalogItem: FC<IProps> = ({ item }) => {
+  const session = useSession();
+
+  const router = useRouter();
+
   const [likeList, setLikelist] = useState<boolean>(false);
 
   function addLike(event: MouseEvent<HTMLButtonElement>) {
     event.stopPropagation();
     setLikelist(!likeList);
+  }
+
+  function buttonHandler() {
+    if (!session.data) {
+      router.push("/loginClient");
+    }
   }
 
   return (
@@ -39,10 +51,10 @@ const CatalogItem: FC<IProps> = ({ item }) => {
         </S.CardItemImage>
       </Link>
       <S.CardItemBox>
-        <Link href={`/catalog/${item.title}`}>
+        <Link href={`/catalog/${item.id}`}>
           <T.CardTitle>{item.title.substring(0, 20)}...</T.CardTitle>
         </Link>
-        <Link href={`/catalog/${item.title}`}>
+        <Link href={`/catalog/${item.id}`}>
           <T.CardPrice>{item.price} руб</T.CardPrice>
         </Link>
 
@@ -50,7 +62,7 @@ const CatalogItem: FC<IProps> = ({ item }) => {
           <T.CardOtherText>{item.category.title}</T.CardOtherText>
           <T.CardOtherText>{item.sumInStock} шт.</T.CardOtherText>
         </S.CardBottom>
-        <B.CardButton type="button" onClick={(e) => e.stopPropagation()}>
+        <B.CardButton type="button" onClick={buttonHandler}>
           В корзину
         </B.CardButton>
         <S.LikeCardIcon onClick={(event) => addLike(event)} type="button">

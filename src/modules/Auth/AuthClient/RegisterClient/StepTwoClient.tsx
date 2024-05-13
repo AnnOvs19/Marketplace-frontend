@@ -5,15 +5,15 @@ import * as U from "@/ui/Inputs/InputForm/inputForm.style";
 import * as B from "@/styles/baseButtons.style";
 import * as T from "@/styles/baseText.style";
 import InputForm from "@/ui/Inputs/InputForm/InputForm";
-import { IFormRegisrerClient } from "./RegisterClient";
 import { Controller, UseFormReturn } from "react-hook-form";
 import { BottomAuth, StepRegister2 } from "../../auth.style";
 import MiniLoader from "@/ui/Loading/MiniLoader/MiniLoader";
+import { IRegisrerClient } from "@/interfaces/users/client";
 
 interface IProps {
   indexTab: number;
   setIndexTab: (step: number) => void;
-  formControl: UseFormReturn<IFormRegisrerClient>;
+  formControl: UseFormReturn<IRegisrerClient>;
   textButton: string;
   statusLoad: boolean;
 }

@@ -2,7 +2,6 @@
 
 import React, { FC } from "react";
 import * as S from "./blogList.style";
-import { mockDelNews } from "../../mockDelNews";
 import BlogItem from "../BlogItem/BlogItem";
 import Link from "next/link";
 import { INewsItem } from "@/interfaces/news/newsItem";

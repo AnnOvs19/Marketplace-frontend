@@ -30,9 +30,7 @@ const PreviewItemsClient: FC<IProps> = ({
             <T.MainTitle>{item.title}</T.MainTitle>
             <T.SubTitle>{item.subTitle}</T.SubTitle>
             <T.TextMedium>{item.text}</T.TextMedium>
-            <Link href="/loginClient">
-              <C.LoginPrewiewButton>Аккаунт покупателя</C.LoginPrewiewButton>
-            </Link>
+
             <C.TextBottom>
               <B.TransparentButton onClick={() => setIndex(0)}>
                 Экономия
@@ -44,6 +42,9 @@ const PreviewItemsClient: FC<IProps> = ({
                 Большой выбор
               </B.TransparentButton>
             </C.TextBottom>
+            <Link href="/loginClient">
+              <C.LoginPrewiewButton>Аккаунт покупателя</C.LoginPrewiewButton>
+            </Link>
           </C.TextBox>
           <C.PreviewImage>
             <Image

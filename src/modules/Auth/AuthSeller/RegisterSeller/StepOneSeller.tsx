@@ -7,12 +7,12 @@ import * as T from "@/styles/baseText.style";
 import InputForm from "@/ui/Inputs/InputForm/InputForm";
 import { StepRegister1 } from "../../auth.style";
 import { Controller, UseFormReturn } from "react-hook-form";
-import { IFormRegisrerSeller } from "./RegisterSeller";
+import { IRegisrerSeller } from "@/interfaces/users/seller";
 
 interface IProps {
   indexTab: number;
   setIndexTab: (step: number) => void;
-  formControl: UseFormReturn<IFormRegisrerSeller>;
+  formControl: UseFormReturn<IRegisrerSeller>;
 }
 
 const StepOneSeller: FC<IProps> = ({ indexTab, setIndexTab, formControl }) => {
