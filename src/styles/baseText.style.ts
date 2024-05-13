@@ -704,3 +704,32 @@ export const ReviewText = styled.span`
     font-size: 11px;
   }
 `;
+
+export const ProfileText = styled.p`
+  font-size: 15px;
+  transition: 0.4s;
+  font-weight: 300;
+  color: ${mainTheme.colors.white};
+  line-height: 135%;
+
+  @media (${mainTheme.deviсe.laptopL}) {
+    font-size: 14px;
+  }
+
+  @media (${mainTheme.deviсe.laptopM}) {
+    font-size: 13px;
+  }
+
+  @media (max-width: 870px) {
+    text-align: center;
+    font-size: 12px;
+  }
+
+  @media (${mainTheme.deviсe.mobileL}) {
+    font-size: 11px;
+  }
+
+  @media (${mainTheme.deviсe.mobileM}) {
+    font-size: 10px;
+  }
+`;

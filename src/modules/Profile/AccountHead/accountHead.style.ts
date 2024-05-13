@@ -17,11 +17,7 @@ export const HeadAccount = styled.div`
   @media (${mainTheme.deviсe.mobileXL}) {
     flex-direction: column;
     align-items: center;
-    gap: 25px;
-  }
-
-  @media (${mainTheme.deviсe.mobileM}) {
-    gap: 20px;
+    gap: 18px;
   }
 
   @media (${mainTheme.deviсe.mobileXS}) {
@@ -72,27 +68,31 @@ export const AvatarSeller = styled.div`
     height: 100px;
     border-radius: 120px;
   }
+
+  @media (${mainTheme.deviсe.mobileM}) {
+    width: 85px;
+    height: 85px;
+    border-radius: 120px;
+  }
+
+  @media (${mainTheme.deviсe.mobileS}) {
+    width: 65px;
+    height: 65px;
+    border-radius: 120px;
+  }
 `;
 
 export const AvatarInfo = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 
-  @media (${mainTheme.deviсe.laptopL}) {
-    gap: 9px;
-  }
-
-  @media (${mainTheme.deviсe.tablet}) {
-    gap: 8px;
-  }
-
-  @media (${mainTheme.deviсe.mobileXL}) {
-    gap: 7px;
-  }
-
-  @media (${mainTheme.deviсe.mobileM}) {
+  @media (${mainTheme.deviсe.laptopS}) {
     gap: 6px;
+  }
+
+  @media (${mainTheme.deviсe.mobileL}) {
+    gap: 5px;
   }
 `;
 

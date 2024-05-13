@@ -9,6 +9,7 @@ import Image from "next/image";
 import avatar from "@/assets/images/clavs.jpg";
 import edit from "@/assets/icons/editIcon.svg";
 import { signOut } from "next-auth/react";
+import Link from "next/link";
 
 const HeadSeller = () => {
   return (
@@ -26,20 +27,22 @@ const HeadSeller = () => {
       <S.AvatarInfo>
         <S.InfoHeader>
           <T.TitleSection>Пупс Пупсович</T.TitleSection>
-          <I.EditIcon>
-            <Image
-              src={edit}
-              alt="Edit a profile"
-              fill
-              style={{
-                objectFit: "contain"
-              }}
-            />
-          </I.EditIcon>
+          <Link href="/editAccountSel">
+            <I.EditIcon>
+              <Image
+                src={edit}
+                alt="Edit a profile"
+                fill
+                style={{
+                  objectFit: "contain"
+                }}
+              />
+            </I.EditIcon>
+          </Link>
         </S.InfoHeader>
         <T.SubTitle>Название магазина</T.SubTitle>
-        <T.TextMedium>email1111@gmail.com</T.TextMedium>
-        <T.TextMedium>Город, адрес</T.TextMedium>
+        <T.ProfileText>email1111@gmail.com</T.ProfileText>
+        <T.ProfileText>Город, адрес</T.ProfileText>
         <B.BaseButton onClick={() => signOut({ callbackUrl: "/" })}>
           Выйти из кабинета
         </B.BaseButton>

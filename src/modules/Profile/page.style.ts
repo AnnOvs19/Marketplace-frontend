@@ -23,15 +23,11 @@ export const PageWrap = styled.section`
   }
 
   @media (${mainTheme.deviсe.mobileXL}) {
-    margin-top: 120px;
-  }
-
-  @media (${mainTheme.deviсe.mobileM}) {
-    margin-top: 125px;
+    margin-top: 80px;
   }
 
   @media (${mainTheme.deviсe.mobileS}) {
-    margin-top: 90px;
+    margin-top: 70px;
   }
 `;
 
