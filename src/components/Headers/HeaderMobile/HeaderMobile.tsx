@@ -8,7 +8,7 @@ import * as C from "../Headers.style";
 import Image from "next/image";
 import logo from "@/assets/icons/mainLogo.svg";
 import MenuBurger from "@/ui/MenuBurger/MenuBurger";
-import Menu from "@/components/Menu/MenuClient";
+import Menu from "@/components/Menu/Menu";
 import { ISeller } from "@/interfaces/users/seller";
 import { IClient } from "@/interfaces/users/client";
 

@@ -9,7 +9,9 @@ import * as C from "../Headers.style";
 
 import logo from "@/assets/icons/mainLogo.svg";
 import basket from "@/assets/icons/basketHeader.svg";
+import profile from "@/assets/icons/profileHeader.svg";
 import Image from "next/image";
+
 import Link from "next/link";
 import { IClient } from "@/interfaces/users/client";
 import { ISeller } from "@/interfaces/users/seller";
@@ -54,12 +56,27 @@ const HeaderDesktop: FC<IProps> = ({ userInfo }) => {
             </S.Navigation>
           ) : userInfo?.role?.name == "Seller" ? (
             <S.Navigation>
-              <T.LinkText>Мои товары</T.LinkText>
-              <T.LinkText>Все заказы</T.LinkText>
+              <Link href="/myProducts">
+                <T.LinkText>Мои товары</T.LinkText>
+              </Link>
+              <Link href="/allOrdersClient">
+                <T.LinkText>Все заказы</T.LinkText>
+              </Link>
               <Link href="/blog">
                 <T.LinkText>Блог</T.LinkText>
               </Link>
-              <T.LinkText>Профиль</T.LinkText>
+              <Link href="/accountSeller">
+                <I.BasketIcon>
+                  <Image
+                    src={profile}
+                    alt="The page profile user"
+                    fill
+                    style={{
+                      objectFit: "cover"
+                    }}
+                  />
+                </I.BasketIcon>
+              </Link>
             </S.Navigation>
           ) : (
             <S.Navigation>
@@ -73,8 +90,21 @@ const HeaderDesktop: FC<IProps> = ({ userInfo }) => {
               <Link href="/catalog">
                 <T.LinkText>Каталог</T.LinkText>
               </Link>
-              <T.LinkText>Мои заказы</T.LinkText>
-              <T.LinkText>Профиль</T.LinkText>
+              <Link href="/myOrders">
+                <T.LinkText>Мои заказы</T.LinkText>
+              </Link>
+              <Link href="/accountUser">
+                <I.BasketIcon>
+                  <Image
+                    src={profile}
+                    alt="The page profile user"
+                    fill
+                    style={{
+                      objectFit: "cover"
+                    }}
+                  />
+                </I.BasketIcon>
+              </Link>
               <Link href="/basket">
                 <I.BasketIcon>
                   <Image
@@ -85,7 +115,6 @@ const HeaderDesktop: FC<IProps> = ({ userInfo }) => {
                       objectFit: "cover"
                     }}
                   />
-                  <S.CountBasket>0</S.CountBasket>
                 </I.BasketIcon>
               </Link>
             </S.Navigation>

@@ -1,7 +1,7 @@
 import BgCircle from "@/components/Backgrounds/BgCircle/BgCircle";
-import HeadUser from "@/modules/Profile/AccountHead/HeadUser/HeadUser";
 import { auth } from "@/configs/auth";
 import { redirect } from "next/navigation";
+import PageUser from "@/modules/Profile/PageUser/PageUser";
 
 export default async function AccountUser() {
   const session = await auth();
@@ -13,7 +13,7 @@ export default async function AccountUser() {
   return (
     <>
       <BgCircle />
-      <HeadUser />
+      <PageUser />
     </>
   );
 }

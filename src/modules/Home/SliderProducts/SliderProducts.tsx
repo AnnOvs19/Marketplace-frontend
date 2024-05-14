@@ -1,16 +1,25 @@
 "use client";
 
-import React from "react";
+import React, { FC } from "react";
 import * as S from "./sliderProducts.style";
 import * as T from "@/styles/baseText.style";
 import * as B from "@/styles/baseButtons.style";
-import { mockDelCatalog } from "@/modules/Catalog/mockDelCatalog";
-import CatalogItem from "@/modules/Catalog/CatalogClient/CatalogItem/CatalogItem";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import SliderItem from "./SliderItem";
+import { IProduct } from "@/interfaces/product/product";
+import Link from "next/link";
 
-const SliderProducts = () => {
+interface IProps {
+  popularProducts: IProduct[];
+}
+
+const SliderProducts: FC<IProps> = ({ popularProducts }) => {
+  const sortProducts = popularProducts.sort(
+    (a, b) => b.likes.length - a.likes.length
+  );
+
   return (
     <S.SliderWrap>
       <T.TitleSection>Популярные новинки</T.TitleSection>
@@ -35,10 +44,10 @@ const SliderProducts = () => {
             }
           }}
         >
-          {mockDelCatalog?.map((item, index) => {
+          {sortProducts?.map((item, index) => {
             return (
               <SwiperSlide key={index}>
-                <CatalogItem item={item} key={index} />
+                <SliderItem item={item} key={index} />
               </SwiperSlide>
             );
           })}
@@ -46,7 +55,10 @@ const SliderProducts = () => {
       </S.SliderList>
       <S.ListBottom>
         <S.BottomLine />
-        <B.SliderButton>Перейти в каталог</B.SliderButton>
+        <Link href="/catalog">
+          <B.SliderButton>Перейти в каталог</B.SliderButton>
+        </Link>
+
         <S.BottomLine />
       </S.ListBottom>
     </S.SliderWrap>

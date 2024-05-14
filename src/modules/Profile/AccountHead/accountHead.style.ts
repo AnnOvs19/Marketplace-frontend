@@ -25,7 +25,7 @@ export const HeadAccount = styled.div`
   }
 `;
 
-export const AvatarSeller = styled.div`
+export const Avatar = styled.div`
   width: 220px;
   height: 220px;
   border-radius: 250px;

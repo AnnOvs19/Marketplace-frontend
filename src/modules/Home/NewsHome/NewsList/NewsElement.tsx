@@ -14,10 +14,12 @@ const NewsElement: FC<IProps> = ({ item, click, index }) => {
   return (
     <S.NewsElementWrap onClick={() => click(index)}>
       <C.NewsHead>
-        <T.SmallText>by {item.seller.name}</T.SmallText>
-        <T.SmallText>| {item.date}</T.SmallText>
+        <T.SmallText>by {item.store.storeName}</T.SmallText>
+        <T.SmallText>
+          | {new Date(item.createdAt).toLocaleDateString()}
+        </T.SmallText>
       </C.NewsHead>
-      <T.TextMedium>{item.title}</T.TextMedium>
+      <T.TextMedium>{item.title.substring(0, 80)}...</T.TextMedium>
     </S.NewsElementWrap>
   );
 };

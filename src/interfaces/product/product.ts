@@ -10,6 +10,7 @@ export interface IProduct {
   text: string;
   image: any[];
   price: number;
+  deliveryPrice: number;
   article: string;
   model: string;
   country: string;
@@ -22,7 +23,7 @@ export interface IProduct {
   sumInStock: number;
   quantity?: number;
   orders?: IOrder[];
-  likes?: ILike[];
+  likes: ILike[];
   reviews?: IReview[];
   seller: ISeller;
 }

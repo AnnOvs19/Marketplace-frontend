@@ -3,9 +3,7 @@
 import React, { FC } from "react";
 import * as S from "./productBody.style";
 import * as T from "@/styles/baseText.style";
-// import SliderProducts from "@/components/SliderProducts/SliderProducts";
 import { IProduct } from "@/interfaces/product/product";
-import SliderProducts from "@/modules/Home/SliderProducts/SliderProducts";
 
 interface IProps {
   product: IProduct;
@@ -82,8 +80,6 @@ const ProductBody: FC<IProps> = ({ product }) => {
           </S.OtherContainer>
         </S.BodyItem>
       </S.BodyDesk>
-
-      <SliderProducts />
     </S.BodyBox>
   );
 };

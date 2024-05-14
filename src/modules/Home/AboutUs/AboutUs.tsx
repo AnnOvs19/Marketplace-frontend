@@ -5,7 +5,8 @@ import * as S from "./aboutUs.style";
 import * as T from "@/styles/baseText.style";
 import Image from "next/image";
 
-import clava from "@/assets/images/clavs.jpg";
+import about1 from "@/assets/images/about1.jpg";
+import about2 from "@/assets/images/about2.png";
 
 const AboutUs = () => {
   return (
@@ -49,7 +50,7 @@ const AboutUs = () => {
               </T.TextMedium>
               <S.AboutUsImage>
                 <Image
-                  src={clava}
+                  src={about1}
                   alt="The image of technology, the history of the brand"
                   fill
                   style={{
@@ -61,7 +62,7 @@ const AboutUs = () => {
             <S.AboutUsBlock>
               <S.AboutUsImage>
                 <Image
-                  src={clava}
+                  src={about2}
                   alt="The image of technology, the history of the brand"
                   fill
                   style={{

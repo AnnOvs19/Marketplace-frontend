@@ -1,7 +1,7 @@
 "use client";
 
 import React, { FC, MouseEvent, useState } from "react";
-import * as S from "./catalogItem.style";
+import * as S from "@/modules/Catalog/CatalogClient/CatalogItem/catalogItem.style";
 import * as T from "@/styles/baseText.style";
 import * as B from "@/styles/baseButtons.style";
 import Image from "next/image";
@@ -17,17 +17,10 @@ interface IProps {
   item: IProduct;
 }
 
-const CatalogItem: FC<IProps> = ({ item }) => {
+const SliderItem: FC<IProps> = ({ item }) => {
   const session = useSession();
 
   const router = useRouter();
-
-  const [likeList, setLikelist] = useState<boolean>(false);
-
-  function addLike(event: MouseEvent<HTMLButtonElement>) {
-    event.stopPropagation();
-    setLikelist(!likeList);
-  }
 
   function buttonHandler() {
     if (!session.data) {
@@ -65,21 +58,9 @@ const CatalogItem: FC<IProps> = ({ item }) => {
         <B.CardButton type="button" onClick={buttonHandler}>
           В корзину
         </B.CardButton>
-        <S.LikeCardIcon onClick={(event) => addLike(event)} type="button">
-          <S.LikeWrap>
-            <Image
-              src={likeList ? like : likeEmpty}
-              alt=""
-              fill
-              style={{
-                objectFit: "contain"
-              }}
-            />
-          </S.LikeWrap>
-        </S.LikeCardIcon>
       </S.CardItemBox>
     </S.CardItem>
   );
 };
 
-export default CatalogItem;
+export default SliderItem;

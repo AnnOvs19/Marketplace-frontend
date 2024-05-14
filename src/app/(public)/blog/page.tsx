@@ -1,7 +1,7 @@
 import BgCircle from "@/components/Backgrounds/BgCircle/BgCircle";
 import axios from "@/helpers/axios";
 import { INewsItem } from "@/interfaces/news/newsItem";
-import BlogList from "@/modules/News/NewsBlog/BlogList/BlogList";
+import BlogList from "@/modules/News/NewsClient/BlogList/BlogList";
 import { AxiosResponse } from "axios";
 
 async function getNewsItem() {

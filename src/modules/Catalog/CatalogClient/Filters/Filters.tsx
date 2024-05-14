@@ -12,13 +12,35 @@ import like from "@/assets/icons/filterLike.svg";
 import FilterMenu from "@/components/FilterMenu/FilterMenu";
 import Link from "next/link";
 import { ICategory } from "@/interfaces/product/category";
+import { IProduct } from "@/interfaces/product/product";
+import axios from "@/helpers/axios";
 
 interface IProps {
   filters: ICategory[];
+  popularProducts: IProduct[];
+  setProducts: (arr: IProduct[]) => void;
 }
 
-const Filters: FC<IProps> = ({ filters }) => {
+const Filters: FC<IProps> = ({ filters, popularProducts, setProducts }) => {
   const [openFilter, setOpenFilter] = useState<boolean>(false);
+
+  function sortNewProducts() {
+    const prodArr = [...popularProducts];
+    const sortNew = prodArr.sort((a, b) => b.id - a.id);
+    setProducts(sortNew);
+  }
+  function sortOldPosts() {
+    const prodArr = [...popularProducts];
+    const sortOld = prodArr.sort((a, b) => a.id - b.id);
+    setProducts(sortOld);
+  }
+
+  async function clearFilters() {
+    const res = await axios.get("/api/products?populate=*");
+    const productsMain: IProduct[] = res.data.data;
+    setProducts(productsMain.sort((a, b) => b.likes.length - a.likes.length));
+  }
+
   return (
     <>
       <S.FiltersWrap>
@@ -28,10 +50,11 @@ const Filters: FC<IProps> = ({ filters }) => {
             <B.SearchButton onClick={() => setOpenFilter(true)}>
               Фильры
             </B.SearchButton>
+            <B.SearchButton onClick={clearFilters}>Отчистить</B.SearchButton>
           </S.SearchPanel>
           <S.ControlPanel>
             <S.IconsContainer>
-              <S.ButtonBox>
+              <S.ButtonBox onClick={sortNewProducts}>
                 <Image
                   src={order}
                   alt="Sort in descending order"
@@ -44,7 +67,7 @@ const Filters: FC<IProps> = ({ filters }) => {
               <S.TextIcon>С новых товаров</S.TextIcon>
             </S.IconsContainer>
             <S.IconsContainer>
-              <S.ButtonBox>
+              <S.ButtonBox onClick={sortOldPosts}>
                 <Image
                   src={reverse}
                   alt="Sorting in reverse order"
@@ -91,6 +114,7 @@ const Filters: FC<IProps> = ({ filters }) => {
         openFilter={openFilter}
         setOpenFilter={setOpenFilter}
         filters={filters}
+        setProducts={setProducts}
       />
     </>
   );

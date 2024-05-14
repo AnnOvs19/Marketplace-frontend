@@ -11,7 +11,7 @@ export const MenuNavigation = styled.nav`
   gap: 10px;
 `;
 
-export const MenuClientWrapper = styled.aside<IProps>`
+export const MenuWrapper = styled.aside<IProps>`
   display: none;
 
   @media (${mainTheme.deviсe.tablet}) {

@@ -1,7 +1,7 @@
 import { IProduct } from "../product/product";
 import { IClient } from "../users/client";
 
-export interface IBasket {
+export interface IOrderContacts {
   id?: number;
   name: string;
   phone: string;

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { FC, useState } from "react";
-import * as S from "./menuClient.style";
+import * as S from "./menu.style";
 import * as T from "@/styles/baseText.style";
 import * as B from "@/styles/baseButtons.style";
 import * as I from "@/styles/baseIcons.style";
@@ -20,7 +20,7 @@ interface IProps {
 
 const Menu: FC<IProps> = ({ openMenu, setOpenMenu, userInfo }) => {
   return (
-    <S.MenuClientWrapper openMenu={openMenu}>
+    <S.MenuWrapper openMenu={openMenu}>
       <I.LogoBox>
         <I.LogoIcon>
           <Image
@@ -56,33 +56,43 @@ const Menu: FC<IProps> = ({ openMenu, setOpenMenu, userInfo }) => {
         </S.MenuNavigation>
       ) : userInfo?.role?.name == "Seller" ? (
         <S.MenuNavigation>
-          <T.LinkText>Мои товары</T.LinkText>
-          <T.LinkText>Все заказы</T.LinkText>
-          <Link href="/blog">
-            <T.LinkText>Блог</T.LinkText>
+          <Link href="/myProducts">
+            <T.MenuText>Мои товары</T.MenuText>
           </Link>
-          <T.LinkText>Профиль</T.LinkText>
+          <Link href="/allOrdersClient">
+            <T.MenuText>Все заказы</T.MenuText>
+          </Link>
+          <Link href="/blog">
+            <T.MenuText>Блог</T.MenuText>
+          </Link>
+          <Link href="/accountSeller">
+            <T.MenuText>Профиль</T.MenuText>
+          </Link>
         </S.MenuNavigation>
       ) : (
         <S.MenuNavigation>
           <Link href="/">
-            <T.LinkText>Главная</T.LinkText>
+            <T.MenuText>Главная</T.MenuText>
           </Link>
           <Link href="/blog">
-            <T.LinkText>Блог</T.LinkText>
+            <T.MenuText>Блог</T.MenuText>
           </Link>
 
           <Link href="/catalog">
-            <T.LinkText>Каталог</T.LinkText>
+            <T.MenuText>Каталог</T.MenuText>
           </Link>
-          <T.LinkText>Мои заказы</T.LinkText>
-          <T.LinkText>Профиль</T.LinkText>
+          <Link href="/myOrders">
+            <T.MenuText>Мои заказы</T.MenuText>
+          </Link>
+          <Link href="/accountUser">
+            <T.MenuText>Профиль</T.MenuText>
+          </Link>
           <Link href="/basket">
-            <T.LinkText>Корзина</T.LinkText>
+            <T.MenuText>Корзина</T.MenuText>
           </Link>
         </S.MenuNavigation>
       )}
-    </S.MenuClientWrapper>
+    </S.MenuWrapper>
   );
 };
 

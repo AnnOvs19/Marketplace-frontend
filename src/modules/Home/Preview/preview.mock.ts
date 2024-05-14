@@ -1,6 +1,6 @@
-import img1 from "@/assets/images/1.jpg";
-import img2 from "@/assets/images/clavs.jpg";
-import img3 from "@/assets/images/3.jpg";
+import img1 from "@/assets/images/preview1.jpg";
+import img2 from "@/assets/images/preview2.jpg";
+import img3 from "@/assets/images/preview3.jpg";
 
 export interface IPreviewClient {
   title: string;

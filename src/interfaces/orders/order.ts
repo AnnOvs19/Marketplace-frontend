@@ -3,6 +3,7 @@ import { IOrderStatus } from "./orderStatus";
 import { IProduct } from "../product/product";
 import { ISeller } from "../users/seller";
 import { IStore } from "../store/store";
+import { IOrderContacts } from "../basket/basket";
 
 export interface IOrder {
   id: number;
@@ -11,5 +12,6 @@ export interface IOrder {
   store: IStore;
   status: IOrderStatus;
   sumOrder: number;
-  product: IProduct[];
+  product: IProduct;
+  contacts: IOrderContacts;
 }

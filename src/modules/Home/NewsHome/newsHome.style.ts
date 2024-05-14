@@ -7,7 +7,7 @@ export const NewsHomeWraper = styled.section`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 645px;
+  height: 695px;
   overflow: hidden;
   box-shadow: 0 8px 32px 0 rgba(95 31 135 / 37%);
   background: rgb(39, 4, 61);
@@ -18,7 +18,7 @@ export const NewsHomeWraper = styled.section`
   );
 
   @media (${mainTheme.deviсe.laptopL}) {
-    height: 625px;
+    height: 635px;
   }
 
   @media (${mainTheme.deviсe.laptopM}) {
@@ -28,7 +28,7 @@ export const NewsHomeWraper = styled.section`
   @media (max-width: 870px) {
     overflow: auto;
     gap: 30px;
-    height: 870px;
+    height: 885px;
   }
 
   @media (${mainTheme.deviсe.mobileXL}) {

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { mainTheme } from "./mainTheme.style";
 
 export const HeaderButton = styled.button`
-  margin-left: 25px;
+  margin-left: 10px;
   background-color: transparent;
   color: ${mainTheme.colors.white};
   border: 1px solid ${mainTheme.colors.white};

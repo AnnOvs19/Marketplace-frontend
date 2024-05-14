@@ -79,9 +79,15 @@ export const ButtonBox = styled.button`
   color: transparent;
   background-color: transparent;
   border: none;
+  outline: none;
   position: relative;
+  padding: 10px;
   height: 25px;
   width: 25px;
+
+  &:hover {
+    transform: scale(1.2);
+  }
 
   @media (${mainTheme.deviсe.laptopL}) {
     height: 20px;
