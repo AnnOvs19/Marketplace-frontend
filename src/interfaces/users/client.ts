@@ -2,6 +2,7 @@ import { IOrder } from "../orders/order";
 
 export interface IClient {
   id: number;
+  role?: { name: string };
   username: string;
   phone: string;
   email: string;
@@ -9,6 +10,7 @@ export interface IClient {
   sity: string;
   adress: string;
   orders?: IOrder[];
+  // store?: any;
 }
 
 export interface IRegisrerClient {

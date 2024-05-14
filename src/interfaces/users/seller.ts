@@ -3,6 +3,7 @@ import { IStore } from "../store/store";
 
 export interface ISeller {
   id?: number;
+  role?: { name: string };
   name?: string;
   phone?: string;
   email?: string;

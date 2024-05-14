@@ -5,6 +5,12 @@ interface IProps {
   openMenu: boolean;
 }
 
+export const MenuNavigation = styled.nav`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+`;
+
 export const MenuClientWrapper = styled.aside<IProps>`
   display: none;
 

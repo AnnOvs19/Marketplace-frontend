@@ -1,23 +1,38 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import HeaderDesktop from "./HeaderDesktop/HeaderDesktop";
 import HeaderMobile from "./HeaderMobile/HeaderMobile";
+import { useSession } from "next-auth/react";
 import axios from "@/helpers/axios";
+import { IClient } from "@/interfaces/users/client";
+import { ISeller } from "@/interfaces/users/seller";
 
 const Headers = () => {
-  const res = axios
-    .get("http://127.0.0.1:1337/api/users/me", {
-      headers: {
-        Authorization: `Bearer ${JSON.parse(localStorage.getItem("token") || "")}`
-      }
-    })
-    .then((res) => console.log(res));
+  const session = useSession();
+  const [userInfo, setUserInfo] = useState<IClient | ISeller>();
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (session.data?.user.token && count == 1) {
+      axios
+        .get("/api/users/me?populate=role", {
+          headers: {
+            Authorization: `Bearer ${session.data?.user.token || ""}`
+          }
+        })
+        .then((res) => setUserInfo(res.data));
+    }
+  }, [session.data]);
+
+  useEffect(() => {
+    setCount(count + 1);
+  }, [session.data]);
 
   return (
     <>
-      <HeaderDesktop />
-      <HeaderMobile />
+      <HeaderDesktop userInfo={userInfo!} />
+      <HeaderMobile userInfo={userInfo!} />
     </>
   );
 };
