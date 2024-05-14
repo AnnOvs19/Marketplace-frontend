@@ -5,8 +5,8 @@ import React, { FC } from "react";
 import * as S from "../ProductMobList/productMobList.style";
 import * as C from "../../catalogSeller.style";
 import * as T from "@/styles/baseText.style";
-import * as B from "@/styles/baseButtons.style";
 import Image from "next/image";
+import { DeleteButton, EditButton } from "@/styles/baseButtons.style";
 
 interface IProps {
   item: ICatalogMock;
@@ -33,8 +33,8 @@ const ProductMobItem: FC<IProps> = ({ item }) => {
           <T.BasketPrice>Цена: {item.price.toFixed(2)} руб</T.BasketPrice>
         </S.ProductItemInfo>
       </S.ProductMobItem>
-      <B.EditButton>Редактировать</B.EditButton>
-      <B.DeleteButton>Удалить</B.DeleteButton>
+      <EditButton>Редактировать</EditButton>
+      <DeleteButton>Удалить</DeleteButton>
     </S.ProductMobBox>
   );
 };

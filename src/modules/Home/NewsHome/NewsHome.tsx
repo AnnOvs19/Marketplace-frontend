@@ -2,13 +2,12 @@
 
 import React, { FC, useState } from "react";
 import * as S from "./newsHome.style";
-import * as T from "@/styles/baseText.style";
 import NewsItem from "./NewsItem/NewsItem";
 import NewsList from "./NewsList/NewsList";
 import Image from "next/image";
 import clava from "@/assets/images/clavs.jpg";
-import { mockDelNews } from "@/modules/News/mockDelNews";
 import { INewsItem } from "@/interfaces/news/newsItem";
+import { TitleSection } from "@/styles/baseText.style";
 
 interface IProps {
   newsHome: INewsItem[];
@@ -20,7 +19,7 @@ const NewsHome: FC<IProps> = ({ newsHome }) => {
   return (
     <S.NewsHomeWraper>
       <S.NewsHomeContainer>
-        <T.TitleSection>Блог и новинки</T.TitleSection>
+        <TitleSection>Блог и новинки</TitleSection>
         <S.NewsHomeBox>
           <S.NewsImageBox>
             <Image

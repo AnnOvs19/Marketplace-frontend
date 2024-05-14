@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import * as S from "./createEditNews.style";
 import * as T from "@/styles/baseText.style";
-import * as B from "@/styles/baseButtons.style";
 import * as U from "@/ui/Inputs/InputForm/inputForm.style";
 import Image from "next/image";
 import FileInput from "@/ui/Inputs/FileInput/FileInput";
@@ -16,6 +15,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css/navigation";
 import "swiper/css";
+import { FileButton, FormButton } from "@/styles/baseButtons.style";
 
 interface ICreateEditNews {
   title: string;
@@ -166,10 +166,10 @@ const CreateEditNews = () => {
           })}
         </Swiper>
       </S.PhotoListMobile>
-      <B.FileButton>
+      <FileButton>
         <FileInput accept="image/*" onChange={(e) => handleChange(e)} />
         Добавить фото
-      </B.FileButton>
+      </FileButton>
       {!validPhoto && (
         <U.ErrorMessage>
           Для загрузки поста необходима хотя бы одна фотография
@@ -177,10 +177,10 @@ const CreateEditNews = () => {
       )}
       <T.SmallText>Вы можете загрузить не более 10 фотографий</T.SmallText>
 
-      <B.FormButton>
+      <FormButton>
         {textButton}
         {statusLoad ? <MiniLoader /> : ""}
-      </B.FormButton>
+      </FormButton>
     </S.CreateNews>
   );
 };

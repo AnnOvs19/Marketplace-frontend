@@ -2,7 +2,6 @@
 
 import React, { FC } from "react";
 import * as S from "./newsArticle.style";
-import * as T from "@/styles/baseText.style";
 import Image from "next/image";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -12,6 +11,7 @@ import "swiper/css/navigation";
 import "swiper/css";
 import { INewsItem } from "@/interfaces/news/newsItem";
 import { LoaderImage } from "@/helpers/loaderImage";
+import { TextMedium, TitleSection } from "@/styles/baseText.style";
 
 interface IProps {
   newsPage: INewsItem;
@@ -20,7 +20,7 @@ interface IProps {
 const NewsArticle: FC<IProps> = ({ newsPage }) => {
   const text = newsPage.text
     .split("\n")
-    .map((str) => <T.TextMedium>{str}</T.TextMedium>);
+    .map((str) => <TextMedium>{str}</TextMedium>);
 
   return (
     <S.ArticleWrapper>
@@ -53,7 +53,7 @@ const NewsArticle: FC<IProps> = ({ newsPage }) => {
           </Swiper>
         </S.ImageList>
         <S.InfoBox>
-          <T.TitleSection>{newsPage.title}</T.TitleSection>
+          <TitleSection>{newsPage.title}</TitleSection>
           <S.TextBox>{text}</S.TextBox>
         </S.InfoBox>
       </S.ArticleBox>

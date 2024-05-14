@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import * as S from "../editPage.style";
 import * as T from "@/styles/baseText.style";
-import * as B from "@/styles/baseButtons.style";
 import * as U from "@/ui/Inputs/InputForm/inputForm.style";
 import InputForm from "@/ui/Inputs/InputForm/InputForm";
 import Image, { StaticImageData } from "next/image";
@@ -12,6 +11,7 @@ import FileInput from "@/ui/Inputs/FileInput/FileInput";
 import { Controller, useForm } from "react-hook-form";
 import TextAreaForm from "@/ui/TextArea/TextAreaForm/TextAreaForm";
 import MiniLoader from "@/ui/Loading/MiniLoader/MiniLoader";
+import { FileButton, FormButton } from "@/styles/baseButtons.style";
 
 interface IEditPageSeller {
   storeName: string;
@@ -79,10 +79,10 @@ const EditPageSel = () => {
               }}
             />
           </S.Photo>
-          <B.FileButton>
+          <FileButton>
             <FileInput accept="image/*" onChange={(e) => handleChange(e)} />
             Добавить фото
-          </B.FileButton>
+          </FileButton>
         </S.BodyAvatar>
         <S.SelBodyInfo>
           <S.EditItemBox>
@@ -259,10 +259,10 @@ const EditPageSel = () => {
           </S.EditItemBox>
         </S.SelBodyInfo>
       </S.EditBody>
-      <B.FormButton>
+      <FormButton>
         {textButton}
         {statusLoad ? <MiniLoader /> : ""}
-      </B.FormButton>
+      </FormButton>
     </S.EditForm>
   );
 };

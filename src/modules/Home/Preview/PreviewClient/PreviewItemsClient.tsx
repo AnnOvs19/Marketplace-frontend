@@ -4,10 +4,10 @@ import React, { FC } from "react";
 
 import * as T from "@/styles/baseText.style";
 import * as C from "../preview.style";
-import * as B from "@/styles/baseButtons.style";
 import Image from "next/image";
 import { IPreviewClient } from "../preview.mock";
 import Link from "next/link";
+import { TransparentButton } from "@/styles/baseButtons.style";
 
 interface IProps {
   item: IPreviewClient;
@@ -32,15 +32,15 @@ const PreviewItemsClient: FC<IProps> = ({
             <T.TextMedium>{item.text}</T.TextMedium>
 
             <C.TextBottom>
-              <B.TransparentButton onClick={() => setIndex(0)}>
+              <TransparentButton onClick={() => setIndex(0)}>
                 Экономия
-              </B.TransparentButton>
-              <B.TransparentButton onClick={() => setIndex(1)}>
+              </TransparentButton>
+              <TransparentButton onClick={() => setIndex(1)}>
                 Качество
-              </B.TransparentButton>
-              <B.TransparentButton onClick={() => setIndex(2)}>
+              </TransparentButton>
+              <TransparentButton onClick={() => setIndex(2)}>
                 Большой выбор
-              </B.TransparentButton>
+              </TransparentButton>
             </C.TextBottom>
             <Link href="/loginClient">
               <C.LoginPrewiewButton>Аккаунт покупателя</C.LoginPrewiewButton>

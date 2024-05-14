@@ -3,7 +3,6 @@
 import React, { FC } from "react";
 
 import * as S from "../createEditProduct.style";
-import * as B from "@/styles/baseButtons.style";
 import * as U from "@/ui/Inputs/InputForm/inputForm.style";
 import * as T from "@/styles/baseText.style";
 
@@ -15,6 +14,7 @@ import "swiper/css";
 import Image from "next/image";
 import FileInput from "@/ui/Inputs/FileInput/FileInput";
 import MiniLoader from "@/ui/Loading/MiniLoader/MiniLoader";
+import { FileButton, FormButton } from "@/styles/baseButtons.style";
 
 interface IProps {
   indexTab: number;
@@ -79,10 +79,10 @@ const StepThreeProduct: FC<IProps> = ({
           })}
         </Swiper>
       </S.ImageListMobile>
-      <B.FileButton>
+      <FileButton>
         <FileInput accept="image/*" onChange={(e) => handleChange(e)} />
         Добавить фото
-      </B.FileButton>
+      </FileButton>
       {!validPhoto && (
         <S.Notice>
           <U.ErrorMessage>
@@ -95,13 +95,13 @@ const StepThreeProduct: FC<IProps> = ({
       </S.Notice>
 
       <S.BottomProduct>
-        <B.FormButton type="button" onClick={() => setIndexTab(2)}>
+        <FormButton type="button" onClick={() => setIndexTab(2)}>
           Назад
-        </B.FormButton>
-        <B.FormButton>
+        </FormButton>
+        <FormButton>
           {textButton}
           {statusLoad ? <MiniLoader /> : ""}
-        </B.FormButton>
+        </FormButton>
       </S.BottomProduct>
     </S.StepProduct3>
   );

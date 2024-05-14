@@ -3,7 +3,6 @@
 import React, { FC, useState } from "react";
 import * as S from "./menu.style";
 import * as T from "@/styles/baseText.style";
-import * as B from "@/styles/baseButtons.style";
 import * as I from "@/styles/baseIcons.style";
 
 import Image from "next/image";
@@ -11,6 +10,7 @@ import logo from "@/assets/icons/mainLogo.svg";
 import Link from "next/link";
 import { ISeller } from "@/interfaces/users/seller";
 import { IClient } from "@/interfaces/users/client";
+import { HeaderButton } from "@/styles/baseButtons.style";
 
 interface IProps {
   openMenu: boolean;
@@ -51,7 +51,7 @@ const Menu: FC<IProps> = ({ openMenu, setOpenMenu, userInfo }) => {
             <T.MenuText>Корзина</T.MenuText>
           </Link>
           <Link href="/loginSeller">
-            <B.HeaderButton>Вы продавец?</B.HeaderButton>
+            <HeaderButton>Вы продавец?</HeaderButton>
           </Link>
         </S.MenuNavigation>
       ) : userInfo?.role?.name == "Seller" ? (

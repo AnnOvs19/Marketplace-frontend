@@ -3,7 +3,6 @@
 import React, { FC } from "react";
 import * as T from "@/styles/baseText.style";
 import * as S from "./headerDesktop.style";
-import * as B from "@/styles/baseButtons.style";
 import * as I from "@/styles/baseIcons.style";
 import * as C from "../Headers.style";
 
@@ -15,6 +14,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { IClient } from "@/interfaces/users/client";
 import { ISeller } from "@/interfaces/users/seller";
+import { HeaderButton } from "@/styles/baseButtons.style";
 
 interface IProps {
   userInfo: ISeller | IClient;
@@ -51,7 +51,7 @@ const HeaderDesktop: FC<IProps> = ({ userInfo }) => {
                 <T.LinkText>Каталог</T.LinkText>
               </Link>
               <Link href="/loginSeller">
-                <B.HeaderButton>Вы продавец?</B.HeaderButton>
+                <HeaderButton>Вы продавец?</HeaderButton>
               </Link>
             </S.Navigation>
           ) : userInfo?.role?.name == "Seller" ? (

@@ -2,12 +2,12 @@
 
 import React, { FC, useState } from "react";
 import * as U from "@/ui/Inputs/InputForm/inputForm.style";
-import * as B from "@/styles/baseButtons.style";
 import * as T from "@/styles/baseText.style";
 import InputForm from "@/ui/Inputs/InputForm/InputForm";
 import { StepRegister1 } from "../../auth.style";
 import { Controller, UseFormReturn } from "react-hook-form";
 import { IRegisrerSeller } from "@/interfaces/users/seller";
+import { FormButton } from "@/styles/baseButtons.style";
 
 interface IProps {
   indexTab: number;
@@ -124,9 +124,9 @@ const StepOneSeller: FC<IProps> = ({ indexTab, setIndexTab, formControl }) => {
           </U.ErrorMessage>
         )}
       </U.BodyInputWrapper>
-      <B.FormButton type="button" onClick={() => setIndexTab(2)}>
+      <FormButton type="button" onClick={() => setIndexTab(2)}>
         К следующему шагу
-      </B.FormButton>
+      </FormButton>
     </StepRegister1>
   );
 };

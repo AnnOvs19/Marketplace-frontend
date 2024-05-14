@@ -3,11 +3,11 @@
 import React, { useState } from "react";
 import * as S from "../editPage.style";
 import * as T from "@/styles/baseText.style";
-import * as B from "@/styles/baseButtons.style";
 import * as U from "@/ui/Inputs/InputForm/inputForm.style";
 import InputForm from "@/ui/Inputs/InputForm/InputForm";
 import { Controller, useForm } from "react-hook-form";
 import MiniLoader from "@/ui/Loading/MiniLoader/MiniLoader";
+import { FormButton } from "@/styles/baseButtons.style";
 
 export interface IEditPageUser {
   name: string;
@@ -178,10 +178,10 @@ const EditPageUser = () => {
           </S.EditItemBox>
         </S.SelBodyInfo>
       </S.EditBody>
-      <B.FormButton>
+      <FormButton>
         {textButton}
         {statusLoad ? <MiniLoader /> : ""}
-      </B.FormButton>
+      </FormButton>
     </S.EditForm>
   );
 };

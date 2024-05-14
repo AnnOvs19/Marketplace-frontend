@@ -2,14 +2,14 @@
 
 import React, { FC } from "react";
 import * as S from "./sliderProducts.style";
-import * as T from "@/styles/baseText.style";
-import * as B from "@/styles/baseButtons.style";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import SliderItem from "./SliderItem";
 import { IProduct } from "@/interfaces/product/product";
 import Link from "next/link";
+import { SliderButton } from "@/styles/baseButtons.style";
+import { TitleSection } from "@/styles/baseText.style";
 
 interface IProps {
   popularProducts: IProduct[];
@@ -22,7 +22,7 @@ const SliderProducts: FC<IProps> = ({ popularProducts }) => {
 
   return (
     <S.SliderWrap>
-      <T.TitleSection>Популярные новинки</T.TitleSection>
+      <TitleSection>Популярные новинки</TitleSection>
       <S.SliderList>
         <Swiper
           spaceBetween={18}
@@ -56,7 +56,7 @@ const SliderProducts: FC<IProps> = ({ popularProducts }) => {
       <S.ListBottom>
         <S.BottomLine />
         <Link href="/catalog">
-          <B.SliderButton>Перейти в каталог</B.SliderButton>
+          <SliderButton>Перейти в каталог</SliderButton>
         </Link>
 
         <S.BottomLine />

@@ -2,8 +2,8 @@
 
 import React, { FC, useState } from "react";
 import * as S from "./TodoList.style";
-import * as B from "@/styles/baseButtons.style";
 import InputForm from "@/ui/Inputs/InputForm/InputForm";
+import { ListButton } from "@/styles/baseButtons.style";
 
 interface IProps {
   list: string[];
@@ -33,9 +33,9 @@ const TodoList: FC<IProps> = ({ list, setList }) => {
           onChange={(e) => setInputValue(e.target.value)}
           placeholder="Добавьте комплектующие вашего продукта"
         ></InputForm>
-        <B.ListButton type="button" onClick={addItem}>
+        <ListButton type="button" onClick={addItem}>
           Добавить пункт
-        </B.ListButton>
+        </ListButton>
       </S.TodoHead>
       <S.TodoBody>
         {list.map((item, index) => {

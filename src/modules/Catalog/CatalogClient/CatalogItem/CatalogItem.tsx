@@ -3,7 +3,6 @@
 import React, { FC, MouseEvent, useState } from "react";
 import * as S from "./catalogItem.style";
 import * as T from "@/styles/baseText.style";
-import * as B from "@/styles/baseButtons.style";
 import Image from "next/image";
 import likeEmpty from "@/assets/icons/filterLike.svg";
 import like from "@/assets/icons/likeProductIcon.svg";
@@ -12,6 +11,7 @@ import { IProduct } from "@/interfaces/product/product";
 import { LoaderImage } from "@/helpers/loaderImage";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import { CardButton } from "@/styles/baseButtons.style";
 
 interface IProps {
   item: IProduct;
@@ -62,9 +62,9 @@ const CatalogItem: FC<IProps> = ({ item }) => {
           <T.CardOtherText>{item.category.title}</T.CardOtherText>
           <T.CardOtherText>{item.sumInStock} шт.</T.CardOtherText>
         </S.CardBottom>
-        <B.CardButton type="button" onClick={buttonHandler}>
+        <CardButton type="button" onClick={buttonHandler}>
           В корзину
-        </B.CardButton>
+        </CardButton>
         <S.LikeCardIcon onClick={(event) => addLike(event)} type="button">
           <S.LikeWrap>
             <Image

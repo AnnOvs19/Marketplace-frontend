@@ -2,13 +2,13 @@
 
 import React, { useState } from "react";
 import * as S from "./totalCost.style";
-import * as B from "@/styles/baseButtons.style";
 import * as T from "@/styles/baseText.style";
 import * as U from "@/ui/Inputs/InputForm/inputForm.style";
 import InputForm from "@/ui/Inputs/InputForm/InputForm";
 import { IOrderContacts } from "@/interfaces/basket/basket";
 import MiniLoader from "@/ui/Loading/MiniLoader/MiniLoader";
 import { Controller, useForm } from "react-hook-form";
+import { FormButton } from "@/styles/baseButtons.style";
 
 const TotalCost = () => {
   const defaultValues: IOrderContacts = {
@@ -147,10 +147,10 @@ const TotalCost = () => {
             </U.ErrorMessage>
           )}
         </U.BodyInputWrapper>
-        <B.FormButton type="submit">
+        <FormButton type="submit">
           {textButton}
           {statusLoad ? <MiniLoader /> : ""}
-        </B.FormButton>
+        </FormButton>
       </S.TotalForm>
     </S.CostWrap>
   );

@@ -2,11 +2,11 @@
 
 import React from "react";
 import * as S from "./aboutUs.style";
-import * as T from "@/styles/baseText.style";
 import Image from "next/image";
 
 import about1 from "@/assets/images/about1.jpg";
 import about2 from "@/assets/images/about2.png";
+import { TextMedium, TitleSection } from "@/styles/baseText.style";
 
 const AboutUs = () => {
   return (
@@ -38,16 +38,16 @@ const AboutUs = () => {
 
       <S.AboutUsWrapper>
         <S.AboutUsContainer>
-          <T.TitleSection>Немного о нас</T.TitleSection>
+          <TitleSection>Немного о нас</TitleSection>
           <S.AboutUsBox>
             <S.AboutUsBlock>
-              <T.TextMedium>
+              <TextMedium>
                 Мы предлагаем ноутбуки, телефоны, часы и многое другое от
                 ведущих производителей. <br />
                 Мы гордимся тем, что предлагаем только качественную продукцию,
                 отвечающую всем стандартам. Наша команда постоянно работает над
                 тем, чтобы обеспечить вас последними новинками.
-              </T.TextMedium>
+              </TextMedium>
               <S.AboutUsImage>
                 <Image
                   src={about1}
@@ -70,13 +70,13 @@ const AboutUs = () => {
                   }}
                 />
               </S.AboutUsImage>
-              <T.TextMedium>
+              <TextMedium>
                 Благодаря удобной системе доставки, вы можете легко и быстро
                 приобрести нужные товары, не выходя из дома.
                 <br /> Наши консультанты всегда готовы помочь и ответить на
                 любые вопросы. Доверьтесь нам и наслаждайтесь качественной
                 техникой, которая сделают вашу жизнь проще и удобнее.
-              </T.TextMedium>
+              </TextMedium>
             </S.AboutUsBlock>
           </S.AboutUsBox>
         </S.AboutUsContainer>

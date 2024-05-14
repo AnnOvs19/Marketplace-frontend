@@ -3,13 +3,12 @@
 import React, { FC, useState } from "react";
 import { Controller, UseFormReturn } from "react-hook-form";
 import { ICreateEditeProduct } from "../CreateEditProduct";
-import { StepProduct1 } from "../createEditProduct.style";
-import * as B from "@/styles/baseButtons.style";
 import * as U from "@/ui/Inputs/InputForm/inputForm.style";
 import * as T from "@/styles/baseText.style";
 import * as S from "../createEditProduct.style";
 import InputForm from "@/ui/Inputs/InputForm/InputForm";
 import DropdownCategory from "@/ui/DropdownCategory/DropdownCategory";
+import { FormButton } from "@/styles/baseButtons.style";
 
 interface IProps {
   indexTab: number;
@@ -225,9 +224,9 @@ const StepOneProduct: FC<IProps> = ({
         </S.ProductBox>
       </S.ContainerRow>
       <DropdownCategory errorDrop={errorDrop} setErrorDrop={setErrorDrop} />
-      <B.FormButton type="button" onClick={() => setIndexTab(2)}>
+      <FormButton type="button" onClick={() => setIndexTab(2)}>
         К следующему шагу
-      </B.FormButton>
+      </FormButton>
     </S.StepProduct1>
   );
 };

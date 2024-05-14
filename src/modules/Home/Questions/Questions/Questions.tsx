@@ -2,14 +2,14 @@
 
 import React from "react";
 import * as S from "./questions.style";
-import * as T from "@/styles/baseText.style";
 import Accordion from "../Accordion/Accordion/Accordion";
 import FormQue from "../FormQue/FormQue";
+import { TitleSection } from "@/styles/baseText.style";
 
 const Questions = () => {
   return (
     <S.QuestionsWraper>
-      <T.TitleSection>Вопрос-ответ</T.TitleSection>
+      <TitleSection>Вопрос-ответ</TitleSection>
       <S.QuestionsBox>
         <Accordion />
         <FormQue />

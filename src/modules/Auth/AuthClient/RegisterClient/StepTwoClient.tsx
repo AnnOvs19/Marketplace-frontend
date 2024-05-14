@@ -2,13 +2,13 @@
 
 import React, { FC } from "react";
 import * as U from "@/ui/Inputs/InputForm/inputForm.style";
-import * as B from "@/styles/baseButtons.style";
 import * as T from "@/styles/baseText.style";
 import InputForm from "@/ui/Inputs/InputForm/InputForm";
 import { Controller, UseFormReturn } from "react-hook-form";
 import { BottomAuth, StepRegister2 } from "../../auth.style";
 import MiniLoader from "@/ui/Loading/MiniLoader/MiniLoader";
 import { IRegisrerClient } from "@/interfaces/users/client";
+import { FormButton } from "@/styles/baseButtons.style";
 
 interface IProps {
   indexTab: number;
@@ -106,13 +106,13 @@ const StepTwoClient: FC<IProps> = ({
         )}
       </U.BodyInputWrapper>
       <BottomAuth>
-        <B.FormButton type="button" onClick={() => setIndexTab(1)}>
+        <FormButton type="button" onClick={() => setIndexTab(1)}>
           Назад
-        </B.FormButton>
-        <B.FormButton>
+        </FormButton>
+        <FormButton>
           {textButton}
           {statusLoad ? <MiniLoader /> : ""}
-        </B.FormButton>
+        </FormButton>
       </BottomAuth>
     </StepRegister2>
   );

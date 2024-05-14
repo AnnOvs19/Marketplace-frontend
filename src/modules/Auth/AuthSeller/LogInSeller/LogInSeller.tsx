@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from "react";
 import * as U from "@/ui/Inputs/InputForm/inputForm.style";
-import * as B from "@/styles/baseButtons.style";
 import * as T from "@/styles/baseText.style";
 import InputForm from "@/ui/Inputs/InputForm/InputForm";
 import { Controller, useForm } from "react-hook-form";
@@ -11,6 +10,7 @@ import MiniLoader from "@/ui/Loading/MiniLoader/MiniLoader";
 import { ILoginSeller } from "@/interfaces/users/seller";
 import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import { FormButton } from "@/styles/baseButtons.style";
 
 const defaultValues: ILoginSeller = {
   password: "",
@@ -111,10 +111,10 @@ const LogInSeller = () => {
           </U.ErrorMessage>
         )}
       </U.BodyInputWrapper>
-      <B.FormButton>
+      <FormButton>
         {textButton}
         {statusLoad ? <MiniLoader /> : ""}
-      </B.FormButton>
+      </FormButton>
     </LoginForm>
   );
 };

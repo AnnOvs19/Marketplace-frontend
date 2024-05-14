@@ -4,9 +4,9 @@ import { ICatalogMock } from "@/modules/Catalog/mockDelCatalog";
 import React, { FC } from "react";
 import * as S from "./basketMob.style";
 import * as T from "@/styles/baseText.style";
-import * as B from "@/styles/baseButtons.style";
 import * as C from "../baskets.style";
 import Image from "next/image";
+import { DeleteButton, QuantityButton } from "@/styles/baseButtons.style";
 
 interface IProps {
   item: ICatalogMock;
@@ -29,14 +29,14 @@ const BasketMobItem: FC<IProps> = ({ item }) => {
         <S.ItemInfo>
           <T.BasketTitle>{item.title}</T.BasketTitle>
           <S.Quantity>
-            <B.QuantityButton>-</B.QuantityButton>
+            <QuantityButton>-</QuantityButton>
             <T.BasketQuantity>{item.quantity}</T.BasketQuantity>
-            <B.QuantityButton>+</B.QuantityButton>
+            <QuantityButton>+</QuantityButton>
           </S.Quantity>
           <T.BasketPrice>Итого: {item.price.toFixed(2)} руб</T.BasketPrice>
         </S.ItemInfo>
       </S.MobItem>
-      <B.DeleteButton>Удалить</B.DeleteButton>
+      <DeleteButton>Удалить</DeleteButton>
     </S.ItemBox>
   );
 };

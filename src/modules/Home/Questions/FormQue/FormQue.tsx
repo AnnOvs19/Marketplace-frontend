@@ -5,10 +5,10 @@ import * as S from "./formQue.style";
 import * as T from "@/styles/baseText.style";
 import InputForm from "@/ui/Inputs/InputForm/InputForm";
 import * as U from "@/ui/Inputs/InputForm/inputForm.style";
-import * as B from "@/styles/baseButtons.style";
 import TextAreaForm from "@/ui/TextArea/TextAreaForm/TextAreaForm";
 import { Controller, useForm } from "react-hook-form";
 import MiniLoader from "@/ui/Loading/MiniLoader/MiniLoader";
+import { FormButton } from "@/styles/baseButtons.style";
 
 interface IFormQuestions {
   name: string;
@@ -111,10 +111,10 @@ const FormQue = () => {
           </U.ErrorMessage>
         )}
       </U.BodyInputWrapper>
-      <B.FormButton>
+      <FormButton>
         {textButton}
         {statusLoad ? <MiniLoader /> : ""}
-      </B.FormButton>
+      </FormButton>
     </S.FormQueWraper>
   );
 };

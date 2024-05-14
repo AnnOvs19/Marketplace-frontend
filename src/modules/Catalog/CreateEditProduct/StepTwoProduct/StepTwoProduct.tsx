@@ -3,12 +3,12 @@
 import React, { FC } from "react";
 import { Controller, UseFormReturn } from "react-hook-form";
 import { ICreateEditeProduct } from "../CreateEditProduct";
-import * as B from "@/styles/baseButtons.style";
 import * as U from "@/ui/Inputs/InputForm/inputForm.style";
 import * as T from "@/styles/baseText.style";
 import * as S from "../createEditProduct.style";
 import TextAreaForm from "@/ui/TextArea/TextAreaForm/TextAreaForm";
 import TodoList from "@/components/TodoList/TodoList";
+import { FormButton } from "@/styles/baseButtons.style";
 
 interface IProps {
   indexTab: number;
@@ -62,12 +62,12 @@ const StepTwoProduct: FC<IProps> = ({
         <TodoList list={list} setList={setList} />
       </U.BodyInputWrapper>
       <S.BottomProduct>
-        <B.FormButton type="button" onClick={() => setIndexTab(1)}>
+        <FormButton type="button" onClick={() => setIndexTab(1)}>
           Назад
-        </B.FormButton>
-        <B.FormButton type="button" onClick={() => setIndexTab(3)}>
+        </FormButton>
+        <FormButton type="button" onClick={() => setIndexTab(3)}>
           Продолжить
-        </B.FormButton>
+        </FormButton>
       </S.BottomProduct>
     </S.StepProduct2>
   );

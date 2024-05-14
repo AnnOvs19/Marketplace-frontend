@@ -4,13 +4,14 @@ import React, { useEffect, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { LoginForm } from "../../auth.style";
 import * as U from "@/ui/Inputs/InputForm/inputForm.style";
-import * as B from "@/styles/baseButtons.style";
+// import * as B from "@/styles/baseButtons.style";
 import * as T from "@/styles/baseText.style";
 import InputForm from "@/ui/Inputs/InputForm/InputForm";
 import MiniLoader from "@/ui/Loading/MiniLoader/MiniLoader";
 import { ILoginClient } from "@/interfaces/users/client";
 import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import { FormButton } from "@/styles/baseButtons.style";
 
 const defaultValues: ILoginClient = {
   name: "",
@@ -110,10 +111,10 @@ const LogInClient = () => {
         )}
       </U.BodyInputWrapper>
 
-      <B.FormButton type="submit">
+      <FormButton type="submit">
         {textButton}
         {statusLoad ? <MiniLoader /> : ""}
-      </B.FormButton>
+      </FormButton>
     </LoginForm>
   );
 };

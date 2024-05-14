@@ -1,6 +1,5 @@
 "use client";
 
-import * as B from "@/styles/baseButtons.style";
 import InputSearch from "@/ui/Inputs/InputSearch/InputSearch";
 import React, { FC, useState } from "react";
 import * as S from "./filter.style";
@@ -9,11 +8,12 @@ import order from "@/assets/icons/filterOrder.svg";
 import reverse from "@/assets/icons/filterReverseOrder.svg";
 import delivery from "@/assets/icons/filterDelivery.svg";
 import like from "@/assets/icons/filterLike.svg";
-import FilterMenu from "@/components/FilterMenu/FilterMenu";
 import Link from "next/link";
 import { ICategory } from "@/interfaces/product/category";
 import { IProduct } from "@/interfaces/product/product";
 import axios from "@/helpers/axios";
+import FilterMenu from "./FilterMenu/FilterMenu";
+import { SearchButton } from "@/styles/baseButtons.style";
 
 interface IProps {
   filters: ICategory[];
@@ -47,10 +47,10 @@ const Filters: FC<IProps> = ({ filters, popularProducts, setProducts }) => {
         <S.FilterBox>
           <S.SearchPanel>
             <InputSearch type="text" placeholder="Поиск товаров" />
-            <B.SearchButton onClick={() => setOpenFilter(true)}>
+            <SearchButton onClick={() => setOpenFilter(true)}>
               Фильры
-            </B.SearchButton>
-            <B.SearchButton onClick={clearFilters}>Отчистить</B.SearchButton>
+            </SearchButton>
+            <SearchButton onClick={clearFilters}>Отчистить</SearchButton>
           </S.SearchPanel>
           <S.ControlPanel>
             <S.IconsContainer>

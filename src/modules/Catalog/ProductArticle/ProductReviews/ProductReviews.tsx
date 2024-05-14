@@ -5,7 +5,6 @@ import { ICatalogMock } from "../../mockDelCatalog";
 import * as S from "./productReviews.style";
 import * as T from "@/styles/baseText.style";
 import CreateReviews from "./CreateReviews/CreateReviews";
-import { IProduct } from "@/interfaces/product/product";
 import { IReview } from "@/interfaces/product/review";
 
 interface IProps {
@@ -13,8 +12,6 @@ interface IProps {
 }
 
 const ProductReviews: FC<IProps> = ({ reviews }) => {
-  console.log(reviews);
-
   return (
     <S.ReviewBox>
       <T.TitleSection>Отзывы</T.TitleSection>
