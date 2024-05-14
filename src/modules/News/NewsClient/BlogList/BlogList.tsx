@@ -1,7 +1,7 @@
 "use client";
 
 import React, { FC } from "react";
-import * as S from "./blogList.style";
+import * as S from "../../blogList.style";
 import BlogItem from "../BlogItem/BlogItem";
 import Link from "next/link";
 import { INewsItem } from "@/interfaces/news/newsItem";
