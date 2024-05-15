@@ -12,7 +12,7 @@ import Link from "next/link";
 import { ICategory } from "@/interfaces/product/category";
 import { IProduct } from "@/interfaces/product/product";
 import axios from "@/helpers/axios";
-import FilterMenu from "./FilterMenu/FilterMenu";
+import FilterMenu from "../../FilterMenu/FilterMenu";
 import { SearchButton } from "@/styles/baseButtons.style";
 
 interface IProps {

@@ -441,28 +441,28 @@ export const BasketTitle = styled.h6`
   }
 
   @media (max-width: 636px) {
-    font-size: 19px;
+    font-size: 18px;
     line-height: 100%;
   }
 
   @media (${mainTheme.deviсe.mobileXL}) {
-    font-size: 18px;
-  }
-
-  @media (${mainTheme.deviсe.mobileL}) {
     font-size: 17px;
   }
 
-  @media (${mainTheme.deviсe.mobileM}) {
+  @media (${mainTheme.deviсe.mobileL}) {
     font-size: 16px;
   }
 
-  @media (${mainTheme.deviсe.mobileS}) {
+  @media (${mainTheme.deviсe.mobileM}) {
     font-size: 15px;
   }
 
-  @media (${mainTheme.deviсe.mobileXS}) {
+  @media (${mainTheme.deviсe.mobileS}) {
     font-size: 14px;
+  }
+
+  @media (${mainTheme.deviсe.mobileXS}) {
+    font-size: 13px;
   }
 `;
 
@@ -490,27 +490,23 @@ export const BasketPrice = styled.p`
   }
 
   @media (max-width: 636px) {
-    font-size: 17px;
+    font-size: 16px;
     line-height: 100%;
   }
 
   @media (${mainTheme.deviсe.mobileXL}) {
-    font-size: 16px;
-  }
-
-  @media (${mainTheme.deviсe.mobileL}) {
     font-size: 15px;
   }
 
-  @media (${mainTheme.deviсe.mobileM}) {
+  @media (${mainTheme.deviсe.mobileL}) {
     font-size: 14px;
   }
 
-  @media (${mainTheme.deviсe.mobileS}) {
+  @media (${mainTheme.deviсe.mobileM}) {
     font-size: 13px;
   }
 
-  @media (${mainTheme.deviсe.mobileXS}) {
+  @media (${mainTheme.deviсe.mobileS}) {
     font-size: 12px;
   }
 `;

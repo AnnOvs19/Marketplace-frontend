@@ -14,24 +14,47 @@ interface IProps {
   setOpenFilter: (state: boolean) => void;
   filters: ICategory[];
   setProducts: (arr: IProduct[]) => void;
+  flag?: number;
+  storeId?: number;
 }
 
 const FilterMenu: FC<IProps> = ({
   openFilter,
   setOpenFilter,
   filters,
-  setProducts
+  setProducts,
+  flag,
+  storeId
 }) => {
   const [idArray, setIdArray] = useState<number[]>([]);
 
   //отправляю id выбранных категорий: мапаю массив и превращаю каждый елемент в строку, потом их соединяю
   async function getProductFiters() {
-    const strCategory = idArray
-      .map((i) => `filters[category][id][$eq]=${i}`)
-      .join("&");
-    const res = await axios.get(`api/products?populate=*&${strCategory}`);
-    if (res.data) {
-      setProducts(res.data.data as IProduct[]);
+    if (flag == 1) {
+      const strCategory = idArray
+        .map((i) => `filters[category][id][$eq]=${i}`)
+        .join("&");
+
+      const res = await axios.get(
+        `api/products?populate=category,store,image&filters[store][id][$eq]=${storeId}&${strCategory}`,
+        {
+          headers: {
+            Authorization: `Bearer ${JSON.parse(localStorage.getItem("token")!)}`
+          }
+        }
+      );
+
+      if (res.data) {
+        setProducts(res.data.data as IProduct[]);
+      }
+    } else {
+      const strCategory = idArray
+        .map((i) => `filters[category][id][$eq]=${i}`)
+        .join("&");
+      const res = await axios.get(`api/products?populate=*&${strCategory}`);
+      if (res.data) {
+        setProducts(res.data.data as IProduct[]);
+      }
     }
   }
 

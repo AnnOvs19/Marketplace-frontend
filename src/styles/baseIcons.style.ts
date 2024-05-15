@@ -52,6 +52,10 @@ export const TableIcon = styled.button`
   height: 30px;
   position: relative;
 
+  &:hover {
+    scale: 1.1;
+  }
+
   @media (${mainTheme.deviсe.laptopL}) {
     width: 28px;
     height: 28px;

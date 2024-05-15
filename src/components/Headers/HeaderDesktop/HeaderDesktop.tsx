@@ -62,8 +62,8 @@ const HeaderDesktop: FC<IProps> = ({ userInfo }) => {
               <Link href="/allOrdersClient">
                 <T.LinkText>Все заказы</T.LinkText>
               </Link>
-              <Link href="/blog">
-                <T.LinkText>Блог</T.LinkText>
+              <Link href="myNews">
+                <T.LinkText>Мой блог</T.LinkText>
               </Link>
               <Link href="/accountSeller">
                 <I.BasketIcon>

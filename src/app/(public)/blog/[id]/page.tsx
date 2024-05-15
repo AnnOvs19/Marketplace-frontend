@@ -2,7 +2,6 @@ import WaveHeader from "@/components/Backgrounds/WaveHeader/WaveHeader";
 import axios from "@/helpers/axios";
 import { INewsItem } from "@/interfaces/news/newsItem";
 import NewsArticle from "@/modules/News/NewsArticle/NewsArticle";
-import { mockDelNews } from "@/modules/News/mockDelNews";
 import { AxiosResponse } from "axios";
 import React from "react";
 

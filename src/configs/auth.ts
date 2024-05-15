@@ -17,8 +17,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
             identifier: credentials.identifier,
             password: credentials.password
           })
-          .then((res) => res.data)
-          .catch((res) => alert(res.data));
+          .then((res) => res.data);
 
         if (user) {
           return {

@@ -1,14 +1,19 @@
 "use client";
 
-import React from "react";
+import React, { FC } from "react";
 import ProductMobItem from "../ProductMobItem/ProductMobItem";
 import { mockDelCatalog } from "@/modules/Catalog/mockDelCatalog";
 import * as S from "./productMobList.style";
+import { IProduct } from "@/interfaces/product/product";
 
-const ProductMobList = () => {
+interface IProps {
+  myProduct: IProduct[];
+}
+
+const ProductMobList: FC<IProps> = ({ myProduct }) => {
   return (
     <S.ProductContainer>
-      {mockDelCatalog?.map((item, index) => {
+      {myProduct?.map((item, index) => {
         return <ProductMobItem item={item} key={index} />;
       })}
     </S.ProductContainer>

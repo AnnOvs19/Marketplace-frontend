@@ -1,6 +1,5 @@
 "use client";
 
-import { ICatalogMock } from "@/modules/Catalog/mockDelCatalog";
 import React, { FC } from "react";
 import * as S from "../ProductDeskList/productDeskList.style";
 import * as T from "@/styles/baseText.style";
@@ -9,18 +8,22 @@ import Image from "next/image";
 import * as I from "@/styles/baseIcons.style";
 import editBasket from "@/assets/icons/editIcon.svg";
 import deleteBasket from "@/assets/icons/deleteBasket.svg";
+import { IProduct } from "@/interfaces/product/product";
+import { LoaderImage } from "@/helpers/loaderImage";
 
 interface IProps {
-  item: ICatalogMock;
+  item: IProduct;
 }
 
 const ProductDeskItem: FC<IProps> = ({ item }) => {
+  console.log(item);
   return (
     <S.ProductString>
       <S.ProductElement>
         <C.ProductImage>
           <Image
-            src={item.image[0]}
+            loader={LoaderImage}
+            src={item.image[0]?.url}
             alt="the main photo of the product"
             fill
             style={{
@@ -37,13 +40,13 @@ const ProductDeskItem: FC<IProps> = ({ item }) => {
         <T.BasketPrice>{item.price.toFixed(2)} руб</T.BasketPrice>
       </S.ProductElement>
       <S.ProductElement>
-        <T.BasketTitle>{item.category}</T.BasketTitle>
+        <T.BasketTitle>{item.category.title}</T.BasketTitle>
       </S.ProductElement>
       <S.ProductElement>
         <I.TableIcon>
           <Image
             src={editBasket}
-            alt="The page with the shopping cart"
+            alt="edit product"
             fill
             style={{
               objectFit: "cover"
@@ -55,7 +58,7 @@ const ProductDeskItem: FC<IProps> = ({ item }) => {
         <I.TableIcon>
           <Image
             src={deleteBasket}
-            alt="The page with the shopping cart"
+            alt="delete product"
             fill
             style={{
               objectFit: "cover"

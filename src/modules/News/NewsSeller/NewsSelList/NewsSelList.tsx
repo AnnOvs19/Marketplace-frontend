@@ -1,12 +1,25 @@
 "use client";
 
-import React from "react";
+import React, { FC } from "react";
+import * as S from "../../blogList.style";
+import { INewsItem } from "@/interfaces/news/newsItem";
+import NewsSelItem from "../NewsSelItem/NewsSelItem";
 
-const NewsSelList = () => {
+interface IProps {
+  myNews: INewsItem[];
+}
+
+const NewsSelList: FC<IProps> = ({ myNews }) => {
+  console.log(myNews);
+
   return (
-    <div>
-      <h1>Hello World from MyComponent</h1>
-    </div>
+    <S.BlogListWrap>
+      <S.NewsSeltBox>
+        {myNews.map((item, index) => {
+          return <NewsSelItem item={item} key={index} />;
+        })}
+      </S.NewsSeltBox>
+    </S.BlogListWrap>
   );
 };
 

@@ -5,7 +5,7 @@ export const CatalogSelWrap = styled.section`
   overflow: hidden;
   max-width: 1405px;
   margin: 0 auto;
-  margin-top: 150px;
+  margin-top: 100px;
   margin-bottom: 150px;
   position: relative;
   z-index: 15;
@@ -13,11 +13,11 @@ export const CatalogSelWrap = styled.section`
   @media (${mainTheme.deviсe.laptopL}) {
     max-width: 100%;
     width: 100%;
-    margin-top: 120px;
+    margin-top: 80px;
   }
 
-  /* @media (${mainTheme.deviсe.laptopS}) {
-    margin-top: 80px;
+  @media (${mainTheme.deviсe.laptopM}) {
+    margin-top: 55px;
   }
 
   @media (${mainTheme.deviсe.tablet}) {
@@ -26,27 +26,25 @@ export const CatalogSelWrap = styled.section`
 
   @media (max-width: 636px) {
     margin-top: 110px;
-  } */
+  }
 
   @media (${mainTheme.deviсe.mobileXL}) {
-    margin-top: 150px;
     max-width: 90%;
     width: 90%;
   }
 
   @media (${mainTheme.deviсe.mobileL}) {
-    margin-top: 135px;
     max-width: 95%;
     width: 95%;
   }
 
-  /* @media (${mainTheme.deviсe.mobileM}) {
+  @media (${mainTheme.deviсe.mobileM}) {
     margin-top: 90px;
   }
 
   @media (${mainTheme.deviсe.mobileS}) {
     margin-top: 80px;
-  } */
+  }
 `;
 
 export const BoxCatalogSel = styled.div`
@@ -91,6 +89,14 @@ export const HeadFilter = styled.div`
   flex-direction: row;
   gap: 20px;
   width: 100%;
+
+  @media (${mainTheme.deviсe.mobileXL}) {
+    gap: 10px;
+  }
+
+  @media (${mainTheme.deviсe.mobileM}) {
+    flex-direction: column;
+  }
 `;
 
 export const BoxРHeadSel = styled.div`

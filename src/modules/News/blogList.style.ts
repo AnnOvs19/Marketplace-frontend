@@ -64,3 +64,36 @@ export const BlogListBox = styled.div`
     gap: 20px;
   }
 `;
+
+export const NewsSeltBox = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  @media (${mainTheme.deviсe.laptopL}) {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  @media (${mainTheme.deviсe.tablet}) {
+    gap: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  @media (${mainTheme.deviсe.mobileXL}) {
+    gap: 10px;
+    width: 97%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  @media (${mainTheme.deviсe.mobileM}) {
+    gap: 15px;
+    width: 95%;
+    flex-direction: column;
+    align-items: center;
+  }
+`;

@@ -3,12 +3,13 @@
 import React from "react";
 import * as S from "../productReviews.style";
 import TextAreaForm from "@/ui/TextArea/TextAreaForm/TextAreaForm";
+import { ListButton } from "@/styles/baseButtons.style";
 
 const CreateReviews = () => {
   return (
     <S.ReviewHead>
       <TextAreaForm />
-      <B.ListButton>Отправить отзыв</B.ListButton>
+      <ListButton>Отправить отзыв</ListButton>
     </S.ReviewHead>
   );
 };

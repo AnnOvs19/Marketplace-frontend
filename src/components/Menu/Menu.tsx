@@ -62,8 +62,8 @@ const Menu: FC<IProps> = ({ openMenu, setOpenMenu, userInfo }) => {
           <Link href="/allOrdersClient">
             <T.MenuText>Все заказы</T.MenuText>
           </Link>
-          <Link href="/blog">
-            <T.MenuText>Блог</T.MenuText>
+          <Link href="myNews">
+            <T.MenuText>Мой блог</T.MenuText>
           </Link>
           <Link href="/accountSeller">
             <T.MenuText>Профиль</T.MenuText>
