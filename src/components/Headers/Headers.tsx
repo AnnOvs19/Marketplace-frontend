@@ -21,7 +21,10 @@ const Headers = () => {
             Authorization: `Bearer ${session.data?.user.token || ""}`
           }
         })
-        .then((res) => setUserInfo(res.data));
+        .then((res) => {
+          setUserInfo(res.data);
+          localStorage.setItem("role", res.data.role.name);
+        });
     }
   }, [session.data]);
 

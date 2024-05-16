@@ -25,6 +25,7 @@ interface IProps {
 const Filters: FC<IProps> = ({ filters, popularProducts, setProducts }) => {
   const session = useSession();
   const [openFilter, setOpenFilter] = useState<boolean>(false);
+  const [role, setRole] = useState<string>(localStorage.getItem("role")!);
 
   function sortNewProducts() {
     const prodArr = [...popularProducts];
@@ -39,7 +40,6 @@ const Filters: FC<IProps> = ({ filters, popularProducts, setProducts }) => {
 
   async function sortLikeMe() {
     const res = await axios.get(
-      // `api/likes?populate=client,product&filters[client][id][$eq]=${session.data?.user.id}`,
       `api/products?populate=likes.client,image,category&filters[likes][client][id][$eq]=${session.data?.user.id}`,
       {
         headers: {
@@ -49,8 +49,6 @@ const Filters: FC<IProps> = ({ filters, popularProducts, setProducts }) => {
     );
 
     if (res.data) {
-      console.log(res.data.data);
-
       setProducts(res.data.data);
     }
   }
@@ -99,6 +97,7 @@ const Filters: FC<IProps> = ({ filters, popularProducts, setProducts }) => {
               </S.ButtonBox>
               <S.TextIcon>В обратном порядке</S.TextIcon>
             </S.IconsContainer>
+
             {session.data?.user ? (
               <>
                 <S.IconsContainer>

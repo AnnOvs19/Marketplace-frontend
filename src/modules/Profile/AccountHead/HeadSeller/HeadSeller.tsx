@@ -45,7 +45,12 @@ const HeadSeller = () => {
         <T.SubTitle>Название магазина</T.SubTitle>
         <T.ProfileText>email1111@gmail.com</T.ProfileText>
         <T.ProfileText>Город, адрес</T.ProfileText>
-        <BaseButton onClick={() => signOut({ callbackUrl: "/" })}>
+        <BaseButton
+          onClick={() => {
+            signOut({ callbackUrl: "/" });
+            localStorage.clear();
+          }}
+        >
           Выйти из кабинета
         </BaseButton>
       </S.AvatarInfo>

@@ -44,7 +44,12 @@ const HeadUser = () => {
         </S.InfoHeader>
         <ProfileText>email1111@gmail.com</ProfileText>
         <ProfileText>Город, адрес</ProfileText>
-        <BaseButton onClick={() => signOut({ callbackUrl: "/" })}>
+        <BaseButton
+          onClick={() => {
+            signOut({ callbackUrl: "/" });
+            localStorage.clear()
+          }}
+        >
           Выйти из кабинета
         </BaseButton>
       </S.AvatarInfo>
