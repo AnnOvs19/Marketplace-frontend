@@ -4,11 +4,11 @@ import React, { FC, useState } from "react";
 import { Controller, UseFormReturn } from "react-hook-form";
 import { ICreateEditeProduct } from "../CreateEditProduct";
 import * as U from "@/ui/Inputs/InputForm/inputForm.style";
-import * as T from "@/styles/baseText.style";
 import * as S from "../createEditProduct.style";
 import InputForm from "@/ui/Inputs/InputForm/InputForm";
 import DropdownCategory from "@/ui/DropdownCategory/DropdownCategory";
 import { FormButton } from "@/styles/baseButtons.style";
+import { TextForm } from "@/styles/baseText.style";
 
 interface IProps {
   indexTab: number;
@@ -35,7 +35,7 @@ const StepOneProduct: FC<IProps> = ({
       <S.ContainerRow>
         <S.ProductBox>
           <U.BodyInputWrapper>
-            <T.TextForm>Название товара*</T.TextForm>
+            <TextForm>Название товара*</TextForm>
             <Controller
               name="title"
               rules={{ required: true, minLength: 5, maxLength: 200 }}
@@ -58,7 +58,7 @@ const StepOneProduct: FC<IProps> = ({
             )}
           </U.BodyInputWrapper>
           <U.BodyInputWrapper>
-            <T.TextForm>Модель товара*</T.TextForm>
+            <TextForm>Модель товара*</TextForm>
             <Controller
               name="model"
               rules={{ required: true, minLength: 5, maxLength: 200 }}
@@ -81,7 +81,7 @@ const StepOneProduct: FC<IProps> = ({
             )}
           </U.BodyInputWrapper>
           <U.BodyInputWrapper>
-            <T.TextForm>Торговый артикул*</T.TextForm>
+            <TextForm>Торговый артикул*</TextForm>
             <Controller
               name="article"
               rules={{ required: true, minLength: 2 }}
@@ -105,7 +105,7 @@ const StepOneProduct: FC<IProps> = ({
           </U.BodyInputWrapper>
 
           <U.BodyInputWrapper>
-            <T.TextForm>Цена товара*</T.TextForm>
+            <TextForm>Цена товара*</TextForm>
             <Controller
               name="price"
               rules={{ required: true, minLength: 5 }}
@@ -130,7 +130,7 @@ const StepOneProduct: FC<IProps> = ({
         </S.ProductBox>
         <S.ProductBox>
           <U.BodyInputWrapper>
-            <T.TextForm>Размеры товара (ШхДхВ)см*</T.TextForm>
+            <TextForm>Размеры товара (ШхДхВ)см*</TextForm>
             <Controller
               name="size"
               rules={{ required: true, minLength: 5, maxLength: 100 }}
@@ -153,7 +153,7 @@ const StepOneProduct: FC<IProps> = ({
             )}
           </U.BodyInputWrapper>
           <U.BodyInputWrapper>
-            <T.TextForm>Страна производства*</T.TextForm>
+            <TextForm>Страна производства*</TextForm>
             <Controller
               name="country"
               rules={{ required: true, minLength: 3, maxLength: 100 }}
@@ -176,7 +176,7 @@ const StepOneProduct: FC<IProps> = ({
             )}
           </U.BodyInputWrapper>
           <U.BodyInputWrapper>
-            <T.TextForm>Наименование бренда*</T.TextForm>
+            <TextForm>Наименование бренда*</TextForm>
             <Controller
               name="brand"
               rules={{ required: true, minLength: 3, maxLength: 100 }}
@@ -199,7 +199,7 @@ const StepOneProduct: FC<IProps> = ({
             )}
           </U.BodyInputWrapper>
           <U.BodyInputWrapper>
-            <T.TextForm>Количество товаров на складе*</T.TextForm>
+            <TextForm>Количество товаров на складе*</TextForm>
             <Controller
               name="sumInStock"
               rules={{ required: true, pattern: /^[0-9]+/ }}

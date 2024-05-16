@@ -2,12 +2,13 @@
 
 import React, { useState } from "react";
 import * as S from "../editPage.style";
-import * as T from "@/styles/baseText.style";
 import * as U from "@/ui/Inputs/InputForm/inputForm.style";
 import InputForm from "@/ui/Inputs/InputForm/InputForm";
 import { Controller, useForm } from "react-hook-form";
 import MiniLoader from "@/ui/Loading/MiniLoader/MiniLoader";
 import { FormButton } from "@/styles/baseButtons.style";
+import { TitleForm } from "@/styles/baseTitle.style";
+import { TextForm } from "@/styles/baseText.style";
 
 export interface IEditPageUser {
   name: string;
@@ -46,12 +47,12 @@ const EditPageUser = () => {
   }
   return (
     <S.EditForm onSubmit={handleSubmit(submit)}>
-      <T.TitleForm>Редактирование профиля покупателя</T.TitleForm>
+      <TitleForm>Редактирование профиля покупателя</TitleForm>
       <S.EditBody>
         <S.SelBodyInfo>
           <S.EditItemBox>
             <U.BodyInputWrapper>
-              <T.TextForm>Введите своё имя</T.TextForm>
+              <TextForm>Введите своё имя</TextForm>
               <Controller
                 name="name"
                 rules={{ required: true, minLength: 5 }}
@@ -74,7 +75,7 @@ const EditPageUser = () => {
               )}
             </U.BodyInputWrapper>
             <U.BodyInputWrapper>
-              <T.TextForm>Номер телефона</T.TextForm>
+              <TextForm>Номер телефона</TextForm>
               <Controller
                 name="phone"
                 rules={{
@@ -102,7 +103,7 @@ const EditPageUser = () => {
               )}
             </U.BodyInputWrapper>
             <U.BodyInputWrapper>
-              <T.TextForm>Введите email</T.TextForm>
+              <TextForm>Введите email</TextForm>
               <Controller
                 name="email"
                 rules={{
@@ -129,7 +130,7 @@ const EditPageUser = () => {
           </S.EditItemBox>
           <S.EditItemBox>
             <U.BodyInputWrapper>
-              <T.TextForm>Ваша область и город </T.TextForm>
+              <TextForm>Ваша область и город </TextForm>
               <Controller
                 name="sity"
                 rules={{ required: true, minLength: 10 }}
@@ -153,7 +154,7 @@ const EditPageUser = () => {
               )}
             </U.BodyInputWrapper>
             <U.BodyInputWrapper>
-              <T.TextForm>Введите адрес для доставки</T.TextForm>
+              <TextForm>Введите адрес для доставки</TextForm>
               <Controller
                 name="adress"
                 rules={{ required: true, minLength: 10 }}

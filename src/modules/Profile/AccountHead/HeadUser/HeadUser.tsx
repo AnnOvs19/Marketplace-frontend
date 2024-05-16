@@ -11,7 +11,8 @@ import edit from "@/assets/icons/editIcon.svg";
 import { signOut } from "next-auth/react";
 import Link from "next/link";
 import { BaseButton } from "@/styles/baseButtons.style";
-import { ProfileText, TitleSection } from "@/styles/baseText.style";
+import { ProfileText } from "@/styles/baseText.style";
+import { TitleSection } from "@/styles/baseTitle.style";
 
 const HeadUser = () => {
   return (
@@ -47,7 +48,7 @@ const HeadUser = () => {
         <BaseButton
           onClick={() => {
             signOut({ callbackUrl: "/" });
-            localStorage.clear()
+            localStorage.clear();
           }}
         >
           Выйти из кабинета

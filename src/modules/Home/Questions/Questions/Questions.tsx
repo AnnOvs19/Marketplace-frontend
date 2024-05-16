@@ -4,7 +4,7 @@ import React from "react";
 import * as S from "./questions.style";
 import Accordion from "../Accordion/Accordion/Accordion";
 import FormQue from "../FormQue/FormQue";
-import { TitleSection } from "@/styles/baseText.style";
+import { TitleSection } from "@/styles/baseTitle.style";
 
 const Questions = () => {
   return (

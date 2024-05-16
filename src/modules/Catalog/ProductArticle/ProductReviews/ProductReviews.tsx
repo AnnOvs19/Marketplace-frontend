@@ -1,11 +1,11 @@
 "use client";
 
 import React, { FC } from "react";
-import { ICatalogMock } from "../../mockDelCatalog";
 import * as S from "./productReviews.style";
-import * as T from "@/styles/baseText.style";
 import CreateReviews from "./CreateReviews/CreateReviews";
 import { IReview } from "@/interfaces/product/review";
+import { TitleSection } from "@/styles/baseTitle.style";
+import { DeskKey, ReviewText } from "@/styles/baseText.style";
 
 interface IProps {
   reviews: IReview[];
@@ -14,14 +14,14 @@ interface IProps {
 const ProductReviews: FC<IProps> = ({ reviews }) => {
   return (
     <S.ReviewBox>
-      <T.TitleSection>Отзывы</T.TitleSection>
+      <TitleSection>Отзывы</TitleSection>
       <S.ReviewContainer>
         <S.ReviewList>
           {reviews?.map((item) => {
             return (
               <S.ReviewItem>
-                <T.DeskKey>{item.client.username}</T.DeskKey>
-                <T.ReviewText>{item.text}</T.ReviewText>
+                <DeskKey>{item.client.username}</DeskKey>
+                <ReviewText>{item.text}</ReviewText>
               </S.ReviewItem>
             );
           })}

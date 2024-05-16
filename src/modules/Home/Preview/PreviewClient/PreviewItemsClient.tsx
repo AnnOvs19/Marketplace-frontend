@@ -2,12 +2,13 @@
 
 import React, { FC } from "react";
 
-import * as T from "@/styles/baseText.style";
 import * as C from "../preview.style";
 import Image from "next/image";
 import { IPreviewClient } from "../preview.mock";
 import Link from "next/link";
 import { TransparentButton } from "@/styles/baseButtons.style";
+import { MainTitle, SubTitle } from "@/styles/baseTitle.style";
+import { TextMedium } from "@/styles/baseText.style";
 
 interface IProps {
   item: IPreviewClient;
@@ -27,9 +28,9 @@ const PreviewItemsClient: FC<IProps> = ({
       {index === indexSlide && (
         <>
           <C.TextBox>
-            <T.MainTitle>{item.title}</T.MainTitle>
-            <T.SubTitle>{item.subTitle}</T.SubTitle>
-            <T.TextMedium>{item.text}</T.TextMedium>
+            <MainTitle>{item.title}</MainTitle>
+            <SubTitle>{item.subTitle}</SubTitle>
+            <TextMedium>{item.text}</TextMedium>
 
             <C.TextBottom>
               <TransparentButton onClick={() => setIndex(0)}>

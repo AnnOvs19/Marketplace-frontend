@@ -2,9 +2,9 @@
 
 import React, { MouseEvent, useState } from "react";
 import * as S from "../auth.style";
-import { TitleSection } from "@/styles/baseText.style";
 import LogInSeller from "./LogInSeller/LogInSeller";
 import RegisterSeller from "./RegisterSeller/RegisterSeller";
+import { TitleSection } from "@/styles/baseTitle.style";
 
 const AuthSeller = () => {
   const [activeTab, setActiveTab] = useState<number>(0);

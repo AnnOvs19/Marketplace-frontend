@@ -2,9 +2,9 @@
 
 import React, { MouseEvent, useState } from "react";
 import * as S from "../auth.style";
-import { TitleSection } from "@/styles/baseText.style";
 import LogInClient from "./LogInClient/LogInClient";
 import RegisterClient from "./RegisterClient/RegisterClient";
+import { TitleSection } from "@/styles/baseTitle.style";
 
 const AuthClient = () => {
   const [activeTab, setActiveTab] = useState<number>(0);

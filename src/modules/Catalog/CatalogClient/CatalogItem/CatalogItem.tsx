@@ -2,7 +2,6 @@
 
 import React, { FC, MouseEvent, useState } from "react";
 import * as S from "./catalogItem.style";
-import * as T from "@/styles/baseText.style";
 import Image from "next/image";
 import likeEmpty from "@/assets/icons/filterLike.svg";
 import like from "@/assets/icons/likeProductIcon.svg";
@@ -12,6 +11,8 @@ import { LoaderImage } from "@/helpers/loaderImage";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { CardButton } from "@/styles/baseButtons.style";
+import { CardTitle } from "@/styles/baseTitle.style";
+import { CardOtherText, CardPrice } from "@/styles/baseText.style";
 
 interface IProps {
   item: IProduct;
@@ -52,15 +53,15 @@ const CatalogItem: FC<IProps> = ({ item }) => {
       </Link>
       <S.CardItemBox>
         <Link href={`/catalog/${item.id}`}>
-          <T.CardTitle>{item.title.substring(0, 20)}...</T.CardTitle>
+          <CardTitle>{item.title.substring(0, 20)}...</CardTitle>
         </Link>
         <Link href={`/catalog/${item.id}`}>
-          <T.CardPrice>{item.price} руб</T.CardPrice>
+          <CardPrice>{item.price} руб</CardPrice>
         </Link>
 
         <S.CardBottom>
-          <T.CardOtherText>{item.category.title}</T.CardOtherText>
-          <T.CardOtherText>{item.sumInStock} шт.</T.CardOtherText>
+          <CardOtherText>{item.category.title}</CardOtherText>
+          <CardOtherText>{item.sumInStock} шт.</CardOtherText>
         </S.CardBottom>
         <CardButton type="button" onClick={buttonHandler}>
           В корзину

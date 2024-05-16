@@ -11,7 +11,8 @@ import "swiper/css/navigation";
 import "swiper/css";
 import { INewsItem } from "@/interfaces/news/newsItem";
 import { LoaderImage } from "@/helpers/loaderImage";
-import { TextMedium, TitleSection } from "@/styles/baseText.style";
+import { TextMedium } from "@/styles/baseText.style";
+import { TitleSection } from "@/styles/baseTitle.style";
 
 interface IProps {
   newsPage: INewsItem;

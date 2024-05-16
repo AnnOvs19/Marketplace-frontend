@@ -5,19 +5,33 @@ import { mockDelOrder } from "../mockDelOrder";
 import OrderMobItem from "./OrderMobItem";
 import * as S from "./orderMobList.style";
 import { IOrderInfo } from "@/interfaces/orders/order";
+import Link from "next/link";
 
 interface IProps {
   orders: IOrderInfo[];
 }
 
 const OrderMobList: FC<IProps> = ({ orders }) => {
+  const [role, setRole] = useState<string>(localStorage.getItem("role")!);
   const [ordersNew, setOrdersNew] = useState<IOrderInfo[]>(
     orders.sort((a, b) => b.id - a.id)
   );
   return (
     <S.OrderContainer>
       {ordersNew?.map((item, index) => {
-        return <OrderMobItem item={item} key={index} />;
+        return (
+          <>
+            {role == "Seller" ? (
+              <Link href={`/allOrdersClient/${index + 1}`}>
+                <OrderMobItem item={item} key={index} />
+              </Link>
+            ) : (
+              <Link href={`/myOrders/${index + 1}`}>
+                <OrderMobItem item={item} key={index} />
+              </Link>
+            )}
+          </>
+        );
       })}
     </S.OrderContainer>
   );

@@ -2,8 +2,9 @@
 
 import React, { FC } from "react";
 import * as S from "./orderDesktopList.style";
-import * as T from "@/styles/baseText.style";
 import { IOrderInfo } from "@/interfaces/orders/order";
+import { BasketPrice } from "@/styles/baseText.style";
+import { BasketTitle } from "@/styles/baseTitle.style";
 
 interface IProps {
   item: IOrderInfo;
@@ -13,19 +14,19 @@ const OrderDesktopItem: FC<IProps> = ({ item }) => {
   return (
     <S.OrderString>
       <S.OrderElement>
-        <T.BasketTitle>{item.productName}</T.BasketTitle>
+        <BasketTitle>{item.productName}</BasketTitle>
       </S.OrderElement>
       <S.OrderElement>
-        <T.BasketPrice>{item.client}</T.BasketPrice>
+        <BasketPrice>{item.client}</BasketPrice>
       </S.OrderElement>
       <S.OrderElement>
-        <T.BasketTitle>{item.sumOrder} руб</T.BasketTitle>
+        <BasketTitle>{item.sumOrder} руб</BasketTitle>
       </S.OrderElement>
       <S.OrderElement>
-        <T.BasketPrice>{item.storeName}</T.BasketPrice>
+        <BasketPrice>{item.storeName}</BasketPrice>
       </S.OrderElement>
       <S.OrderElement>
-        <T.BasketTitle>{item.status}</T.BasketTitle>
+        <BasketTitle>{item.status}</BasketTitle>
       </S.OrderElement>
     </S.OrderString>
   );

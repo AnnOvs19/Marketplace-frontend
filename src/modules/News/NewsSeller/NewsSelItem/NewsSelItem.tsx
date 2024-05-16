@@ -3,10 +3,10 @@
 import { INewsItem } from "@/interfaces/news/newsItem";
 import React, { FC } from "react";
 import * as S from "./newsSelItem.style";
-import { SmallText, TextMedium } from "@/styles/baseText.style";
+import { TextMedium } from "@/styles/baseText.style";
 import Image from "next/image";
 import { LoaderImage } from "@/helpers/loaderImage";
-import { BaseButton, FormButton } from "@/styles/baseButtons.style";
+import { FormButton } from "@/styles/baseButtons.style";
 import Link from "next/link";
 
 interface IProps {

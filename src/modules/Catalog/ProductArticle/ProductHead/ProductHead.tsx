@@ -3,7 +3,6 @@
 import CardImage from "@/components/CardImage/CardImage";
 import React, { FC } from "react";
 import * as S from "./productHead.style";
-import * as T from "@/styles/baseText.style";
 import * as I from "@/styles/baseIcons.style";
 import like from "@/assets/icons/likeProductIcon.svg";
 import reviews from "@/assets/icons/reviewsProductIcon.svg";
@@ -12,6 +11,8 @@ import { BaseButton } from "@/styles/baseButtons.style";
 import { IProduct } from "@/interfaces/product/product";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import { TitleProduct } from "@/styles/baseTitle.style";
+import { InfoProduct, SmallText } from "@/styles/baseText.style";
 
 interface IProps {
   product: IProduct;
@@ -32,11 +33,11 @@ const ProductHead: FC<IProps> = ({ product }) => {
     <S.HeadBox>
       <CardImage product={product} />
       <S.HeadInfo>
-        <T.TitleProduct>{product.title}</T.TitleProduct>
+        <TitleProduct>{product.title}</TitleProduct>
         <S.CommonInfo>
           <S.CategoryBox>
-            <T.SmallText>Артикул: {product.article}</T.SmallText>
-            <T.SmallText>Категория: {product.category.title}</T.SmallText>
+            <SmallText>Артикул: {product.article}</SmallText>
+            <SmallText>Категория: {product.category.title}</SmallText>
           </S.CategoryBox>
           <S.CategoryBox>
             <S.LikeBox>
@@ -50,7 +51,7 @@ const ProductHead: FC<IProps> = ({ product }) => {
                   }}
                 />
               </I.LikeIcon>
-              <T.SmallText>{product.likes?.length} оценок</T.SmallText>
+              <SmallText>{product.likes?.length} оценок</SmallText>
             </S.LikeBox>
             <S.LikeBox>
               <I.LikeIcon>
@@ -63,15 +64,15 @@ const ProductHead: FC<IProps> = ({ product }) => {
                   }}
                 />
               </I.LikeIcon>
-              <T.SmallText>{product.reviews?.length} отзывов</T.SmallText>
+              <SmallText>{product.reviews?.length} отзывов</SmallText>
             </S.LikeBox>
           </S.CategoryBox>
         </S.CommonInfo>
         <S.PriceBox>
-          <T.InfoProduct>
+          <InfoProduct>
             Количество на складе: {product.sumInStock}шт
-          </T.InfoProduct>
-          <T.InfoProduct>Стоимость: {product.price}руб</T.InfoProduct>
+          </InfoProduct>
+          <InfoProduct>Стоимость: {product.price}руб</InfoProduct>
         </S.PriceBox>
         <BaseButton type="button" onClick={buttonHandler}>
           Добавить в корзину

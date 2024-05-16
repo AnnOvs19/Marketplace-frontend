@@ -6,7 +6,8 @@ import Image from "next/image";
 
 import about1 from "@/assets/images/about1.jpg";
 import about2 from "@/assets/images/about2.png";
-import { TextMedium, TitleSection } from "@/styles/baseText.style";
+import { TextMedium } from "@/styles/baseText.style";
+import { TitleSection } from "@/styles/baseTitle.style";
 
 const AboutUs = () => {
   return (

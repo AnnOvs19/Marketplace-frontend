@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import * as S from "../editPage.style";
-import * as T from "@/styles/baseText.style";
 import * as U from "@/ui/Inputs/InputForm/inputForm.style";
 import InputForm from "@/ui/Inputs/InputForm/InputForm";
 import Image, { StaticImageData } from "next/image";
@@ -12,6 +11,8 @@ import { Controller, useForm } from "react-hook-form";
 import TextAreaForm from "@/ui/TextArea/TextAreaForm/TextAreaForm";
 import MiniLoader from "@/ui/Loading/MiniLoader/MiniLoader";
 import { FileButton, FormButton } from "@/styles/baseButtons.style";
+import { TitleForm } from "@/styles/baseTitle.style";
+import { TextForm } from "@/styles/baseText.style";
 
 interface IEditPageSeller {
   storeName: string;
@@ -66,7 +67,7 @@ const EditPageSel = () => {
 
   return (
     <S.EditForm onSubmit={handleSubmit(submit)}>
-      <T.TitleForm>Редактирование профиля продавца</T.TitleForm>
+      <TitleForm>Редактирование профиля продавца</TitleForm>
       <S.EditBody>
         <S.BodyAvatar>
           <S.Photo>
@@ -87,7 +88,7 @@ const EditPageSel = () => {
         <S.SelBodyInfo>
           <S.EditItemBox>
             <U.BodyInputWrapper>
-              <T.TextForm>Название вашего магазина</T.TextForm>
+              <TextForm>Название вашего магазина</TextForm>
               <Controller
                 name="storeName"
                 rules={{ required: true, minLength: 5 }}
@@ -110,7 +111,7 @@ const EditPageSel = () => {
               )}
             </U.BodyInputWrapper>
             <U.BodyInputWrapper>
-              <T.TextForm>Напишите о своём магазине</T.TextForm>
+              <TextForm>Напишите о своём магазине</TextForm>
               <Controller
                 name="aboutMe"
                 control={control}
@@ -132,7 +133,7 @@ const EditPageSel = () => {
               )}
             </U.BodyInputWrapper>
             <U.BodyInputWrapper>
-              <T.TextForm>Область и город для вашего бизнеса</T.TextForm>
+              <TextForm>Область и город для вашего бизнеса</TextForm>
               <Controller
                 name="sity"
                 rules={{ required: true, minLength: 10 }}
@@ -158,7 +159,7 @@ const EditPageSel = () => {
           </S.EditItemBox>
           <S.EditItemBox>
             <U.BodyInputWrapper>
-              <T.TextForm>Введите адрес своего склада</T.TextForm>
+              <TextForm>Введите адрес своего склада</TextForm>
               <Controller
                 name="adress"
                 rules={{ required: true, minLength: 10 }}
@@ -181,7 +182,7 @@ const EditPageSel = () => {
               )}
             </U.BodyInputWrapper>
             <U.BodyInputWrapper>
-              <T.TextForm>Введите своё имя</T.TextForm>
+              <TextForm>Введите своё имя</TextForm>
               <Controller
                 name="name"
                 rules={{ required: true, minLength: 5 }}
@@ -204,7 +205,7 @@ const EditPageSel = () => {
               )}
             </U.BodyInputWrapper>
             <U.BodyInputWrapper>
-              <T.TextForm>Номер телефона</T.TextForm>
+              <TextForm>Номер телефона</TextForm>
               <Controller
                 name="phone"
                 rules={{
@@ -232,7 +233,7 @@ const EditPageSel = () => {
               )}
             </U.BodyInputWrapper>
             <U.BodyInputWrapper>
-              <T.TextForm>Введите email</T.TextForm>
+              <TextForm>Введите email</TextForm>
               <Controller
                 name="email"
                 rules={{

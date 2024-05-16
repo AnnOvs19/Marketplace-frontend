@@ -2,8 +2,9 @@
 
 import React, { FC } from "react";
 import * as S from "./productBody.style";
-import * as T from "@/styles/baseText.style";
 import { IProduct } from "@/interfaces/product/product";
+import { DeskTitle } from "@/styles/baseTitle.style";
+import { DeskKey, DeskValue, SmallText } from "@/styles/baseText.style";
 
 interface IProps {
   product: IProduct;
@@ -12,44 +13,44 @@ interface IProps {
 const ProductBody: FC<IProps> = ({ product }) => {
   const text = product.text
     .split("\n")
-    .map((str) => <T.SmallText>{str}</T.SmallText>);
+    .map((str) => <SmallText>{str}</SmallText>);
   return (
     <S.BodyBox>
       <S.BodyDesk>
         <S.BodyItem>
           <S.InfoContainer>
-            <T.DeskTitle>Общие характеристики</T.DeskTitle>
+            <DeskTitle>Общие характеристики</DeskTitle>
             <S.InfoItem>
-              <T.DeskKey>Название товара</T.DeskKey>
-              <T.DeskValue>{product.title}</T.DeskValue>
+              <DeskKey>Название товара</DeskKey>
+              <DeskValue>{product.title}</DeskValue>
             </S.InfoItem>
             <S.InfoItem>
-              <T.DeskKey>Модель</T.DeskKey>
-              <T.DeskValue>{product.model}</T.DeskValue>
+              <DeskKey>Модель</DeskKey>
+              <DeskValue>{product.model}</DeskValue>
             </S.InfoItem>
             <S.InfoItem>
-              <T.DeskKey>Торговый артикул</T.DeskKey>
-              <T.DeskValue>{product.article}</T.DeskValue>
+              <DeskKey>Торговый артикул</DeskKey>
+              <DeskValue>{product.article}</DeskValue>
             </S.InfoItem>
             <S.InfoItem>
-              <T.DeskKey>Размеры товара в упаковке (см)</T.DeskKey>
-              <T.DeskValue>{product.size}</T.DeskValue>
+              <DeskKey>Размеры товара в упаковке (см)</DeskKey>
+              <DeskValue>{product.size}</DeskValue>
             </S.InfoItem>
             <S.InfoItem>
-              <T.DeskKey>Страна производства</T.DeskKey>
-              <T.DeskValue>{product.country}</T.DeskValue>
+              <DeskKey>Страна производства</DeskKey>
+              <DeskValue>{product.country}</DeskValue>
             </S.InfoItem>
             <S.InfoItem>
-              <T.DeskKey>Бренд-производитель</T.DeskKey>
-              <T.DeskValue>{product.brand}</T.DeskValue>
+              <DeskKey>Бренд-производитель</DeskKey>
+              <DeskValue>{product.brand}</DeskValue>
             </S.InfoItem>
             <S.InfoItem>
-              <T.DeskKey>Количество товаров на складе</T.DeskKey>
-              <T.DeskValue>{product.sumInStock}</T.DeskValue>
+              <DeskKey>Количество товаров на складе</DeskKey>
+              <DeskValue>{product.sumInStock}</DeskValue>
             </S.InfoItem>
           </S.InfoContainer>
           <S.OtherContainer>
-            <T.DeskTitle>Комплектация товара</T.DeskTitle>
+            <DeskTitle>Комплектация товара</DeskTitle>
             <S.BodyOther>
               {product.equipment?.length !== 0 ? (
                 product.equipment?.map((item) => {
@@ -63,11 +64,11 @@ const ProductBody: FC<IProps> = ({ product }) => {
         </S.BodyItem>
         <S.BodyItem>
           <S.TextContainer>
-            <T.DeskTitle>Описание товара</T.DeskTitle>
+            <DeskTitle>Описание товара</DeskTitle>
             <>{text}</>
           </S.TextContainer>
           <S.OtherContainer>
-            <T.DeskTitle>Материалы</T.DeskTitle>
+            <DeskTitle>Материалы</DeskTitle>
             <S.BodyOther>
               {product.materials?.length !== 0 ? (
                 product.materials?.map((item) => {

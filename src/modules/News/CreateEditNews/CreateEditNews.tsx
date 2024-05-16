@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import * as S from "./createEditNews.style";
-import * as T from "@/styles/baseText.style";
 import * as U from "@/ui/Inputs/InputForm/inputForm.style";
 import Image from "next/image";
 import FileInput from "@/ui/Inputs/FileInput/FileInput";
@@ -16,6 +15,8 @@ import { Navigation } from "swiper/modules";
 import "swiper/css/navigation";
 import "swiper/css";
 import { FileButton, FormButton } from "@/styles/baseButtons.style";
+import { TitleForm } from "@/styles/baseTitle.style";
+import { SmallText, TextForm } from "@/styles/baseText.style";
 
 interface ICreateEditNews {
   title: string;
@@ -76,10 +77,10 @@ const CreateEditNews = () => {
 
   return (
     <S.CreateNews onSubmit={handleSubmit(submit)}>
-      <T.TitleForm>Создание новостного поста</T.TitleForm>
+      <TitleForm>Создание новостного поста</TitleForm>
       <S.InfoBox>
         <U.BodyInputWrapper>
-          <T.TextForm>Название статьи</T.TextForm>
+          <TextForm>Название статьи</TextForm>
           <Controller
             name="title"
             rules={{ required: true, minLength: 5, maxLength: 200 }}
@@ -102,7 +103,7 @@ const CreateEditNews = () => {
           )}
         </U.BodyInputWrapper>
         <U.BodyInputWrapper>
-          <T.TextForm>Напишите текст своей статьи</T.TextForm>
+          <TextForm>Напишите текст своей статьи</TextForm>
           <Controller
             name="text"
             control={control}
@@ -175,7 +176,7 @@ const CreateEditNews = () => {
           Для загрузки поста необходима хотя бы одна фотография
         </U.ErrorMessage>
       )}
-      <T.SmallText>Вы можете загрузить не более 10 фотографий</T.SmallText>
+      <SmallText>Вы можете загрузить не более 10 фотографий</SmallText>
 
       <FormButton>
         {textButton}

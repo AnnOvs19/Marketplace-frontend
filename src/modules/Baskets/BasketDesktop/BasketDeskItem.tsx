@@ -3,12 +3,14 @@
 import { ICatalogMock } from "@/modules/Catalog/mockDelCatalog";
 import React, { FC } from "react";
 import * as S from "./basketDesk.style";
-import * as T from "@/styles/baseText.style";
+// import * as T from "@/styles/baseText.style";
 import * as I from "@/styles/baseIcons.style";
 import * as C from "../baskets.style";
 import Image from "next/image";
 import deleteBasket from "@/assets/icons/deleteBasket.svg";
 import { QuantityButton } from "@/styles/baseButtons.style";
+import { BasketTitle } from "@/styles/baseTitle.style";
+import { BasketPrice, TextMedium } from "@/styles/baseText.style";
 
 interface IProps {
   item: ICatalogMock;
@@ -28,18 +30,18 @@ const BasketDeskItem: FC<IProps> = ({ item }) => {
             }}
           />
         </C.BasketImage>
-        <T.BasketTitle>{item.title}</T.BasketTitle>
+        <BasketTitle>{item.title}</BasketTitle>
       </S.BodyElement>
       <S.BodyElement>
-        <T.BasketPrice>{item.price.toFixed(2)} руб</T.BasketPrice>
+        <BasketPrice>{item.price.toFixed(2)} руб</BasketPrice>
       </S.BodyElement>
       <S.BodyElement>
         <QuantityButton>-</QuantityButton>
-        <T.TextMedium>{item.quantity}</T.TextMedium>
+        <TextMedium>{item.quantity}</TextMedium>
         <QuantityButton>+</QuantityButton>
       </S.BodyElement>
       <S.BodyElement>
-        <T.BasketPrice>{item.price.toFixed(2)} руб</T.BasketPrice>
+        <BasketPrice>{item.price.toFixed(2)} руб</BasketPrice>
       </S.BodyElement>
 
       <S.BodyElement>

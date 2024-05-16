@@ -2,13 +2,14 @@
 
 import React, { useState } from "react";
 import * as S from "./totalCost.style";
-import * as T from "@/styles/baseText.style";
 import * as U from "@/ui/Inputs/InputForm/inputForm.style";
 import InputForm from "@/ui/Inputs/InputForm/InputForm";
 import { IOrderContacts } from "@/interfaces/basket/basket";
 import MiniLoader from "@/ui/Loading/MiniLoader/MiniLoader";
 import { Controller, useForm } from "react-hook-form";
 import { FormButton } from "@/styles/baseButtons.style";
+import { TitleBasket, TitleForm } from "@/styles/baseTitle.style";
+import { TextForm, TotalPrice, TotalText } from "@/styles/baseText.style";
 
 const TotalCost = () => {
   const defaultValues: IOrderContacts = {
@@ -37,26 +38,26 @@ const TotalCost = () => {
   return (
     <S.CostWrap>
       <S.TotalPrice>
-        <T.TitleBasket>Итоговая стоимость за все товары</T.TitleBasket>
+        <TitleBasket>Итоговая стоимость за все товары</TitleBasket>
         <S.PriceBox>
           <S.PriceElem>
-            <T.TotalText>Цена</T.TotalText>
-            <T.TotalPrice>20000 руб</T.TotalPrice>
+            <TotalText>Цена</TotalText>
+            <TotalPrice>20000 руб</TotalPrice>
           </S.PriceElem>
           <S.PriceElem>
-            <T.TotalText>Доставка</T.TotalText>
-            <T.TotalPrice>2000 руб</T.TotalPrice>
+            <TotalText>Доставка</TotalText>
+            <TotalPrice>2000 руб</TotalPrice>
           </S.PriceElem>
           <S.PriceElem>
-            <T.TotalText>Итого</T.TotalText>
-            <T.TotalPrice>40000 руб</T.TotalPrice>
+            <TotalText>Итого</TotalText>
+            <TotalPrice>40000 руб</TotalPrice>
           </S.PriceElem>
         </S.PriceBox>
       </S.TotalPrice>
       <S.TotalForm onSubmit={handleSubmit(submit)}>
-        <T.TitleForm>Оставьте данные получателя</T.TitleForm>
+        <TitleForm>Оставьте данные получателя</TitleForm>
         <U.BodyInputWrapper>
-          <T.TextForm>Имя получателя</T.TextForm>
+          <TextForm>Имя получателя</TextForm>
           <Controller
             name="name"
             rules={{ required: true, minLength: 5 }}
@@ -77,7 +78,7 @@ const TotalCost = () => {
           )}
         </U.BodyInputWrapper>
         <U.BodyInputWrapper>
-          <T.TextForm>Номер телефона</T.TextForm>
+          <TextForm>Номер телефона</TextForm>
           <Controller
             name="phone"
             rules={{
@@ -102,7 +103,7 @@ const TotalCost = () => {
           )}
         </U.BodyInputWrapper>
         <U.BodyInputWrapper>
-          <T.TextForm>Область и город получателя</T.TextForm>
+          <TextForm>Область и город получателя</TextForm>
           <Controller
             name="sity"
             rules={{ required: true, minLength: 10 }}
@@ -125,7 +126,7 @@ const TotalCost = () => {
           )}
         </U.BodyInputWrapper>
         <U.BodyInputWrapper>
-          <T.TextForm>Введите адрес для доставки</T.TextForm>
+          <TextForm>Введите адрес для доставки</TextForm>
           <Controller
             name="adress"
             rules={{ required: true, minLength: 10 }}

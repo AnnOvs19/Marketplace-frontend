@@ -1,7 +1,7 @@
 import { mainTheme } from "@/styles/mainTheme.style";
 import styled from "styled-components";
 
-export const OrderContainer = styled.div`
+export const OrderContainer = styled.section`
   display: none;
   @media (max-width: 636px) {
     width: 95%;

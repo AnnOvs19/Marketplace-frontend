@@ -2,12 +2,13 @@
 
 import React, { FC, useState } from "react";
 import * as S from "./filterMenu.style";
-import * as T from "@/styles/baseText.style";
 import * as B from "@/styles/baseButtons.style";
 import CheckBox from "@/ui/Inputs/Checkbox/CheckBox";
 import { ICategory } from "@/interfaces/product/category";
 import axios from "@/helpers/axios";
 import { IProduct } from "@/interfaces/product/product";
+import { FilterTitle } from "@/styles/baseTitle.style";
+import { FilterText } from "@/styles/baseText.style";
 
 interface IProps {
   openFilter: boolean;
@@ -64,7 +65,7 @@ const FilterMenu: FC<IProps> = ({
       onClick={() => setOpenFilter(false)}
     >
       <S.FilterContent onClick={(event) => event.stopPropagation()}>
-        <T.FilterTitle>Фильтры по категориям:</T.FilterTitle>
+        <FilterTitle>Фильтры по категориям:</FilterTitle>
         <S.ContentList>
           {filters?.map((item, index) => {
             return (
@@ -74,7 +75,7 @@ const FilterMenu: FC<IProps> = ({
                   setIdArray={setIdArray}
                   id={item.id!}
                 />
-                <T.FilterText>{item.title}</T.FilterText>
+                <FilterText>{item.title}</FilterText>
               </S.ContentItem>
             );
           })}

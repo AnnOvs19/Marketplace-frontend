@@ -2,13 +2,14 @@
 
 import React, { useState } from "react";
 import * as S from "./formQue.style";
-import * as T from "@/styles/baseText.style";
 import InputForm from "@/ui/Inputs/InputForm/InputForm";
 import * as U from "@/ui/Inputs/InputForm/inputForm.style";
 import TextAreaForm from "@/ui/TextArea/TextAreaForm/TextAreaForm";
 import { Controller, useForm } from "react-hook-form";
 import MiniLoader from "@/ui/Loading/MiniLoader/MiniLoader";
 import { FormButton } from "@/styles/baseButtons.style";
+import { TitleForm } from "@/styles/baseTitle.style";
+import { TextForm } from "@/styles/baseText.style";
 
 interface IFormQuestions {
   name: string;
@@ -42,9 +43,9 @@ const FormQue = () => {
 
   return (
     <S.FormQueWraper onSubmit={handleSubmit(submit)}>
-      <T.TitleForm>Ещё остались вопросы?</T.TitleForm>
+      <TitleForm>Ещё остались вопросы?</TitleForm>
       <U.BodyInputWrapper>
-        <T.TextForm>Введите своё имя*</T.TextForm>
+        <TextForm>Введите своё имя*</TextForm>
         <Controller
           name="name"
           rules={{ required: true, minLength: 5 }}
@@ -65,7 +66,7 @@ const FormQue = () => {
         )}
       </U.BodyInputWrapper>
       <U.BodyInputWrapper>
-        <T.TextForm>Введите свой email*</T.TextForm>
+        <TextForm>Введите свой email*</TextForm>
         <Controller
           name="email"
           rules={{
@@ -90,7 +91,7 @@ const FormQue = () => {
         )}
       </U.BodyInputWrapper>
       <U.BodyInputWrapper>
-        <T.TextForm>Напишите свой вопроc*</T.TextForm>
+        <TextForm>Напишите свой вопроc*</TextForm>
         <Controller
           name="massage"
           control={control}

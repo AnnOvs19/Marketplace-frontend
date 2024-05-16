@@ -1,7 +1,7 @@
 import { mainTheme } from "@/styles/mainTheme.style";
 import styled from "styled-components";
 
-export const OrderWrap = styled.section`
+export const OrderWrap = styled.article`
   overflow: hidden;
   max-width: 1405px;
   margin: 0 auto;
@@ -58,10 +58,6 @@ export const BoxOrder = styled.div`
   gap: 35px;
 
   @media (${mainTheme.deviсe.laptopL}) {
-    gap: 45px;
-  }
-
-  @media (${mainTheme.deviсe.laptopS}) {
     gap: 25px;
   }
 
@@ -107,10 +103,10 @@ export const HeadBox = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  gap: 60px;
+  gap: 35px;
 
   @media (${mainTheme.deviсe.laptopL}) {
-    gap: 40px;
+    gap: 25px;
   }
 
   @media (${mainTheme.deviсe.laptopS}) {

@@ -2,7 +2,6 @@
 
 import React, { FC } from "react";
 import * as S from "../ProductDeskList/productDeskList.style";
-import * as T from "@/styles/baseText.style";
 import * as C from "../../catalogSeller.style";
 import Image from "next/image";
 import * as I from "@/styles/baseIcons.style";
@@ -10,6 +9,8 @@ import editBasket from "@/assets/icons/editIcon.svg";
 import deleteBasket from "@/assets/icons/deleteBasket.svg";
 import { IProduct } from "@/interfaces/product/product";
 import { LoaderImage } from "@/helpers/loaderImage";
+import { BasketTitle } from "@/styles/baseTitle.style";
+import { BasketPrice } from "@/styles/baseText.style";
 
 interface IProps {
   item: IProduct;
@@ -32,15 +33,15 @@ const ProductDeskItem: FC<IProps> = ({ item }) => {
           />
         </C.ProductImage>
         <S.ElementBox>
-          <T.BasketTitle>{item.title}</T.BasketTitle>
-          <T.BasketPrice>№{item.id}</T.BasketPrice>
+          <BasketTitle>{item.title}</BasketTitle>
+          <BasketPrice>№{item.id}</BasketPrice>
         </S.ElementBox>
       </S.ProductElement>
       <S.ProductElement>
-        <T.BasketPrice>{item.price.toFixed(2)} руб</T.BasketPrice>
+        <BasketPrice>{item.price.toFixed(2)} руб</BasketPrice>
       </S.ProductElement>
       <S.ProductElement>
-        <T.BasketTitle>{item.category.title}</T.BasketTitle>
+        <BasketTitle>{item.category.title}</BasketTitle>
       </S.ProductElement>
       <S.ProductElement>
         <I.TableIcon>

@@ -1,7 +1,7 @@
 import { mainTheme } from "@/styles/mainTheme.style";
 import styled from "styled-components";
 
-export const OrderDesktop = styled.div`
+export const OrderDesktop = styled.section`
   width: 1080px;
   display: flex;
   flex-direction: column;

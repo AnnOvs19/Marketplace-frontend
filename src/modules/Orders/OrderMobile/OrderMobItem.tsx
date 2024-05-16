@@ -2,8 +2,9 @@
 
 import React, { FC } from "react";
 import * as S from "./orderMobList.style";
-import * as T from "@/styles/baseText.style";
 import { IOrderInfo } from "@/interfaces/orders/order";
+import { BasketPrice } from "@/styles/baseText.style";
+import { BasketTitle } from "@/styles/baseTitle.style";
 
 interface IProps {
   item: IOrderInfo;
@@ -12,11 +13,11 @@ interface IProps {
 const OrderMobItem: FC<IProps> = ({ item }) => {
   return (
     <S.OrderItem>
-      <T.BasketTitle>Название:{item.productName}</T.BasketTitle>
-      <T.BasketPrice>Покупатель: {item.client}</T.BasketPrice>
-      <T.BasketTitle>Цена: {item.sumOrder} руб</T.BasketTitle>
-      <T.BasketPrice>Продавец: {item.storeName}</T.BasketPrice>
-      <T.BasketTitle>{item.status}</T.BasketTitle>
+      <BasketTitle>Название:{item.productName}</BasketTitle>
+      <BasketPrice>Покупатель: {item.client}</BasketPrice>
+      <BasketTitle>Цена: {item.sumOrder} руб</BasketTitle>
+      <BasketPrice>Продавец: {item.storeName}</BasketPrice>
+      <BasketTitle>{item.status}</BasketTitle>
     </S.OrderItem>
   );
 };

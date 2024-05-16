@@ -2,7 +2,6 @@
 
 import React from "react";
 import * as S from "../accountHead.style";
-import * as T from "@/styles/baseText.style";
 import * as I from "@/styles/baseIcons.style";
 
 import Image from "next/image";
@@ -12,6 +11,8 @@ import edit from "@/assets/icons/editIcon.svg";
 import { signOut } from "next-auth/react";
 import Link from "next/link";
 import { BaseButton } from "@/styles/baseButtons.style";
+import { SubTitle, TitleSection } from "@/styles/baseTitle.style";
+import { ProfileText } from "@/styles/baseText.style";
 
 const HeadSeller = () => {
   return (
@@ -28,7 +29,7 @@ const HeadSeller = () => {
       </S.Avatar>
       <S.AvatarInfo>
         <S.InfoHeader>
-          <T.TitleSection>Продавец продавцович</T.TitleSection>
+          <TitleSection>Продавец продавцович</TitleSection>
           <Link href="/editAccountSel">
             <I.EditIcon>
               <Image
@@ -42,9 +43,9 @@ const HeadSeller = () => {
             </I.EditIcon>
           </Link>
         </S.InfoHeader>
-        <T.SubTitle>Название магазина</T.SubTitle>
-        <T.ProfileText>email1111@gmail.com</T.ProfileText>
-        <T.ProfileText>Город, адрес</T.ProfileText>
+        <SubTitle>Название магазина</SubTitle>
+        <ProfileText>email1111@gmail.com</ProfileText>
+        <ProfileText>Город, адрес</ProfileText>
         <BaseButton
           onClick={() => {
             signOut({ callbackUrl: "/" });

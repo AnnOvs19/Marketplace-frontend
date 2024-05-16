@@ -6,9 +6,8 @@ import InputSearch from "@/ui/Inputs/InputSearch/InputSearch";
 import OrderDesktopList from "./OrderDesktop/OrderList/OrderDesktopList";
 import OrderMobList from "./OrderMobile/OrderMobList";
 import { TransparentButton } from "@/styles/baseButtons.style";
-import { TitleSection } from "@/styles/baseText.style";
 import { IOrderInfo } from "@/interfaces/orders/order";
-import { useSession } from "next-auth/react";
+import { TitleSection } from "@/styles/baseTitle.style";
 
 interface IProps {
   orders: IOrderInfo[];

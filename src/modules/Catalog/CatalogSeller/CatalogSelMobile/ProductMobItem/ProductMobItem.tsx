@@ -7,7 +7,8 @@ import Image from "next/image";
 import { DeleteButton, EditButton } from "@/styles/baseButtons.style";
 import { IProduct } from "@/interfaces/product/product";
 import { LoaderImage } from "@/helpers/loaderImage";
-import { BasketPrice, BasketTitle } from "@/styles/baseText.style";
+import { BasketPrice } from "@/styles/baseText.style";
+import { BasketTitle } from "@/styles/baseTitle.style";
 
 interface IProps {
   item: IProduct;

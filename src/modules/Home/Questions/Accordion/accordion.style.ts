@@ -1,4 +1,3 @@
-import { SubTitle } from "@/styles/baseText.style";
 import { mainTheme } from "@/styles/mainTheme.style";
 import styled from "styled-components";
 

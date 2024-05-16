@@ -6,11 +6,11 @@ import InputSearch from "@/ui/Inputs/InputSearch/InputSearch";
 import ProductMobList from "./CatalogSelMobile/ProductMobList/ProductMobList";
 import ProductDeskList from "./CatalogSelDesktop/ProductDeskList/ProductDeskList";
 import { BaseButton, SearchButton } from "@/styles/baseButtons.style";
-import { TitleSection } from "@/styles/baseText.style";
 import { IProduct } from "@/interfaces/product/product";
 import FilterMenu from "../FilterMenu/FilterMenu";
 import { ICategory } from "@/interfaces/product/category";
 import axios from "@/helpers/axios";
+import { TitleSection } from "@/styles/baseTitle.style";
 
 interface IProps {
   filters: ICategory[];

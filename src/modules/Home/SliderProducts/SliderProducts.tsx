@@ -9,7 +9,7 @@ import SliderItem from "./SliderItem";
 import { IProduct } from "@/interfaces/product/product";
 import Link from "next/link";
 import { SliderButton } from "@/styles/baseButtons.style";
-import { TitleSection } from "@/styles/baseText.style";
+import { TitleSection } from "@/styles/baseTitle.style";
 
 interface IProps {
   popularProducts: IProduct[];

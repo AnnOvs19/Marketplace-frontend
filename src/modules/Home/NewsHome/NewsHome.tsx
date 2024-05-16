@@ -7,7 +7,7 @@ import NewsList from "./NewsList/NewsList";
 import Image from "next/image";
 import clava from "@/assets/images/clavs.jpg";
 import { INewsItem } from "@/interfaces/news/newsItem";
-import { TitleSection } from "@/styles/baseText.style";
+import { TitleSection } from "@/styles/baseTitle.style";
 
 interface IProps {
   newsHome: INewsItem[];
