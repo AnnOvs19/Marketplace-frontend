@@ -1,14 +1,19 @@
 "use client";
 
-import React from "react";
+import React, { FC } from "react";
 import * as S from "./orders.style";
 import InputSearch from "@/ui/Inputs/InputSearch/InputSearch";
 import OrderDesktopList from "./OrderDesktop/OrderList/OrderDesktopList";
 import OrderMobList from "./OrderMobile/OrderMobList";
 import { TransparentButton } from "@/styles/baseButtons.style";
 import { TitleSection } from "@/styles/baseText.style";
+import { IOrderInfo } from "@/interfaces/orders/order";
 
-const Orders = () => {
+interface IProps {
+  orders: IOrderInfo[];
+}
+
+const Orders: FC<IProps> = ({ orders }) => {
   return (
     <S.OrderWrap>
       <S.BoxOrder>
@@ -24,8 +29,8 @@ const Orders = () => {
             <TransparentButton>Отменённые</TransparentButton>
           </S.HeadBox>
         </S.HeadOrder>
-        <OrderDesktopList />
-        <OrderMobList />
+        <OrderDesktopList orders={orders} />
+        <OrderMobList orders={orders} />
       </S.BoxOrder>
     </S.OrderWrap>
   );

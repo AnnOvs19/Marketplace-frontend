@@ -15,3 +15,12 @@ export interface IOrder {
   product: IProduct;
   contacts: IOrderContacts;
 }
+
+export interface IOrderInfo {
+  id: number;
+  client: string;
+  storeName: string;
+  status: string;
+  sumOrder: number;
+  productName: string;
+}

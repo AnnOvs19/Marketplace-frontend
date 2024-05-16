@@ -57,11 +57,11 @@ export const OrderElement = styled.div`
   gap: 10px;
 
   &:nth-child(1) {
-    width: 95px;
+    width: 200px;
   }
 
   &:nth-child(2) {
-    width: 210px;
+    width: 150px;
     justify-content: center;
   }
 
@@ -82,11 +82,11 @@ export const OrderElement = styled.div`
 
   @media (${mainTheme.deviсe.laptopS}) {
     &:nth-child(1) {
-      width: 85px;
+      width: 190px;
     }
 
     &:nth-child(2) {
-      width: 190px;
+      width: 140px;
       justify-content: center;
     }
 
@@ -108,11 +108,11 @@ export const OrderElement = styled.div`
 
   @media (max-width: 700px) {
     &:nth-child(1) {
-      width: 75px;
+      width: 150px;
     }
 
     &:nth-child(2) {
-      width: 175px;
+      width: 140px;
       justify-content: center;
     }
 
@@ -122,7 +122,7 @@ export const OrderElement = styled.div`
     }
 
     &:nth-child(4) {
-      width: 160px;
+      width: 140px;
       justify-content: center;
     }
 

@@ -14,6 +14,7 @@ import { IProduct } from "@/interfaces/product/product";
 import axios from "@/helpers/axios";
 import FilterMenu from "../../FilterMenu/FilterMenu";
 import { SearchButton } from "@/styles/baseButtons.style";
+import { useSession } from "next-auth/react";
 
 interface IProps {
   filters: ICategory[];
@@ -22,6 +23,7 @@ interface IProps {
 }
 
 const Filters: FC<IProps> = ({ filters, popularProducts, setProducts }) => {
+  const session = useSession();
   const [openFilter, setOpenFilter] = useState<boolean>(false);
 
   function sortNewProducts() {
@@ -33,6 +35,24 @@ const Filters: FC<IProps> = ({ filters, popularProducts, setProducts }) => {
     const prodArr = [...popularProducts];
     const sortOld = prodArr.sort((a, b) => a.id - b.id);
     setProducts(sortOld);
+  }
+
+  async function sortLikeMe() {
+    const res = await axios.get(
+      // `api/likes?populate=client,product&filters[client][id][$eq]=${session.data?.user.id}`,
+      `api/products?populate=likes.client,image,category&filters[likes][client][id][$eq]=${session.data?.user.id}`,
+      {
+        headers: {
+          Authorization: `Bearer ${JSON.parse(localStorage.getItem("token")!)}`
+        }
+      }
+    );
+
+    if (res.data) {
+      console.log(res.data.data);
+
+      setProducts(res.data.data);
+    }
   }
 
   async function clearFilters() {
@@ -79,34 +99,40 @@ const Filters: FC<IProps> = ({ filters, popularProducts, setProducts }) => {
               </S.ButtonBox>
               <S.TextIcon>В обратном порядке</S.TextIcon>
             </S.IconsContainer>
-            <S.IconsContainer>
-              <S.ButtonBox>
-                <Image
-                  src={like}
-                  alt=""
-                  fill
-                  style={{
-                    objectFit: "contain"
-                  }}
-                />
-              </S.ButtonBox>
-              <S.TextIcon>Избранное</S.TextIcon>
-            </S.IconsContainer>
-            <Link href="/myOrders">
-              <S.IconsContainer>
-                <S.ButtonBox>
-                  <Image
-                    src={delivery}
-                    alt=""
-                    fill
-                    style={{
-                      objectFit: "contain"
-                    }}
-                  />
-                </S.ButtonBox>
-                <S.TextIcon>Мои заказы</S.TextIcon>
-              </S.IconsContainer>
-            </Link>
+            {session.data?.user ? (
+              <>
+                <S.IconsContainer>
+                  <S.ButtonBox onClick={sortLikeMe}>
+                    <Image
+                      src={like}
+                      alt=""
+                      fill
+                      style={{
+                        objectFit: "contain"
+                      }}
+                    />
+                  </S.ButtonBox>
+                  <S.TextIcon>Избранное</S.TextIcon>
+                </S.IconsContainer>
+                <Link href="/myOrders">
+                  <S.IconsContainer>
+                    <S.ButtonBox>
+                      <Image
+                        src={delivery}
+                        alt=""
+                        fill
+                        style={{
+                          objectFit: "contain"
+                        }}
+                      />
+                    </S.ButtonBox>
+                    <S.TextIcon>Мои заказы</S.TextIcon>
+                  </S.IconsContainer>
+                </Link>
+              </>
+            ) : (
+              ""
+            )}
           </S.ControlPanel>
         </S.FilterBox>
       </S.FiltersWrap>

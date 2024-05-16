@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const FooterWrap = styled.footer`
   padding: 35px 100px 50px 100px;
-  margin-top: 50px;
+  margin-top: 60px;
   margin: 0 auto;
   display: flex;
   justify-content: center;

@@ -7,7 +7,8 @@ interface IProps {
 
 export const AuthContainer = styled.div`
   margin: 0 auto;
-  margin-top: 250px;
+  margin-top: 200px;
+  margin-bottom: 70px;
   position: relative;
   z-index: 150;
   display: flex;
@@ -15,15 +16,15 @@ export const AuthContainer = styled.div`
   gap: 20px;
 
   @media (${mainTheme.deviсe.desktopS}) {
-    margin-top: 210px;
+    margin-top: 160px;
   }
 
   @media (${mainTheme.deviсe.mobileXL}) {
-    margin-top: 250px;
+    margin-top: 200px;
   }
 
   @media (${mainTheme.deviсe.mobileM}) {
-    margin-top: 210px;
+    margin-top: 160px;
   }
 `;
 

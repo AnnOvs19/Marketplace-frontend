@@ -1,22 +1,22 @@
 "use client";
 
 import React, { FC } from "react";
-import { IOrderMock } from "../mockDelOrder";
 import * as S from "./orderMobList.style";
 import * as T from "@/styles/baseText.style";
+import { IOrderInfo } from "@/interfaces/orders/order";
 
 interface IProps {
-  item: IOrderMock;
+  item: IOrderInfo;
 }
 
 const OrderMobItem: FC<IProps> = ({ item }) => {
   return (
     <S.OrderItem>
-      <T.BasketPrice>Номер заказа:{item.id}</T.BasketPrice>
-      <T.BasketTitle>Покупатель: {item.client}</T.BasketTitle>
-      <T.BasketPrice>Цена: {item.price} руб</T.BasketPrice>
-      <T.BasketTitle>Продавец: {item.seller}</T.BasketTitle>
-      <T.BasketPrice>{item.status}</T.BasketPrice>
+      <T.BasketTitle>Название:{item.productName}</T.BasketTitle>
+      <T.BasketPrice>Покупатель: {item.client}</T.BasketPrice>
+      <T.BasketTitle>Цена: {item.sumOrder} руб</T.BasketTitle>
+      <T.BasketPrice>Продавец: {item.storeName}</T.BasketPrice>
+      <T.BasketTitle>{item.status}</T.BasketTitle>
     </S.OrderItem>
   );
 };
