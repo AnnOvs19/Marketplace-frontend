@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import * as S from "./totalCost.style";
 import * as U from "@/ui/Inputs/InputForm/inputForm.style";
 import InputForm from "@/ui/Inputs/InputForm/InputForm";
@@ -8,19 +8,26 @@ import { IOrderContacts } from "@/interfaces/basket/basket";
 import MiniLoader from "@/ui/Loading/MiniLoader/MiniLoader";
 import { Controller, useForm } from "react-hook-form";
 import { FormButton } from "@/styles/baseButtons.style";
-import { TitleBasket, TitleForm } from "@/styles/baseTitle.style";
+import { TitleForm } from "@/styles/baseTitle.style";
 import { TextForm, TotalPrice, TotalText } from "@/styles/baseText.style";
+import { IProduct } from "@/interfaces/product/product";
 
-const TotalCost = () => {
+interface IProps {
+  products: IProduct[];
+  myBasket?: IOrderContacts;
+}
+
+const TotalCost: FC<IProps> = ({ myBasket, products }) => {
   const defaultValues: IOrderContacts = {
-    name: "",
-    phone: "",
-    sity: "",
-    adress: ""
+    name: myBasket?.name ? myBasket.name : "",
+    phone: myBasket?.phone ? myBasket.phone : "",
+    sity: myBasket?.sity ? myBasket.sity : "",
+    adress: myBasket?.adress ? myBasket.adress : ""
   };
 
   const [textButton, setTextButton] = useState<string>("Заказать товары");
   const [statusLoad, setStatusLoad] = useState<boolean>(false);
+  const [totalPrice, setTotalPrice] = useState<number>(0);
 
   const {
     handleSubmit,
@@ -29,28 +36,31 @@ const TotalCost = () => {
     formState: { errors }
   } = useForm<IOrderContacts>({ defaultValues, mode: "onChange" });
 
+  function calcPrice() {
+    let price = 0;
+    products.forEach((item) => {
+      price += item.price * item.quantity!;
+    });
+    setTotalPrice(price);
+  }
+
   function submit(data: IOrderContacts) {
     setTextButton("Создание заказов...");
     setStatusLoad(true);
     reset();
   }
 
+  useEffect(() => {
+    calcPrice();
+  }, [products]);
+
   return (
     <S.CostWrap>
       <S.TotalPrice>
-        <TitleBasket>Итоговая стоимость за все товары</TitleBasket>
         <S.PriceBox>
           <S.PriceElem>
-            <TotalText>Цена</TotalText>
-            <TotalPrice>20000 руб</TotalPrice>
-          </S.PriceElem>
-          <S.PriceElem>
-            <TotalText>Доставка</TotalText>
-            <TotalPrice>2000 руб</TotalPrice>
-          </S.PriceElem>
-          <S.PriceElem>
-            <TotalText>Итого</TotalText>
-            <TotalPrice>40000 руб</TotalPrice>
+            <TotalText>Стоимость всех товаров</TotalText>
+            <TotalPrice>{totalPrice} руб</TotalPrice>
           </S.PriceElem>
         </S.PriceBox>
       </S.TotalPrice>

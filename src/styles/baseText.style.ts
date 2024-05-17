@@ -277,16 +277,18 @@ export const TotalText = styled.p`
 `;
 
 export const TotalPrice = styled.h4`
-  font-size: 21px;
+  font-size: 20px;
   font-weight: 600;
+  width: 50%;
+  text-align: end;
   color: ${mainTheme.colors.extraLightPurple};
 
   @media (${mainTheme.deviсe.laptopL}) {
-    font-size: 19px;
+    font-size: 18px;
   }
 
   @media (${mainTheme.deviсe.laptopM}) {
-    font-size: 17px;
+    font-size: 16px;
   }
 
   @media (${mainTheme.deviсe.laptopS}) {
@@ -298,11 +300,11 @@ export const TotalPrice = styled.h4`
   }
 
   @media (${mainTheme.deviсe.mobileXL}) {
-    font-size: 13px;
+    font-size: 14px;
   }
 
   @media (${mainTheme.deviсe.mobileS}) {
-    font-size: 11px;
+    font-size: 12px;
   }
 `;
 

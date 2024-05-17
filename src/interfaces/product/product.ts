@@ -10,7 +10,6 @@ export interface IProduct {
   text: string;
   image: any[];
   price: number;
-  deliveryPrice: number;
   article: string;
   model: string;
   country: string;

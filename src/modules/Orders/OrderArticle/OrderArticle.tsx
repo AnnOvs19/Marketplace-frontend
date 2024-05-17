@@ -79,10 +79,6 @@ const OrderArticle = () => {
               <OrderSubTitle>Цена за одну единицу:</OrderSubTitle>
               <OrderText> 600 руб</OrderText>
             </S.OrderString>
-            <S.OrderString>
-              <OrderSubTitle>Доставка за одну единицу:</OrderSubTitle>
-              <OrderText> 60 руб</OrderText>
-            </S.OrderString>
 
             <OrderTitle>Итого: 1220 руб</OrderTitle>
           </S.OrderPrice>

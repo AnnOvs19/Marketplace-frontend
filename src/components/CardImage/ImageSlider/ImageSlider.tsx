@@ -8,7 +8,6 @@ import { Navigation } from "swiper/modules";
 import "swiper/css/navigation";
 import "swiper/css";
 import * as S from "./imageSlider.style";
-import { ICatalogMock, mockDelCatalog } from "@/modules/Catalog/mockDelCatalog";
 import Image from "next/image";
 import { IProduct } from "@/interfaces/product/product";
 import { LoaderImage } from "@/helpers/loaderImage";

@@ -27,8 +27,8 @@ export const CostWrap = styled.div`
 
 export const TotalPrice = styled.section`
   width: 100%;
-  height: 290px;
-  padding: 30px 30px 40px 30px;
+  height: fit-content;
+  padding: 30px 30px 30px 30px;
   background-color: #161616;
   border: 1px solid ${mainTheme.colors.gray};
   display: flex;
@@ -36,7 +36,6 @@ export const TotalPrice = styled.section`
   gap: 30px;
 
   @media (${mainTheme.deviсe.laptopL}) {
-    height: auto;
   }
 
   @media (${mainTheme.deviсe.tablet}) {
@@ -44,12 +43,12 @@ export const TotalPrice = styled.section`
   }
 
   @media (${mainTheme.deviсe.mobileXL}) {
-    padding: 20px 20px 30px 20px;
+    padding: 20px 20px 20px 20px;
   }
 
   @media (${mainTheme.deviсe.mobileM}) {
     gap: 20px;
-    padding: 15px 15px 25px 15px;
+    padding: 15px 15px 15px 15px;
   }
 `;
 

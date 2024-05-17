@@ -69,8 +69,8 @@ export const BasketMobile = styled.section`
 `;
 
 export const BasketImage = styled.div`
-  width: 76px;
-  height: 76px;
+  width: 66px;
+  height: 66px;
   padding: 10px;
   position: relative;
   margin-right: 10px;

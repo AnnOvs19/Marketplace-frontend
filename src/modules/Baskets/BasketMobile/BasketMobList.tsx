@@ -1,17 +1,29 @@
 "use client";
 
-import { mockDelCatalog } from "@/modules/Catalog/mockDelCatalog";
-import React from "react";
+import React, { FC } from "react";
 import BasketMobItem from "./BasketMobItem";
 import { BasketMobile } from "../baskets.style";
 import * as S from "./basketMob.style";
+import { IProduct } from "@/interfaces/product/product";
 
-const BasketMobList = () => {
+interface IProps {
+  products: IProduct[];
+  setProducts: (arr: IProduct[]) => void;
+}
+
+const BasketMobList: FC<IProps> = ({ products, setProducts }) => {
   return (
     <BasketMobile>
       <S.BasketContainer>
-        {mockDelCatalog?.map((item, index) => {
-          return <BasketMobItem item={item} key={index} />;
+        {products?.map((item, index) => {
+          return (
+            <BasketMobItem
+              item={item}
+              key={index}
+              setProducts={setProducts}
+              products={products}
+            />
+          );
         })}
       </S.BasketContainer>
     </BasketMobile>
