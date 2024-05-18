@@ -6,8 +6,6 @@ import { auth } from "@/configs/auth";
 import { redirect } from "next/navigation";
 import { IOrderContacts } from "@/interfaces/basket/basket";
 
-// http://localhost:1337/api/baskets?populate=*&filters[client][id][$eq]=1
-
 async function getMyBasket(id: number, token: string) {
   const res: AxiosResponse = await axios.get(
     `api/baskets?populate=products,products.image&filters[client][id][$eq]=${id}`,

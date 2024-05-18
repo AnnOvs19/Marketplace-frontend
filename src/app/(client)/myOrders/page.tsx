@@ -5,6 +5,17 @@ import { redirect } from "next/navigation";
 import { AxiosResponse } from "axios";
 import axios from "@/helpers/axios";
 import { IOrderInfo } from "@/interfaces/orders/order";
+import { IOrderStatus } from "@/interfaces/orders/orderStatus";
+
+async function getStatusOrders(token: string) {
+  const res: AxiosResponse = await axios.get(`api/order-statuses`, {
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  });
+  const statusOrders: IOrderStatus[] = res.data.data;
+  return statusOrders;
+}
 
 async function getMyOrders(id: number, token: string) {
   const res: AxiosResponse = await axios.get(
@@ -38,11 +49,12 @@ export default async function MyOrders() {
   }
 
   const myOrders = await getMyOrders(session.user.id, session.user.token);
+  const statusOrders = await getStatusOrders(session.user.token);
 
   return (
     <>
       <BgCircle />
-      <Orders orders={myOrders} />
+      <Orders orders={myOrders} statusOrders={statusOrders} flag={1} />
     </>
   );
 }

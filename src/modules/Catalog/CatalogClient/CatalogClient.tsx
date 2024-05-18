@@ -3,7 +3,7 @@
 import { ICategory } from "@/interfaces/product/category";
 import { IProduct } from "@/interfaces/product/product";
 import React, { FC, useEffect, useState } from "react";
-import Filters from "./Filters/Filters";
+import Filters from "../Filters/Filters";
 import CatalogList from "./CatalogList/CatalogList";
 
 interface IProps {

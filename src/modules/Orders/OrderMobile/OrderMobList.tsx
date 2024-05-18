@@ -13,26 +13,29 @@ interface IProps {
 
 const OrderMobList: FC<IProps> = ({ orders }) => {
   const [role, setRole] = useState<string>(localStorage.getItem("role")!);
-  const [ordersNew, setOrdersNew] = useState<IOrderInfo[]>(
-    orders.sort((a, b) => b.id - a.id)
-  );
+
   return (
     <S.OrderContainer>
-      {ordersNew?.map((item, index) => {
-        return (
-          <>
-            {role == "Seller" ? (
-              <Link href={`/allOrdersClient/${index + 1}`}>
-                <OrderMobItem item={item} key={index} />
-              </Link>
-            ) : (
-              <Link href={`/myOrders/${index + 1}`}>
-                <OrderMobItem item={item} key={index} />
-              </Link>
-            )}
-          </>
-        );
-      })}
+      {orders
+        ?.sort((a, b) => b.id - a.id)
+        .map((item, index) => {
+          return (
+            <>
+              {role == "Seller" ? (
+                <Link
+                  href={`/allOrdersClient/${index + 1}`}
+                  style={{ width: "100%" }}
+                >
+                  <OrderMobItem item={item} key={index} />
+                </Link>
+              ) : (
+                <Link href={`/myOrders/${index + 1}`} style={{ width: "100%" }}>
+                  <OrderMobItem item={item} key={index} />
+                </Link>
+              )}
+            </>
+          );
+        })}
     </S.OrderContainer>
   );
 };

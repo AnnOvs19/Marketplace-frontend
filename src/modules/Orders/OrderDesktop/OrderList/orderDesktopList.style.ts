@@ -76,7 +76,7 @@ export const OrderElement = styled.div`
   }
 
   &:nth-child(5) {
-    width: 140px;
+    width: 142px;
     justify-content: center;
   }
 
@@ -101,7 +101,7 @@ export const OrderElement = styled.div`
     }
 
     &:nth-child(5) {
-      width: 130px;
+      width: 132px;
       justify-content: center;
     }
   }
@@ -127,7 +127,7 @@ export const OrderElement = styled.div`
     }
 
     &:nth-child(5) {
-      width: 115px;
+      width: 117px;
       justify-content: center;
     }
   }
