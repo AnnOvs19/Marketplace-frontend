@@ -22,11 +22,11 @@ const OrderDesktopList: FC<IProps> = ({ orders }) => {
             return (
               <>
                 {role == "Seller" ? (
-                  <Link href={`/allOrdersClient/${index + 1}`}>
+                  <Link href={`/allOrdersClient/${item.id}`}>
                     <OrderDesktopItem item={item} key={index} />
                   </Link>
                 ) : (
-                  <Link href={`/myOrders/${index + 1}`}>
+                  <Link href={`/myOrders/${item.id}`}>
                     <OrderDesktopItem item={item} key={index} />
                   </Link>
                 )}

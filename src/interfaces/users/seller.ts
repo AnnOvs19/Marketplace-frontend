@@ -4,7 +4,7 @@ import { IStore } from "../store/store";
 export interface ISeller {
   id?: number;
   role?: { name: string };
-  name?: string;
+  username?: string;
   phone?: string;
   email?: string;
   password?: string;
@@ -15,7 +15,7 @@ export interface ISeller {
 }
 
 export interface IRegisrerSeller {
-  name: string;
+  username?: string;
   phone: string;
   email: string;
   password: string;
@@ -25,6 +25,6 @@ export interface IRegisrerSeller {
 }
 
 export interface ILoginSeller {
-  name: string;
+  username?: string;
   password: string;
 }

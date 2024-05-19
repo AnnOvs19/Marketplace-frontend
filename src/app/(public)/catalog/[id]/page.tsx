@@ -29,8 +29,6 @@ export default async function Card({ params }: IParams) {
   const productPage = await getProductPage(params.id);
   const reviews = await getReviewsProduct(params.id);
 
-  console.log(productPage);
-
   return (
     <>
       <BgCircle />

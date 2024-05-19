@@ -14,15 +14,16 @@ export interface IClient {
 }
 
 export interface IRegisrerClient {
-  name: string;
+  username: string;
   phone: string;
   email: string;
   password: string;
   sity: string;
   adress: string;
+  role?: string;
 }
 
 export interface ILoginClient {
-  name: string;
+  username: string;
   password: string;
 }

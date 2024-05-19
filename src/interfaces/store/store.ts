@@ -1,7 +1,9 @@
 import { IProduct } from "../product/product";
+import { ISeller } from "../users/seller";
 
 export interface IStore {
   id: number;
-  title: string;
+  storeName: string;
   products: IProduct[];
+  user?: ISeller;
 }

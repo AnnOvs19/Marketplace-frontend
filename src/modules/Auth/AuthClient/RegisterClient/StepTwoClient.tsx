@@ -2,13 +2,13 @@
 
 import React, { FC } from "react";
 import * as U from "@/ui/Inputs/InputForm/inputForm.style";
-import * as T from "@/styles/baseText.style";
 import InputForm from "@/ui/Inputs/InputForm/InputForm";
 import { Controller, UseFormReturn } from "react-hook-form";
 import { BottomAuth, StepRegister2 } from "../../auth.style";
 import MiniLoader from "@/ui/Loading/MiniLoader/MiniLoader";
 import { IRegisrerClient } from "@/interfaces/users/client";
 import { FormButton } from "@/styles/baseButtons.style";
+import { TextForm } from "@/styles/baseText.style";
 
 interface IProps {
   indexTab: number;
@@ -35,7 +35,7 @@ const StepTwoClient: FC<IProps> = ({
   return (
     <StepRegister2 step={indexTab}>
       <U.BodyInputWrapper>
-        <T.TextForm>Введите email</T.TextForm>
+        <TextForm>Введите email</TextForm>
         <Controller
           name="email"
           rules={{
@@ -60,7 +60,7 @@ const StepTwoClient: FC<IProps> = ({
         )}
       </U.BodyInputWrapper>
       <U.BodyInputWrapper>
-        <T.TextForm>Ваша область и город </T.TextForm>
+        <TextForm>Ваша область и город </TextForm>
         <Controller
           name="sity"
           rules={{ required: true, minLength: 10 }}
@@ -83,7 +83,7 @@ const StepTwoClient: FC<IProps> = ({
         )}
       </U.BodyInputWrapper>
       <U.BodyInputWrapper>
-        <T.TextForm>Введите адрес для доставки</T.TextForm>
+        <TextForm>Введите адрес для доставки</TextForm>
         <Controller
           name="adress"
           rules={{ required: true, minLength: 10 }}
@@ -109,7 +109,7 @@ const StepTwoClient: FC<IProps> = ({
         <FormButton type="button" onClick={() => setIndexTab(1)}>
           Назад
         </FormButton>
-        <FormButton>
+        <FormButton type="submit">
           {textButton}
           {statusLoad ? <MiniLoader /> : ""}
         </FormButton>

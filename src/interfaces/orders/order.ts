@@ -7,10 +7,11 @@ import { IOrderContacts } from "../basket/basket";
 
 export interface IOrder {
   id: number;
-  client: IClient;
+  user: IClient;
   seller: ISeller;
   store: IStore;
-  status: IOrderStatus;
+  orderStatus: IOrderStatus;
+  quantity: number;
   sumOrder: number;
   product: IProduct;
   contacts: IOrderContacts;

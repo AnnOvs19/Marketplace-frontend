@@ -23,13 +23,13 @@ const OrderMobList: FC<IProps> = ({ orders }) => {
             <>
               {role == "Seller" ? (
                 <Link
-                  href={`/allOrdersClient/${index + 1}`}
+                  href={`/allOrdersClient/${item.id}`}
                   style={{ width: "100%" }}
                 >
                   <OrderMobItem item={item} key={index} />
                 </Link>
               ) : (
-                <Link href={`/myOrders/${index + 1}`} style={{ width: "100%" }}>
+                <Link href={`/myOrders/${item.id}`} style={{ width: "100%" }}>
                   <OrderMobItem item={item} key={index} />
                 </Link>
               )}

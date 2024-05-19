@@ -2,12 +2,12 @@
 
 import React, { FC } from "react";
 import * as U from "@/ui/Inputs/InputForm/inputForm.style";
-import * as T from "@/styles/baseText.style";
 import InputForm from "@/ui/Inputs/InputForm/InputForm";
 import { Controller, UseFormReturn } from "react-hook-form";
 import { StepRegister1 } from "../../auth.style";
 import { IRegisrerClient } from "@/interfaces/users/client";
 import { FormButton } from "@/styles/baseButtons.style";
+import { TextForm } from "@/styles/baseText.style";
 
 interface IProps {
   indexTab: number;
@@ -25,28 +25,28 @@ const StepOneClient: FC<IProps> = ({ indexTab, setIndexTab, formControl }) => {
   return (
     <StepRegister1 step={indexTab}>
       <U.BodyInputWrapper>
-        <T.TextForm>Введите своё имя</T.TextForm>
+        <TextForm>Введите своё имя</TextForm>
         <Controller
-          name="name"
+          name="username"
           rules={{ required: true, minLength: 5 }}
           control={control}
           render={({ field: { value, onChange }, fieldState }) => (
             <InputForm
               placeholder="Ваше ФИО"
               type="text"
-              name="name"
+              name="username"
               value={value}
               onChange={onChange}
               errors={fieldState.invalid}
             />
           )}
         />
-        {errors.name && (
+        {errors.username && (
           <U.ErrorMessage>Введите ФИО не короче пяти символов</U.ErrorMessage>
         )}
       </U.BodyInputWrapper>
       <U.BodyInputWrapper>
-        <T.TextForm>Номер телефона</T.TextForm>
+        <TextForm>Номер телефона</TextForm>
         <Controller
           name="phone"
           rules={{
@@ -71,7 +71,7 @@ const StepOneClient: FC<IProps> = ({ indexTab, setIndexTab, formControl }) => {
         )}
       </U.BodyInputWrapper>
       <U.BodyInputWrapper>
-        <T.TextForm>Придумайте свой пароль</T.TextForm>
+        <TextForm>Придумайте свой пароль</TextForm>
         <Controller
           name="password"
           rules={{

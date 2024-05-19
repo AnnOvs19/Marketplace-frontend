@@ -6,9 +6,10 @@ import { RegisterForm } from "../../auth.style";
 import StepOneClient from "./StepOneClient";
 import StepTwoClient from "./StepTwoClient";
 import { IRegisrerClient } from "@/interfaces/users/client";
+import axios from "@/helpers/axios";
 
 const defaultValues: IRegisrerClient = {
-  name: "",
+  username: "",
   phone: "",
   email: "",
   password: "",
@@ -26,11 +27,16 @@ const RegisterClient = () => {
     mode: "onChange"
   });
 
-  function submit(data: IRegisrerClient) {
-    console.log(data);
+  async function submit(data: IRegisrerClient) {
+    data.role = "Client";
     setTextButton("Регистрация...");
+    console.log(data);
     setStatusLoad(true);
     formControl.reset();
+
+    const res = await axios.post("api/auth/local/register", data);
+
+    console.log(res.data);
   }
   return (
     <RegisterForm onSubmit={formControl.handleSubmit(submit)}>
