@@ -1,14 +1,19 @@
 "use client";
 
-import React from "react";
+import React, { FC } from "react";
 import * as S from "../page.style";
 import HeadUser from "../AccountHead/HeadUser/HeadUser";
+import { IClient } from "@/interfaces/users/client";
 
-const PageUser = () => {
+interface IProps {
+  clientMe: IClient;
+}
+
+const PageUser: FC<IProps> = ({ clientMe }) => {
   return (
     <S.PageWrap>
       <S.PageBox>
-        <HeadUser />
+        <HeadUser clientMe={clientMe} />
       </S.PageBox>
     </S.PageWrap>
   );

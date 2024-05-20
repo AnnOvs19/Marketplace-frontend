@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { FC } from "react";
 import * as S from "../accountHead.style";
 import * as I from "@/styles/baseIcons.style";
 
@@ -13,8 +13,13 @@ import Link from "next/link";
 import { BaseButton } from "@/styles/baseButtons.style";
 import { ProfileText } from "@/styles/baseText.style";
 import { TitleSection } from "@/styles/baseTitle.style";
+import { IClient } from "@/interfaces/users/client";
 
-const HeadUser = () => {
+interface IProps {
+  clientMe: IClient;
+}
+
+const HeadUser: FC<IProps> = ({ clientMe }) => {
   return (
     <S.HeadAccount>
       <S.Avatar>
@@ -29,7 +34,7 @@ const HeadUser = () => {
       </S.Avatar>
       <S.AvatarInfo>
         <S.InfoHeader>
-          <TitleSection>Покупатель Покупателевич</TitleSection>
+          <TitleSection>{clientMe.username}</TitleSection>
           <Link href="/editAccountUser">
             <I.EditIcon>
               <Image
@@ -43,8 +48,10 @@ const HeadUser = () => {
             </I.EditIcon>
           </Link>
         </S.InfoHeader>
-        <ProfileText>email1111@gmail.com</ProfileText>
-        <ProfileText>Город, адрес</ProfileText>
+        <ProfileText>{clientMe.email}</ProfileText>
+        <ProfileText>
+          {clientMe.sity}, {clientMe.adress}
+        </ProfileText>
         <BaseButton
           onClick={() => {
             signOut({ callbackUrl: "/" });

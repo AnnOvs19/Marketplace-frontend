@@ -28,7 +28,7 @@ export default async function AccountUser() {
   return (
     <>
       <BgCircle />
-      <PageUser />
+      <PageUser clientMe={clientMe} />
     </>
   );
 }

@@ -28,7 +28,7 @@ export default async function AccountSeller() {
   return (
     <>
       <BgCircle />
-      <PageSeller userMe={sellerMe} />
+      <PageSeller sellerMe={sellerMe} />
     </>
   );
 }

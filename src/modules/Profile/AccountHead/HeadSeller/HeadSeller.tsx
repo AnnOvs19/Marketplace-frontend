@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { FC } from "react";
 import * as S from "../accountHead.style";
 import * as I from "@/styles/baseIcons.style";
 
@@ -13,8 +13,13 @@ import Link from "next/link";
 import { BaseButton } from "@/styles/baseButtons.style";
 import { SubTitle, TitleSection } from "@/styles/baseTitle.style";
 import { ProfileText } from "@/styles/baseText.style";
+import { ISeller } from "@/interfaces/users/seller";
 
-const HeadSeller = () => {
+interface IProps {
+  sellerMe: ISeller;
+}
+
+const HeadSeller: FC<IProps> = ({ sellerMe }) => {
   return (
     <S.HeadAccount>
       <S.Avatar>
@@ -29,7 +34,7 @@ const HeadSeller = () => {
       </S.Avatar>
       <S.AvatarInfo>
         <S.InfoHeader>
-          <TitleSection>Продавец продавцович</TitleSection>
+          <TitleSection>{sellerMe.username}</TitleSection>
           <Link href="/editAccountSel">
             <I.EditIcon>
               <Image
@@ -43,10 +48,13 @@ const HeadSeller = () => {
             </I.EditIcon>
           </Link>
         </S.InfoHeader>
-        <SubTitle>Название магазина</SubTitle>
-        <ProfileText>email1111@gmail.com</ProfileText>
-        <ProfileText>Город, адрес</ProfileText>
+        <SubTitle>{sellerMe.store?.storeName}</SubTitle>
+        <ProfileText>{sellerMe.email}</ProfileText>
+        <ProfileText>
+          {sellerMe.sity}, {sellerMe.adress}
+        </ProfileText>
         <BaseButton
+          style={{ marginTop: "10px" }}
           onClick={() => {
             signOut({ callbackUrl: "/" });
             localStorage.clear();
