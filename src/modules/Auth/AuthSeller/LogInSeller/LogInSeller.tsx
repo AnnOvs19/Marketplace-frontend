@@ -14,7 +14,7 @@ import { FormButton } from "@/styles/baseButtons.style";
 
 const defaultValues: ILoginSeller = {
   password: "",
-  name: ""
+  username: ""
 };
 
 const LogInSeller = () => {
@@ -41,7 +41,7 @@ const LogInSeller = () => {
     reset();
 
     const response = await signIn("credentials", {
-      identifier: data.name,
+      identifier: data.username,
       password: data.password,
       redirect: false
     });
@@ -64,7 +64,7 @@ const LogInSeller = () => {
       <U.BodyInputWrapper>
         <T.TextForm>Введите своё имя</T.TextForm>
         <Controller
-          name="name"
+          name="username"
           rules={{ required: true, minLength: 5 }}
           control={control}
           render={({ field: { value, onChange }, fieldState }) => (
@@ -78,7 +78,7 @@ const LogInSeller = () => {
             />
           )}
         />
-        {errors.name && (
+        {errors.username && (
           <U.ErrorMessage>Введите ФИО не короче пяти символов</U.ErrorMessage>
         )}
       </U.BodyInputWrapper>

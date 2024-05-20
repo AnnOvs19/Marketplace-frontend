@@ -7,6 +7,7 @@ import StepOneClient from "./StepOneClient";
 import StepTwoClient from "./StepTwoClient";
 import { IRegisrerClient } from "@/interfaces/users/client";
 import axios from "@/helpers/axios";
+import { useRouter } from "next/navigation";
 
 const defaultValues: IRegisrerClient = {
   username: "",
@@ -21,6 +22,8 @@ const RegisterClient = () => {
   const [indexTab, setIndexTab] = useState<number>(1);
   const [textButton, setTextButton] = useState<string>("Зарегистрироваться");
   const [statusLoad, setStatusLoad] = useState<boolean>(false);
+
+  const router = useRouter();
 
   const formControl = useForm<IRegisrerClient>({
     defaultValues,
@@ -39,9 +42,11 @@ const RegisterClient = () => {
     formControl.reset();
 
     const res = await axios.post("api/users", data);
-
     if (res.data) {
       createBasket(res.data.id);
+      setTextButton("Зарегистрироваться");
+      setStatusLoad(false);
+      alert("Регистрация прошла успешно! Можете зайти в свой аккаунт");
     }
   }
 

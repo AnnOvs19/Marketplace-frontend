@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { LoginForm } from "../../auth.style";
 import * as U from "@/ui/Inputs/InputForm/inputForm.style";
-// import * as B from "@/styles/baseButtons.style";
 import * as T from "@/styles/baseText.style";
 import InputForm from "@/ui/Inputs/InputForm/InputForm";
 import MiniLoader from "@/ui/Loading/MiniLoader/MiniLoader";
@@ -14,7 +13,7 @@ import { useRouter } from "next/navigation";
 import { FormButton } from "@/styles/baseButtons.style";
 
 const defaultValues: ILoginClient = {
-  name: "",
+  username: "",
   password: ""
 };
 
@@ -41,7 +40,7 @@ const LogInClient = () => {
     reset();
 
     const response = await signIn("credentials", {
-      identifier: data.name,
+      identifier: data.username,
       password: data.password,
       redirect: false
     });
@@ -64,7 +63,7 @@ const LogInClient = () => {
       <U.BodyInputWrapper>
         <T.TextForm>Введите своё имя</T.TextForm>
         <Controller
-          name="name"
+          name="username"
           rules={{ required: true, minLength: 5 }}
           control={control}
           render={({ field: { value, onChange }, fieldState }) => (
@@ -78,7 +77,7 @@ const LogInClient = () => {
             />
           )}
         />
-        {errors.name && (
+        {errors.username && (
           <U.ErrorMessage>Введите ФИО не короче пяти символов</U.ErrorMessage>
         )}
       </U.BodyInputWrapper>
