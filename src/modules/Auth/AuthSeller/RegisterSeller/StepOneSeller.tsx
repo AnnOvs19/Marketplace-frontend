@@ -28,21 +28,21 @@ const StepOneSeller: FC<IProps> = ({ indexTab, setIndexTab, formControl }) => {
       <U.BodyInputWrapper>
         <T.TextForm>Введите своё имя</T.TextForm>
         <Controller
-          name="name"
+          name="username"
           rules={{ required: true, minLength: 5 }}
           control={control}
           render={({ field: { value, onChange }, fieldState }) => (
             <InputForm
               placeholder="Ваше ФИО"
               type="text"
-              name="name"
+              name="username"
               value={value}
               onChange={onChange}
               errors={fieldState.invalid}
             />
           )}
         />
-        {errors.name && (
+        {errors.username && (
           <U.ErrorMessage>Введите ФИО не короче пяти символов</U.ErrorMessage>
         )}
       </U.BodyInputWrapper>

@@ -27,11 +27,9 @@ export default function RootLayout({
           <GlobalStyle />
           <Headers />
           <main>{children}</main>
-          <Footer />
+          {/* <Footer /> */}
         </Providers>
       </body>
     </html>
   );
 }
-
-//Сдесь не индексировать страницы с моими заказами и страницу профиля и редактирования профиля

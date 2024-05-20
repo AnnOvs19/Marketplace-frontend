@@ -22,6 +22,7 @@ export interface IRegisrerSeller {
   storeName: string;
   sity: string;
   adress: string;
+  role?: string;
 }
 
 export interface ILoginSeller {

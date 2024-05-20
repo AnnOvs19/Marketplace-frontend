@@ -27,17 +27,34 @@ const RegisterClient = () => {
     mode: "onChange"
   });
 
+  // 1 - Client
+  // 2 - Public
+  // 3 - Seller
+
   async function submit(data: IRegisrerClient) {
-    data.role = "Client";
+    data.role = "1";
     setTextButton("Регистрация...");
     console.log(data);
     setStatusLoad(true);
     formControl.reset();
 
-    const res = await axios.post("api/auth/local/register", data);
+    const res = await axios.post("api/users", data);
 
-    console.log(res.data);
+    if (res.data) {
+      createBasket(res.data.id);
+    }
   }
+
+  async function createBasket(id: any) {
+    await axios.post("api/baskets", {
+      data: {
+        client: {
+          id: id
+        }
+      }
+    });
+  }
+
   return (
     <RegisterForm onSubmit={formControl.handleSubmit(submit)}>
       <StepOneClient

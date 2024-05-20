@@ -10,7 +10,6 @@ export interface IClient {
   sity: string;
   adress: string;
   orders?: IOrder[];
-  // store?: any;
 }
 
 export interface IRegisrerClient {

@@ -58,33 +58,10 @@ const EditPageSel = () => {
     reset();
   }
 
-  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
-    e.preventDefault();
-    const loadedImage = e.target.files && e.target.files[0];
-    setImageData(loadedImage!);
-    setNoAvatar(URL.createObjectURL(loadedImage!));
-  }
-
   return (
     <S.EditForm onSubmit={handleSubmit(submit)}>
       <TitleForm>Редактирование профиля продавца</TitleForm>
       <S.EditBody>
-        <S.BodyAvatar>
-          <S.Photo>
-            <Image
-              src={noAvatar}
-              alt="The seller's avatar"
-              fill
-              style={{
-                objectFit: "cover"
-              }}
-            />
-          </S.Photo>
-          <FileButton>
-            <FileInput accept="image/*" onChange={(e) => handleChange(e)} />
-            Добавить фото
-          </FileButton>
-        </S.BodyAvatar>
         <S.SelBodyInfo>
           <S.EditItemBox>
             <U.BodyInputWrapper>

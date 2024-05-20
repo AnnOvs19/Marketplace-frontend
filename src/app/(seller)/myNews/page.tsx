@@ -31,7 +31,6 @@ export default async function MyNews() {
 
   const myNews = await getMyNews(session?.user.token);
 
-  console.log(myNews);
   return (
     <>
       <BgCircle />

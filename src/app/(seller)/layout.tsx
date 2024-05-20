@@ -27,11 +27,9 @@ export default function RootLayout({
           <GlobalStyle />
           <Headers />
           <main>{children}</main>
-          <Footer />
+          {/* <Footer /> */}
         </Providers>
       </body>
     </html>
   );
 }
-
-// //сдесь сделать функционал для того, чтобы робот не считывал все страницы в этом разделе

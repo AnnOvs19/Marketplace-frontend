@@ -6,9 +6,10 @@ import StepTwoSeller from "./StepTwoSeller";
 import { RegisterForm } from "../../auth.style";
 import { useForm } from "react-hook-form";
 import { IRegisrerSeller } from "@/interfaces/users/seller";
+import axios from "@/helpers/axios";
 
 const defaultValues: IRegisrerSeller = {
-  name: "",
+  username: "",
   phone: "",
   email: "",
   password: "",
@@ -27,11 +28,32 @@ const RegisterSeller = () => {
     mode: "onChange"
   });
 
-  function submit(data: IRegisrerSeller) {
-    console.log(data);
+  // 1 - Client
+  // 2 - Public
+  // 3 - Seller
+
+  async function submit(data: IRegisrerSeller) {
+    data.role = "3";
     setTextButton("Регистрация...");
     setStatusLoad(true);
     formControl.reset();
+
+    const res = await axios.post("api/users", data);
+
+    if (res.data) {
+      createStore(res.data.id, data);
+    }
+  }
+
+  async function createStore(id: any, data: IRegisrerSeller) {
+    await axios.post("api/stores", {
+      data: {
+        user: {
+          id: id
+        },
+        storeName: data.storeName
+      }
+    });
   }
 
   return (

@@ -27,11 +27,9 @@ export default function RootLayout({
           <GlobalStyle />
           <Headers />
           <main>{children}</main>
-          <Footer />
+          {/* <Footer /> */}
         </Providers>
       </body>
     </html>
   );
 }
-
-//Сдесь сделать динамическую метадату
